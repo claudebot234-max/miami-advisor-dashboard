@@ -1021,5 +1021,23 @@
             if (e.target === this) closeModal();
         });
     </script>
-</body>
+<script>
+(async function() {
+  const RAW = 'https://raw.githubusercontent.com/claudebot234-max/miami-advisor-dashboard/main/data/leads-data.json';
+  try {
+    const r = await fetch(RAW + '?t=' + Date.now());
+    if (!r.ok) return;
+    const data = await r.json();
+    if (!Array.isArray(data) || !data.length) return;
+    localStorage.setItem('advisorLeads', JSON.stringify(data));
+    if (typeof leads !== 'undefined') {
+      leads = data;
+      renderLeads();
+      updateNavCounts();
+      updateStats();
+    }
+    console.log('Dashboard loaded', data.length, 'leads from GitHub');
+  } catch(e) { console.log('GitHub load error:', e); }
+})();
+</script></body>
 </html>
