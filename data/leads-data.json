@@ -271,5 +271,26 @@
       }
     ],
     "createdAt": "2026-03-21"
+  },
+  {
+    "id": 777001,
+    "sourceId": 777001,
+    "triggerEvent": "Ryan Magath Referral - Divorce Settlement Pending",
+    "prospectName": "Pending (Ryan Magath referral)",
+    "eventType": "divorce",
+    "details": "Source: Ryan Magath, forensic accountant at Financial Research Associates. 15yr friendship with James. Client going through high-asset divorce with no financial management experience. Papers expected to finalize in 1-2 months. THIS IS THE LEAD THAT UNLOCKS RYANS ONGOING PIPELINE. Close her well and Ryan sends continuous divorce referrals.",
+    "advisorApproach": "Heat: HOT (incoming) | Why: First test case for Ryan referral pipeline - closing her unlocks ongoing stream of high-asset divorce clients. Be patient, educational, not salesy. She has no financial experience. Focus on stability and simplicity first. | Next step: Stay warm with Ryan. Be ready to onboard the moment papers finalize.",
+    "estimatedAUM": 500000,
+    "heat": "Hot",
+    "category": "divorce-referral",
+    "status": "new",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-22T17:59:47.358311",
+        "action": "Added manually - awaiting divorce finalization in 1-2 months"
+      }
+    ],
+    "createdAt": "2026-03-22T17:59:47.358491"
   }
 ]
