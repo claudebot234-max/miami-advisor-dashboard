@@ -3,1006 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miami Advisor AI - Business Development System</title>
+    <title>Miami Advisory Intelligence Dashboard</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: #e2e8f0;
+            padding: 2rem;
             line-height: 1.6;
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
         }
-
-        .sidebar {
-            width: 280px;
+        .container { max-width: 1400px; margin: 0 auto; }
+        .header {
             background: rgba(15, 23, 42, 0.95);
-            border-right: 1px solid rgba(100, 200, 255, 0.1);
-            padding: 2rem 0;
-            overflow-y: auto;
-        }
-
-        .logo {
-            padding: 0 1.5rem;
+            padding: 2rem;
+            border-radius: 12px;
             margin-bottom: 2rem;
+            border: 1px solid rgba(100, 200, 255, 0.1);
         }
-
-        .logo h1 {
-            font-size: 1.5rem;
+        .header h1 {
+            font-size: 2rem;
             background: linear-gradient(135deg, #60a5fa, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
-
-        .logo p {
-            font-size: 0.85rem;
+        .header .meta {
+            font-size: 0.9rem;
             color: #94a3b8;
-            margin-top: 0.25rem;
+            margin-top: 0.5rem;
         }
-
-        .nav-section {
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
             margin-bottom: 2rem;
         }
-
-        .nav-label {
-            padding: 0 1.5rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #64748b;
+        .stat-card {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(100, 200, 255, 0.1);
+        }
+        .stat-card h3 {
+            font-size: 0.875rem;
+            color: #94a3b8;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: 0.5rem;
         }
-
-        .nav-item {
-            padding: 0.75rem 1.5rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-left: 3px solid transparent;
-        }
-
-        .nav-item:hover {
-            background: rgba(59, 130, 246, 0.1);
-            border-left-color: #3b82f6;
-        }
-
-        .nav-item.active {
-            background: rgba(59, 130, 246, 0.15);
-            border-left-color: #3b82f6;
-            color: #60a5fa;
-        }
-
-        .nav-badge {
-            background: #3b82f6;
-            color: white;
-            padding: 0.15rem 0.5rem;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .nav-badge.empty {
-            background: #334155;
-        }
-
-        .main-content {
-            flex: 1;
-            overflow-y: auto;
-            padding: 2rem;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(100, 200, 255, 0.1);
-        }
-
-        .header-title h2 {
-            font-size: 1.875rem;
-            color: #f1f5f9;
-            margin-bottom: 0.25rem;
-        }
-
-        .header-meta {
-            font-size: 0.875rem;
-            color: #94a3b8;
-        }
-
-        .header-actions {
-            display: flex;
-            gap: 0.75rem;
-        }
-
-        .btn {
-            padding: 0.625rem 1.25rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
-        }
-
-        .btn-secondary {
-            background: rgba(59, 130, 246, 0.1);
-            color: #60a5fa;
-            border: 1px solid rgba(59, 130, 246, 0.3);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(59, 130, 246, 0.2);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .stat-card {
-            background: rgba(15, 23, 42, 0.5);
-            border: 1px solid rgba(100, 200, 255, 0.1);
-            border-radius: 12px;
-            padding: 1.5rem;
-            transition: all 0.3s;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(59, 130, 246, 0.3);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
-        }
-
-        .stat-label {
-            font-size: 0.875rem;
-            color: #94a3b8;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-value {
+        .stat-card .value {
             font-size: 2rem;
-            font-weight: 700;
+            font-weight: bold;
             color: #60a5fa;
         }
-
-        .stat-change {
-            font-size: 0.75rem;
-            margin-top: 0.5rem;
-        }
-
-        .stat-change.positive {
-            color: #34d399;
-        }
-
-        .stat-change.neutral {
-            color: #94a3b8;
-        }
-
-        .filter-bar {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .search-box {
-            flex: 1;
-            min-width: 250px;
-            padding: 0.75rem 1rem;
-            background: rgba(15, 23, 42, 0.5);
-            border: 1px solid rgba(100, 200, 255, 0.1);
-            border-radius: 8px;
-            color: #e2e8f0;
-            font-size: 0.875rem;
-        }
-
-        .search-box:focus {
-            outline: none;
-            border-color: #3b82f6;
-        }
-
-        .filter-dropdown {
-            padding: 0.75rem 1rem;
-            background: rgba(15, 23, 42, 0.5);
-            border: 1px solid rgba(100, 200, 255, 0.1);
-            border-radius: 8px;
-            color: #e2e8f0;
-            font-size: 0.875rem;
-            cursor: pointer;
-        }
-
-        .lead-list {
-            display: grid;
-            gap: 1.5rem;
-        }
-
-        .lead-card {
-            background: rgba(15, 23, 42, 0.5);
-            border: 1px solid rgba(100, 200, 255, 0.1);
+        .section {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 2rem;
             border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(100, 200, 255, 0.1);
+        }
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #60a5fa;
+        }
+        .lead-card {
+            background: rgba(30, 41, 59, 0.5);
             padding: 1.5rem;
-            transition: all 0.3s;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #3b82f6;
         }
-
-        .lead-card:hover {
-            border-color: rgba(59, 130, 246, 0.3);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
-        }
-
+        .lead-card.hot { border-left-color: #ef4444; }
+        .lead-card.warm { border-left-color: #f59e0b; }
+        .lead-card.cold { border-left-color: #6b7280; }
         .lead-header {
             display: flex;
             justify-content: space-between;
             align-items: start;
             margin-bottom: 1rem;
         }
-
         .lead-title {
-            flex: 1;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #e2e8f0;
         }
-
-        .lead-title h3 {
-            font-size: 1.25rem;
-            color: #f1f5f9;
-            margin-bottom: 0.5rem;
-        }
-
-        .lead-type {
-            display: inline-block;
+        .heat-badge {
             padding: 0.25rem 0.75rem;
-            background: rgba(59, 130, 246, 0.15);
-            color: #60a5fa;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .lead-status {
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .status-new {
-            background: rgba(234, 179, 8, 0.15);
-            color: #facc15;
-        }
-
-        .status-contacted {
-            background: rgba(59, 130, 246, 0.15);
-            color: #60a5fa;
-        }
-
-        .status-meeting {
-            background: rgba(168, 85, 247, 0.15);
-            color: #a78bfa;
-        }
-
-        .status-client {
-            background: rgba(34, 197, 94, 0.15);
-            color: #4ade80;
-        }
-
-        .lead-details {
-            margin-bottom: 1rem;
-            color: #cbd5e1;
-            font-size: 0.875rem;
-        }
-
-        .lead-details strong {
-            color: #e2e8f0;
-        }
-
-        .lead-approach {
-            background: rgba(59, 130, 246, 0.05);
-            border-left: 3px solid #3b82f6;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 4px;
-            font-size: 0.875rem;
-            color: #cbd5e1;
-        }
-
-        .lead-approach strong {
-            color: #60a5fa;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .lead-contact {
-            display: flex;
-            gap: 1rem;
-            margin: 1rem 0;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.875rem;
-            color: #94a3b8;
-        }
-
-        .lead-actions {
-            display: flex;
-            gap: 0.75rem;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(100, 200, 255, 0.1);
-        }
-
-        .btn-small {
-            padding: 0.5rem 1rem;
-            font-size: 0.75rem;
-        }
-
-        .note-input {
-            width: 100%;
-            padding: 0.75rem;
-            background: rgba(15, 23, 42, 0.5);
-            border: 1px solid rgba(100, 200, 255, 0.1);
-            border-radius: 8px;
-            color: #e2e8f0;
-            font-size: 0.875rem;
-            margin-top: 1rem;
-            resize: vertical;
-            min-height: 60px;
-        }
-
-        .note-input:focus {
-            outline: none;
-            border-color: #3b82f6;
-        }
-
-        .timeline {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(100, 200, 255, 0.1);
-        }
-
-        .timeline-item {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 0.75rem;
-            font-size: 0.875rem;
-        }
-
-        .timeline-dot {
-            width: 8px;
-            height: 8px;
-            background: #3b82f6;
-            border-radius: 50%;
-            margin-top: 0.5rem;
-            flex-shrink: 0;
-        }
-
-        .timeline-content {
-            flex: 1;
-            color: #94a3b8;
-        }
-
-        .timeline-date {
-            color: #64748b;
-            font-size: 0.75rem;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background: #1e293b;
             border-radius: 12px;
-            padding: 2rem;
-            max-width: 600px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
         }
-
-        .modal-header {
-            margin-bottom: 1.5rem;
-        }
-
-        .modal-header h3 {
-            font-size: 1.5rem;
-            color: #f1f5f9;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-label {
-            display: block;
+        .heat-badge.hot { background: #ef4444; color: white; }
+        .heat-badge.warm { background: #f59e0b; color: white; }
+        .heat-badge.cold { background: #6b7280; color: white; }
+        .lead-detail {
+            font-size: 0.9rem;
+            color: #94a3b8;
             margin-bottom: 0.5rem;
+        }
+        .lead-detail strong { color: #cbd5e1; }
+        .opening-line {
+            background: rgba(59, 130, 246, 0.1);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            font-style: italic;
             color: #cbd5e1;
+        }
+        .source-link {
+            color: #60a5fa;
+            text-decoration: none;
             font-size: 0.875rem;
+        }
+        .source-link:hover { text-decoration: underline; }
+        .refresh-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
             font-weight: 600;
         }
-
-        .form-input {
-            width: 100%;
-            padding: 0.75rem;
-            background: rgba(15, 23, 42, 0.5);
-            border: 1px solid rgba(100, 200, 255, 0.1);
-            border-radius: 8px;
-            color: #e2e8f0;
-            font-size: 0.875rem;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: #3b82f6;
-        }
-
-        .modal-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: flex-end;
-            margin-top: 2rem;
-        }
-
-        .empty-state {
-            text-align: center;
-            padding: 4rem 2rem;
-            color: #64748b;
-        }
-
-        .empty-state h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #94a3b8;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
-
-            .sidebar {
-                width: 100%;
-                border-right: none;
-                border-bottom: 1px solid rgba(100, 200, 255, 0.1);
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        .refresh-btn:hover { background: #2563eb; }
+        .empty { color: #64748b; text-align: center; padding: 2rem; }
     </style>
 </head>
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="logo">
-            <h1>Miami Advisor AI</h1>
-            <p>Business Development System</p>
-        </div>
-
-        <div class="nav-section">
-            <div class="nav-label">Intelligence</div>
-            <div class="nav-item active" data-view="lead-radar">
-                <span>Lead Radar</span>
-                <span class="nav-badge" id="radarCount">0</span>
-            </div>
-            <div class="nav-item" data-view="business-sales">
-                <span>Business Sales</span>
-                <span class="nav-badge empty" id="businessSalesCount">0</span>
-            </div>
-            <div class="nav-item" data-view="acquisition">
-                <span>Acquisition Targets</span>
-                <span class="nav-badge empty" id="acquisitionCount">0</span>
-            </div>
-            <div class="nav-item" data-view="vul">
-                <span>VUL Prospects</span>
-                <span class="nav-badge" id="vulCount">0</span>
-            </div>
-        </div>
-
-        <div class="nav-section">
-            <div class="nav-label">Outreach</div>
-            <div class="nav-item" data-view="cpa">
-                <span>CPA Partners</span>
-                <span class="nav-badge empty" id="cpaCount">0</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-content">
+    <div class="container">
         <div class="header">
-            <div class="header-title">
-                <h2 id="viewTitle">Lead Radar</h2>
-                <div class="header-meta">
-                    <span id="entryCount">0 entries</span> · 
-                    <span id="doneCount">0 done</span> · 
-                    <span id="progressPercent">0%</span>
-                </div>
-            </div>
-            <div class="header-actions">
-                <button class="btn btn-secondary" onclick="exportData()">Export CSV</button>
-                <button class="btn btn-primary" onclick="openAddModal()">+ Add Lead</button>
+            <h1>💼 Miami Advisory Intelligence Dashboard</h1>
+            <div class="meta">
+                Last updated: <span id="lastUpdated">Loading...</span> |
+                <button class="refresh-btn" onclick="loadData()">🔄 Refresh</button>
             </div>
         </div>
 
-        <!-- Stats Dashboard -->
-        <div class="stats-grid" id="statsGrid">
+        <div class="stats">
             <div class="stat-card">
-                <div class="stat-label">Total Leads</div>
-                <div class="stat-value" id="statTotal">0</div>
-                <div class="stat-change neutral">All time</div>
+                <h3>Wealth Trigger Leads</h3>
+                <div class="value" id="statLeads">-</div>
             </div>
             <div class="stat-card">
-                <div class="stat-label">Potential Revenue</div>
-                <div class="stat-value" id="statRevenue">$0</div>
-                <div class="stat-change neutral">Estimated AUM</div>
+                <h3>CPA Targets</h3>
+                <div class="value" id="statCPA">-</div>
             </div>
             <div class="stat-card">
-                <div class="stat-label">Conversion Rate</div>
-                <div class="stat-value" id="statConversion">0%</div>
-                <div class="stat-change positive">+0% this month</div>
+                <h3>Practice Acquisitions</h3>
+                <div class="value" id="statAcquisitions">-</div>
             </div>
             <div class="stat-card">
-                <div class="stat-label">Active Pipeline</div>
-                <div class="stat-value" id="statActive">0</div>
-                <div class="stat-change neutral">Requires follow-up</div>
+                <h3>VUL Prospects</h3>
+                <div class="value" id="statVUL">-</div>
             </div>
         </div>
 
-        <!-- Filters -->
-        <div class="filter-bar">
-            <input type="text" class="search-box" placeholder="Search leads..." id="searchInput" oninput="filterLeads()">
-            <select class="filter-dropdown" id="statusFilter" onchange="filterLeads()">
-                <option value="all">All Status</option>
-                <option value="new">New</option>
-                <option value="contacted">Contacted</option>
-                <option value="meeting">Meeting Scheduled</option>
-                <option value="client">Client</option>
-            </select>
-            <select class="filter-dropdown" id="typeFilter" onchange="filterLeads()">
-                <option value="all">All Types</option>
-                <option value="startup-exit">Startup Exit</option>
-                <option value="real-estate">Real Estate</option>
-                <option value="promotion">Executive Promotion</option>
-                <option value="inheritance">Inheritance</option>
-                <option value="divorce">Divorce Settlement</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-
-        <!-- Lead List -->
-        <div class="lead-list" id="leadList"></div>
-    </div>
-
-    <!-- Add/Edit Lead Modal -->
-    <div class="modal" id="leadModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="modalTitle">Add New Lead</h3>
-            </div>
-            <form id="leadForm" onsubmit="saveLead(event)">
-                <div class="form-group">
-                    <label class="form-label">Trigger Event *</label>
-                    <input type="text" class="form-input" id="triggerEvent" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Prospect Name *</label>
-                    <input type="text" class="form-input" id="prospectName" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Age</label>
-                    <input type="number" class="form-input" id="prospectAge">
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-input" id="prospectEmail">
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Phone</label>
-                    <input type="tel" class="form-input" id="prospectPhone">
-                </div>
-                <div class="form-group">
-                    <label class="form-label">LinkedIn</label>
-                    <input type="url" class="form-input" id="prospectLinkedin">
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Event Type *</label>
-                    <select class="form-input" id="eventType" required>
-                        <option value="startup-exit">Startup Exit</option>
-                        <option value="real-estate">Real Estate Transaction</option>
-                        <option value="promotion">Executive Promotion</option>
-                        <option value="inheritance">Inheritance</option>
-                        <option value="divorce">Divorce Settlement</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Details</label>
-                    <textarea class="form-input" id="eventDetails" rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Advisor Approach</label>
-                    <textarea class="form-input" id="advisorApproach" rows="3"></textarea>
-                </div>
-                <div class="form-group">
-                    <label class="form-label">Estimated AUM</label>
-                    <input type="number" class="form-input" id="estimatedAUM" placeholder="0">
-                </div>
-                <div class="modal-actions">
-                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Save Lead</button>
-                </div>
-            </form>
-        </div>
+        <div class="section" id="leadsSection"></div>
+        <div class="section" id="cpaSection"></div>
+        <div class="section" id="acquisitionsSection"></div>
+        <div class="section" id="vulSection"></div>
+        <div class="section" id="businessSalesSection"></div>
     </div>
 
     <script>
-        // Data storage
-        let leads = JSON.parse(localStorage.getItem('advisorLeads') || '[]');
-        let currentView = 'lead-radar';
-        let editingId = null;
-
-        // No sample data - start clean
-
-        // Initialize
-        renderLeads();
-        updateStats();
-        updateNavCounts();
-
-        // Navigation
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', function() {
-                document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
-                this.classList.add('active');
-                currentView = this.dataset.view;
-                document.getElementById('viewTitle').textContent = this.textContent.trim();
-                filterLeads();
-            });
-        });
-
-        function renderLeads() {
-            const container = document.getElementById('leadList');
-            const filteredLeads = getFilteredLeads();
-
-            if (filteredLeads.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <h3>No leads found</h3>
-                        <p>Add your first lead to get started</p>
-                    </div>
-                `;
-                return;
-            }
-
-            container.innerHTML = filteredLeads.map(lead => `
-                <div class="lead-card">
-                    <div class="lead-header">
-                        <div class="lead-title">
-                            <h3>${lead.triggerEvent}</h3>
-                            <span class="lead-type">${getEventTypeLabel(lead.eventType)}</span>
-                        </div>
-                        <div class="lead-status status-${lead.status}">${lead.status}</div>
-                    </div>
-                    
-                    <div class="lead-details">
-                        <strong>Prospect:</strong> ${lead.prospectName}${lead.age ? `, ${lead.age}` : ''}<br>
-                        ${lead.details ? `<strong>Details:</strong> ${lead.details}` : ''}
-                    </div>
-
-                    ${lead.email || lead.phone || lead.linkedin ? `
-                        <div class="lead-contact">
-                            ${lead.email ? `<div class="contact-item">📧 ${lead.email}</div>` : ''}
-                            ${lead.phone ? `<div class="contact-item">📞 ${lead.phone}</div>` : ''}
-                            ${lead.linkedin ? `<div class="contact-item">💼 <a href="${lead.linkedin}" target="_blank" style="color: #60a5fa;">LinkedIn</a></div>` : ''}
-                        </div>
-                    ` : ''}
-
-                    ${lead.advisorApproach ? `
-                        <div class="lead-approach">
-                            <strong>Potential Advisor Approach:</strong>
-                            ${lead.advisorApproach}
-                        </div>
-                    ` : ''}
-
-                    ${lead.estimatedAUM ? `
-                        <div style="margin: 1rem 0; font-size: 0.875rem;">
-                            <strong style="color: #60a5fa;">Estimated AUM:</strong> 
-                            <span style="color: #cbd5e1;">$${lead.estimatedAUM.toLocaleString()}</span>
-                        </div>
-                    ` : ''}
-
-                    <div class="lead-actions">
-                        <button class="btn btn-secondary btn-small" onclick="changeStatus(${lead.id}, 'contacted')">Mark Contacted</button>
-                        <button class="btn btn-secondary btn-small" onclick="changeStatus(${lead.id}, 'meeting')">Schedule Meeting</button>
-                        <button class="btn btn-secondary btn-small" onclick="changeStatus(${lead.id}, 'client')">Convert to Client</button>
-                        <button class="btn btn-secondary btn-small" onclick="editLead(${lead.id})">Edit</button>
-                        <button class="btn btn-secondary btn-small" onclick="deleteLead(${lead.id})">Delete</button>
-                    </div>
-
-                    <textarea class="note-input" placeholder="Add notes..." onchange="addNote(${lead.id}, this.value)"></textarea>
-
-                    ${lead.activities && lead.activities.length > 1 ? `
-                        <div class="timeline">
-                            ${lead.activities.slice(-3).reverse().map(activity => `
-                                <div class="timeline-item">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <div>${activity.action}</div>
-                                        <div class="timeline-date">${new Date(activity.date).toLocaleString()}</div>
-                                    </div>
-                                </div>
-                            `).join('')}
-                        </div>
-                    ` : ''}
-                </div>
-            `).join('');
-
-            updateStats();
-        }
-
-        function getFilteredLeads() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const statusFilter = document.getElementById('statusFilter').value;
-            const typeFilter = document.getElementById('typeFilter').value;
-
-            return leads.filter(lead => {
-                const matchesSearch = !searchTerm || 
-                    lead.triggerEvent.toLowerCase().includes(searchTerm) ||
-                    lead.prospectName.toLowerCase().includes(searchTerm) ||
-                    (lead.details && lead.details.toLowerCase().includes(searchTerm));
+        async function loadData() {
+            try {
+                const response = await fetch('data.json');
+                const data = await response.json();
                 
-                const matchesStatus = statusFilter === 'all' || lead.status === statusFilter;
-                const matchesType = typeFilter === 'all' || lead.eventType === typeFilter;
-                const matchesView = lead.category === currentView;
-
-                return matchesSearch && matchesStatus && matchesType && matchesView;
-            });
-        }
-
-        function getEventTypeLabel(type) {
-            const labels = {
-                'startup-exit': 'Startup Exit',
-                'real-estate': 'Real Estate',
-                'promotion': 'Promotion',
-                'inheritance': 'Inheritance',
-                'divorce': 'Divorce',
-                'other': 'Other'
-            };
-            return labels[type] || type;
-        }
-
-        function filterLeads() {
-            renderLeads();
-        }
-
-        function openAddModal() {
-            editingId = null;
-            document.getElementById('modalTitle').textContent = 'Add New Lead';
-            document.getElementById('leadForm').reset();
-            document.getElementById('leadModal').classList.add('active');
-        }
-
-        function editLead(id) {
-            editingId = id;
-            const lead = leads.find(l => l.id === id);
-            if (!lead) return;
-
-            document.getElementById('modalTitle').textContent = 'Edit Lead';
-            document.getElementById('triggerEvent').value = lead.triggerEvent;
-            document.getElementById('prospectName').value = lead.prospectName;
-            document.getElementById('prospectAge').value = lead.age || '';
-            document.getElementById('prospectEmail').value = lead.email || '';
-            document.getElementById('prospectPhone').value = lead.phone || '';
-            document.getElementById('prospectLinkedin').value = lead.linkedin || '';
-            document.getElementById('eventType').value = lead.eventType;
-            document.getElementById('eventDetails').value = lead.details || '';
-            document.getElementById('advisorApproach').value = lead.advisorApproach || '';
-            document.getElementById('estimatedAUM').value = lead.estimatedAUM || '';
-
-            document.getElementById('leadModal').classList.add('active');
-        }
-
-        function closeModal() {
-            document.getElementById('leadModal').classList.remove('active');
-            editingId = null;
-        }
-
-        function saveLead(event) {
-            event.preventDefault();
-
-            const leadData = {
-                triggerEvent: document.getElementById('triggerEvent').value,
-                prospectName: document.getElementById('prospectName').value,
-                age: parseInt(document.getElementById('prospectAge').value) || null,
-                email: document.getElementById('prospectEmail').value,
-                phone: document.getElementById('prospectPhone').value,
-                linkedin: document.getElementById('prospectLinkedin').value,
-                eventType: document.getElementById('eventType').value,
-                details: document.getElementById('eventDetails').value,
-                advisorApproach: document.getElementById('advisorApproach').value,
-                estimatedAUM: parseFloat(document.getElementById('estimatedAUM').value) || 0,
-                category: currentView
-            };
-
-            if (editingId) {
-                const lead = leads.find(l => l.id === editingId);
-                Object.assign(lead, leadData);
-                lead.activities.push({
-                    date: new Date().toISOString(),
-                    action: 'Lead updated'
-                });
-            } else {
-                leads.push({
-                    id: Date.now(),
-                    ...leadData,
-                    status: 'new',
-                    notes: [],
-                    activities: [
-                        { date: new Date().toISOString(), action: 'Lead created' }
-                    ],
-                    createdAt: new Date().toISOString()
-                });
+                // Update stats
+                document.getElementById('statLeads').textContent = data.summary.totalLeads;
+                document.getElementById('statCPA').textContent = data.summary.totalCPATargets;
+                document.getElementById('statAcquisitions').textContent = data.summary.totalPracticeAcquisitions;
+                document.getElementById('statVUL').textContent = data.summary.totalVULProspects;
+                document.getElementById('lastUpdated').textContent = new Date(data.lastUpdated).toLocaleString();
+                
+                // Render Leads
+                document.getElementById('leadsSection').innerHTML = `
+                    <h2>🎯 Wealth Trigger Leads (${data.leads.date})</h2>
+                    ${data.leads.items.map(lead => `
+                        <div class="lead-card ${lead.heat.toLowerCase()}">
+                            <div class="lead-header">
+                                <div class="lead-title">${lead.trigger}</div>
+                                <span class="heat-badge ${lead.heat.toLowerCase()}">${lead.heat}</span>
+                            </div>
+                            ${lead.name ? `<div class="lead-detail"><strong>Contact:</strong> ${lead.name}</div>` : ''}
+                            <div class="lead-detail"><strong>Signal:</strong> ${lead.wealthSignal}</div>
+                            <div class="lead-detail"><strong>Reachability:</strong> ${lead.reachability}</div>
+                            <div class="lead-detail"><strong>Category:</strong> ${lead.category}</div>
+                            <div class="opening-line">"${lead.openingLine}"</div>
+                            <div class="lead-detail" style="margin-top: 1rem;">
+                                <a href="${lead.source}" class="source-link" target="_blank">Source →</a>
+                            </div>
+                        </div>
+                    `).join('')}
+                `;
+                
+                // Render CPA Targets
+                document.getElementById('cpaSection').innerHTML = `
+                    <h2>🤝 CPA Partnership Targets (${data.cpaTargets.date})</h2>
+                    ${data.cpaTargets.items.map(cpa => `
+                        <div class="lead-card ${cpa.heat.toLowerCase()}">
+                            <div class="lead-header">
+                                <div class="lead-title">${cpa.firmName}</div>
+                                <span class="heat-badge ${cpa.heat.toLowerCase()}">${cpa.heat}</span>
+                            </div>
+                            ${cpa.contact ? `<div class="lead-detail"><strong>Contact:</strong> ${cpa.contact}</div>` : ''}
+                            <div class="lead-detail"><strong>Location:</strong> ${cpa.location}</div>
+                            ${cpa.phone ? `<div class="lead-detail"><strong>Phone:</strong> ${cpa.phone}</div>` : ''}
+                            ${cpa.email ? `<div class="lead-detail"><strong>Email:</strong> ${cpa.email}</div>` : ''}
+                            <div class="lead-detail"><strong>Specialty:</strong> ${cpa.specialty}</div>
+                            <div class="lead-detail"><strong>Why No Advisor:</strong> ${cpa.whyNoAdvisor}</div>
+                            <div class="opening-line">${cpa.linkedInOpener}</div>
+                            <div class="lead-detail" style="margin-top: 1rem;">
+                                <a href="${cpa.website}" class="source-link" target="_blank">Website →</a>
+                            </div>
+                        </div>
+                    `).join('')}
+                `;
+                
+                // Render Practice Acquisitions
+                document.getElementById('acquisitionsSection').innerHTML = `
+                    <h2>📊 Practice Acquisition Targets (${data.practiceAcquisitions.date})</h2>
+                    ${data.practiceAcquisitions.items.map(acq => `
+                        <div class="lead-card ${acq.heat.toLowerCase()}">
+                            <div class="lead-header">
+                                <div class="lead-title">${acq.name} - ${acq.firm}</div>
+                                <span class="heat-badge ${acq.heat.toLowerCase()}">${acq.heat}</span>
+                            </div>
+                            <div class="lead-detail"><strong>Location:</strong> ${acq.location}</div>
+                            ${acq.aum ? `<div class="lead-detail"><strong>AUM:</strong> ${acq.aum}</div>` : ''}
+                            ${acq.avgClientBalance ? `<div class="lead-detail"><strong>Avg Client Balance:</strong> ${acq.avgClientBalance}</div>` : ''}
+                            <div class="lead-detail"><strong>Retirement Signal:</strong> ${acq.retirementSignal}</div>
+                            <div class="opening-line"><strong>Email Subject:</strong> ${acq.coldEmailSubject}</div>
+                            <div class="opening-line">${acq.coldEmailOpener}</div>
+                            <div class="lead-detail" style="margin-top: 1rem;">
+                                <a href="${acq.secIAPD}" class="source-link" target="_blank">SEC IAPD →</a>
+                            </div>
+                        </div>
+                    `).join('')}
+                `;
+                
+                // Render VUL Prospects
+                document.getElementById('vulSection').innerHTML = `
+                    <h2>💰 VUL Sales Opportunities (${data.vulProspects.date})</h2>
+                    ${data.vulProspects.items.map(vul => `
+                        <div class="lead-card ${vul.heat.toLowerCase()}">
+                            <div class="lead-header">
+                                <div class="lead-title">${vul.name || vul.trigger}</div>
+                                <span class="heat-badge ${vul.heat.toLowerCase()}">${vul.heat}</span>
+                            </div>
+                            <div class="lead-detail"><strong>Category:</strong> ${vul.category}</div>
+                            <div class="lead-detail"><strong>Trigger:</strong> ${vul.trigger}</div>
+                            <div class="lead-detail"><strong>Profile:</strong> ${vul.profile}</div>
+                            <div class="opening-line"><strong>Approach:</strong> ${vul.approach}</div>
+                            ${vul.source ? `<div class="lead-detail" style="margin-top: 1rem;"><a href="${vul.source}" class="source-link" target="_blank">Source →</a></div>` : ''}
+                        </div>
+                    `).join('')}
+                `;
+                
+                // Render Business Sales (if exists)
+                if (data.businessSales && data.businessSales.items) {
+                    document.getElementById('businessSalesSection').innerHTML = `
+                        <h2>🏢 Business Sales Opportunities (${data.businessSales.date})</h2>
+                        <div style="color: #94a3b8; margin-bottom: 1rem; font-style: italic;">
+                            ${data.businessSales.note}
+                        </div>
+                        ${data.businessSales.items.map(biz => `
+                            <div class="lead-card warm">
+                                <div class="lead-header">
+                                    <div class="lead-title">${biz.listing}</div>
+                                </div>
+                                <div class="lead-detail"><strong>Signal:</strong> ${biz.signal}</div>
+                                <div class="lead-detail"><strong>Opportunity:</strong> ${biz.opportunity}</div>
+                                <div class="opening-line"><strong>Approach:</strong> ${biz.approach}</div>
+                                <div class="lead-detail" style="margin-top: 1rem;">
+                                    <a href="${biz.source}" class="source-link" target="_blank">Source →</a>
+                                </div>
+                            </div>
+                        `).join('')}
+                    `;
+                }
+                
+                console.log('✅ Dashboard loaded successfully');
+            } catch (error) {
+                console.error('❌ Failed to load data:', error);
+                document.body.innerHTML += '<div class="empty">❌ Failed to load data.json</div>';
             }
-
-            saveLeads();
-            renderLeads();
-            updateNavCounts();
-            closeModal();
         }
-
-        function deleteLead(id) {
-            if (!confirm('Delete this lead?')) return;
-            leads = leads.filter(l => l.id !== id);
-            saveLeads();
-            renderLeads();
-            updateNavCounts();
-        }
-
-        function changeStatus(id, newStatus) {
-            const lead = leads.find(l => l.id === id);
-            if (!lead) return;
-            
-            lead.status = newStatus;
-            lead.activities.push({
-                date: new Date().toISOString(),
-                action: `Status changed to ${newStatus}`
-            });
-            
-            saveLeads();
-            renderLeads();
-        }
-
-        function addNote(id, note) {
-            if (!note.trim()) return;
-            
-            const lead = leads.find(l => l.id === id);
-            if (!lead) return;
-            
-            lead.notes.push({
-                date: new Date().toISOString(),
-                text: note
-            });
-            lead.activities.push({
-                date: new Date().toISOString(),
-                action: 'Note added'
-            });
-            
-            saveLeads();
-        }
-
-        function updateStats() {
-            const filteredLeads = getFilteredLeads();
-            const totalLeads = filteredLeads.length;
-            const clientCount = filteredLeads.filter(l => l.status === 'client').length;
-            const totalRevenue = filteredLeads.reduce((sum, l) => sum + (l.estimatedAUM || 0), 0);
-            const activeLeads = filteredLeads.filter(l => l.status !== 'client').length;
-            const conversionRate = totalLeads > 0 ? ((clientCount / totalLeads) * 100).toFixed(1) : 0;
-
-            document.getElementById('statTotal').textContent = totalLeads;
-            document.getElementById('statRevenue').textContent = '$' + (totalRevenue / 1000000).toFixed(1) + 'M';
-            document.getElementById('statConversion').textContent = conversionRate + '%';
-            document.getElementById('statActive').textContent = activeLeads;
-
-            document.getElementById('entryCount').textContent = `${totalLeads} entries`;
-            document.getElementById('doneCount').textContent = `${clientCount} done`;
-            document.getElementById('progressPercent').textContent = `${conversionRate}%`;
-        }
-
-        function updateNavCounts() {
-            const categories = {
-                'lead-radar': 'radarCount',
-                'business-sales': 'businessSalesCount',
-                'acquisition': 'acquisitionCount',
-                'vul': 'vulCount',
-                'cpa': 'cpaCount'
-            };
-
-            Object.entries(categories).forEach(([category, elementId]) => {
-                const count = leads.filter(l => l.category === category).length;
-                const element = document.getElementById(elementId);
-                element.textContent = count;
-                element.className = count > 0 ? 'nav-badge' : 'nav-badge empty';
-            });
-        }
-
-        function exportData() {
-            const csv = [
-                ['Trigger Event', 'Prospect Name', 'Age', 'Email', 'Phone', 'Type', 'Status', 'Estimated AUM', 'Details', 'Approach', 'Created'].join(','),
-                ...leads.map(lead => [
-                    `"${lead.triggerEvent}"`,
-                    `"${lead.prospectName}"`,
-                    lead.age || '',
-                    lead.email || '',
-                    lead.phone || '',
-                    getEventTypeLabel(lead.eventType),
-                    lead.status,
-                    lead.estimatedAUM || 0,
-                    `"${lead.details || ''}"`,
-                    `"${lead.advisorApproach || ''}"`,
-                    new Date(lead.createdAt).toLocaleDateString()
-                ].join(','))
-            ].join('\n');
-
-            const blob = new Blob([csv], { type: 'text/csv' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `advisor-leads-${new Date().toISOString().split('T')[0]}.csv`;
-            a.click();
-            URL.revokeObjectURL(url);
-        }
-
-        function saveLeads() {
-            localStorage.setItem('advisorLeads', JSON.stringify(leads));
-        }
-
-        // Close modal on background click
-        document.getElementById('leadModal').addEventListener('click', function(e) {
-            if (e.target === this) closeModal();
-        });
+        
+        // Load on page load
+        loadData();
     </script>
 </body>
 </html>

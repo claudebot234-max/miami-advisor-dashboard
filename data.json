@@ -1,0 +1,231 @@
+{
+  "lastUpdated": "2026-03-21T13:50:00-04:00",
+  "summary": {
+    "totalLeads": 5,
+    "totalCPATargets": 5,
+    "totalPracticeAcquisitions": 1,
+    "totalVULProspects": 4,
+    "totalBusinessSales": 3
+  },
+  "leads": {
+    "date": "2026-03-21",
+    "items": [
+      {
+        "id": "dr-gardner-2026-03-21",
+        "category": "Professional Transition",
+        "name": "Dr. Laurence B. 'Lanny' Gardner",
+        "trigger": "Retirement after 50 years at UM Miller School of Medicine",
+        "wealthSignal": "Senior leadership, academic medical career",
+        "reachability": "University of Miami alumni network",
+        "source": "https://news.med.miami.edu/",
+        "openingLine": "After half a century of medical excellence at UM Miller School of Medicine, your retirement marks a pivotal wealth transition moment - let's discuss how to optimize your academic pension, deferred comp, and personal investments for the next chapter.",
+        "heat": "Hot"
+      },
+      {
+        "id": "elena-skvortsova-2026-03-21",
+        "category": "Real Estate Liquidity",
+        "name": "Elena Skvortsova",
+        "trigger": "$19.8M penthouse purchase at Vita at Grove Isle",
+        "position": "President & CEO, Messer Americas",
+        "wealthSignal": "$19.8M real estate, Fortune 500 executive comp",
+        "reachability": "LinkedIn, Messer corporate contacts",
+        "source": "https://therealdeal.com/miami/2026/03/20/south-florida-top-real-estate-deals-thursday-march-19-2026/",
+        "openingLine": "Your recent $19.8M Grove Isle acquisition signals significant Miami commitment - as Messer Americas' CEO, you likely have concentrated equity and executive comp that could benefit from tax-advantaged diversification strategies I specialize in.",
+        "heat": "Hot"
+      },
+      {
+        "id": "anant-bhalla-2026-03-21",
+        "category": "Real Estate Liquidity",
+        "name": "Anant Bhalla",
+        "trigger": "$15.1M penthouse purchase at Vita at Grove Isle",
+        "position": "CEO, American Equity Investment Life (NASDAQ: AEL)",
+        "wealthSignal": "$46.6M total comp (2022), major Miami RE investment",
+        "reachability": "LinkedIn, public company IR",
+        "source": "https://therealdeal.com/miami/2026/03/20/south-florida-top-real-estate-deals-thursday-march-19-2026/",
+        "openingLine": "As CEO of a publicly-traded insurance company with documented $46M+ comp, your Grove Isle purchase shows you understand wealth concentration risk - let's discuss diversification strategies beyond your AEL equity position.",
+        "heat": "Hot"
+      },
+      {
+        "id": "blair-childs-2026-03-21",
+        "category": "Startup Funding",
+        "name": "Blair Austin Childs",
+        "trigger": "$9.3M seed funding round for Neural Earth",
+        "position": "CEO/Founder, Neural Earth",
+        "wealthSignal": "Oversubscribed funding, founder equity in climate AI",
+        "reachability": "LinkedIn, Refresh Miami tech community",
+        "source": "https://www.finsmes.com/2026/02/neural-earth-raises-9-3m-in-seed-funding.html",
+        "openingLine": "Neural Earth's $9.3M raise puts your founder equity at an inflection point - tech entrepreneurs often overlook tax-efficient wealth extraction and key-person protection during growth phases, both critical now.",
+        "heat": "Warm"
+      },
+      {
+        "id": "nexair-owners-2026-03-21",
+        "category": "Real Estate Exit",
+        "name": "nexAir Ownership",
+        "trigger": "Sold Miami/Medley industrial property for $9.8M (280% gain)",
+        "wealthSignal": "$6.3M capital gain on commercial RE",
+        "reachability": "Commercial RE brokers, industrial gas networks",
+        "source": "https://therealdeal.com/miami/2026/03/17/south-florida-top-real-estate-deals-monday-march-16-2026/",
+        "openingLine": "Your nexAir Medley sale generated a substantial taxable gain - privately-held business owners often miss opportunities to defer gains through like-kind exchanges or reposition into tax-advantaged structures like DSTs or life insurance.",
+        "heat": "Warm"
+      }
+    ]
+  },
+  "cpaTargets": {
+    "date": "2026-03-20",
+    "verified": true,
+    "items": [
+      {
+        "id": "philossaint-cpa",
+        "firmName": "Philossaint CPA",
+        "location": "Miami, Miami-Dade",
+        "website": "https://www.philossaintcpa.com/",
+        "specialty": "Minority-owned, tech-forward accounting for entrepreneurs",
+        "whyNoAdvisor": "Focus on accounting tech, no wealth mgmt partnerships mentioned",
+        "heat": "Warm",
+        "linkedInOpener": "Hi [Name], I came across Philossaint CPA and was impressed by your focus on helping South Florida entrepreneurs with modern, tech-forward accounting solutions. Many of the successful business owners I work with as a financial advisor face a gap between great tax planning and comprehensive wealth strategies—especially around succession, retirement plans, and executive benefits. I'd love to explore how we might create value for each other's clients through a referral partnership. Would you be open to a brief call?"
+      },
+      {
+        "id": "landeiro-cpa",
+        "firmName": "Damian Landeiro CPA, PA",
+        "contact": "Damian Landeiro, CPA",
+        "location": "Miami (12350 SW 132nd Ct)",
+        "phone": "786-293-2930",
+        "website": "http://www.landeirocpa.com/",
+        "specialty": "Solo practitioner - tax, audits, valuations, QuickBooks",
+        "whyNoAdvisor": "Traditional solo practice, no advisor partnerships listed",
+        "heat": "Hot",
+        "linkedInOpener": "Hi Damian, I noticed you serve Miami small business owners with tax prep, business valuations, and international consulting—exactly the clients who often need comprehensive wealth planning beyond accounting. As a financial advisor specializing in South Florida business owners, I often refer clients to CPAs who 'get' complex structures. I'd love to discuss a mutual referral relationship where we can support each other's clients with tax-smart wealth strategies. Open to a quick coffee or call?"
+      },
+      {
+        "id": "ramirez-cpa",
+        "firmName": "Jorge Ramirez CPA, P.A.",
+        "contact": "Jorge Ramirez, CPA",
+        "location": "Fort Lauderdale (6550 N Federal Hwy)",
+        "phone": "(954) 463-0829",
+        "email": "jorge@jorcpa.com",
+        "website": "http://www.jorcpa.com/",
+        "specialty": "Bilingual (Spanish/English) - Hispanic/Latin American business owners",
+        "whyNoAdvisor": "Positions as business advisor but tax-focused, no wealth mgmt mentioned",
+        "heat": "Hot",
+        "linkedInOpener": "Hi Jorge, I saw that you specialize in helping Hispanic business owners and high-net-worth individuals in Broward County navigate U.S. tax complexities—a unique and valuable niche. Many of those clients also need strategic guidance on wealth protection, executive benefits, and succession planning that goes beyond tax. As a financial advisor focused on South Florida, I'd love to explore a referral partnership where we can jointly serve your clients' full financial picture. Would you be open to connecting?"
+      },
+      {
+        "id": "caldwell-cpa",
+        "firmName": "Caldwell & Company Accounting",
+        "contact": "K.C. Caldwell",
+        "location": "Plantation (7501 NW 4th St)",
+        "website": "https://kccaldwellcpa.com/",
+        "specialty": "IRS tax problem resolution, CPA consulting",
+        "whyNoAdvisor": "Claims 'trusted advisor' role but scoped to tax/accounting only",
+        "heat": "Warm",
+        "linkedInOpener": "Hi [Name], I came across Caldwell & Company Accounting and appreciated your focus on being a trusted advisor for tax and business growth in Broward County. Many business owners I work with need both strong tax strategy AND holistic wealth planning—especially when it comes to executive comp, practice transitions, and insurance-based wealth strategies. I'd love to discuss how a referral partnership could benefit both our clients. Open to a brief conversation?"
+      },
+      {
+        "id": "dawson-cpa",
+        "firmName": "Dawson & Associates, C.P.A.",
+        "contact": "Raquel Dawson (President)",
+        "location": "Miami (2701 S Bayshore Dr, Coconut Grove)",
+        "website": "https://www.flacpa.com/",
+        "specialty": "Full-service for Coconut Grove, Coral Gables, Brickell professionals",
+        "whyNoAdvisor": "Generic site, no mention of wealth partnerships",
+        "heat": "Hot",
+        "linkedInOpener": "Hi Raquel, I noticed Dawson & Associates serves business owners and professionals in some of Miami's most affluent areas—Coconut Grove, Coral Gables, Brickell. These clients often need more than tax and accounting; they need integrated wealth strategies around retirement, succession, and risk management. As a financial advisor specializing in South Florida business owners, I'd love to explore a referral partnership that could add value to your clients. Would you be open to a conversation?"
+      }
+    ]
+  },
+  "practiceAcquisitions": {
+    "date": "2026-03-20",
+    "items": [
+      {
+        "id": "dave-fernandez",
+        "name": "Dave Fernandez",
+        "firm": "Zynergy Retirement Planning",
+        "location": "Naples, Collier County FL",
+        "crd": "143861",
+        "aum": "$152.2M",
+        "avgClientBalance": "$879,580",
+        "retirementSignal": "NAPFA advisor age 60+, 20+ year practice, no evident succession plan",
+        "secIAPD": "https://adviserinfo.sec.gov/firm/summary/143861",
+        "valuationEstimate": "$3.0-4.5M (2-3x revenue)",
+        "heat": "Hot",
+        "coldEmailSubject": "Succession Planning for Naples NAPFA Practice",
+        "coldEmailOpener": "Dave, your fee-only practice at Zynergy has clearly built an impressive $152M book with high-net-worth clients ($880K average balance). As a Miami-based advisor actively acquiring South Florida practices, I'm interested in discussing a succession arrangement that ensures your clients receive continuity while you realize value on 20+ years of relationship-building. Would you be open to a confidential conversation about your 3-5 year plans?"
+      }
+    ]
+  },
+  "vulProspects": {
+    "date": "2026-03-21",
+    "items": [
+      {
+        "id": "blair-childs-vul",
+        "name": "Blair Austin Childs",
+        "category": "Key Person Insurance",
+        "trigger": "$9.3M seed funding for Neural Earth",
+        "profile": "Tech founder with concentrated equity",
+        "approach": "VUL for tax-efficient liquidity access and key-person protection during growth phase. Flexible premiums adapt to startup cash flow.",
+        "source": "https://www.finsmes.com/2026/02/neural-earth-raises-9-3m-in-seed-funding.html",
+        "heat": "Hot"
+      },
+      {
+        "id": "elena-skvortsova-vul",
+        "name": "Elena Skvortsova",
+        "category": "Executive Benefits",
+        "trigger": "$19.8M real estate purchase, Messer Americas CEO",
+        "profile": "Fortune 500 exec with equity grants and deferred comp",
+        "approach": "VUL transforms concentrated corporate equity into tax-free death benefit while building liquid cash value outside corporate structure. Living benefits for additional real estate opportunities.",
+        "source": "https://therealdeal.com/miami/2026/03/20/south-florida-top-real-estate-deals-thursday-march-19-2026/",
+        "heat": "Hot"
+      },
+      {
+        "id": "anant-bhalla-vul",
+        "name": "Anant Bhalla",
+        "category": "Estate Planning",
+        "trigger": "$15.1M real estate purchase, AEL CEO with $46.6M comp",
+        "profile": "Public company CEO with substantial equity grants",
+        "approach": "As insurance industry CEO, understands VUL for diversification beyond company stock. Policy provides estate tax liquidity and supplemental retirement income without qualified plan restrictions.",
+        "source": "https://therealdeal.com/miami/2026/03/20/south-florida-top-real-estate-deals-thursday-march-19-2026/",
+        "heat": "Hot"
+      },
+      {
+        "id": "nexair-vul",
+        "name": "nexAir Ownership",
+        "category": "Asset Protection",
+        "trigger": "$9.8M commercial RE sale with $6.3M taxable gain",
+        "profile": "Private company owners with concentrated real estate gains",
+        "approach": "VUL repositions taxable RE gains into tax-deferred growth with tax-free policy loan access. Provides key-person protection and buy-sell funding for privately-held business.",
+        "source": "https://therealdeal.com/miami/2026/03/17/south-florida-top-real-estate-deals-monday-march-16-2026/",
+        "heat": "Warm"
+      }
+    ]
+  },
+  "businessSales": {
+    "date": "2026-03-21",
+    "note": "These are transaction opportunities where we connect with BUYERS during deals, not direct outreach leads",
+    "items": [
+      {
+        "id": "sb-venue",
+        "listing": "South Beach Bar/Lounge",
+        "signal": "Full liquor license, 3,875 sq ft",
+        "opportunity": "Connect with buyer for SBA loan insurance, key-person policies",
+        "source": "https://www.bizbuysell.com/",
+        "approach": "Monitor listing for sale activity, connect via business broker"
+      },
+      {
+        "id": "event-rental",
+        "listing": "35-Year Event Rental Company",
+        "signal": "Succession sale, extensive equipment",
+        "opportunity": "Seller financing and earnout structures need insurance",
+        "source": "https://www.bizbuysell.com/",
+        "approach": "Connect during due diligence for buyer/seller wealth planning"
+      },
+      {
+        "id": "luxury-auto",
+        "listing": "Luxury Automotive Dealership",
+        "signal": "Exotic car sales + rental + repair",
+        "opportunity": "High-net-worth buyer with diversification needs",
+        "source": "https://www.bizbuysell.com/",
+        "approach": "Target buyer post-close for asset protection and cash flow mgmt"
+      }
+    ]
+  }
+}
