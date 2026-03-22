@@ -1,7 +1,7 @@
 [
   {
-    "id": 756715658,
-    "sourceId": 756715658,
+    "id": 397455657,
+    "sourceId": 397455657,
     "triggerEvent": "Elena Skvortsova",
     "prospectName": "Elena Skvortsova",
     "eventType": "real-estate",
@@ -14,15 +14,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.903618",
+        "date": "2026-03-22T00:51:41.166499",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.903628"
+    "createdAt": "2026-03-22T00:51:41.166514"
   },
   {
-    "id": 837019699,
-    "sourceId": 837019699,
+    "id": 63872708,
+    "sourceId": 63872708,
     "triggerEvent": "Anant Bhalla",
     "prospectName": "Anant Bhalla",
     "eventType": "real-estate",
@@ -35,15 +35,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.903849",
+        "date": "2026-03-22T00:51:41.166757",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.903850"
+    "createdAt": "2026-03-22T00:51:41.166760"
   },
   {
-    "id": 995045303,
-    "sourceId": 995045303,
+    "id": 343343376,
+    "sourceId": 343343376,
     "triggerEvent": "Blair Austin Childs",
     "prospectName": "Blair Austin Childs",
     "eventType": "startup-exit",
@@ -56,15 +56,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.904036",
+        "date": "2026-03-22T00:51:41.166953",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.904037"
+    "createdAt": "2026-03-22T00:51:41.166954"
   },
   {
-    "id": 190099575,
-    "sourceId": 190099575,
+    "id": 299689930,
+    "sourceId": 299689930,
     "triggerEvent": "Dr. Laurence B. \"Lanny\" Gardner",
     "prospectName": "Dr. Laurence B. \"Lanny\" Gardner",
     "eventType": "real-estate",
@@ -77,15 +77,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.904193",
+        "date": "2026-03-22T00:51:41.167106",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.904194"
+    "createdAt": "2026-03-22T00:51:41.167107"
   },
   {
-    "id": 287145312,
-    "sourceId": 287145312,
+    "id": 849401952,
+    "sourceId": 849401952,
     "triggerEvent": "nexAir Principal Owners",
     "prospectName": "nexAir Principal Owners",
     "eventType": "startup-exit",
@@ -98,15 +98,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.904398",
+        "date": "2026-03-22T00:51:41.167384",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.904398"
+    "createdAt": "2026-03-22T00:51:41.167385"
   },
   {
-    "id": 561822874,
-    "sourceId": 561822874,
+    "id": 644730678,
+    "sourceId": 644730678,
     "triggerEvent": "REMOVED FROM THIS SCAN",
     "prospectName": "REMOVED FROM THIS SCAN",
     "eventType": "startup-exit",
@@ -119,15 +119,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.904463",
+        "date": "2026-03-22T00:51:41.167460",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.904464"
+    "createdAt": "2026-03-22T00:51:41.167461"
   },
   {
-    "id": 346464676,
-    "sourceId": 346464676,
+    "id": 250807017,
+    "sourceId": 250807017,
     "triggerEvent": "Maria Rodriguez",
     "prospectName": "Maria Rodriguez",
     "eventType": "promotion",
@@ -140,15 +140,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.904897",
+        "date": "2026-03-22T00:51:41.167954",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.904898"
+    "createdAt": "2026-03-22T00:51:41.167955"
   },
   {
-    "id": 293657259,
-    "sourceId": 293657259,
+    "id": 809718987,
+    "sourceId": 809718987,
     "triggerEvent": "Carlos Martinez",
     "prospectName": "Carlos Martinez",
     "eventType": "real-estate",
@@ -161,15 +161,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.904931",
+        "date": "2026-03-22T00:51:41.168012",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.904932"
+    "createdAt": "2026-03-22T00:51:41.168013"
   },
   {
-    "id": 798119262,
-    "sourceId": 798119262,
+    "id": 569441964,
+    "sourceId": 569441964,
     "triggerEvent": "Elena Suarez",
     "prospectName": "Elena Suarez",
     "eventType": "other",
@@ -182,15 +182,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.904973",
+        "date": "2026-03-22T00:51:41.168055",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.904974"
+    "createdAt": "2026-03-22T00:51:41.168056"
   },
   {
-    "id": 424636852,
-    "sourceId": 424636852,
+    "id": 553681732,
+    "sourceId": 553681732,
     "triggerEvent": "Practice Acquisition Targets - March 20, 2026",
     "prospectName": "Practice Acquisition Targets - March 20, 2026",
     "eventType": "other",
@@ -203,15 +203,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.905448",
+        "date": "2026-03-22T00:51:41.168587",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.905450"
+    "createdAt": "2026-03-22T00:51:41.168589"
   },
   {
-    "id": 404309628,
-    "sourceId": 404309628,
+    "id": 466632232,
+    "sourceId": 466632232,
     "triggerEvent": "Dave Fernandez - SOLE ACTIONABLE TARGET",
     "prospectName": "(239) 325-9650 (firm phone)",
     "eventType": "promotion",
@@ -224,15 +224,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.905748",
+        "date": "2026-03-22T00:51:41.168919",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.905749"
+    "createdAt": "2026-03-22T00:51:41.168921"
   },
   {
-    "id": 338213293,
-    "sourceId": 338213293,
+    "id": 733753216,
+    "sourceId": 733753216,
     "triggerEvent": "TARGETS REMOVED (NO LONGER VIABLE)",
     "prospectName": "TARGETS REMOVED (NO LONGER VIABLE)",
     "eventType": "other",
@@ -245,15 +245,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.905761",
+        "date": "2026-03-22T00:51:41.168952",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.905761"
+    "createdAt": "2026-03-22T00:51:41.168954"
   },
   {
-    "id": 654323098,
-    "sourceId": 654323098,
+    "id": 816632076,
+    "sourceId": 816632076,
     "triggerEvent": "WHY SO FEW TARGETS?",
     "prospectName": "WHY SO FEW TARGETS?",
     "eventType": "other",
@@ -266,15 +266,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.905890",
+        "date": "2026-03-22T00:51:41.169085",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.905891"
+    "createdAt": "2026-03-22T00:51:41.169086"
   },
   {
-    "id": 570445202,
-    "sourceId": 570445202,
+    "id": 330802381,
+    "sourceId": 330802381,
     "triggerEvent": "NEXT SEARCH PRIORITIES",
     "prospectName": "NEXT SEARCH PRIORITIES",
     "eventType": "promotion",
@@ -287,15 +287,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.905980",
+        "date": "2026-03-22T00:51:41.169201",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.905981"
+    "createdAt": "2026-03-22T00:51:41.169204"
   },
   {
-    "id": 821789572,
-    "sourceId": 821789572,
+    "id": 776400173,
+    "sourceId": 776400173,
     "triggerEvent": "VUL Trigger Monitor - March 20, 2026",
     "prospectName": "VUL Trigger Monitor - March 20, 2026",
     "eventType": "other",
@@ -308,15 +308,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.906363",
+        "date": "2026-03-22T00:51:41.169647",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.906364"
+    "createdAt": "2026-03-22T00:51:41.169649"
   },
   {
-    "id": 707381827,
-    "sourceId": 707381827,
+    "id": 730239868,
+    "sourceId": 730239868,
     "triggerEvent": "Why So Few Verified Prospects?",
     "prospectName": "Why So Few Verified Prospects?",
     "eventType": "startup-exit",
@@ -329,15 +329,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.906443",
+        "date": "2026-03-22T00:51:41.169733",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.906444"
+    "createdAt": "2026-03-22T00:51:41.169734"
   },
   {
-    "id": 412726321,
-    "sourceId": 412726321,
+    "id": 345308046,
+    "sourceId": 345308046,
     "triggerEvent": "\ud83d\udd0d POTENTIAL LEAD (Partial Verification)",
     "prospectName": "\ud83d\udd0d POTENTIAL LEAD (Partial Verification)",
     "eventType": "other",
@@ -350,15 +350,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.906463",
+        "date": "2026-03-22T00:51:41.169755",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.906464"
+    "createdAt": "2026-03-22T00:51:41.169755"
   },
   {
-    "id": 227003063,
-    "sourceId": 227003063,
+    "id": 459735098,
+    "sourceId": 459735098,
     "triggerEvent": "nexAir Affiliate (Medley Industrial Property Sale)",
     "prospectName": "nexAir Affiliate (Medley Industrial Property Sale)",
     "eventType": "startup-exit",
@@ -371,15 +371,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.906596",
+        "date": "2026-03-22T00:51:41.169896",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.906597"
+    "createdAt": "2026-03-22T00:51:41.169897"
   },
   {
-    "id": 464826708,
-    "sourceId": 464826708,
+    "id": 233747470,
+    "sourceId": 233747470,
     "triggerEvent": "**Miami Startup Funding Surge**",
     "prospectName": "**Miami Startup Funding Surge**",
     "eventType": "startup-exit",
@@ -392,15 +392,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.906680",
+        "date": "2026-03-22T00:51:41.169987",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.906680"
+    "createdAt": "2026-03-22T00:51:41.169987"
   },
   {
-    "id": 464666485,
-    "sourceId": 464666485,
+    "id": 998815744,
+    "sourceId": 998815744,
     "triggerEvent": "**Institutional Real Estate Acquisitions (Buyers, Not Sellers)**",
     "prospectName": "**Institutional Real Estate Acquisitions (Buyers, Not Sellers)**",
     "eventType": "startup-exit",
@@ -413,15 +413,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.906773",
+        "date": "2026-03-22T00:51:41.170084",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.906774"
+    "createdAt": "2026-03-22T00:51:41.170085"
   },
   {
-    "id": 252457436,
-    "sourceId": 252457436,
+    "id": 540974408,
+    "sourceId": 540974408,
     "triggerEvent": "**Venture Capital Fund Closings**",
     "prospectName": "**Venture Capital Fund Closings**",
     "eventType": "other",
@@ -434,15 +434,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.906839",
+        "date": "2026-03-22T00:51:41.170155",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.906840"
+    "createdAt": "2026-03-22T00:51:41.170156"
   },
   {
-    "id": 522910812,
-    "sourceId": 522910812,
+    "id": 699270197,
+    "sourceId": 699270197,
     "triggerEvent": "\u26a1 Recommended Actions",
     "prospectName": "\u26a1 Recommended Actions",
     "eventType": "startup-exit",
@@ -455,15 +455,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.906907",
+        "date": "2026-03-22T00:51:41.170227",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.906907"
+    "createdAt": "2026-03-22T00:51:41.170227"
   },
   {
-    "id": 437513235,
-    "sourceId": 437513235,
+    "id": 710432990,
+    "sourceId": 710432990,
     "triggerEvent": "VUL Trigger Monitor - March 21, 2026",
     "prospectName": "VUL Trigger Monitor - March 21, 2026",
     "eventType": "other",
@@ -476,15 +476,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.907196",
+        "date": "2026-03-22T00:51:41.170531",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.907197"
+    "createdAt": "2026-03-22T00:51:41.170532"
   },
   {
-    "id": 993498261,
-    "sourceId": 993498261,
+    "id": 505066281,
+    "sourceId": 505066281,
     "triggerEvent": "VERIFIED VUL TRIGGER EVENTS - MIAMI",
     "prospectName": "VERIFIED VUL TRIGGER EVENTS - MIAMI",
     "eventType": "other",
@@ -497,15 +497,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.907208",
+        "date": "2026-03-22T00:51:41.170544",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.907209"
+    "createdAt": "2026-03-22T00:51:41.170545"
   },
   {
-    "id": 720021315,
-    "sourceId": 720021315,
+    "id": 6989746,
+    "sourceId": 6989746,
     "triggerEvent": "Blair Austin Childs - Neural Earth CEO/Founder",
     "prospectName": "Blair Austin Childs - Neural Earth CEO/Founder",
     "eventType": "promotion",
@@ -518,15 +518,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.907309",
+        "date": "2026-03-22T00:51:41.170646",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.907309"
+    "createdAt": "2026-03-22T00:51:41.170646"
   },
   {
-    "id": 260447679,
-    "sourceId": 260447679,
+    "id": 391520052,
+    "sourceId": 391520052,
     "triggerEvent": "Elena Skvortsova - Messer Americas President & CEO",
     "prospectName": "Elena Skvortsova - Messer Americas President & CEO",
     "eventType": "real-estate",
@@ -539,15 +539,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.907414",
+        "date": "2026-03-22T00:51:41.170755",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.907414"
+    "createdAt": "2026-03-22T00:51:41.170756"
   },
   {
-    "id": 728376068,
-    "sourceId": 728376068,
+    "id": 846749277,
+    "sourceId": 846749277,
     "triggerEvent": "Anant Bhalla - American Equity Investment Life CEO",
     "prospectName": "Anant Bhalla - American Equity Investment Life CEO",
     "eventType": "startup-exit",
@@ -560,15 +560,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.907520",
+        "date": "2026-03-22T00:51:41.170867",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.907520"
+    "createdAt": "2026-03-22T00:51:41.170868"
   },
   {
-    "id": 765966265,
-    "sourceId": 765966265,
+    "id": 162739908,
+    "sourceId": 162739908,
     "triggerEvent": "nexAir Leadership (Commercial Real Estate Exit)",
     "prospectName": "nexAir Leadership (Commercial Real Estate Exit)",
     "eventType": "startup-exit",
@@ -581,15 +581,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.907621",
+        "date": "2026-03-22T00:51:41.170975",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.907622"
+    "createdAt": "2026-03-22T00:51:41.170975"
   },
   {
-    "id": 687838312,
-    "sourceId": 687838312,
+    "id": 774833840,
+    "sourceId": 774833840,
     "triggerEvent": "Miami Wealth Migration Trends (March 2026)",
     "prospectName": "Miami Wealth Migration Trends (March 2026)",
     "eventType": "startup-exit",
@@ -602,15 +602,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.907674",
+        "date": "2026-03-22T00:51:41.171031",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.907675"
+    "createdAt": "2026-03-22T00:51:41.171031"
   },
   {
-    "id": 269920308,
-    "sourceId": 269920308,
+    "id": 796123659,
+    "sourceId": 796123659,
     "triggerEvent": "Startup Funding Activity",
     "prospectName": "Startup Funding Activity",
     "eventType": "startup-exit",
@@ -623,15 +623,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.907712",
+        "date": "2026-03-22T00:51:41.171070",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.907712"
+    "createdAt": "2026-03-22T00:51:41.171071"
   },
   {
-    "id": 696863008,
-    "sourceId": 696863008,
+    "id": 534487967,
+    "sourceId": 534487967,
     "triggerEvent": "Commercial Real Estate",
     "prospectName": "Commercial Real Estate",
     "eventType": "real-estate",
@@ -644,15 +644,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.907751",
+        "date": "2026-03-22T00:51:41.171112",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.907751"
+    "createdAt": "2026-03-22T00:51:41.171113"
   },
   {
-    "id": 96527902,
-    "sourceId": 96527902,
+    "id": 858268216,
+    "sourceId": 858268216,
     "triggerEvent": "PROSPECTING NOTES",
     "prospectName": "PROSPECTING NOTES",
     "eventType": "real-estate",
@@ -665,15 +665,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.907861",
+        "date": "2026-03-22T00:51:41.171230",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.907862"
+    "createdAt": "2026-03-22T00:51:41.171231"
   },
   {
-    "id": 347596714,
-    "sourceId": 347596714,
+    "id": 612679394,
+    "sourceId": 612679394,
     "triggerEvent": "CPA Partner Finder Report",
     "prospectName": "CPA Partner Finder Report",
     "eventType": "other",
@@ -686,15 +686,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.908212",
+        "date": "2026-03-22T00:51:41.171654",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.908213"
+    "createdAt": "2026-03-22T00:51:41.171655"
   },
   {
-    "id": 543033971,
-    "sourceId": 543033971,
+    "id": 776565283,
+    "sourceId": 776565283,
     "triggerEvent": "VERIFIED TARGET FIRMS",
     "prospectName": "VERIFIED TARGET FIRMS",
     "eventType": "other",
@@ -707,15 +707,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.908226",
+        "date": "2026-03-22T00:51:41.171669",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.908226"
+    "createdAt": "2026-03-22T00:51:41.171669"
   },
   {
-    "id": 186126622,
-    "sourceId": 186126622,
+    "id": 860808303,
+    "sourceId": 860808303,
     "triggerEvent": "Philossaint CPA",
     "prospectName": "Philossaint CPA",
     "eventType": "other",
@@ -728,15 +728,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.908395",
+        "date": "2026-03-22T00:51:41.171861",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.908396"
+    "createdAt": "2026-03-22T00:51:41.171864"
   },
   {
-    "id": 721078825,
-    "sourceId": 721078825,
+    "id": 926306083,
+    "sourceId": 926306083,
     "triggerEvent": "Damian Landeiro CPA, PA",
     "prospectName": "Damian Landeiro CPA, PA",
     "eventType": "other",
@@ -749,15 +749,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.908574",
+        "date": "2026-03-22T00:51:41.172063",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.908574"
+    "createdAt": "2026-03-22T00:51:41.172064"
   },
   {
-    "id": 445983806,
-    "sourceId": 445983806,
+    "id": 939798836,
+    "sourceId": 939798836,
     "triggerEvent": "Jorge Ramirez CPA, P.A.",
     "prospectName": "Jorge Ramirez CPA, P.A.",
     "eventType": "startup-exit",
@@ -770,15 +770,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.908770",
+        "date": "2026-03-22T00:51:41.172271",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.908770"
+    "createdAt": "2026-03-22T00:51:41.172272"
   },
   {
-    "id": 418774065,
-    "sourceId": 418774065,
+    "id": 326105706,
+    "sourceId": 326105706,
     "triggerEvent": "Caldwell & Company Accounting",
     "prospectName": "Caldwell & Company Accounting",
     "eventType": "inheritance",
@@ -791,15 +791,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.908964",
+        "date": "2026-03-22T00:51:41.172469",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.908964"
+    "createdAt": "2026-03-22T00:51:41.172470"
   },
   {
-    "id": 175239730,
-    "sourceId": 175239730,
+    "id": 242732107,
+    "sourceId": 242732107,
     "triggerEvent": "Dawson & Associates, C.P.A.",
     "prospectName": "Dawson & Associates, C.P.A.",
     "eventType": "other",
@@ -812,15 +812,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.909153",
+        "date": "2026-03-22T00:51:41.172660",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.909154"
+    "createdAt": "2026-03-22T00:51:41.172661"
   },
   {
-    "id": 385223748,
-    "sourceId": 385223748,
+    "id": 96974992,
+    "sourceId": 96974992,
     "triggerEvent": "South Beach Entertainment Venue",
     "prospectName": "South Beach Entertainment Venue",
     "eventType": "startup-exit",
@@ -833,15 +833,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.909541",
+        "date": "2026-03-22T00:51:41.173108",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.909542"
+    "createdAt": "2026-03-22T00:51:41.173110"
   },
   {
-    "id": 747153993,
-    "sourceId": 747153993,
+    "id": 531009263,
+    "sourceId": 531009263,
     "triggerEvent": "Event Rental Company (35-Year Established)",
     "prospectName": "Event Rental Company (35-Year Established)",
     "eventType": "startup-exit",
@@ -854,15 +854,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.909618",
+        "date": "2026-03-22T00:51:41.173189",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.909618"
+    "createdAt": "2026-03-22T00:51:41.173189"
   },
   {
-    "id": 406952613,
-    "sourceId": 406952613,
+    "id": 375156579,
+    "sourceId": 375156579,
     "triggerEvent": "Luxury Automotive Dealership",
     "prospectName": "Luxury Automotive Dealership",
     "eventType": "startup-exit",
@@ -875,15 +875,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.909671",
+        "date": "2026-03-22T00:51:41.173245",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.909672"
+    "createdAt": "2026-03-22T00:51:41.173246"
   },
   {
-    "id": 691135067,
-    "sourceId": 691135067,
+    "id": 729732306,
+    "sourceId": 729732306,
     "triggerEvent": "USAGE NOTES",
     "prospectName": "USAGE NOTES",
     "eventType": "startup-exit",
@@ -896,15 +896,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.909796",
+        "date": "2026-03-22T00:51:41.173379",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.909797"
+    "createdAt": "2026-03-22T00:51:41.173380"
   },
   {
-    "id": 303658947,
-    "sourceId": 303658947,
+    "id": 324523742,
+    "sourceId": 324523742,
     "triggerEvent": "ZoomInfo Leads - 2026-03-20",
     "prospectName": "ZoomInfo Leads - 2026-03-20",
     "eventType": "other",
@@ -917,15 +917,15 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.910157",
+        "date": "2026-03-22T00:51:41.173749",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.910159"
+    "createdAt": "2026-03-22T00:51:41.173750"
   },
   {
-    "id": 88484718,
-    "sourceId": 88484718,
+    "id": 943304030,
+    "sourceId": 943304030,
     "triggerEvent": "Potential High-Value Leads",
     "prospectName": "Dr. Michael Rothstein | TITLE: Orthopedic Surgeon | COMPANY: Rothstein Medical Associates | LOCATION: Phoenix, AZ | TRIGGER: Medical Practice Sale Preparation | WEALTH SIGNAL: High-value specialty medical practice | ZOOMINFO: \"Dr. Michael Rothstein\" Rothstein Medical Associates",
     "eventType": "startup-exit",
@@ -938,10 +938,10 @@
     "notes": [],
     "activities": [
       {
-        "date": "2026-03-22T00:50:24.910196",
+        "date": "2026-03-22T00:51:41.173783",
         "action": "Imported from AI scan"
       }
     ],
-    "createdAt": "2026-03-22T00:50:24.910197"
+    "createdAt": "2026-03-22T00:51:41.173784"
   }
 ]
