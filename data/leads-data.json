@@ -253,5 +253,105 @@
     "notes": [],
     "activities": [],
     "createdAt": "2026-03-23T20:28:31.642Z"
+  },
+  {
+    "id": 1424470,
+    "category": "cpa",
+    "triggerEvent": "High-income entrepreneurs ($500K+ income) with Act 60 Puerto Rico tax optimization and multi-entity structuring. No advisor partnership mentioned. Bil",
+    "prospectName": "Victor Delerme",
+    "eventType": "other",
+    "details": "High-income entrepreneurs ($500K+ income) with Act 60 Puerto Rico tax optimization and multi-entity structuring. No advisor partnership mentioned. Bilingual practice serving global entrepreneurs with international footprint.",
+    "advisorApproach": "Victor, I came across your work with high-income entrepreneurs and Act 60 relocations\u2014impressive niche. I'm a wealth advisor in Miami working with similar clients (business owners scaling 7-8 figures). I'm finding most CPAs focus on compliance, not strategy. You clearly do both. Curious if you've built referral relationships with advisors who complement your tax work\u2014estate planning, investment structuring, insurance optimization?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Hot",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T16:39:10.506662",
+        "action": "Imported from cpa-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-23T16:39:10.506691"
+  },
+  {
+    "id": 392820,
+    "category": "cpa",
+    "triggerEvent": "Construction contractors, freight companies, wholesale distributors with complex cash flow. 20+ years experience, Big 4 background. Strong tax resolut",
+    "prospectName": "Edgar Gomez",
+    "eventType": "other",
+    "details": "Construction contractors, freight companies, wholesale distributors with complex cash flow. 20+ years experience, Big 4 background. Strong tax resolution practice. No advisor partnership on website.",
+    "advisorApproach": "Edgar, I saw you've built a strong practice with construction and freight businesses in Miami. Those clients have unique cash flow challenges. I'm finding business owners in those industries often have great tax planning but terrible wealth accumulation strategies. They're profitable, but not building personal wealth outside the business. Curious if you've seen that pattern and whether there's a fit to collaborate?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Hot",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T16:39:10.506716",
+        "action": "Imported from cpa-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-23T16:39:10.506721"
+  },
+  {
+    "id": 3868097,
+    "category": "cpa",
+    "triggerEvent": "Startups, real estate investors, and high-net-worth individuals. International tax planning. 500+ LinkedIn connections (well-networked). Real estate i",
+    "prospectName": "Edward D. Quilca",
+    "eventType": "other",
+    "details": "Startups, real estate investors, and high-net-worth individuals. International tax planning. 500+ LinkedIn connections (well-networked). Real estate investors over-concentrated in property, startup founders in equity.",
+    "advisorApproach": "Edward, I saw you work with real estate investors and startup founders in Miami\u2014two groups with similar blind spots: great at building wealth, terrible at protecting and diversifying it. Real estate guys have 100% in property. Startup founders have 100% in equity. Both need someone to help them translate that into long-term financial security. Worth a quick call to explore?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Warm",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T16:39:10.506736",
+        "action": "Imported from cpa-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-23T16:39:10.506740"
+  },
+  {
+    "id": 778807,
+    "category": "cpa",
+    "triggerEvent": "International business owners, foreign investors in U.S. real estate (FIRPTA), FATCA compliance. Serving clients since 1980 (44 years). Attorney + CPA",
+    "prospectName": "Alvaro Acevedo Jr.",
+    "eventType": "other",
+    "details": "International business owners, foreign investors in U.S. real estate (FIRPTA), FATCA compliance. Serving clients since 1980 (44 years). Attorney + CPA dual expertise. No wealth advisor partnership despite ultra-HNW international clients.",
+    "advisorApproach": "Alvaro, I saw you've been serving international clients in Brickell since 1980\u2014serious track record. I keep running into foreign nationals who have great tax and legal structuring but zero investment strategy or wealth planning. They're compliant and structured, but not optimized for long-term wealth growth. Curious if you've seen that pattern and whether there's a fit to collaborate on the international client segment?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Warm",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T16:39:10.506749",
+        "action": "Imported from cpa-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-23T16:39:10.506753"
+  },
+  {
+    "id": 4843258,
+    "category": "cpa",
+    "triggerEvent": "IRS problem resolution (clients in financial distress), financial modeling, expert witness testimony. Virtual firm, tech-forward. Financial coaching m",
+    "prospectName": "Mongio & Associates",
+    "eventType": "other",
+    "details": "IRS problem resolution (clients in financial distress), financial modeling, expert witness testimony. Virtual firm, tech-forward. Financial coaching mentioned (stepping into advisory territory). No wealth advisor partnership.",
+    "advisorApproach": "I noticed Mongio & Associates specializes in IRS problem resolution\u2014valuable niche. I'm curious: what happens to your clients AFTER you fix their tax problems? They're compliant again, but do they have a plan to rebuild wealth and avoid ending up back in the same position? I work with business owners who've been through financial crises. The ones who succeed long-term have two things: a great CPA and a wealth advisor. Worth a conversation about the 'what comes next' side?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Warm",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T16:39:10.506762",
+        "action": "Imported from cpa-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-23T16:39:10.506764"
   }
 ]
