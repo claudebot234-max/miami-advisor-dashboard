@@ -567,6 +567,7 @@
                 <span class="nav-badge empty" id="divorceCount">0</span>
             </div>
             <div class="nav-item" data-view="pipeline"><span>Pipeline</span><span class="nav-badge empty" id="pipelineCount">0</span></div>
+            <div class="nav-item" data-view="updates"><span>Updates</span><span class="nav-badge empty" id="updatesCount">0</span></div>
         </div>
     </div>
 
@@ -731,7 +732,9 @@
                 this.classList.add('active');
                 currentView = this.dataset.view;
                 document.getElementById('viewTitle').textContent = this.textContent.trim();
-                if(currentView === 'pipeline') {
+                if(currentView === 'updates') {
+                  loadUpdates();
+                } else if(currentView === 'pipeline') {
                   checkPipelineToken && checkPipelineToken();
                   document.getElementById('leadList') && loadPipelineLeads().then(function(pl){ renderPipeline(pl); });
                 } else {
@@ -1215,6 +1218,44 @@ function exportPipelineCSV() {
   a.href = 'data:text/csv;charset=utf-8,'+encodeURIComponent(csv);
   a.download = 'pipeline-'+new Date().toISOString().slice(0,10)+'.csv';
   a.click();
+}
+
+function loadUpdates(){
+  var el=document.getElementById('leadList');
+  if(!el)return;
+  var token=localStorage.getItem('ghToken')||'';
+  el.innerHTML='<div style="color:#888;padding:20px">Loading updates...</div>';
+  fetch('https://api.github.com/repos/claudebot234-max/miami-advisor-dashboard/contents/data/updates.json',
+    {headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}})
+  .then(function(r){return r.json();})
+  .then(function(d){
+    var items=d.content?JSON.parse(atob(d.content.replace(/\n/g,''))):[]; 
+    renderUpdates(items);
+  })
+  .catch(function(){renderUpdates([]);});
+}
+function renderUpdates(items){
+  var el=document.getElementById('leadList');
+  if(!el)return;
+  if(!items.length){
+    el.innerHTML='<div style="text-align:center;padding:60px 20px;color:#64748b"><h3 style="color:#94a3b8;margin-bottom:8px">No updates yet</h3><p>Updates from your AI system will appear here each morning</p></div>';
+    return;
+  }
+  items.sort(function(a,b){return new Date(b.date)-new Date(a.date);});
+  el.innerHTML=items.map(function(u){
+    var col=u.type==='lead'?'#4f8ef7':u.type==='acquisition'?'#2ecc71':u.type==='alert'?'#e74c3c':'#f39c12';
+    return '<div style="background:rgba(15,23,42,0.5);border:1px solid rgba(100,200,255,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1rem">'
+      +'<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">'
+      +'<div style="display:flex;align-items:center;gap:10px">'
+      +'<span style="background:'+col+'22;color:'+col+';padding:3px 10px;border-radius:6px;font-size:11px;font-weight:600;text-transform:uppercase">'+u.type+'</span>'
+      +'<span style="font-size:14px;font-weight:600;color:#f1f5f9">'+u.title+'</span>'
+      +'</div>'
+      +'<span style="font-size:12px;color:#64748b">'+new Date(u.date).toLocaleDateString()+'</span>'
+      +'</div>'
+      +'<p style="font-size:14px;color:#cbd5e1;line-height:1.6;margin:0">'+u.body+'</p>'
+      +(u.action?'<div style="margin-top:12px"><span style="font-size:12px;color:'+col+';font-weight:500">Action: '+u.action+'</span></div>':'')
+      +'</div>';
+  }).join('');
 }
 </script></body>
 </html>
