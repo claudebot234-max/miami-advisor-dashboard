@@ -11,93 +11,68 @@
     "status": "new",
     "heat": "HOT",
     "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T19:38:31.345Z",
-        "action": "Lead created via Ryan Magath referral"
-      }
-    ],
-    "createdAt": "2026-03-23T19:38:31.345Z"
+    "activities": [],
+    "createdAt": "2026-03-23T19:42:20.798Z"
   },
   {
     "id": 1001,
     "category": "cpa",
-    "triggerEvent": "Miami CPA serving $500K+ income entrepreneurs - no advisor partnership",
+    "triggerEvent": "Brickell CPA serving $500K+ entrepreneurs - Act 60 specialist",
     "prospectName": "Victor Delerme, CPA",
     "eventType": "other",
-    "details": "Brickell CPA firm. Act 60 specialist, high-income entrepreneurs, global investors. Founded 2009. No existing advisor partnership.",
-    "advisorApproach": "Victor, I work with several entrepreneurs in Miami who could benefit from our collaboration. Your Act 60 expertise paired with my wealth planning would be a natural fit. LinkedIn: linkedin.com/in/victor-delerme/",
+    "details": "Delerme CPA, Brickell. Act 60 specialist, high-income entrepreneurs, global investors. Founded 2009. No existing advisor partnership.",
+    "advisorApproach": "Victor, I work with entrepreneurs in Miami who could benefit from our collaboration. Your Act 60 expertise paired with my wealth planning would be a natural fit. linkedin.com/in/victor-delerme/",
     "estimatedAUM": 0,
     "status": "new",
     "heat": "Hot",
     "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T19:38:31.345Z",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T19:38:31.345Z"
+    "activities": [],
+    "createdAt": "2026-03-23T19:42:20.798Z"
   },
   {
     "id": 1002,
     "category": "cpa",
-    "triggerEvent": "Big 4 background CPA serving construction/business owners in Brickell",
+    "triggerEvent": "Big 4 CPA serving construction/business owners in Brickell",
     "prospectName": "Edgar Gomez, CPA",
     "eventType": "other",
-    "details": "E. Gomez CPA LLC, Brickell. 20+ years, Big 4 background. Serves construction contractors, freight/trucking, small business owners.",
-    "advisorApproach": "Hi Edgar, your Big 4 background and client base in construction/freight would pair well with my practice. Many business owners need both tax and wealth planning.",
+    "details": "E. Gomez CPA LLC, Brickell. 20+ years, Big 4 background. Construction contractors, freight/trucking, small business owners.",
+    "advisorApproach": "Hi Edgar, your Big 4 background and construction/freight client base would pair well with my practice. Many business owners need both tax and wealth planning.",
     "estimatedAUM": 0,
     "status": "new",
     "heat": "Warm",
     "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T19:38:31.345Z",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T19:38:31.345Z"
+    "activities": [],
+    "createdAt": "2026-03-23T19:42:20.798Z"
   },
   {
     "id": 1003,
     "category": "cpa",
-    "triggerEvent": "CPA serving real estate investors and startups - HNW Miami clients",
+    "triggerEvent": "CPA serving real estate investors and startups in Miami",
     "prospectName": "Edward D. Quilca, CPA",
     "eventType": "other",
-    "details": "Quilca CPA Group. Serves real estate investors, startups, HNW individuals. FIU grad, 500+ LinkedIn connections, international tax.",
-    "advisorApproach": "Hi Edward, your real estate and startup client base aligns perfectly with wealth events I track. Would love to explore a referral partnership.",
+    "details": "Quilca CPA Group. Real estate investors, startups, HNW individuals. FIU grad, 500+ LinkedIn connections, international tax.",
+    "advisorApproach": "Hi Edward, your real estate and startup client base aligns with wealth events I track. Would love to explore a referral partnership.",
     "estimatedAUM": 0,
     "status": "new",
     "heat": "Warm",
     "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T19:38:31.345Z",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T19:38:31.345Z"
+    "activities": [],
+    "createdAt": "2026-03-23T19:42:20.798Z"
   },
   {
     "id": 1004,
     "category": "cpa",
-    "triggerEvent": "Attorney+CPA at 800 Brickell - 44 years serving international HNW clients",
+    "triggerEvent": "Attorney+CPA at 800 Brickell - 44 years international HNW clients",
     "prospectName": "Alvaro Acevedo Jr., JD, CPA",
     "eventType": "other",
-    "details": "Brickell Accountants, 800 Brickell Ave. Attorney + CPA dual credentials. International clients since 1980. FIRPTA and cross-border wealth focus.",
+    "details": "Brickell Accountants, 800 Brickell Ave. Attorney + CPA. International clients since 1980. FIRPTA and cross-border wealth.",
     "advisorApproach": "Hi Alvaro, your 44 years at 800 Brickell serving international HNW clients makes you an ideal partner. Would love a quick coffee.",
     "estimatedAUM": 0,
     "status": "new",
     "heat": "Warm",
     "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T19:38:31.345Z",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T19:38:31.345Z"
+    "activities": [],
+    "createdAt": "2026-03-23T19:42:20.798Z"
   },
   {
     "id": 1005,
@@ -105,58 +80,28 @@
     "triggerEvent": "IRS resolution CPA - clients rebuilding wealth post-crisis",
     "prospectName": "Mongio & Associates, CPAs",
     "eventType": "other",
-    "details": "Virtual firm. IRS problem resolution, financial modeling, veteran-focused. Modern approach, likely open to partnerships.",
-    "advisorApproach": "Your IRS resolution clients are rebuilding wealth after crisis - a perfect point to introduce comprehensive financial planning.",
+    "details": "Virtual firm. IRS problem resolution, financial modeling, veteran-focused.",
+    "advisorApproach": "Your IRS resolution clients are rebuilding wealth after crisis - perfect point to introduce comprehensive financial planning.",
     "estimatedAUM": 0,
     "status": "new",
     "heat": "Warm",
     "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T19:38:31.345Z",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T19:38:31.345Z"
+    "activities": [],
+    "createdAt": "2026-03-23T19:42:20.798Z"
   },
   {
     "id": 2001,
     "category": "lead-radar",
-    "triggerEvent": "40-year Aventura dental practice - succession planning needed",
+    "triggerEvent": "40-year Aventura dental practice owner - succession planning needed",
     "prospectName": "Dr. Larry Grillo",
     "eventType": "other",
-    "details": "Aventura Dental Arts LLC. Senior partner since 1986. Age ~60. Income $500K-1M+. Specialty esthetic/implant practice. No financial advisor mentioned.",
-    "advisorApproach": "Dr. Grillo, you've built Aventura Dental Arts over nearly 40 years. As you think about the next 5-10 years, have you started planning how to transition the practice or diversify wealth beyond the business?",
+    "details": "Aventura Dental Arts LLC. Senior partner since 1986. Age ~60. Income $500K-1M+. Specialty esthetic/implant practice. No financial advisor mentioned on website.",
+    "advisorApproach": "Dr. Grillo, you have built Aventura Dental Arts over nearly 40 years. As you think about the next 5-10 years, have you started planning how to transition the practice or diversify wealth beyond the business?",
     "estimatedAUM": 3000000,
     "status": "new",
     "heat": "Warm",
     "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T19:38:31.345Z",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T19:38:31.345Z"
-  },
-  {
-    "id": 2002,
-    "category": "lead-radar",
-    "triggerEvent": "Honey co-founder sold Miami Beach mansion $18.5M - post-exit wealth",
-    "prospectName": "Ryan Hudson",
-    "eventType": "startup-exit",
-    "details": "Co-founded Honey (PayPal $4B acquisition 2020). Just sold Venetian Islands home $18.5M March 2026. Starting new venture Pie. Late 30s-40s.",
-    "advisorApproach": "Ryan, congrats on the Venetian Islands sale and building Pie. As a founder post-exit, are you working with anyone helping balance startup grind with personal wealth diversification?",
-    "estimatedAUM": 10000000,
-    "status": "new",
-    "heat": "Hot",
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T19:38:31.345Z",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T19:38:31.345Z"
+    "activities": [],
+    "createdAt": "2026-03-23T19:42:20.798Z"
   }
 ]
