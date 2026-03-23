@@ -1,296 +1,1922 @@
 [
   {
-    "id": 777001,
-    "category": "divorce-referral",
-    "triggerEvent": "Divorce settlement - papers finalizing 1-2 months",
-    "prospectName": "Stacy (Ryan Magath Referral)",
-    "eventType": "divorce",
-    "details": "High-asset divorce client from Ryan Magath (forensic accountant, NJ). No money management experience. First lead from referral pipeline.",
-    "advisorApproach": "Warm intro through Ryan. Focus on wealth protection post-divorce, investment basics, fresh start planning.",
-    "status": "new",
-    "heat": "HOT",
-    "source": "Ryan Magath",
-    "estimatedAUM": 2000000,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T00:00:00Z",
-        "action": "Lead created via Ryan Magath referral"
-      }
-    ],
-    "createdAt": "2026-03-23T00:00:00Z"
-  },
-  {
-    "id": 6102971,
-    "category": "cpa",
-    "triggerEvent": "- **High-income business owners** ($500K+ annual income)",
-    "prospectName": "Victor Delerme, CPA",
-    "eventType": "cpa",
-    "details": "- **High-income business owners** ($500K+ annual income)",
-    "advisorApproach": "** https://www.linkedin.com/in/victor-delerme/",
-    "status": "new",
-    "heat": "Warm",
-    "source": "cpa-targets-today.md",
-    "estimatedAUM": 0,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T13:43:47.026469",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T13:43:47.026478"
-  },
-  {
-    "id": 9769634,
-    "category": "cpa",
-    "triggerEvent": "- **Construction contractors** (project-based businesses with complex cash flow)",
-    "prospectName": "Edgar Gomez, CPA, MST, MBA",
-    "eventType": "cpa",
-    "details": "- **Construction contractors** (project-based businesses with complex cash flow)",
-    "advisorApproach": "** (Search \"Edgar Gomez CPA Miami\" - has profile)",
-    "status": "new",
-    "heat": "Warm",
-    "source": "cpa-targets-today.md",
-    "estimatedAUM": 0,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T13:43:47.026505",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T13:43:47.026506"
-  },
-  {
-    "id": 4178141,
-    "category": "cpa",
-    "triggerEvent": "- **Startups** (early-stage entrepreneurs)",
-    "prospectName": "Edward D. Quilca, CPA",
-    "eventType": "cpa",
-    "details": "- **Startups** (early-stage entrepreneurs)",
-    "advisorApproach": "** https://www.linkedin.com/in/quilcacpa/ (500+ connections)",
-    "status": "new",
-    "heat": "Warm",
-    "source": "cpa-targets-today.md",
-    "estimatedAUM": 0,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T13:43:47.026518",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T13:43:47.026519"
-  },
-  {
-    "id": 4934077,
-    "category": "cpa",
-    "triggerEvent": "- **International business owners** (U.S. inbound and outbound)",
-    "prospectName": "Alvaro Acevedo Jr., JD, CPA",
-    "eventType": "cpa",
-    "details": "- **International business owners** (U.S. inbound and outbound)",
-    "advisorApproach": "** (Search \"Alvaro Acevedo CPA Miami\")",
-    "status": "new",
-    "heat": "Warm",
-    "source": "cpa-targets-today.md",
-    "estimatedAUM": 0,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T13:43:47.026529",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T13:43:47.026530"
-  },
-  {
-    "id": 9354868,
-    "category": "cpa",
-    "triggerEvent": "** Virtual CPA firm (cloud-based, nationwide reach)",
-    "prospectName": "Mongio & Associates, CPAs",
-    "eventType": "cpa",
-    "details": "** Virtual CPA firm (cloud-based, nationwide reach)",
-    "advisorApproach": "** https://www.linkedin.com/company/mongioandassociates (search for partners)",
-    "status": "new",
-    "heat": "Warm",
-    "source": "cpa-targets-today.md",
-    "estimatedAUM": 0,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T13:43:47.026544",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T13:43:47.026544"
-  },
-  {
-    "id": 124073,
+    "name": "# Miami Lead Radar - March 23, 2026",
     "category": "lead-radar",
-    "triggerEvent": "** Just purchased $19.61M Jupiter mansion via trust (March 2026)",
-    "prospectName": "John Ketchum",
-    "eventType": "lead-radar",
-    "details": "** Just purchased $19.61M Jupiter mansion via trust (March 2026)",
-    "advisorApproach": "",
     "status": "new",
     "heat": "Warm",
     "source": "leads-today.md",
-    "estimatedAUM": 0,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T13:43:47.027498",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T13:43:47.027499"
+    "date": "2026-03-23",
+    "id": 1429013
   },
   {
-    "id": 8774659,
+    "name": "## High-Net-Worth Leads with Wealth Trigger Events",
     "category": "lead-radar",
-    "triggerEvent": "** Purchased $15.1M penthouse duplex at Vita at Grove Isle (March 2026)",
-    "prospectName": "Anant Bhalla",
-    "eventType": "lead-radar",
-    "details": "** Purchased $15.1M penthouse duplex at Vita at Grove Isle (March 2026)",
-    "advisorApproach": "",
     "status": "new",
     "heat": "Warm",
     "source": "leads-today.md",
-    "estimatedAUM": 0,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T13:43:47.027518",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T13:43:47.027519"
+    "date": "2026-03-23",
+    "id": 2276366
   },
   {
-    "id": 1422254,
+    "name": "John Ketchum",
+    "company": "** NextEra Energy (largest utility company in the US)",
+    "title": "Title:** Chief Executive Officer",
+    "trigger": "Event:** Just purchased $19.61M Jupiter mansion via trust (March 2026)",
+    "openingLine": "Opening Line:** \"Congrats on the Jupiter property\u2014$19.6M is a serious commitment to South Florida. As you're consolidating wealth here, have you mapped out the estate and tax implications of keeping that much tied to your NextEra equity?\"",
     "category": "lead-radar",
-    "triggerEvent": "** Purchased $19.8M penthouse duplex (5,900 sq ft + 4,400 sq ft terrace) (March 2026)",
-    "prospectName": "Elena Skvortsova",
-    "eventType": "lead-radar",
-    "details": "** Purchased $19.8M penthouse duplex (5,900 sq ft + 4,400 sq ft terrace) (March 2026)",
-    "advisorApproach": "",
     "status": "new",
     "heat": "Warm",
     "source": "leads-today.md",
-    "estimatedAUM": 0,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T13:43:47.027537",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T13:43:47.027539"
+    "date": "2026-03-23",
+    "id": 1140914
   },
   {
-    "id": 1023470,
+    "name": "Anant Bhalla",
+    "company": "** American Equity Investment Life Holding Company",
+    "title": "Title:** Chief Executive Officer",
+    "trigger": "Event:** Purchased $15.1M penthouse duplex at Vita at Grove Isle (March 2026)",
+    "openingLine": "Opening Line:** \"I saw you just closed on the Vita penthouse\u2014congrats! As a life insurance CEO relocating to Miami, you probably know more about VUL than most advisors. But have you thought through how Florida's asset protection laws could supercharge your family's wealth strategy?\"",
     "category": "lead-radar",
-    "triggerEvent": "** Purchased $8.3M oceanfront condo at 19575 Collins Avenue (March 2026)",
-    "prospectName": "Reid Nagle",
-    "eventType": "lead-radar",
-    "details": "** Purchased $8.3M oceanfront condo at 19575 Collins Avenue (March 2026)",
-    "advisorApproach": "",
     "status": "new",
     "heat": "Warm",
     "source": "leads-today.md",
-    "estimatedAUM": 0,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T13:43:47.027553",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T13:43:47.027554"
+    "date": "2026-03-23",
+    "id": 6573301
   },
   {
-    "id": 6829515,
+    "name": "Elena Skvortsova",
+    "company": "Grove Isle)",
+    "trigger": "Event:** Purchased $19.8M penthouse duplex (5,900 sq ft + 4,400 sq ft terrace) (March 2026)",
+    "openingLine": "Opening Line:** \"Congrats on the $19.8M Grove Isle penthouse! As European executives with U.S. real estate, are you structured to avoid double taxation between Germany and the States? There's a small window to optimize before IRS reporting kicks in.\"",
     "category": "lead-radar",
-    "triggerEvent": "** Sold 5,000 sq ft luxury condo for $8.3M (bought 2015 for $8M—held 11 years)",
-    "prospectName": "Alexandre Mentrezol Brandstatter",
-    "eventType": "lead-radar",
-    "details": "** Sold 5,000 sq ft luxury condo for $8.3M (bought 2015 for $8M—held 11 years)",
-    "advisorApproach": "",
     "status": "new",
     "heat": "Warm",
     "source": "leads-today.md",
-    "estimatedAUM": 0,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T13:43:47.027571",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T13:43:47.027572"
+    "date": "2026-03-23",
+    "id": 8798721
   },
   {
-    "id": 8016303,
+    "name": "Reid Nagle",
+    "company": "** Private equity fund (founder)",
+    "title": "Title:** Founder & Managing Partner",
+    "trigger": "Event:** Purchased $8.3M oceanfront condo at 19575 Collins Avenue (March 2026)",
+    "openingLine": "Opening Line:** \"Saw you picked up the $8.3M Sunny Isles unit\u2014solid oceanfront play. As a PE founder, are you structuring your carry distributions to minimize the 3.8% net investment income tax? Most funds leave 6 figures on the table annually.\"",
     "category": "lead-radar",
-    "triggerEvent": "** Leading international expansion into Miami—positioning for HNW Latin American clients",
-    "prospectName": "Gustavo Pires",
-    "eventType": "lead-radar",
-    "details": "** Leading international expansion into Miami—positioning for HNW Latin American clients",
-    "advisorApproach": "",
     "status": "new",
     "heat": "Warm",
     "source": "leads-today.md",
-    "estimatedAUM": 0,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T13:43:47.027588",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T13:43:47.027589"
+    "date": "2026-03-23",
+    "id": 3585407
   },
   {
-    "id": 7592478,
+    "name": "Alexandre Mentrezol Brandstatter",
+    "trigger": "Event:** Sold 5,000 sq ft luxury condo for $8.3M (bought 2015 for $8M\u2014held 11 years)",
+    "openingLine": "Opening Line:** \"Congrats on exiting the Sunny Isles property at $8.3M. After 11 years, you're sitting on a nice gain\u2014but also a big tax bill. Have you modeled whether a 1031 into a Delaware Statutory Trust could defer that while diversifying your exposure?\"",
     "category": "lead-radar",
-    "triggerEvent": "** Sold Jupiter home to NextEra CEO for $19.61M (March 2026)",
-    "prospectName": "Dr. Armin Oskouei",
-    "eventType": "lead-radar",
-    "details": "** Sold Jupiter home to NextEra CEO for $19.61M (March 2026)",
-    "advisorApproach": "",
     "status": "new",
     "heat": "Warm",
     "source": "leads-today.md",
-    "estimatedAUM": 0,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T13:43:47.027604",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T13:43:47.027605"
+    "date": "2026-03-23",
+    "id": 8596638
   },
   {
-    "id": 7655541,
+    "name": "Gustavo Pires",
+    "company": "** XP Inc. (Brazil's largest investment platform)",
+    "trigger": "Event:** Leading international expansion into Miami\u2014positioning for HNW Latin American clients",
+    "openingLine": "Opening Line:** \"I saw XP hosted a Miami investment summit with you leading the international wealth expansion. As you're building the U.S. bridge for Brazilian HNW clients, have you thought about strategic partnerships with advisors who specialize in cross-border tax planning?\"",
     "category": "lead-radar",
-    "triggerEvent": "** Sold 41,000 sq ft office building at 140 Intracoastal Pointe Drive for $10.6M (bought 1997 for $2",
-    "prospectName": "James Riordan",
-    "eventType": "lead-radar",
-    "details": "** Sold 41,000 sq ft office building at 140 Intracoastal Pointe Drive for $10.6M (bought 1997 for $2.8M = 279% gain) (March 2026)",
-    "advisorApproach": "",
     "status": "new",
     "heat": "Warm",
     "source": "leads-today.md",
-    "estimatedAUM": 0,
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-23T13:43:47.027622",
-        "action": "Lead created"
-      }
-    ],
-    "createdAt": "2026-03-23T13:43:47.027623"
+    "date": "2026-03-23",
+    "id": 6938245
+  },
+  {
+    "name": "Dr. Armin Oskouei",
+    "title": "CEO for $19.61M (March 2026)",
+    "trigger": "Event:** Sold Jupiter home to NextEra CEO for $19.61M (March 2026)",
+    "openingLine": "Opening Line:** \"Dr. Oskouei, congrats on the $19.6M Jupiter sale to NextEra's CEO. That's a massive liquidity event. Are you planning a 1031 exchange, or are you diversifying away from real estate? Either way, let's make sure you're not overpaying Uncle Sam.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "date": "2026-03-23",
+    "id": 1521629
+  },
+  {
+    "name": "James Riordan",
+    "trigger": "Event:** Sold 41,000 sq ft office building at 140 Intracoastal Pointe Drive for $10.6M (bought 1997 for $2.8M = 279% gain) (March 2026)",
+    "openingLine": "Opening Line:** \"James, I saw you sold the Intracoastal office building for $10.6M after nearly 30 years\u2014incredible hold. That's about $7.8M in gains. Are you still reinvesting in commercial, or is this a transition into more passive income? Either way, we should talk tax strategy.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "date": "2026-03-23",
+    "id": 6965134
+  },
+  {
+    "name": "Indian Technology/Finance Executives",
+    "trigger": "Event:** High-paying job placements (consulting/finance/tech starting salaries $150K-250K+)",
+    "openingLine": "Opening Line:** \"Congrats on the IIM Bangalore placement! As you're starting with [Company] in Miami, have you thought about how to optimize your RSU grants? Most international hires leave 15-20% on the table in year one alone.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "date": "2026-03-23",
+    "id": 6580578
+  },
+  {
+    "name": "Dark Watch CEO",
+    "company": "** Dark Watch (Miami-based AI cybersecurity startup)",
+    "title": "Title:** Chief Executive Officer",
+    "trigger": "Event:** Just raised $3.5M seed/Series A funding (March 2026)",
+    "openingLine": "Opening Line:** \"Congrats on the $3.5M raise for Dark Watch! As you're scaling the AI security platform, have you locked in your 83(b) elections and mapped out QSBS qualification? Getting this right now could save you millions when you exit.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "date": "2026-03-23",
+    "id": 6475863
+  },
+  {
+    "name": "Total Leads:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "date": "2026-03-23",
+    "id": 6215987
+  },
+  {
+    "name": "# Miami Lead Radar - Wealth Trigger Leads (2026-03-21)",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 4872754
+  },
+  {
+    "name": "Standard:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 1548592
+  },
+  {
+    "name": "Title:",
+    "title": "Title:** President & CEO, Messer Americas",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5764349
+  },
+  {
+    "name": "Company:",
+    "company": "** Messer (German industrial gas conglomerate, $3.4B revenue)",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 4227223
+  },
+  {
+    "name": "Trigger:",
+    "company": "Vita at Grove Isle",
+    "trigger": "Trigger:** Purchased $19.8M penthouse at Vita at Grove Isle, Coconut Grove (March 19, 2026)",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 6819896
+  },
+  {
+    "name": "Source:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 7113856
+  },
+  {
+    "name": "Why This Lead Matters:",
+    "title": "CEO making 8-figure Miami real estate purch",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 246233
+  },
+  {
+    "name": "The Real Opportunity:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 8165630
+  },
+  {
+    "name": "Outreach Angle:",
+    "title": "CEOs?\"",
+    "openingLine": "Your Grove Isle acquisition caught my attention - I work with Fortune 500 executives who've relocated to Miami and discovered their international comp structures create unexpected tax and estate planning",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 7688865
+  },
+  {
+    "name": "Reachability:",
+    "title": "CEO profile active)",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 1415340
+  },
+  {
+    "name": "Heat:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 4349653
+  },
+  {
+    "name": "Title:",
+    "title": "Title:** CEO, American Equity Investment Life Holding Company (NASDAQ: AEL)",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5764349
+  },
+  {
+    "name": "Trigger:",
+    "company": "Vita at Grove Isle (March 19",
+    "trigger": "Trigger:** Purchased $15.1M penthouse at Vita at Grove Isle (March 19, 2026)",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 6043480
+  },
+  {
+    "name": "Source:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 7113856
+  },
+  {
+    "name": "Public Comp Data:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 6800780
+  },
+  {
+    "name": "Why This Lead Matters:",
+    "title": "CEO with documented $46M+ comp (SEC filings",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 246233
+  },
+  {
+    "name": "The Real Opportunity:",
+    "title": "CEO who likely has corporate life insurance",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 8165630
+  },
+  {
+    "name": "Outreach Angle:",
+    "title": "CEO of American Equity",
+    "openingLine": "Your recent Grove Isle purchase suggests you're in wealth consolidation mode. Would you be open to a peer-to-peer conversation about strategies I've used with other publicly-traded insurance CEOs?\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 7688865
+  },
+  {
+    "name": "Reachability:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 1415340
+  },
+  {
+    "name": "Heat:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 4349653
+  },
+  {
+    "name": "Title:",
+    "title": "Title:** CEO & Founder, Neural Earth",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5764349
+  },
+  {
+    "name": "Company:",
+    "company": "** Miami-based geospatial AI startup (climate risk intelligence)",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 438516
+  },
+  {
+    "name": "Trigger:",
+    "trigger": "Trigger:** Closed $9.3M oversubscribed seed round (February 2026)",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 2589027
+  },
+  {
+    "name": "Source:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 7113856
+  },
+  {
+    "name": "Background:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5039573
+  },
+  {
+    "name": "Why This Lead Matters:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 246233
+  },
+  {
+    "name": "The Real Opportunity:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 8165630
+  },
+  {
+    "name": "Outreach Angle:",
+    "openingLine": "Your M&A background means you understand the opportunity cost of waiting. Would you be open to a conversation about strategies successful Miami founders have used to de-risk their equity positions early?\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 7688865
+  },
+  {
+    "name": "Reachability:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 1415340
+  },
+  {
+    "name": "Heat:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 4349653
+  },
+  {
+    "name": "## 4. Dr. Laurence B. \"Lanny\" Gardner",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 603096
+  },
+  {
+    "name": "Title:",
+    "title": "Title:** Retired - Former Senior Medical Faculty, University of Miami Miller Sch",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5764349
+  },
+  {
+    "name": "Trigger:",
+    "trigger": "Trigger:** Retirement announcement after 50 years of service (March 2026)",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 2589027
+  },
+  {
+    "name": "Source:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 7113856
+  },
+  {
+    "name": "Age:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 1290779
+  },
+  {
+    "name": "Why This Lead Matters:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 246233
+  },
+  {
+    "name": "The Real Opportunity:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 8165630
+  },
+  {
+    "name": "Outreach Angle:",
+    "company": "UM Miller School - I work with retiring p",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 7055682
+  },
+  {
+    "name": "Reachability:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 1415340
+  },
+  {
+    "name": "Heat:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 4349653
+  },
+  {
+    "name": "Company:",
+    "company": "** nexAir (largest privately-owned industrial/specialty gas supplier in US)",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 8297792
+  },
+  {
+    "name": "Trigger:",
+    "trigger": "Trigger:** Sold Miami/Medley industrial property for $9.8M, 280% gain (bought 2016 for $3.5M) - March 16, 2026",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 2589027
+  },
+  {
+    "name": "Source:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 7113856
+  },
+  {
+    "name": "Capital Gain:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 1707988
+  },
+  {
+    "name": "Why This Lead Matters:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 246233
+  },
+  {
+    "name": "The Real Opportunity:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 8165630
+  },
+  {
+    "name": "Outreach Angle:",
+    "openingLine": "Your nexAir Medley sale generated substantial liquidity - most privately-held business owners I work with in industrial distribution miss opportunities to reposition gains into tax-advantaged structures b",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 7688865
+  },
+  {
+    "name": "Reachability:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 1415340
+  },
+  {
+    "name": "Heat:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 4349653
+  },
+  {
+    "name": "Miami-Dade Retirement Ecosystem",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5745353
+  },
+  {
+    "name": "Business Listings",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 442959
+  },
+  {
+    "name": "Sources:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5629443
+  },
+  {
+    "name": "Filters Applied:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 8642553
+  },
+  {
+    "name": "Total Actionable Leads:",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 9861107
+  },
+  {
+    "name": "# Miami Wealth Trigger Events - March 14, 2026",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-14.md",
+    "date": "2026-03-23",
+    "id": 1535080
+  },
+  {
+    "name": "Tech Startup Exit",
+    "trigger": "Trigger: Significant liquidity event",
+    "openingLine": "Opening Line: \"Congratulations on the successful exit of TechNova. Many founders find this is a critical moment to strategically manage their newfound wealth.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-14.md",
+    "date": "2026-03-23",
+    "id": 6217616
+  },
+  {
+    "name": "Real Estate Development Sale",
+    "trigger": "Trigger: Large real estate transaction",
+    "openingLine": "Opening Line: \"Your recent Edgewater development sale represents a major milestone. Let's discuss how to maximize the tax efficiency of your investment proceeds.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-14.md",
+    "date": "2026-03-23",
+    "id": 3401121
+  },
+  {
+    "name": "Senior Executive Promotion",
+    "company": "LatAm Financial Group",
+    "title": "Role: Chief Strategy Officer at LatAm Financial Group",
+    "trigger": "Trigger: Career advancement",
+    "openingLine": "Opening Line: \"Congratulations on your strategic leadership role at LatAm Financial. This is an ideal time to align your personal financial strategy with your new career trajectory.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-14.md",
+    "date": "2026-03-23",
+    "id": 5397718
+  },
+  {
+    "name": "High-Value Residential Purchase",
+    "trigger": "Trigger: Significant real estate investment",
+    "openingLine": "Opening Line: \"Your recent Coconut Grove investment is a testament to your strategic vision. Let's explore how to optimize the financial potential of this asset.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-14.md",
+    "date": "2026-03-23",
+    "id": 663517
+  },
+  {
+    "name": "# Miami Lead Radar - Wealth Trigger Events (2026-03-20)",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 6742412
+  },
+  {
+    "name": "### Business Sales & Transitions",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 5645568
+  },
+  {
+    "name": "Entertainment Industry Transition",
+    "trigger": "Trigger: Bar/Lounge Asset in South Beach",
+    "openingLine": "Opening Line: \"Navigating the sale of a prime South Beach entertainment venue requires strategic financial planning \u2013 let's discuss how to maximize your asset's value.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 893404
+  },
+  {
+    "name": "Event Rental Company Potential Sale",
+    "trigger": "Trigger: 35-year established South Florida event rental company",
+    "openingLine": "Opening Line: \"With 35 years of building your event rental business, let's explore a transition strategy that honors your legacy and secures your financial future.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 3273402
+  },
+  {
+    "name": "### Executive & Professional Transitions",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 3533349
+  },
+  {
+    "name": "Corporate Insider Movement",
+    "trigger": "Trigger: Sold over 5,000 shares in Motorsport Games",
+    "openingLine": "Opening Line: \"Strategic share sales can be pivotal moments in an executive's financial journey \u2013 let's discuss how to optimize your next move.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 2939720
+  },
+  {
+    "name": "Real Estate Executive Signal",
+    "trigger": "Event: Hawkins Commercial Realty reports $120M Coral Gables Office Sale",
+    "openingLine": "Opening Line: \"Significant real estate transactions like your recent sale open strategic wealth management opportunities we should explore.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 6637629
+  },
+  {
+    "name": "### Emerging Business Opportunities",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 3878411
+  },
+  {
+    "name": "Franchise Expansion Opportunity",
+    "trigger": "Trigger: Ranked #1 in 2026 Entrepreneur Franchise 500\u00ae",
+    "openingLine": "Opening Line: \"Your franchise's remarkable performance positions you perfectly to strategically plan your next financial milestone.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 6276169
+  },
+  {
+    "name": "### Professional Transition Indicators",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 3389740
+  },
+  {
+    "name": "Distribution Company Ownership Shift",
+    "trigger": "Trigger: Seeking majority owner (51% of company)",
+    "openingLine": "Opening Line: \"With your company's impressive growth trajectory, now's the time to strategically structure your ownership and wealth transition.\"",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 1142240
+  },
+  {
+    "name": "## Methodology",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 5739606
+  },
+  {
+    "name": "Cross-reference leads with LinkedIn",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 688050
+  },
+  {
+    "name": "Validate contact information",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 8782486
+  },
+  {
+    "name": "Develop personalized outreach strategy",
+    "category": "lead-radar",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 6870496
+  },
+  {
+    "name": "# Practice Acquisition Targets - March 20, 2026",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 5045970
+  },
+  {
+    "name": "Standard:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 1548592
+  },
+  {
+    "name": "## Dave Fernandez - SOLE ACTIONABLE TARGET",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 8632361
+  },
+  {
+    "name": "Firm:",
+    "company": "** Zynergy Retirement Planning",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 2274074
+  },
+  {
+    "name": "Location:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 2143146
+  },
+  {
+    "name": "Verified AUM:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 8190910
+  },
+  {
+    "name": "Average Client Balance:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 3695227
+  },
+  {
+    "name": "Model:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 6878374
+  },
+  {
+    "name": "Estimated Annual Revenue:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 6590810
+  },
+  {
+    "name": "Why This Target Makes Sense:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 7648761
+  },
+  {
+    "name": "Solo Practice Structure",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 3881201
+  },
+  {
+    "name": "Retirement Signals",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 3984698
+  },
+  {
+    "name": "Client Quality",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 7093443
+  },
+  {
+    "name": "Market Dynamics",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 9805452
+  },
+  {
+    "name": "Valuation:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 5111154
+  },
+  {
+    "name": "Acquisition Structure Options:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 1303508
+  },
+  {
+    "name": "Asset Purchase:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 4653855
+  },
+  {
+    "name": "Earnout:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 1185818
+  },
+  {
+    "name": "Tuck-in:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 5737372
+  },
+  {
+    "name": "Email Subject:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 863287
+  },
+  {
+    "name": "Email Body:",
+    "openingLine": "Your 20-year NAPFA membership and $152M book serving Naples families caught my attention.",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 2176033
+  },
+  {
+    "name": "Reachability:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 1415340
+  },
+  {
+    "name": "LinkedIn connection request with personalized note",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 4354087
+  },
+  {
+    "name": "Follow-up email 7 days later if no response",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 5578361
+  },
+  {
+    "name": "NAPFA member mutual connection search (warm intro path)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 5122237
+  },
+  {
+    "name": "Naples advisor network outreach (who knows Fernandez?)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 321804
+  },
+  {
+    "name": "Heat:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 4349653
+  },
+  {
+    "name": "## TARGETS REMOVED (NO LONGER VIABLE)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 3656594
+  },
+  {
+    "name": "### \u274c Margaret McDowell - Arbor Wealth Management",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 270802
+  },
+  {
+    "name": "Why Removed:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 478783
+  },
+  {
+    "name": "Lesson:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 7307304
+  },
+  {
+    "name": "### \u274c Nick Defenthaler - Center for Financial Planning",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 4787024
+  },
+  {
+    "name": "Why Removed:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 478783
+  },
+  {
+    "name": "Lesson:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 7307304
+  },
+  {
+    "name": "Reality Check:",
+    "trigger": "acquired by:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 8252793
+  },
+  {
+    "name": "Market Dynamics:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 1365116
+  },
+  {
+    "name": "Expand geography:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 374120
+  },
+  {
+    "name": "Target younger:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 1226727
+  },
+  {
+    "name": "Broker-dealers:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 6251869
+  },
+  {
+    "name": "Fee-based vs fee-only:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 2973638
+  },
+  {
+    "name": "FINRA BrokerCheck:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 3348551
+  },
+  {
+    "name": "Florida CFP Board:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 9333796
+  },
+  {
+    "name": "Local Business Journals:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 9935301
+  },
+  {
+    "name": "Industry Conferences:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 8997688
+  },
+  {
+    "name": "Target Profile Adjustment:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "date": "2026-03-23",
+    "id": 7135246
+  },
+  {
+    "name": "# Practice Acquisition Scout - March 23, 2026",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 4193826
+  },
+  {
+    "name": "Standard:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 1548592
+  },
+  {
+    "name": "## \ud83d\udea8 MARKET REALITY: ZERO ACTIONABLE TARGETS FOUND",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 759474
+  },
+  {
+    "name": "1. PE-Backed Consolidation Wave Has Already Hit",
+    "title": "Partners** took minority stake in Cyndeo Wealth",
+    "trigger": "acquired** Suncoast Prosperity Advisors ($830M, Tampa) - Feb 2026",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 6896781
+  },
+  {
+    "name": "The best targets have already been acquired.",
+    "trigger": "acquired.** Solo/small independent RIAs with $50M-$500M AUM and clear succession needs were swept up in 2024",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 6350274
+  },
+  {
+    "name": "### \u274c Suncoast Prosperity Advisors (Jeff Strouse, Beth Neal, Terri Ritchie)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 3030098
+  },
+  {
+    "name": "Why Removed:",
+    "trigger": "acquired by CAPTRUST in February 2026 ($830M AUM, Tampa)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 478783
+  },
+  {
+    "name": "Lesson:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 7307304
+  },
+  {
+    "name": "### \u274c Derse Morgan Financial Advisors (Tim Alessi, Matthew Shahady)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 2609214
+  },
+  {
+    "name": "Why Removed:",
+    "trigger": "acquired by OneDigital in February 2026 ($330M AUM, NC/SC)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 478783
+  },
+  {
+    "name": "Lesson:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 7307304
+  },
+  {
+    "name": "### \u274c Cyndeo Wealth Partners (Matt Kilgroe)",
+    "title": "Partners (Matt Kilgroe)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 3435848
+  },
+  {
+    "name": "Why Removed:",
+    "title": "Partners took minority stake March 2026 ($3.1B",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 478783
+  },
+  {
+    "name": "Lesson:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 7307304
+  },
+  {
+    "name": "### \u274c Moran Wealth Management (Naples)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 9060920
+  },
+  {
+    "name": "Why Removed:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 478783
+  },
+  {
+    "name": "Lesson:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 7307304
+  },
+  {
+    "name": "### \u274c Capital Wealth Advisors (Daniel London, Naples)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 1694145
+  },
+  {
+    "name": "Why Removed:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 478783
+  },
+  {
+    "name": "Lesson:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 7307304
+  },
+  {
+    "name": "### \u274c Collier Family Office (Naples)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 7760424
+  },
+  {
+    "name": "Why Removed:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 478783
+  },
+  {
+    "name": "Lesson:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 7307304
+  },
+  {
+    "name": "### \u274c Concorde Investment Services (relocated HQ to Boca Raton March 2026)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 5218612
+  },
+  {
+    "name": "Why Removed:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 478783
+  },
+  {
+    "name": "Lesson:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 7307304
+  },
+  {
+    "name": "Hyperlocal Outreach to Under-the-Radar Solos",
+    "trigger": "Why: These advisors don't show up in SEC searches or M&A announcements\u2014too small for aggregators",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 7607171
+  },
+  {
+    "name": "NAPFA Member Succession Pipeline",
+    "trigger": "Why: Fee-only planners with mature books, strong compliance, clean transition",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 3169745
+  },
+  {
+    "name": "Pre-Emptive Outreach: 55-60 Age Range",
+    "trigger": "Why: Capture pipeline before competitive bidding starts",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 2257863
+  },
+  {
+    "name": "Reverse Acquisition: Buy Retiring Advisor's Orphan Clients",
+    "trigger": "Why: Lower acquisition cost, immediate book of business, no earnout complexity",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 7067381
+  },
+  {
+    "name": "CPA Partnership Path to Acquisition",
+    "title": "Partnership Path to Acquisition**",
+    "trigger": "Why: CPAs have mature client relationships but lack succession for wealth services",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 9079036
+  },
+  {
+    "name": "Q2 2026:",
+    "trigger": "acquired practices",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 9877081
+  },
+  {
+    "name": "Truth:",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 8282372
+  },
+  {
+    "name": "Earlier intervention (before retirement signal goes public)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 9180768
+  },
+  {
+    "name": "Creative structuring (continuity agreements, revenue-sharing vs. full buyout)",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 7922705
+  },
+  {
+    "name": "Orphan client rescue operations",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 7914118
+  },
+  {
+    "name": "Non-advisor wealth professional acquisitions (CPAs, attorneys with investment bo",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 4081871
+  },
+  {
+    "name": "## RECOMMENDATION: PIVOT STRATEGY",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 5155972
+  },
+  {
+    "name": "Stop waiting for \"retiring advisors\" to appear.",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 6490468
+  },
+  {
+    "name": "### Option A: Build Internal Succession Pipeline",
+    "trigger": "acquired clients later",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 7375326
+  },
+  {
+    "name": "### Option B: Offer Continuity Agreements to 55-60 Advisors",
+    "openingLine": "your practice in 5-10 years\" with revenue-sharing NOW",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 9964594
+  },
+  {
+    "name": "### Option C: Acquire Books, Not Practices",
+    "openingLine": "your 401(k) rollover clients\")",
+    "category": "acquisition",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "date": "2026-03-23",
+    "id": 6740510
+  },
+  {
+    "name": "# VUL Trigger Monitor - March 21, 2026",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5149961
+  },
+  {
+    "name": "## VERIFIED VUL TRIGGER EVENTS - MIAMI",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 9565867
+  },
+  {
+    "name": "### 1. Blair Austin Childs - Neural Earth CEO/Founder",
+    "title": "CEO/Founder",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 4069078
+  },
+  {
+    "name": "Company:",
+    "company": "** Neural Earth (Miami-based geospatial risk intelligence startup)",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 8138540
+  },
+  {
+    "name": "Trigger Event:",
+    "trigger": "Event:** Closed $9.3 million oversubscribed seed funding round (February 2026)",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 9646038
+  },
+  {
+    "name": "Source URL:",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 3844321
+  },
+  {
+    "name": "Why VUL fits:",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5917818
+  },
+  {
+    "name": "VUL Pitch:",
+    "openingLine": "Your Neural Earth equity represents concentrated wealth in a single asset class. A Variable Universal Life policy can provide tax-efficient liquidity access while protecting your family against key-person",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 296485
+  },
+  {
+    "name": "Background:",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5039573
+  },
+  {
+    "name": "### 2. Elena Skvortsova - Messer Americas President & CEO",
+    "title": "President & CEO",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 4342495
+  },
+  {
+    "name": "Company:",
+    "company": "** Messer (German industrial gas company - Americas region CEO)",
+    "title": "CEO)",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 4179406
+  },
+  {
+    "name": "Trigger Event:",
+    "company": "Vita at Grove Isle (March 19",
+    "trigger": "Event:** Purchased $19.8 million penthouse at Vita at Grove Isle (March 19, 2026)",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 107630
+  },
+  {
+    "name": "Source URL:",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 3844321
+  },
+  {
+    "name": "Why VUL fits:",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5917818
+  },
+  {
+    "name": "VUL Pitch:",
+    "title": "President & CEO of Messer Americas",
+    "openingLine": "your executive compensation package likely includes substantial equity grants and deferred comp. A VUL policy transforms that concentrated risk into tax-free death benefit protection while building liquid",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 296485
+  },
+  {
+    "name": "Background:",
+    "title": "President and CEO of Messer Americas",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5039573
+  },
+  {
+    "name": "### 3. Anant Bhalla - American Equity Investment Life CEO",
+    "title": "CEO",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 979002
+  },
+  {
+    "name": "Company:",
+    "company": "** American Equity Investment Life Holding Company (NASDAQ: AEL)",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 2018273
+  },
+  {
+    "name": "Trigger Event:",
+    "company": "Vita at Grove Isle with wife Anubha Lal (",
+    "trigger": "Event:** Purchased $15.1 million penthouse at Vita at Grove Isle with wife Anubha Lal (March 19, 2026)",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 3506636
+  },
+  {
+    "name": "Source URL:",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 3844321
+  },
+  {
+    "name": "Why VUL fits:",
+    "title": "CEO with documented $46.6M total comp (2022",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5917818
+  },
+  {
+    "name": "VUL Pitch:",
+    "title": "CEO of a publicly-traded life insurance com",
+    "openingLine": "Your position as CEO of a publicly-traded life insurance company gives you unique insight into the power of permanent life insurance. A VUL policy for your personal estate allows you to diversify beyond A",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 296485
+  },
+  {
+    "name": "Background:",
+    "title": "CEO of American Equity Investment Life in M",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 5039573
+  },
+  {
+    "name": "### 4. nexAir Leadership (Commercial Real Estate Exit)",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 2978131
+  },
+  {
+    "name": "Company:",
+    "company": "** nexAir (largest privately-owned industrial/specialty gas supplier in US)",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 8297792
+  },
+  {
+    "name": "Trigger Event:",
+    "trigger": "Event:** Sold Miami/Medley industrial location for $9.8 million (March 16, 2026)",
+    "category": "vul",
+    "status": "new",
+    "heat": "Warm",
+    "source": "vul-prospects-2026-03-21.md",
+    "date": "2026-03-23",
+    "id": 9646038
   }
 ]
