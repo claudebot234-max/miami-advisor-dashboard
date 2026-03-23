@@ -1034,6 +1034,23 @@
 
         function saveLeads() {
             localStorage.setItem('advisorLeads', JSON.stringify(leads));
+            // Also save to GitHub so edits persist across refreshes
+            var token = localStorage.getItem('ghToken');
+            if(!token) return;
+            fetch('https://api.github.com/repos/claudebot234-max/miami-advisor-dashboard/contents/data/leads-data.json',
+                {headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}})
+            .then(function(r){return r.json();})
+            .then(function(d){
+                var content = btoa(unescape(encodeURIComponent(JSON.stringify(leads,null,2))));
+                return fetch('https://api.github.com/repos/claudebot234-max/miami-advisor-dashboard/contents/data/leads-data.json',{
+                    method:'PUT',
+                    headers:{'Authorization':'token '+token,'Content-Type':'application/json'},
+                    body:JSON.stringify({message:'Lead update',content:content,sha:d.sha})
+                });
+            })
+            .then(function(r){return r.json();})
+            .then(function(d){if(d.content) console.log('Saved to GitHub');})
+            .catch(function(e){console.log('GitHub save error:',e);});
         }
 
         // Close modal on background click
