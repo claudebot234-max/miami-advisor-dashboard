@@ -1407,12 +1407,7 @@
                 if (data.leads && data.leads.items) data.leads.items.forEach(item => leads.push({ id: item.id, category: "lead-radar", triggerEvent: item.trigger, prospectName: item.name || "Contact", eventType: item.category, details: item.wealthSignal, advisorApproach: item.openingLine, status: "new", createdAt: new Date().toISOString(), notes: [], activities: [] }));
                 if (data.cpaTargets && data.cpaTargets.items) data.cpaTargets.items.forEach(item => leads.push({ id: item.id, category: "cpa", triggerEvent: item.firmName, prospectName: item.contact || item.firmName, eventType: "CPA Partnership", details: item.specialty, advisorApproach: item.linkedInOpener, status: "new", createdAt: new Date().toISOString(), notes: [], activities: [] }));
                 if (data.practiceAcquisitions && data.practiceAcquisitions.items) data.practiceAcquisitions.items.forEach(item => leads.push({ id: item.id, category: "acquisition", triggerEvent: item.firm, prospectName: item.name, eventType: "Practice Acquisition", details: item.retirementSignal + " | AUM: " + item.aum, advisorApproach: item.coldEmailOpener, status: "new", createdAt: new Date().toISOString(), notes: [], activities: [] }));
-                if (data.vulProspects && data.vulProspects.items) data.vulProspects.items.forEach(item => leads.push({ id: item.id, category: "vul", triggerEvent: item.trigger, prospectName: item.name || item.profile, eventType: item.category, details: item.profile, advisorApproach: item.approach, status: "new", createdAt: new Date().toISOString(), notes: [], activities: [] }));
-                localStorage.setItem("advisorLeads", JSON.stringify(leads));
-                localStorage.setItem("dataSourceVersion", "2026-03-21-clean");
-                location.reload();
-            });
-        }
+
         // Data storage
         let leads = JSON.parse(localStorage.getItem('advisorLeads') || '[]');
         let currentView = 'lead-radar';
