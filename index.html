@@ -731,7 +731,11 @@
                 this.classList.add('active');
                 currentView = this.dataset.view;
                 document.getElementById('viewTitle').textContent = this.textContent.trim();
-                filterLeads();
+                if(currentView === 'pipeline') {
+                  document.getElementById('leadsContainer') && loadPipelineLeads().then(function(pl){ renderPipeline(pl); });
+                } else {
+                  filterLeads();
+                }
             });
         });
 
