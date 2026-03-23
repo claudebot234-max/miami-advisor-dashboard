@@ -1,1 +1,989 @@
-[]
+[
+  {
+    "id": 777001,
+    "category": "divorce-referral",
+    "triggerEvent": "Divorce settlement - papers finalizing 1-2 months",
+    "prospectName": "Stacy (Ryan Magath Referral)",
+    "eventType": "divorce",
+    "details": "High-asset divorce client from Ryan Magath (forensic accountant, NJ). No money management experience. First lead from referral pipeline.",
+    "advisorApproach": "Warm intro through Ryan. Focus on wealth protection post-divorce, investment basics, fresh start planning.",
+    "status": "new",
+    "heat": "HOT",
+    "source": "Ryan Magath",
+    "estimatedAUM": 2000000,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T00:00:00Z",
+        "action": "Lead created via Ryan Magath referral"
+      }
+    ],
+    "createdAt": "2026-03-23T00:00:00Z"
+  },
+  {
+    "id": 6102971,
+    "category": "cpa",
+    "triggerEvent": "- **High-income business owners** ($500K+ annual income)",
+    "prospectName": "Victor Delerme, CPA",
+    "eventType": "cpa",
+    "details": "- **High-income business owners** ($500K+ annual income)",
+    "advisorApproach": "** https://www.linkedin.com/in/victor-delerme/",
+    "status": "new",
+    "heat": "Warm",
+    "source": "cpa-targets-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.026469",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.026478"
+  },
+  {
+    "id": 9769634,
+    "category": "cpa",
+    "triggerEvent": "- **Construction contractors** (project-based businesses with complex cash flow)",
+    "prospectName": "Edgar Gomez, CPA, MST, MBA",
+    "eventType": "cpa",
+    "details": "- **Construction contractors** (project-based businesses with complex cash flow)",
+    "advisorApproach": "** (Search \"Edgar Gomez CPA Miami\" - has profile)",
+    "status": "new",
+    "heat": "Warm",
+    "source": "cpa-targets-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.026505",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.026506"
+  },
+  {
+    "id": 4178141,
+    "category": "cpa",
+    "triggerEvent": "- **Startups** (early-stage entrepreneurs)",
+    "prospectName": "Edward D. Quilca, CPA",
+    "eventType": "cpa",
+    "details": "- **Startups** (early-stage entrepreneurs)",
+    "advisorApproach": "** https://www.linkedin.com/in/quilcacpa/ (500+ connections)",
+    "status": "new",
+    "heat": "Warm",
+    "source": "cpa-targets-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.026518",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.026519"
+  },
+  {
+    "id": 4934077,
+    "category": "cpa",
+    "triggerEvent": "- **International business owners** (U.S. inbound and outbound)",
+    "prospectName": "Alvaro Acevedo Jr., JD, CPA",
+    "eventType": "cpa",
+    "details": "- **International business owners** (U.S. inbound and outbound)",
+    "advisorApproach": "** (Search \"Alvaro Acevedo CPA Miami\")",
+    "status": "new",
+    "heat": "Warm",
+    "source": "cpa-targets-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.026529",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.026530"
+  },
+  {
+    "id": 9354868,
+    "category": "cpa",
+    "triggerEvent": "** Virtual CPA firm (cloud-based, nationwide reach)",
+    "prospectName": "Mongio & Associates, CPAs",
+    "eventType": "cpa",
+    "details": "** Virtual CPA firm (cloud-based, nationwide reach)",
+    "advisorApproach": "** https://www.linkedin.com/company/mongioandassociates (search for partners)",
+    "status": "new",
+    "heat": "Warm",
+    "source": "cpa-targets-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.026544",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.026544"
+  },
+  {
+    "id": 124073,
+    "category": "lead-radar",
+    "triggerEvent": "** Just purchased $19.61M Jupiter mansion via trust (March 2026)",
+    "prospectName": "John Ketchum",
+    "eventType": "lead-radar",
+    "details": "** Just purchased $19.61M Jupiter mansion via trust (March 2026)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.027498",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.027499"
+  },
+  {
+    "id": 8774659,
+    "category": "lead-radar",
+    "triggerEvent": "** Purchased $15.1M penthouse duplex at Vita at Grove Isle (March 2026)",
+    "prospectName": "Anant Bhalla",
+    "eventType": "lead-radar",
+    "details": "** Purchased $15.1M penthouse duplex at Vita at Grove Isle (March 2026)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.027518",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.027519"
+  },
+  {
+    "id": 1422254,
+    "category": "lead-radar",
+    "triggerEvent": "** Purchased $19.8M penthouse duplex (5,900 sq ft + 4,400 sq ft terrace) (March 2026)",
+    "prospectName": "Elena Skvortsova",
+    "eventType": "lead-radar",
+    "details": "** Purchased $19.8M penthouse duplex (5,900 sq ft + 4,400 sq ft terrace) (March 2026)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.027537",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.027539"
+  },
+  {
+    "id": 1023470,
+    "category": "lead-radar",
+    "triggerEvent": "** Purchased $8.3M oceanfront condo at 19575 Collins Avenue (March 2026)",
+    "prospectName": "Reid Nagle",
+    "eventType": "lead-radar",
+    "details": "** Purchased $8.3M oceanfront condo at 19575 Collins Avenue (March 2026)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.027553",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.027554"
+  },
+  {
+    "id": 6829515,
+    "category": "lead-radar",
+    "triggerEvent": "** Sold 5,000 sq ft luxury condo for $8.3M (bought 2015 for $8M\u2014held 11 years)",
+    "prospectName": "Alexandre Mentrezol Brandstatter",
+    "eventType": "lead-radar",
+    "details": "** Sold 5,000 sq ft luxury condo for $8.3M (bought 2015 for $8M\u2014held 11 years)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.027571",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.027572"
+  },
+  {
+    "id": 8016303,
+    "category": "lead-radar",
+    "triggerEvent": "** Leading international expansion into Miami\u2014positioning for HNW Latin American clients",
+    "prospectName": "Gustavo Pires",
+    "eventType": "lead-radar",
+    "details": "** Leading international expansion into Miami\u2014positioning for HNW Latin American clients",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.027588",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.027589"
+  },
+  {
+    "id": 7592478,
+    "category": "lead-radar",
+    "triggerEvent": "** Sold Jupiter home to NextEra CEO for $19.61M (March 2026)",
+    "prospectName": "Dr. Armin Oskouei",
+    "eventType": "lead-radar",
+    "details": "** Sold Jupiter home to NextEra CEO for $19.61M (March 2026)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.027604",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.027605"
+  },
+  {
+    "id": 7655541,
+    "category": "lead-radar",
+    "triggerEvent": "** Sold 41,000 sq ft office building at 140 Intracoastal Pointe Drive for $10.6M (bought 1997 for $2",
+    "prospectName": "James Riordan",
+    "eventType": "lead-radar",
+    "details": "** Sold 41,000 sq ft office building at 140 Intracoastal Pointe Drive for $10.6M (bought 1997 for $2.8M = 279% gain) (March 2026)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.027622",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.027623"
+  },
+  {
+    "id": 8169095,
+    "category": "lead-radar",
+    "triggerEvent": "** High-paying job placements (consulting/finance/tech starting salaries $150K-250K+)",
+    "prospectName": "Indian Technology/Finance Executives",
+    "eventType": "lead-radar",
+    "details": "** High-paying job placements (consulting/finance/tech starting salaries $150K-250K+)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.027641",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.027641"
+  },
+  {
+    "id": 1501836,
+    "category": "lead-radar",
+    "triggerEvent": "** Just raised $3.5M seed/Series A funding (March 2026)",
+    "prospectName": "Dark Watch CEO",
+    "eventType": "lead-radar",
+    "details": "** Just raised $3.5M seed/Series A funding (March 2026)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.027656",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.027657"
+  },
+  {
+    "id": 8747641,
+    "category": "lead-radar",
+    "triggerEvent": "Significant liquidity event",
+    "prospectName": "Tech Startup Exit",
+    "eventType": "lead-radar",
+    "details": "Significant liquidity event",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-14.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.028240",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.028241"
+  },
+  {
+    "id": 7499870,
+    "category": "lead-radar",
+    "triggerEvent": "Large real estate transaction",
+    "prospectName": "Real Estate Development Sale",
+    "eventType": "lead-radar",
+    "details": "Large real estate transaction",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-14.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.028258",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.028259"
+  },
+  {
+    "id": 8075676,
+    "category": "lead-radar",
+    "triggerEvent": "Career advancement",
+    "prospectName": "Senior Executive Promotion",
+    "eventType": "lead-radar",
+    "details": "Career advancement",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-14.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.028276",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.028277"
+  },
+  {
+    "id": 7288688,
+    "category": "lead-radar",
+    "triggerEvent": "Significant real estate investment",
+    "prospectName": "High-Value Residential Purchase",
+    "eventType": "lead-radar",
+    "details": "Significant real estate investment",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-14.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.028291",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.028292"
+  },
+  {
+    "id": 6397482,
+    "category": "lead-radar",
+    "triggerEvent": "Bar/Lounge Asset in South Beach",
+    "prospectName": "Entertainment Industry Transition",
+    "eventType": "lead-radar",
+    "details": "Bar/Lounge Asset in South Beach",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.028624",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.028625"
+  },
+  {
+    "id": 3424205,
+    "category": "lead-radar",
+    "triggerEvent": "35-year established South Florida event rental company",
+    "prospectName": "Event Rental Company Potential Sale",
+    "eventType": "lead-radar",
+    "details": "35-year established South Florida event rental company",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.028642",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.028643"
+  },
+  {
+    "id": 5792674,
+    "category": "lead-radar",
+    "triggerEvent": "Sold over 5,000 shares in Motorsport Games",
+    "prospectName": "Corporate Insider Movement",
+    "eventType": "lead-radar",
+    "details": "Sold over 5,000 shares in Motorsport Games",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.028658",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.028659"
+  },
+  {
+    "id": 5761794,
+    "category": "lead-radar",
+    "triggerEvent": "Hawkins Commercial Realty reports $120M Coral Gables Office Sale",
+    "prospectName": "Real Estate Executive Signal",
+    "eventType": "lead-radar",
+    "details": "Hawkins Commercial Realty reports $120M Coral Gables Office Sale",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.028673",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.028674"
+  },
+  {
+    "id": 733877,
+    "category": "lead-radar",
+    "triggerEvent": "Ranked #1 in 2026 Entrepreneur Franchise 500\u00ae",
+    "prospectName": "Franchise Expansion Opportunity",
+    "eventType": "lead-radar",
+    "details": "Ranked #1 in 2026 Entrepreneur Franchise 500\u00ae",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.028688",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.028689"
+  },
+  {
+    "id": 8663632,
+    "category": "lead-radar",
+    "triggerEvent": "Seeking majority owner (51% of company)",
+    "prospectName": "Distribution Company Ownership Shift",
+    "eventType": "lead-radar",
+    "details": "Seeking majority owner (51% of company)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "leads-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.028704",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.028704"
+  },
+  {
+    "id": 5581016,
+    "category": "acquisition",
+    "triggerEvent": "Solo Practice Structure",
+    "prospectName": "Solo Practice Structure",
+    "eventType": "acquisition",
+    "details": "Solo Practice Structure",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029204",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029205"
+  },
+  {
+    "id": 1301793,
+    "category": "acquisition",
+    "triggerEvent": "Retirement Signals",
+    "prospectName": "Retirement Signals",
+    "eventType": "acquisition",
+    "details": "Retirement Signals",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029225",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029226"
+  },
+  {
+    "id": 3537262,
+    "category": "acquisition",
+    "triggerEvent": "Client Quality",
+    "prospectName": "Client Quality",
+    "eventType": "acquisition",
+    "details": "Client Quality",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029242",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029243"
+  },
+  {
+    "id": 6608069,
+    "category": "acquisition",
+    "triggerEvent": "Market Dynamics",
+    "prospectName": "Market Dynamics",
+    "eventType": "acquisition",
+    "details": "Market Dynamics",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029259",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029259"
+  },
+  {
+    "id": 4110218,
+    "category": "acquisition",
+    "triggerEvent": "Asset Purchase:",
+    "prospectName": "Asset Purchase:",
+    "eventType": "acquisition",
+    "details": "Asset Purchase:",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029275",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029276"
+  },
+  {
+    "id": 7261855,
+    "category": "acquisition",
+    "triggerEvent": "Earnout:",
+    "prospectName": "Earnout:",
+    "eventType": "acquisition",
+    "details": "Earnout:",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029292",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029292"
+  },
+  {
+    "id": 296867,
+    "category": "acquisition",
+    "triggerEvent": "Tuck-in:",
+    "prospectName": "Tuck-in:",
+    "eventType": "acquisition",
+    "details": "Tuck-in:",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029308",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029309"
+  },
+  {
+    "id": 6358281,
+    "category": "acquisition",
+    "triggerEvent": "Expand geography:",
+    "prospectName": "Expand geography:",
+    "eventType": "acquisition",
+    "details": "Expand geography:",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029326",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029326"
+  },
+  {
+    "id": 7245234,
+    "category": "acquisition",
+    "triggerEvent": "Target younger:",
+    "prospectName": "Target younger:",
+    "eventType": "acquisition",
+    "details": "Target younger:",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029343",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029344"
+  },
+  {
+    "id": 5502424,
+    "category": "acquisition",
+    "triggerEvent": "Broker-dealers:",
+    "prospectName": "Broker-dealers:",
+    "eventType": "acquisition",
+    "details": "Broker-dealers:",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029360",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029361"
+  },
+  {
+    "id": 641097,
+    "category": "acquisition",
+    "triggerEvent": "Fee-based vs fee-only:",
+    "prospectName": "Fee-based vs fee-only:",
+    "eventType": "acquisition",
+    "details": "Fee-based vs fee-only:",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029377",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029378"
+  },
+  {
+    "id": 3051248,
+    "category": "acquisition",
+    "triggerEvent": "** $75M-$300M (sweet spot for independent buyers)",
+    "prospectName": "FINRA BrokerCheck:",
+    "eventType": "acquisition",
+    "details": "** $75M-$300M (sweet spot for independent buyers)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029394",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029395"
+  },
+  {
+    "id": 48332,
+    "category": "acquisition",
+    "triggerEvent": "** $75M-$300M (sweet spot for independent buyers)",
+    "prospectName": "Florida CFP Board:",
+    "eventType": "acquisition",
+    "details": "** $75M-$300M (sweet spot for independent buyers)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029411",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029411"
+  },
+  {
+    "id": 9534130,
+    "category": "acquisition",
+    "triggerEvent": "** $75M-$300M (sweet spot for independent buyers)",
+    "prospectName": "Local Business Journals:",
+    "eventType": "acquisition",
+    "details": "** $75M-$300M (sweet spot for independent buyers)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029427",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029428"
+  },
+  {
+    "id": 9418678,
+    "category": "acquisition",
+    "triggerEvent": "** $75M-$300M (sweet spot for independent buyers)",
+    "prospectName": "Industry Conferences:",
+    "eventType": "acquisition",
+    "details": "** $75M-$300M (sweet spot for independent buyers)",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-2026-03-20.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029443",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029444"
+  },
+  {
+    "id": 5277942,
+    "category": "acquisition",
+    "triggerEvent": "2. What's Left: Either Too Big or Not Independent",
+    "prospectName": "2. What's Left: Either Too Big or Not Independent",
+    "eventType": "acquisition",
+    "details": "2. What's Left: Either Too Big or Not Independent",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029727",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029727"
+  },
+  {
+    "id": 7334232,
+    "category": "acquisition",
+    "triggerEvent": "These advisors don't show up in SEC searches or M&A announcements\u2014too small for aggregators",
+    "prospectName": "Hyperlocal Outreach to Under-the-Radar Solos",
+    "eventType": "acquisition",
+    "details": "These advisors don't show up in SEC searches or M&A announcements\u2014too small for aggregators",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029747",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029748"
+  },
+  {
+    "id": 6129042,
+    "category": "acquisition",
+    "triggerEvent": "Fee-only planners with mature books, strong compliance, clean transition",
+    "prospectName": "NAPFA Member Succession Pipeline",
+    "eventType": "acquisition",
+    "details": "Fee-only planners with mature books, strong compliance, clean transition",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029764",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029765"
+  },
+  {
+    "id": 139560,
+    "category": "acquisition",
+    "triggerEvent": "Capture pipeline before competitive bidding starts",
+    "prospectName": "Pre-Emptive Outreach: 55-60 Age Range",
+    "eventType": "acquisition",
+    "details": "Capture pipeline before competitive bidding starts",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029780",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029780"
+  },
+  {
+    "id": 2189551,
+    "category": "acquisition",
+    "triggerEvent": "Lower acquisition cost, immediate book of business, no earnout complexity",
+    "prospectName": "Reverse Acquisition: Buy Retiring Advisor's Orphan Clients",
+    "eventType": "acquisition",
+    "details": "Lower acquisition cost, immediate book of business, no earnout complexity",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029796",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029797"
+  },
+  {
+    "id": 1017959,
+    "category": "acquisition",
+    "triggerEvent": "CPAs have mature client relationships but lack succession for wealth services",
+    "prospectName": "CPA Partnership Path to Acquisition",
+    "eventType": "acquisition",
+    "details": "CPAs have mature client relationships but lack succession for wealth services",
+    "advisorApproach": "",
+    "status": "new",
+    "heat": "Warm",
+    "source": "acquisition-targets-today.md",
+    "estimatedAUM": 0,
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T13:43:47.029812",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-23T13:43:47.029813"
+  }
+]
