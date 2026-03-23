@@ -1053,5 +1053,180 @@
     console.log('Dashboard loaded', data.length, 'leads from GitHub');
   } catch(e) { console.log('GitHub load error:', e); }
 })();
+
+function renderPipeline(leads) {
+  const stages = [
+    {id:'s0',label:'Step 0',sub:'Uncontacted',col:'#888780'},
+    {id:'s2',label:'Step 2',sub:'Cold Call',col:'#185FA5'},
+    {id:'s3a',label:'Step 3A',sub:'Planning Mtg',col:'#3B6D11'},
+    {id:'s3b',label:'Step 3B',sub:'Deeper Mtg',col:'#854F0B'},
+    {id:'s4',label:'Step 4',sub:'Questions Mtg',col:'#533AB7'},
+    {id:'s5',label:'Step 5',sub:'Move Forward',col:'#0F6E56'}
+  ];
+  const byStage = {};
+  stages.forEach(s => byStage[s.id] = []);
+  leads.forEach(l => { if(byStage[l.stage]) byStage[l.stage].push(l); });
+
+  const total = leads.length;
+  const inProgress = leads.filter(l => l.stage !== 's0' && l.stage !== 's5').length;
+  const hot = leads.filter(l => l.heat === 'Hot').length;
+  const closed = leads.filter(l => l.stage === 's5').length;
+
+  const el = document.getElementById('leadsContainer');
+  el.innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px">
+      <div style="background:var(--surface-secondary,#1a1f2e);border-radius:8px;padding:14px">
+        <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px">Total</div>
+        <div style="font-size:22px;font-weight:500;color:#fff">${total}</div>
+      </div>
+      <div style="background:var(--surface-secondary,#1a1f2e);border-radius:8px;padding:14px">
+        <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px">In Progress</div>
+        <div style="font-size:22px;font-weight:500;color:#4f8ef7">${inProgress}</div>
+      </div>
+      <div style="background:var(--surface-secondary,#1a1f2e);border-radius:8px;padding:14px">
+        <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px">Hot Leads</div>
+        <div style="font-size:22px;font-weight:500;color:#e74c3c">${hot}</div>
+      </div>
+      <div style="background:var(--surface-secondary,#1a1f2e);border-radius:8px;padding:14px">
+        <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px">Closed</div>
+        <div style="font-size:22px;font-weight:500;color:#2ecc71">${closed}</div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:flex-end;gap:8px;margin-bottom:14px">
+      <button onclick="openPipelineAdd()" style="background:#4f8ef7;color:#fff;border:none;padding:7px 16px;border-radius:6px;font-size:13px;cursor:pointer;font-weight:500">+ Add Lead</button>
+      <button onclick="importPipelineCSV()" style="background:#1a1f2e;color:#aaa;border:1px solid #333;padding:7px 16px;border-radius:6px;font-size:13px;cursor:pointer">Import CSV</button>
+      <button onclick="exportPipelineCSV()" style="background:#1a1f2e;color:#aaa;border:1px solid #333;padding:7px 16px;border-radius:6px;font-size:13px;cursor:pointer">Export CSV</button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px">
+      ${stages.map(s => `
+        <div style="border-radius:8px;overflow:hidden;border:1px solid #2a2f3e">
+          <div style="padding:8px 10px;background:${s.col}22;border-bottom:1px solid ${s.col}44;display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-size:11px;font-weight:600;color:${s.col};text-transform:uppercase;letter-spacing:0.05em">${s.label}</div>
+              <div style="font-size:10px;color:#888;margin-top:1px">${s.sub}</div>
+            </div>
+            <span style="background:${s.col};color:#fff;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600">${byStage[s.id].length}</span>
+          </div>
+          <div style="padding:6px;min-height:60px">
+            ${byStage[s.id].length === 0 ? '<div style="font-size:11px;color:#555;text-align:center;padding:10px 4px">Empty</div>' :
+              byStage[s.id].map(l => `
+              <div onclick="openPipelineLead('${l.id}')" style="background:#1a1f2e;border:1px solid #2a2f3e;border-radius:5px;padding:7px 8px;margin-bottom:5px;cursor:pointer">
+                <div style="font-size:12px;font-weight:500;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${l.name}</div>
+                <div style="font-size:10px;color:#888;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${l.title||l.company||''}</div>
+                <div style="margin-top:4px">
+                  <span style="font-size:9px;font-weight:600;padding:1px 5px;border-radius:3px;text-transform:uppercase;background:${l.source&&l.source.includes('Zoom')?'#E6F1FB':l.source&&l.source.includes('Ryan')?'#FBEAF0':l.source&&l.source.includes('Agent')?'#EAF3DE':'#FAEEDA'};color:${l.source&&l.source.includes('Zoom')?'#0C447C':l.source&&l.source.includes('Ryan')?'#72243E':l.source&&l.source.includes('Agent')?'#27500A':'#633806'}">${l.source||'Manual'}</span>
+                  <span style="font-size:9px;font-weight:600;padding:1px 5px;border-radius:3px;margin-left:3px;background:${l.heat==='Hot'?'#FCEBEB':l.heat==='Warm'?'#FAEEDA':'#E6F1FB'};color:${l.heat==='Hot'?'#A32D2D':l.heat==='Warm'?'#854F0B':'#0C447C'}">${l.heat||'Warm'}</span>
+                </div>
+              </div>`).join('')}
+          </div>
+        </div>`).join('')}
+    </div>`;
+
+  const badge = document.getElementById('pipelineCount');
+  if(badge){ badge.textContent = total; badge.className = total > 0 ? 'nav-badge' : 'nav-badge empty'; }
+}
+
+let pipelineLeads = [];
+const PIPELINE_SERVER = 'http://127.0.0.1:18790';
+
+async function loadPipelineLeads() {
+  try {
+    const r = await fetch(PIPELINE_SERVER + '/load-pipeline');
+    pipelineLeads = await r.json();
+    if(!Array.isArray(pipelineLeads)) pipelineLeads = [];
+  } catch(e) {
+    pipelineLeads = JSON.parse(localStorage.getItem('pipelineLeads')||'[]');
+  }
+  return pipelineLeads;
+}
+
+async function savePipelineLeads() {
+  try {
+    await fetch(PIPELINE_SERVER + '/save-pipeline', {
+      method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(pipelineLeads)
+    });
+  } catch(e) {}
+  localStorage.setItem('pipelineLeads', JSON.stringify(pipelineLeads));
+}
+
+function openPipelineAdd() {
+  const name = prompt('Full name:'); if(!name) return;
+  const title = prompt('Title + Company:') || '';
+  const mobile = prompt('Mobile phone:') || '';
+  const email = prompt('Work email:') || '';
+  const source = prompt('Source (ZoomInfo Enriched / ZoomInfo Blast / Ryan Magath / Agent / Manual):') || 'Manual';
+  const heat = prompt('Heat (Hot/Warm/Cold):') || 'Warm';
+  const context = prompt('Context / Opening line:') || '';
+  pipelineLeads.push({
+    id: 'p'+Date.now(),
+    name, title, mobile, email, source, heat,
+    stage: 's0',
+    notes: context ? [{time:new Date().toLocaleDateString(),text:context}] : [],
+    added: new Date().toISOString()
+  });
+  savePipelineLeads().then(() => renderPipeline(pipelineLeads));
+}
+
+function openPipelineLead(id) {
+  const l = pipelineLeads.find(x=>x.id===id);
+  if(!l) return;
+  const stages = [
+    {id:'s0',label:'Step 0: Uncontacted'},
+    {id:'s2',label:'Step 2: Cold Call'},
+    {id:'s3a',label:'Step 3A: Planning Meeting'},
+    {id:'s3b',label:'Step 3B: Deeper Meeting'},
+    {id:'s4',label:'Step 4: Questions Meeting'},
+    {id:'s5',label:'Step 5: Move Forward / Closed'}
+  ];
+  const action = prompt(
+    l.name + ' — ' + (l.title||'') + '\n' +
+    'Mobile: ' + (l.mobile||'N/A') + '\n' +
+    'Email: ' + (l.email||'N/A') + '\n' +
+    'Current stage: ' + (stages.find(s=>s.id===l.stage)||{label:l.stage}).label + '\n\n' +
+    'Notes:\n' + (l.notes||[]).map(n=>n.time+': '+n.text).join('\n') + '\n\n' +
+    'Actions: move s0/s2/s3a/s3b/s4/s5 | note [text] | delete | cancel'
+  );
+  if(!action || action==='cancel') return;
+  if(['s0','s2','s3a','s3b','s4','s5'].includes(action.trim())) {
+    const stageName = (stages.find(s=>s.id===action.trim())||{label:action}).label;
+    l.stage = action.trim();
+    if(!l.notes) l.notes=[];
+    l.notes.push({time:new Date().toLocaleDateString(), text:'Moved to '+stageName});
+  } else if(action.startsWith('note ')) {
+    if(!l.notes) l.notes=[];
+    l.notes.push({time:new Date().toLocaleDateString(), text:action.slice(5)});
+  } else if(action==='delete') {
+    if(confirm('Delete '+l.name+'?')) {
+      pipelineLeads = pipelineLeads.filter(x=>x.id!==id);
+    }
+  }
+  savePipelineLeads().then(() => renderPipeline(pipelineLeads));
+}
+
+function importPipelineCSV() {
+  const raw = prompt('Paste CSV rows (Name,Title,Company,Mobile,Email,Source,Heat):');
+  if(!raw) return;
+  raw.split('\n').forEach(row => {
+    const c = row.split(',').map(x=>x.trim());
+    if(!c[0]) return;
+    pipelineLeads.push({
+      id:'p'+Date.now()+Math.random(),
+      name:c[0],title:c[1]||'',company:c[2]||'',mobile:c[3]||'',email:c[4]||'',
+      source:c[5]||'Manual',heat:c[6]||'Warm',stage:'s0',notes:[],added:new Date().toISOString()
+    });
+  });
+  savePipelineLeads().then(() => renderPipeline(pipelineLeads));
+}
+
+function exportPipelineCSV() {
+  const stages = {s0:'Uncontacted',s2:'Cold Call',s3a:'Planning Mtg',s3b:'Deeper Mtg',s4:'Questions Mtg',s5:'Closed'};
+  const rows = [['Name','Title','Mobile','Email','Source','Heat','Stage','Added']];
+  pipelineLeads.forEach(l => rows.push([l.name,l.title,l.mobile,l.email,l.source,l.heat,stages[l.stage]||l.stage,l.added?new Date(l.added).toLocaleDateString():'']));
+  const csv = rows.map(r=>r.map(c=>'"'+(c||'').toString().replace(/"/g,'""')+'"').join(',')).join('\n');
+  const a = document.createElement('a');
+  a.href = 'data:text/csv;charset=utf-8,'+encodeURIComponent(csv);
+  a.download = 'pipeline-'+new Date().toISOString().slice(0,10)+'.csv';
+  a.click();
+}
 </script></body>
 </html>
