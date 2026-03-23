@@ -1135,26 +1135,8 @@ function renderPipeline(leads) {
 let pipelineLeads = [];
 const PIPELINE_SERVER = 'http://127.0.0.1:18790';
 
-async function loadPipelineLeads() {
-  try {
-    const r = await fetch(PIPELINE_SERVER + '/load-pipeline');
-    pipelineLeads = await r.json();
-    if(!Array.isArray(pipelineLeads)) pipelineLeads = [];
-  } catch(e) {
-    pipelineLeads = JSON.parse(localStorage.getItem('pipelineLeads')||'[]');
-  }
-  return pipelineLeads;
-}
-
-async function savePipelineLeads() {
-  try {
-    await fetch(PIPELINE_SERVER + '/save-pipeline', {
-      method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(pipelineLeads)
-    });
-  } catch(e) {}
-  localStorage.setItem('pipelineLeads', JSON.stringify(pipelineLeads));
-}
-
+async function loadPipelineLeads(){var t=localStorage.getItem("ghToken")||"";try{const r=await fetch("https://api.github.com/repos/claudebot234-max/miami-advisor-dashboard/contents/data/pipeline-data.json",{headers:{"Authorization":"token "+t,"Accept":"application/vnd.github.v3+json"}});const d=await r.json();pipelineLeads=d.content?JSON.parse(atob(d.content.replace(/\n/g,""))):[]; }catch(e){pipelineLeads=JSON.parse(localStorage.getItem("pipelineLeads")||"[]");}localStorage.setItem("pipelineLeads",JSON.stringify(pipelineLeads));return pipelineLeads;}
+async function savePipelineLeads(){localStorage.setItem("pipelineLeads",JSON.stringify(pipelineLeads));var t=localStorage.getItem("ghToken")||"";if(!t)return;try{const g=await fetch("https://api.github.com/repos/claudebot234-max/miami-advisor-dashboard/contents/data/pipeline-data.json",{headers:{"Authorization":"token "+t,"Accept":"application/vnd.github.v3+json"}});const gd=await g.json();const ct=btoa(unescape(encodeURIComponent(JSON.stringify(pipelineLeads,null,2))));await fetch("https://api.github.com/repos/claudebot234-max/miami-advisor-dashboard/contents/data/pipeline-data.json",{method:"PUT",headers:{"Authorization":"token "+t,"Content-Type":"application/json","Accept":"application/vnd.github.v3+json"},body:JSON.stringify({message:"Pipeline "+new Date().toISOString().slice(0,10),content:ct,sha:gd.sha})});}catch(e){}}
 function openPipelineAdd() {
   const name = prompt('Full name:'); if(!name) return;
   const title = prompt('Title + Company:') || '';
