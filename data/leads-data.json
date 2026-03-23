@@ -1918,5 +1918,22 @@
     "source": "vul-prospects-2026-03-21.md",
     "date": "2026-03-23",
     "id": 7564900
+  },
+  {
+    "id": 777001,
+    "name": "Ryan Magath Referral",
+    "category": "divorce-referral",
+    "triggerEvent": "Divorce settlement - papers finalizing 1-2 months",
+    "prospectName": "Pending - Woman waiting for divorce to finalize",
+    "eventType": "divorce",
+    "status": "new",
+    "heat": "HOT",
+    "details": "High-asset divorce client from Ryan Magath (forensic accountant, NJ). No money management experience. First lead from referral pipeline.",
+    "advisorApproach": "Warm intro through Ryan. Focus on wealth protection post-divorce, investment basics, fresh start planning.",
+    "source": "Ryan Magath",
+    "date": "2026-03-23",
+    "createdAt": "2026-03-23T00:00:00Z",
+    "notes": [],
+    "activities": []
   }
 ]
