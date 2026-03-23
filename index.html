@@ -733,7 +733,7 @@
                 document.getElementById('viewTitle').textContent = this.textContent.trim();
                 if(currentView === 'pipeline') {
                   checkPipelineToken && checkPipelineToken();
-                  document.getElementById('leadsContainer') && loadPipelineLeads().then(function(pl){ renderPipeline(pl); });
+                  document.getElementById('leadList') && loadPipelineLeads().then(function(pl){ renderPipeline(pl); });
                 } else {
                   filterLeads();
                 }
@@ -1078,7 +1078,7 @@ function renderPipeline(leads) {
   const hot = leads.filter(l => l.heat === 'Hot').length;
   const closed = leads.filter(l => l.stage === 's5').length;
 
-  const el = document.getElementById('leadsContainer');
+  const el = document.getElementById('leadList');
   el.innerHTML = `
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px">
       <div style="background:var(--surface-secondary,#1a1f2e);border-radius:8px;padding:14px">
