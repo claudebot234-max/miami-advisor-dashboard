@@ -413,5 +413,85 @@
       }
     ],
     "createdAt": "2026-03-23T18:04:40.580222"
+  },
+  {
+    "id": 8904559,
+    "category": "acquisition",
+    "triggerEvent": "Founded 2005 (21 years). Boca Raton. Solo practice (2 employees per RocketReach). Affiliated with Osaic Wealth (formerly Securities America). Age like",
+    "prospectName": "Steven Fenyves",
+    "eventType": "other",
+    "details": "Founded 2005 (21 years). Boca Raton. Solo practice (2 employees per RocketReach). Affiliated with Osaic Wealth (formerly Securities America). Age likely 55-65. Hofstra grad, served South Florida 21 years.",
+    "advisorApproach": "Steven, I saw you founded Valued Wealth Management in 2005\u201421 years serving Boca Raton professionals is impressive. As a solo/small practice owner approaching the 20-25 year mark, have you started thinking about succession planning? Many advisors your age are exploring strategic partnerships to ensure client continuity while maximizing practice value. Would you be open to a confidential conversation about what your next 5-10 years look like?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Hot",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T18:09:48.428645",
+        "action": "Imported from acquisition-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-23T18:09:48.428667"
+  },
+  {
+    "id": 9853544,
+    "category": "acquisition",
+    "triggerEvent": "Founded 2006 (20 years). Boca Raton. Partnership with Richard Koblick (CRPC, AWMA). 20-year milestone, partnership structure creates succession comple",
+    "prospectName": "Joshua Feller",
+    "eventType": "other",
+    "details": "Founded 2006 (20 years). Boca Raton. Partnership with Richard Koblick (CRPC, AWMA). 20-year milestone, partnership structure creates succession complexity. 'Old-school' relationship-focused practice.",
+    "advisorApproach": "Josh, I noticed you and Richard founded Feller Financial in 2006\u201420 years serving South Florida. As partners approaching the 20-year mark, have you two discussed succession planning? Many partnerships hit complexity at this stage (who exits first, how to value each partner's book). I work with advisors in similar positions exploring strategic partnerships that solve the succession puzzle. Worth a conversation?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Warm",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T18:09:48.428680",
+        "action": "Imported from acquisition-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-23T18:09:48.428684"
+  },
+  {
+    "id": 459467,
+    "category": "acquisition",
+    "triggerEvent": "Founded 2015 (11 years). Coral Gables. Independent RIA serving U.S. and international clients. Too young for immediate succession but good future pipe",
+    "prospectName": "Jaime Domenech Macias",
+    "eventType": "other",
+    "details": "Founded 2015 (11 years). Coral Gables. Independent RIA serving U.S. and international clients. Too young for immediate succession but good future pipeline target.",
+    "advisorApproach": "Jaime, I saw you founded Angelus Investment Consulting in 2015 serving U.S. and international clients from Coral Gables. While succession may be years away, many advisors tell me they wish they'd started planning earlier. As your practice matures (11 years now), have you thought about long-term continuity planning? Not looking to buy today\u2014just exploring whether there's fit for future partnership. Worth keeping in touch?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Cool",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T18:09:48.428690",
+        "action": "Imported from acquisition-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-23T18:09:48.428693"
+  },
+  {
+    "id": 2793160,
+    "category": "acquisition",
+    "triggerEvent": "Founded 2000 as TBK Investments, sold to major bank 2007 (GenSpring), re-established as independent WE Family Offices 2013. Now serves 80+ UHNW famili",
+    "prospectName": "Santiago Ulloa",
+    "eventType": "other",
+    "details": "Founded 2000 as TBK Investments, sold to major bank 2007 (GenSpring), re-established as independent WE Family Offices 2013. Now serves 80+ UHNW families, $14.1B in assets advised/reported. Too large and institutionalized for typical acquisition, but good partnership/alliance target.",
+    "advisorApproach": "Santiago, I saw WE Family Offices serves 80+ UHNW families with $14B+ advised\u2014impressive scale. I'm curious about your journey from founding TBK in 2000, selling to a bank, then re-establishing independence in 2013. That's rare. As someone who's been through both sides (selling and building), would you be open to sharing insights on what you learned? Not looking to pitch anything\u2014just learning from someone who's navigated the path I'm exploring.",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Cool",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-23T18:09:48.428698",
+        "action": "Imported from acquisition-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-23T18:09:48.428700"
   }
 ]
