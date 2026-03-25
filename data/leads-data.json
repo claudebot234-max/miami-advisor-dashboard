@@ -6,8 +6,8 @@
     "name": "Steven Fenyves, CFP, CFS",
     "company": "Valued Wealth Management Inc.",
     "status": "new",
-    "aum": 50000000,
-    "details": "\ud83d\udccd 5255 North Federal Highway, Suite 330, Boca Raton, FL 33487\n\n**Why:**\n\u2705 Solo founder (no partnership complexity)\n\u2705 21 years = mature practice, peak value\n\u2705 Independent BD affiliation (Osaic) = portable book\n\u2705 Boca Raton = strong market, retiree-focused\n\u2705 No evidence of succession plan on website\n\n**Succession:** 21 years in practice | Solo practice with small team | Named after service (\"Valued Wealth\")\n\n**Valuation:** - **Conservative (2x revenue):** $1M-3M\n- **Fair market (2.5x):** $1.25M-3.75M\n- **Aggressive (3x):** $1.5M-4.5M",
+    "aum": 0,
+    "details": "\ud83d\udccd 5255 North Federal Highway, Suite 330, Boca Raton, FL 33487",
     "approach": ""
   },
   {
@@ -18,7 +18,7 @@
     "company": "Guerra Wealth Advisors",
     "status": "new",
     "aum": 600000000,
-    "details": "\ud83d\udccd Miami, FL\n\n**Why:**\n\u2705 Patriarch with succession question (will sons fully take over or need partner?)\n\u2705 No PE backing or aggregator affiliation\n\u2705 40-year milestone = natural transition point\n\u2705 Family businesses often need outside succession when next gen is uncertain\n\n**Succession:** 40 years in practice | Family succession in progress | \"Thousands of clients\"\n\n**Valuation:** - **Conservative (2x revenue):** $12M\n- **Fair market (2.5x):** $15M\n- **Aggressive (3x):** $18M",
+    "details": "\ud83d\udccd Miami, FL",
     "approach": ""
   },
   {
@@ -28,8 +28,8 @@
     "name": "Joshua Feller, ChFC",
     "company": "",
     "status": "new",
-    "aum": 50000000,
-    "details": "\ud83d\udccd Boca Raton, FL\n\n**Why:**\n\u2705 20-year milestone = natural evaluation point\n\u2705 Partnership without clear succession = both partners face same question\n\u2705 Relationship-focused practice = high client retention\n\u2705 Boca Raton = affluent market\n\n**Succession:** 20 years in practice | Partnership structure | \"Old-school relationship-focused\"\n\n**Valuation:** - **Conservative (2x revenue):** $1M-4M\n- **Fair market (2.5x):** $1.25M-5M\n- **Aggressive (3x):** $1.5M-6M",
+    "aum": 0,
+    "details": "\ud83d\udccd Boca Raton, FL",
     "approach": ""
   },
   {
@@ -40,7 +40,7 @@
     "company": "",
     "status": "new",
     "aum": 100000000,
-    "details": "\ud83d\udccd Fort Lauderdale, FL\n\n**Succession:** 26 years in business | Partnership structure | Fee-only RIA",
+    "details": "\ud83d\udccd Fort Lauderdale, FL",
     "approach": ""
   },
   {
@@ -51,7 +51,7 @@
     "company": "",
     "status": "new",
     "aum": 100000000,
-    "details": "\ud83d\udccd Plantation, FL (Broward County)\n\n**Succession:** 26 years | 7-person team | Fee-only RIA",
+    "details": "\ud83d\udccd Plantation, FL (Broward County)",
     "approach": ""
   },
   {
@@ -62,8 +62,8 @@
     "company": "Delerme CPA",
     "status": "new",
     "aum": 0,
-    "details": "\ud83d\udccd Brickell, Miami, FL\n\n**Client Focus:**\n- High-income business owners ($500K+ annual income)\n- Global entrepreneurs with international footprint\n- Puerto Rico Act 60 tax optimization specialists\n- Multi-entity structuring for tax reduction\n- Bilingual team (English/Spanish)\n\n**Why:**\n\u2705 Explicitly markets to \"high-income business owners, investors, and global entrepreneurs\"\n\u2705 Strategic tax planning focus (not just compliance)\n\u2705 Act 60 expertise = clients considering major wealth moves\n\u2705 **No mention of advisor partnerships on website or LinkedIn**\n\u2705 Bilingual = Miami Latin American market overlap",
-    "approach": "Victor, I came across your work with high-income entrepreneurs and Act 60 relocations\u2014impressive niche. I'm a wealth advisor in Miami working with similar clients (business owners scaling 7-8 figures, often with international exposure). I'm finding that most of my clients' CPAs focus on compliance, not strategy. You clearly do both. That's rare. I'm curious if you've built referral relationships with advisors who complement your tax work\u2014estate planning, investment structuring, insurance optimization, etc. Many of my CPA relationships are informal, but the best ones are intentional. Would you be open to a quick call to explore whether there's a fit? Not looking to pitch you\u2014just comparing notes on how we each serve this market."
+    "details": "\ud83d\udccd Brickell, Miami, FL",
+    "approach": ""
   },
   {
     "id": 7,
@@ -73,8 +73,8 @@
     "company": "E. Gomez CPA LLC",
     "status": "new",
     "aum": 0,
-    "details": "\ud83d\udccd Brickell, Miami, FL\n\n**Client Focus:**\n- Construction contractors (project-based businesses)\n- Freight & trucking companies\n- Wholesale distributors\n- Tax resolution and audit protection\n- QuickBooks/cloud accounting implementation\n\n**Why:**\n\u2705 20+ years = mature client relationships\n\u2705 Big 4 background = sophisticated technical skills\n\u2705 Focus on business owners with complex operations (construction, freight = high cash flow)\n\u2705 Tax resolution practice = clients with financial stress (opportunity for wealth planning intervention)\n\u2705 **No advisor partnership mentioned on website**",
-    "approach": "Edgar, I saw you've built a strong practice with construction and freight businesses in Miami\u2014impressive niche. Those clients have unique cash flow challenges (I know, I work with several). I'm a wealth advisor here, and I'm finding that business owners in those industries often have great tax planning (if they have a good CPA like you), but terrible wealth accumulation strategies. They're profitable, but they're not building personal wealth outside the business. I'm curious if you've seen that pattern\u2014and whether you've built referral relationships with advisors who help your clients translate business success into personal financial security. Not looking to pitch you anything. Just wondering if there's a fit to collaborate where your tax work ends and wealth planning begins."
+    "details": "\ud83d\udccd Brickell, Miami, FL",
+    "approach": ""
   },
   {
     "id": 8,
@@ -84,8 +84,8 @@
     "company": "Quilca CPA Group",
     "status": "new",
     "aum": 0,
-    "details": "\ud83d\udccd Miami, FL\n\n**Client Focus:**\n- Startups (early-stage entrepreneurs)\n- Real estate investors (buy-and-hold, flips, 1031 exchanges)\n- High-net-worth individuals\n- International tax planning\n- Small business accounting\n\n**Why:**\n\u2705 FIU graduate (local Miami roots)\n\u2705 500+ LinkedIn connections = well-networked\n\u2705 Real estate investors AND HNW individuals = wealth accumulation clients\n\u2705 Startup advisory = entrepreneurs experiencing liquidity events\n\u2705 **No mention of advisor partnerships**",
-    "approach": "Edward, I saw you work with real estate investors and startup founders in Miami\u2014two groups I work with constantly. Both have similar blind spots: they're great at building wealth, terrible at protecting and diversifying it. Real estate guys have 100% of their net worth in property. Startup founders have 100% in equity. Both need someone to help them translate that into long-term financial security\u2014but most CPAs don't want to touch that (and most advisors don't understand their tax situations). I'm curious if you've built partnerships with advisors who understand your clients' worlds. I'm not looking to compete with you\u2014I'm looking for CPAs who can help me serve clients better, and vice versa. Worth a quick call to explore?"
+    "details": "\ud83d\udccd Miami, FL",
+    "approach": ""
   },
   {
     "id": 9,
@@ -95,8 +95,8 @@
     "company": "Brickell Accountants",
     "status": "new",
     "aum": 0,
-    "details": "\ud83d\udccd 800 Brickell Ave, Miami, FL\n\n**Client Focus:**\n- International business owners (U.S. inbound and outbound)\n- Foreign investors in U.S. real estate (FIRPTA compliance)\n- Executives of multinational companies\n- High-net-worth individuals with cross-border wealth\n- FATCA compliance specialists\n\n**Why:**\n\u2705 **Attorney + CPA** = sophisticated estate and tax planning conversations\n\u2705 **Since 1980** = 44+ years, massive relationship network\n\u2705 Brickell location = financial district, corporate clients\n\u2705 FIRPTA expertise = foreign nationals buying U.S. real estate ($2M+ deals)\n\u2705 **No wealth advisor partnership** despite serving ultra-HNW international clients",
-    "approach": "Alvaro, I saw you've been serving international clients in Brickell since 1980\u2014that's a serious track record. I'm a wealth advisor here, and I keep running into foreign nationals who have great tax and legal structuring (usually through a firm like yours) but zero investment strategy or wealth planning. They're compliant. They're structured. But they're not optimized for long-term wealth growth. I'm curious if you've seen that pattern\u2014and whether you've built referral relationships with advisors who can help your clients with the investment/wealth planning side after you handle the tax/legal side. Not looking to pitch you. Just wondering if there's a fit to collaborate on the international client segment. Worth a call?"
+    "details": "\ud83d\udccd 800 Brickell Ave, Miami, FL",
+    "approach": ""
   },
   {
     "id": 10,
@@ -106,7 +106,84 @@
     "company": "",
     "status": "new",
     "aum": 0,
-    "details": "\ud83d\udccd 1100 S Miami Ave, Miami, FL (Brickell area)\n\n**Client Focus:**\n- Business owners (tax, bookkeeping, consulting)\n- IRS problem resolution (tax debt, audits, appeals)\n- Expert witness testimony (financial litigation)\n- Financial modeling and coaching\n- Military veteran-focused services\n\n**Why:**\n\u2705 **IRS problem resolution** = clients in financial distress (opportunity for wealth reset/planning)\n\u2705 **Financial coaching** mentioned = already stepping into advisory territory\n\u2705 Virtual firm = modern, tech-forward (likely open to new partnerships)\n\u2705 \"Save time, money, reduce stress\" marketing = relationship-oriented\n\u2705 **No wealth advisor partnership mentioned**",
-    "approach": "[Partner Name], I noticed Mongio & Associates specializes in IRS problem resolution\u2014that's a unique and valuable niche. I'm a wealth advisor in Miami, and I'm curious about something: What happens to your clients AFTER you fix their tax problems? They're compliant again, but do they have a plan to rebuild wealth and avoid ending up back in the same position? I work with business owners who've been through financial crises (tax debt, business failures, divorces). The ones who succeed long-term have two things: a great CPA (to keep them compliant) and a wealth advisor (to help them rebuild smart). I'm wondering if there's a fit to collaborate\u2014not on the tax resolution side (that's your expertise), but on the 'what comes next' side for clients you've helped turn around. Worth a conversation?"
+    "details": "\ud83d\udccd 1100 S Miami Ave, Miami, FL (Brickell area)",
+    "approach": ""
+  },
+  {
+    "id": 11,
+    "section": "estate-attorneys",
+    "title": "Anwar E. Hadeed - Hadeed Legal",
+    "name": "Anwar E. Hadeed",
+    "company": "Hadeed Legal",
+    "status": "new",
+    "aum": 0,
+    "details": "",
+    "approach": ""
+  },
+  {
+    "id": 12,
+    "section": "estate-attorneys",
+    "title": "Yanitza Schoonover - The Schoonover Law Firm",
+    "name": "Yanitza Schoonover",
+    "company": "The Schoonover Law Firm",
+    "status": "new",
+    "aum": 0,
+    "details": "",
+    "approach": ""
+  },
+  {
+    "id": 13,
+    "section": "estate-attorneys",
+    "title": "Monique Lavender Greenberg - Lavender Greenberg PLLC",
+    "name": "Monique Lavender Greenberg",
+    "company": "Lavender Greenberg PLLC",
+    "status": "new",
+    "aum": 0,
+    "details": "",
+    "approach": ""
+  },
+  {
+    "id": 14,
+    "section": "estate-attorneys",
+    "title": "Peter A. Dyson - The Estate Plan",
+    "name": "Peter A. Dyson",
+    "company": "The Estate Plan",
+    "status": "new",
+    "aum": 0,
+    "details": "",
+    "approach": ""
+  },
+  {
+    "id": 15,
+    "section": "estate-attorneys",
+    "title": "Denise Jomarron - Denise Jomarron Legal Group",
+    "name": "Denise Jomarron",
+    "company": "Denise Jomarron Legal Group",
+    "status": "new",
+    "aum": 0,
+    "details": "",
+    "approach": ""
+  },
+  {
+    "id": 16,
+    "section": "estate-attorneys",
+    "title": "Alain E. Roman - The Law Office of Alain Roman, PLLC",
+    "name": "Alain E. Roman",
+    "company": "The Law Office of Alain Roman, PLLC",
+    "status": "new",
+    "aum": 0,
+    "details": "",
+    "approach": ""
+  },
+  {
+    "id": 17,
+    "section": "estate-attorneys",
+    "title": "AJ Yolofsky - Yolofsky Law",
+    "name": "AJ Yolofsky",
+    "company": "Yolofsky Law",
+    "status": "new",
+    "aum": 0,
+    "details": "",
+    "approach": ""
   }
 ]
