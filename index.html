@@ -734,8 +734,7 @@
                 currentView = this.dataset.view;
                 document.getElementById('viewTitle').textContent = this.textContent.trim();
                 if(currentView === 'pipeline') {
-                  checkPipelineToken && checkPipelineToken();
-                  document.getElementById('leadList') && loadPipelineLeads().then(function(pl){ renderPipeline(pl); });
+                  loadPipelineLeads().then(function(pl){ pipelineLeads=pl; renderPipeline(pl); });
                 } else {
                   filterLeads();
                 }
