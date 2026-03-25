@@ -56,6 +56,39 @@
   },
   {
     "id": 6,
+    "section": "vul",
+    "title": "Teri Kaye - CohnReznick",
+    "name": "Teri Kaye",
+    "company": "CohnReznick",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Miami, FL",
+    "approach": "As someone who helps high-net-worth families reduce tax burden, have you explored how tax-advantaged permanent insurance fits into your own wealth strategy alongside your qualified retirement accounts?\"\n\n---"
+  },
+  {
+    "id": 7,
+    "section": "vul",
+    "title": "Martha M. Ferral - Shutts & Bowen",
+    "name": "Martha M. Ferral",
+    "company": "Shutts & Bowen",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Miami, FL",
+    "approach": "Congratulations on making partner - as you enter this new income phase, most new partners realize they've maxed traditional retirement vehicles and need additional tax-advantaged growth. Have you looked at how VUL complements your 401k?\"\n\n---"
+  },
+  {
+    "id": 8,
+    "section": "vul",
+    "title": "Daniela F. Cimo - Weiss Serota Helfman Cole + Bierman",
+    "name": "Daniela F. Cimo",
+    "company": "Weiss Serota Helfman Cole + Bierman",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Miami, FL",
+    "approach": "Making partner is a huge milestone - it also typically means you've hit the 401k/IRA limits. Most successful attorneys in your position use VUL to create additional tax-free accumulation. Have you explored this?"
+  },
+  {
+    "id": 9,
     "section": "cpa-partners",
     "title": "Victor Delerme, CPA - Delerme CPA",
     "name": "Victor Delerme, CPA",
@@ -66,7 +99,7 @@
     "approach": "Victor, I came across your work with high-income entrepreneurs and Act 60 relocations\u2014impressive niche. I'm a wealth advisor in Miami working with similar clients (business owners scaling 7-8 figures, often with international exposure). I'm finding that most of my clients' CPAs focus on compliance, not strategy. You clearly do both. That's rare. I'm curious if you've built referral relationships with advisors who complement your tax work\u2014estate planning, investment structuring, insurance optimization, etc. Many of my CPA relationships are informal, but the best ones are intentional. Would you be open to a quick call to explore whether there's a fit? Not looking to pitch you\u2014just comparing notes on how we each serve this market."
   },
   {
-    "id": 7,
+    "id": 10,
     "section": "cpa-partners",
     "title": "Edgar Gomez, CPA, MST, MBA - E. Gomez CPA LLC",
     "name": "Edgar Gomez, CPA, MST, MBA",
@@ -77,7 +110,7 @@
     "approach": "Edgar, I saw you've built a strong practice with construction and freight businesses in Miami\u2014impressive niche. Those clients have unique cash flow challenges (I know, I work with several). I'm a wealth advisor here, and I'm finding that business owners in those industries often have great tax planning (if they have a good CPA like you), but terrible wealth accumulation strategies. They're profitable, but they're not building personal wealth outside the business. I'm curious if you've seen that pattern\u2014and whether you've built referral relationships with advisors who help your clients translate business success into personal financial security. Not looking to pitch you anything. Just wondering if there's a fit to collaborate where your tax work ends and wealth planning begins."
   },
   {
-    "id": 8,
+    "id": 11,
     "section": "cpa-partners",
     "title": "Edward D. Quilca, CPA - Quilca CPA Group",
     "name": "Edward D. Quilca, CPA",
@@ -88,7 +121,7 @@
     "approach": "Edward, I saw you work with real estate investors and startup founders in Miami\u2014two groups I work with constantly. Both have similar blind spots: they're great at building wealth, terrible at protecting and diversifying it. Real estate guys have 100% of their net worth in property. Startup founders have 100% in equity. Both need someone to help them translate that into long-term financial security\u2014but most CPAs don't want to touch that (and most advisors don't understand their tax situations). I'm curious if you've built partnerships with advisors who understand your clients' worlds. I'm not looking to compete with you\u2014I'm looking for CPAs who can help me serve clients better, and vice versa. Worth a quick call to explore?"
   },
   {
-    "id": 9,
+    "id": 12,
     "section": "cpa-partners",
     "title": "Alvaro Acevedo Jr., JD, CPA - Brickell Accountants",
     "name": "Alvaro Acevedo Jr., JD, CPA",
@@ -99,7 +132,7 @@
     "approach": "Alvaro, I saw you've been serving international clients in Brickell since 1980\u2014that's a serious track record. I'm a wealth advisor here, and I keep running into foreign nationals who have great tax and legal structuring (usually through a firm like yours) but zero investment strategy or wealth planning. They're compliant. They're structured. But they're not optimized for long-term wealth growth. I'm curious if you've seen that pattern\u2014and whether you've built referral relationships with advisors who can help your clients with the investment/wealth planning side after you handle the tax/legal side. Not looking to pitch you. Just wondering if there's a fit to collaborate on the international client segment. Worth a call?"
   },
   {
-    "id": 10,
+    "id": 13,
     "section": "cpa-partners",
     "title": "Mongio & Associates, CPAs",
     "name": "Mongio & Associates, CPAs",
@@ -108,5 +141,38 @@
     "aum": 0,
     "details": "\ud83d\udccd 1100 S Miami Ave, Miami, FL (Brickell area)\n\n**Client Focus:**\n- Business owners (tax, bookkeeping, consulting)\n- IRS problem resolution (tax debt, audits, appeals)\n- Expert witness testimony (financial litigation)\n- Financial modeling and coaching\n- Military veteran-focused services\n\n**Why:**\n\u2705 **IRS problem resolution** = clients in financial distress (opportunity for wealth reset/planning)\n\u2705 **Financial coaching** mentioned = already stepping into advisory territory\n\u2705 Virtual firm = modern, tech-forward (likely open to new partnerships)\n\u2705 \"Save time, money, reduce stress\" marketing = relationship-oriented\n\u2705 **No wealth advisor partnership mentioned**",
     "approach": "[Partner Name], I noticed Mongio & Associates specializes in IRS problem resolution\u2014that's a unique and valuable niche. I'm a wealth advisor in Miami, and I'm curious about something: What happens to your clients AFTER you fix their tax problems? They're compliant again, but do they have a plan to rebuild wealth and avoid ending up back in the same position? I work with business owners who've been through financial crises (tax debt, business failures, divorces). The ones who succeed long-term have two things: a great CPA (to keep them compliant) and a wealth advisor (to help them rebuild smart). I'm wondering if there's a fit to collaborate\u2014not on the tax resolution side (that's your expertise), but on the 'what comes next' side for clients you've helped turn around. Worth a conversation?"
+  },
+  {
+    "id": 14,
+    "section": "warm-intros",
+    "title": "Seema Chaturvedi - TiE Miami / Accelerator Group",
+    "name": "Seema Chaturvedi",
+    "company": "TiE Miami / Accelerator Group",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Miami, FL",
+    "approach": "I saw you're leading TiE Miami's growth - I work with several Indian professionals in Brickell and would love to learn about the entrepreneurship community you're building here.\"\n\n---"
+  },
+  {
+    "id": 15,
+    "section": "warm-intros",
+    "title": "Anil Gajwani - EnCircle Payments / TiE Miami",
+    "name": "Anil Gajwani",
+    "company": "EnCircle Payments / TiE Miami",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Doral, FL",
+    "approach": "I understand you're leading mentorship at TiE Miami - as an Equitable advisor working with Indian professionals, I'd value your perspective on the business community here.\"\n\n---"
+  },
+  {
+    "id": 16,
+    "section": "warm-intros",
+    "title": "Satish Mehta - Chewy",
+    "name": "Satish Mehta",
+    "company": "Chewy",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Plantation, FL",
+    "approach": "I work with several senior tech leaders in the Indian community - would love to connect given your role leading technology at one of South Florida's largest tech companies."
   }
 ]
