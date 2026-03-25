@@ -128,12 +128,8 @@ let activeSection = 'lead-radar';
 let leads = [];
 
 // Load from localStorage first, then try to fetch from GitHub
-function init() {
-  const stored = localStorage.getItem('mai-leads-v2');
-  if (stored) {
-    leads = JSON.parse(stored);
-  }
-  fetchLeadsFromGitHub();
+async function init() {
+  await fetchLeadsFromGitHub();
   render();
 }
 
