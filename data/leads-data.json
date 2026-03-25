@@ -553,5 +553,28 @@
       }
     ],
     "createdAt": "2026-03-23T22:13:48.890Z"
+  },
+  {
+    "id": 1774413429589,
+    "triggerEvent": "Existing Client",
+    "prospectName": "Boris",
+    "age": null,
+    "email": "",
+    "phone": "",
+    "linkedin": "",
+    "eventType": "other",
+    "details": "",
+    "advisorApproach": "500k into scs adv and managed half half",
+    "estimatedAUM": 500000,
+    "category": "pipeline",
+    "status": "new",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-25T04:37:09.589Z",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-25T04:37:09.590Z"
   }
 ]
