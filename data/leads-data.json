@@ -576,5 +576,28 @@
       }
     ],
     "createdAt": "2026-03-25T04:37:09.590Z"
+  },
+  {
+    "id": 1774413937877,
+    "triggerEvent": "Existing Client",
+    "prospectName": "Boris",
+    "age": null,
+    "email": "",
+    "phone": "",
+    "linkedin": "",
+    "eventType": "startup-exit",
+    "details": "",
+    "advisorApproach": "",
+    "estimatedAUM": 0,
+    "category": "divorce-referral",
+    "status": "new",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-25T04:45:37.877Z",
+        "action": "Lead created"
+      }
+    ],
+    "createdAt": "2026-03-25T04:45:37.877Z"
   }
 ]
