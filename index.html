@@ -1145,8 +1145,11 @@ function renderPipeline(leads) {
         </div>`).join('')}
     </div>`;
 
+  const allStoredLeads = JSON.parse(localStorage.getItem('advisorLeads') || '[]');
+  const pipelineCat = allStoredLeads.filter(l => l.category === 'pipeline');
+  const combinedTotal = total + pipelineCat.length;
   const badge = document.getElementById('pipelineCount');
-  if(badge){ badge.textContent = total; badge.className = total > 0 ? 'nav-badge' : 'nav-badge empty'; }
+  if(badge){ badge.textContent = combinedTotal; badge.className = combinedTotal > 0 ? 'nav-badge' : 'nav-badge empty'; }
 }
 
 let pipelineLeads = [];
