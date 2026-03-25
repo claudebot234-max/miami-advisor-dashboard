@@ -288,14 +288,17 @@ function render() {
 
 function updateStatus(id, status) {
   leads = leads.map(l => l.id === id ? {...l, status} : l);
-  save();
+  statusUpdates[id] = status;
+  saveState();
   render();
 }
 
 function deleteLead(id) {
   if (confirm('Delete this lead permanently?')) {
     leads = leads.filter(l => l.id !== id);
-    save();
+    deletedIds.add(id);
+    manualLeads = manualLeads.filter(l => l.id !== id);
+    saveState();
     render();
   }
 }
@@ -374,16 +377,24 @@ function saveLead(e, id) {
     status: document.getElementById('f-status').value,
     details: document.getElementById('f-details').value,
     approach: document.getElementById('f-approach').value,
-    notes: document.getElementById('f-notes').value
+    notes: document.getElementById('f-notes').value,
+    section: activeSection
   };
   
   if (id) {
     leads = leads.map(l => l.id === id ? {...l, ...data} : l);
+    // Update in manualLeads if it exists there
+    const idx = manualLeads.findIndex(l => l.id === id);
+    if (idx >= 0) {
+      manualLeads[idx] = {...manualLeads[idx], ...data};
+    }
   } else {
-    leads.push({...data, id: Date.now(), section: activeSection});
+    const newLead = {...data, id: Date.now()};
+    leads.push(newLead);
+    manualLeads.push(newLead);
   }
   
-  save();
+  saveState();
   closeModal();
   render();
 }
