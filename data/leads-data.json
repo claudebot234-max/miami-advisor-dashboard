@@ -576,32 +576,5 @@
       }
     ],
     "createdAt": "2026-03-25T04:37:09.590Z"
-  },
-  {
-    "id": 1774413937877,
-    "triggerEvent": "Existing Client",
-    "prospectName": "Boris",
-    "age": null,
-    "email": "",
-    "phone": "",
-    "linkedin": "",
-    "eventType": "other",
-    "details": "",
-    "advisorApproach": "1/2 SCS ADV and 1/2 to managed Mid cap low pe",
-    "estimatedAUM": 500000,
-    "category": "pipeline",
-    "status": "new",
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-25T04:45:37.877Z",
-        "action": "Lead created"
-      },
-      {
-        "date": "2026-03-25T04:53:57.808Z",
-        "action": "Lead updated"
-      }
-    ],
-    "createdAt": "2026-03-25T04:45:37.877Z"
   }
 ]
