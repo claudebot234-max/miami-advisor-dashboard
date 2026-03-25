@@ -239,7 +239,7 @@ function render() {
         </div>
         <span class="badge badge-${l.status || 'new'}">${l.status || 'new'}</span>
       </div>
-      ${l.details ? `<div class="lead-details">${l.details}</div>` : ''}
+      ${l.details ? `<div class="lead-details">${l.details.replace(/\n/g, '<br>').replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/✅/g, '<span style="color:#34d399">✅</span>')}</div>` : ''}
       ${l.approach ? `<div class="lead-approach">💡 ${l.approach}</div>` : ''}
       ${l.aum ? `<div class="lead-aum">Estimated AUM: <span>${fmt(l.aum)}</span></div>` : ''}
       <div class="actions">
