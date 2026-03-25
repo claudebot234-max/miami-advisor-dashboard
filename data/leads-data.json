@@ -585,17 +585,21 @@
     "email": "",
     "phone": "",
     "linkedin": "",
-    "eventType": "startup-exit",
+    "eventType": "other",
     "details": "",
-    "advisorApproach": "",
-    "estimatedAUM": 0,
-    "category": "divorce-referral",
+    "advisorApproach": "1/2 SCS ADV and 1/2 to managed Mid cap low pe",
+    "estimatedAUM": 500000,
+    "category": "pipeline",
     "status": "new",
     "notes": [],
     "activities": [
       {
         "date": "2026-03-25T04:45:37.877Z",
         "action": "Lead created"
+      },
+      {
+        "date": "2026-03-25T04:53:57.808Z",
+        "action": "Lead updated"
       }
     ],
     "createdAt": "2026-03-25T04:45:37.877Z"
