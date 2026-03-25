@@ -124,7 +124,6 @@ const SECTIONS = [
   {id:'filly-bookings',name:'Filly Bookings',icon:'📞'}
 ];
 
-let activeSection = 'lead-radar';
 let leads = [];
 let activeSection = 'lead-radar';
 let manualLeads = JSON.parse(localStorage.getItem('mai-manual') || '[]');
@@ -137,9 +136,7 @@ function saveLocal() {
   localStorage.setItem('mai-status', JSON.stringify(statusMap));
 }
 
-async function init() {
-  await fetchLeadsFromGitHub();
-}
+async function init() { await fetchLeadsFromGitHub(); }
 
 async function fetchLeadsFromGitHub() {
   try {
@@ -155,13 +152,7 @@ async function fetchLeadsFromGitHub() {
   } catch(e) { console.log(e); }
 }
 
-function refreshData() {
-  fetchLeadsFromGitHub();
-}
-
-function save() {
-  localStorage.setItem('mai-leads-v2', JSON.stringify(leads));
-}
+function refreshData() { fetchLeadsFromGitHub(); }
 
 function fmt(n) {
   if (!n) return '$0';
@@ -169,82 +160,51 @@ function fmt(n) {
 }
 
 function renderNav() {
-  const counts = {};
-  SECTIONS.forEach(s => counts[s.id] = leads.filter(l => l.section === s.id).length);
-  document.getElementById('nav').innerHTML = SECTIONS.map(s => 
-    `<button class="nav-btn ${activeSection === s.id ? 'active' : ''}" onclick="setSection('${s.id}')">
-      <span class="icon">${s.icon}</span>
-      <span>${s.name}</span>
-      ${counts[s.id] ? `<span class="count">${counts[s.id]}</span>` : ''}
-    </button>`
-  ).join('');
-}
-
-function setSection(id) {
-  activeSection = id;
-  document.getElementById('section-title').textContent = SECTIONS.find(s => s.id === id)?.name || id;
-  render();
+  document.getElementById('nav').innerHTML = SECTIONS.map(s => {
+    const count = leads.filter(l => l.section === s.id).length;
+    return `<div class="nav-item ${activeSection === s.id ? 'active' : ''}" onclick="activeSection='${s.id}';render()">
+      <span>${s.icon} ${s.name}</span>
+      ${count ? `<span class="nav-count">${count}</span>` : ''}
+    </div>`;
+  }).join('');
 }
 
 function render() {
   renderNav();
-  const search = document.getElementById('search').value.toLowerCase();
-  const statusFilter = document.getElementById('status-filter').value;
+  const sec = SECTIONS.find(s => s.id === activeSection);
+  document.getElementById('section-title').textContent = sec?.name || 'Leads';
+  const filtered = leads.filter(l => l.section === activeSection);
+  const status = document.getElementById('status-filter')?.value || 'all';
+  const search = (document.getElementById('search')?.value || '').toLowerCase();
+  let shown = filtered;
+  if (status !== 'all') shown = shown.filter(l => l.status === status);
+  if (search) shown = shown.filter(l => 
+    (l.name||'').toLowerCase().includes(search) || 
+    (l.company||'').toLowerCase().includes(search) || 
+    (l.details||'').toLowerCase().includes(search)
+  );
+  document.getElementById('total-leads').textContent = shown.length;
+  document.getElementById('total-aum').textContent = fmt(shown.reduce((a,l) => a + (l.aum||0), 0));
+  document.getElementById('new-leads').textContent = shown.filter(l => l.status === 'new').length;
+  const meetings = shown.filter(l => l.status === 'meeting').length;
+  const clients = shown.filter(l => l.status === 'client').length;
+  document.getElementById('meetings-clients').textContent = meetings + ' / ' + clients;
   
-  const filtered = leads.filter(l => {
-    if (l.section !== activeSection) return false;
-    if (statusFilter !== 'all' && l.status !== statusFilter) return false;
-    if (search && !((l.name || '').toLowerCase().includes(search) || 
-                    (l.company || '').toLowerCase().includes(search) ||
-                    (l.title || '').toLowerCase().includes(search) ||
-                    (l.details || '').toLowerCase().includes(search))) return false;
-    return true;
-  });
-  
-  const sectionLeads = leads.filter(l => l.section === activeSection);
-  const totalAUM = sectionLeads.reduce((s, l) => s + (l.aum || 0), 0);
-  const newCount = sectionLeads.filter(l => l.status === 'new').length;
-  const meetingCount = sectionLeads.filter(l => l.status === 'meeting').length;
-  const clientCount = sectionLeads.filter(l => l.status === 'client').length;
-  
-  document.getElementById('stats').innerHTML = `
-    <div class="stat">
-      <div class="stat-label">Total Leads</div>
-      <div class="stat-value">${sectionLeads.length}</div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">Potential AUM</div>
-      <div class="stat-value blue">${fmt(totalAUM)}</div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">New Leads</div>
-      <div class="stat-value yellow">${newCount}</div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">Meetings / Clients</div>
-      <div class="stat-value green">${meetingCount} / ${clientCount}</div>
-    </div>`;
-  
-  if (!filtered.length) {
-    document.getElementById('leads').innerHTML = `
-      <div class="empty">
-        <div class="empty-icon">📋</div>
-        <p>No leads in this section yet.</p>
-        <p style="margin-top: 8px;">Click "+ Add Lead" to create one, or wait for cron jobs to populate data.</p>
-      </div>`;
+  if (!shown.length) {
+    document.getElementById('leads-list').innerHTML = `<div class="empty"><div class="empty-icon">📋</div><p>No leads in this section yet.</p><p>Click "+ Add Lead" to create one, or wait for cron jobs to populate data.</p></div>`;
     return;
   }
   
-  document.getElementById('leads').innerHTML = filtered.map(l => `
+  document.getElementById('leads-list').innerHTML = shown.map(l => `
     <div class="lead-card">
       <div class="lead-header">
         <div>
-          <div class="lead-title">${l.title || l.name || 'Untitled Lead'}</div>
+          <div class="lead-title">${l.title || l.name || 'Untitled'}</div>
           <div class="lead-meta">${l.name || ''}${l.company ? ' · ' + l.company : ''}</div>
         </div>
-        <span class="badge badge-${l.status || 'new'}">${l.status || 'new'}</span>
+        <span class="badge badge-${l.status || 'new'}">${l.status || 'New'}</span>
       </div>
-      ${l.details ? `<div class="lead-details">${l.details.replace(/\n/g, '<br>').replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/✅/g, '<span style="color:#34d399">✅</span>')}</div>` : ''}
+      ${l.details ? `<div class="lead-details">${l.details.replace(/\n/g,'<br>').replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/✅/g,'<span style="color:#34d399">✅</span>')}</div>` : ''}
       ${l.approach ? `<div class="lead-approach">💡 ${l.approach}</div>` : ''}
       ${l.aum ? `<div class="lead-aum">Estimated AUM: <span>${fmt(l.aum)}</span></div>` : ''}
       <div class="actions">
@@ -252,9 +212,10 @@ function render() {
         ${l.status === 'contacted' ? `<button onclick="updateStatus(${l.id},'meeting')">📅 Schedule Meeting</button>` : ''}
         ${l.status === 'meeting' ? `<button onclick="updateStatus(${l.id},'client')">✅ Convert to Client</button>` : ''}
         <button onclick="editLead(${l.id})">✏️ Edit</button>
-        <button onclick="deleteLead(${l.id})" style="color: var(--danger);">🗑️ Delete</button>
+        <button onclick="deleteLead(${l.id})" style="color:#f87171">🗑️ Delete</button>
       </div>
-    </div>`).join('');
+    </div>
+  `).join('');
 }
 
 function updateStatus(id, status) {
@@ -263,10 +224,6 @@ function updateStatus(id, status) {
   if (m) m.status = status;
   else statusMap[id] = status;
   saveLocal();
-  render();
-} : l);
-  statusUpdates[id] = status;
-  saveState();
   render();
 }
 
@@ -279,9 +236,7 @@ function deleteLead(id) {
   render();
 }
 
-function editLead(id) {
-  openAddModal(leads.find(l => l.id === id));
-}
+function editLead(id) { openAddModal(leads.find(l => l.id === id)); }
 
 function openAddModal(lead = null) {
   document.getElementById('modal').innerHTML = `
@@ -291,57 +246,36 @@ function openAddModal(lead = null) {
         <form onsubmit="saveLead(event, ${lead?.id || 'null'})">
           <div class="form-group">
             <label>Lead Title / Trigger Event *</label>
-            <input id="f-title" value="${lead?.title || ''}" required placeholder="e.g., Sold company for $5M">
+            <input id="f-title" value="${lead?.title?.replace(/"/g,'&quot;') || ''}" required>
           </div>
           <div class="form-row">
-            <div class="form-group">
-              <label>Contact Name</label>
-              <input id="f-name" value="${lead?.name || ''}" placeholder="John Smith">
-            </div>
-            <div class="form-group">
-              <label>Company</label>
-              <input id="f-company" value="${lead?.company || ''}" placeholder="Acme Corp">
-            </div>
+            <div class="form-group"><label>Contact Name</label><input id="f-name" value="${lead?.name?.replace(/"/g,'&quot;') || ''}"></div>
+            <div class="form-group"><label>Company</label><input id="f-company" value="${lead?.company?.replace(/"/g,'&quot;') || ''}"></div>
           </div>
           <div class="form-row">
-            <div class="form-group">
-              <label>Estimated AUM ($)</label>
-              <input type="number" id="f-aum" value="${lead?.aum || 0}" placeholder="1000000">
-            </div>
-            <div class="form-group">
-              <label>Status</label>
+            <div class="form-group"><label>Estimated AUM ($)</label><input type="number" id="f-aum" value="${lead?.aum || 0}"></div>
+            <div class="form-group"><label>Status</label>
               <select id="f-status">
-                <option value="new" ${lead?.status === 'new' ? 'selected' : ''}>New</option>
-                <option value="contacted" ${lead?.status === 'contacted' ? 'selected' : ''}>Contacted</option>
-                <option value="meeting" ${lead?.status === 'meeting' ? 'selected' : ''}>Meeting Scheduled</option>
-                <option value="client" ${lead?.status === 'client' ? 'selected' : ''}>Client</option>
+                <option value="new" ${lead?.status==='new'?'selected':''}>New</option>
+                <option value="contacted" ${lead?.status==='contacted'?'selected':''}>Contacted</option>
+                <option value="meeting" ${lead?.status==='meeting'?'selected':''}>Meeting</option>
+                <option value="client" ${lead?.status==='client'?'selected':''}>Client</option>
               </select>
             </div>
           </div>
-          <div class="form-group">
-            <label>Details</label>
-            <textarea id="f-details" placeholder="Background info, source, context...">${lead?.details || ''}</textarea>
-          </div>
-          <div class="form-group">
-            <label>Suggested Approach</label>
-            <textarea id="f-approach" placeholder="How to reach out, talking points...">${lead?.approach || ''}</textarea>
-          </div>
-          <div class="form-group">
-            <label>Notes</label>
-            <textarea id="f-notes" placeholder="Personal notes, follow-up reminders...">${lead?.notes || ''}</textarea>
-          </div>
+          <div class="form-group"><label>Details</label><textarea id="f-details">${lead?.details || ''}</textarea></div>
+          <div class="form-group"><label>Approach</label><textarea id="f-approach">${lead?.approach || ''}</textarea></div>
+          <div class="form-group"><label>Notes</label><textarea id="f-notes">${lead?.notes || ''}</textarea></div>
           <div class="form-actions">
             <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
-            <button type="submit" class="btn btn-primary">${lead ? 'Save Changes' : 'Add Lead'}</button>
+            <button type="submit" class="btn btn-primary">${lead ? 'Save' : 'Add Lead'}</button>
           </div>
         </form>
       </div>
     </div>`;
 }
 
-function closeModal() {
-  document.getElementById('modal').innerHTML = '';
-}
+function closeModal() { document.getElementById('modal').innerHTML = ''; }
 
 function saveLead(e, id) {
   e.preventDefault();
@@ -372,31 +306,16 @@ function saveLead(e, id) {
 
 function exportCSV() {
   const sectionLeads = leads.filter(l => l.section === activeSection);
-  if (!sectionLeads.length) {
-    alert('No leads to export');
-    return;
-  }
-  
-  const headers = ['Name', 'Title', 'Company', 'Status', 'AUM', 'Details', 'Approach'];
-  const rows = sectionLeads.map(l => [
-    l.name || '',
-    l.title || '',
-    l.company || '',
-    l.status || 'new',
-    l.aum || 0,
-    (l.details || '').replace(/"/g, '""'),
-    (l.approach || '').replace(/"/g, '""')
-  ].map(v => `"${v}"`).join(','));
-  
+  if (!sectionLeads.length) { alert('No leads'); return; }
+  const headers = ['Name','Title','Company','Status','AUM','Details','Approach'];
+  const rows = sectionLeads.map(l => [l.name||'',l.title||'',l.company||'',l.status||'new',l.aum||0,(l.details||'').replace(/"/g,'""'),(l.approach||'').replace(/"/g,'""')].map(v=>`"${v}"`).join(','));
   const csv = [headers.join(','), ...rows].join('\n');
-  const blob = new Blob([csv], {type: 'text/csv'});
+  const blob = new Blob([csv], {type:'text/csv'});
+  const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = `${activeSection}-leads-${new Date().toISOString().split('T')[0]}.csv`;
-  a.click();
+  a.href = url; a.download = activeSection + '-leads.csv'; a.click();
 }
 
-// Initialize
 init();
 </script>
 </body>
