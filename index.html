@@ -129,8 +129,28 @@ let leads = [];
 
 // Load from localStorage first, then try to fetch from GitHub
 async function init() {
+  // Load saved state first (manual edits, status changes, deletions)
+  const savedState = localStorage.getItem('mai-state-v3');
+  if (savedState) {
+    const state = JSON.parse(savedState);
+    manualLeads = state.manualLeads || [];
+    statusUpdates = state.statusUpdates || {};
+    deletedIds = new Set(state.deletedIds || []);
+  }
   await fetchLeadsFromGitHub();
   render();
+}
+
+let manualLeads = [];
+let statusUpdates = {};
+let deletedIds = new Set();
+
+function saveState() {
+  localStorage.setItem('mai-state-v3', JSON.stringify({
+    manualLeads,
+    statusUpdates,
+    deletedIds: [...deletedIds]
+  }));
 }
 
 async function fetchLeadsFromGitHub() {
@@ -139,19 +159,22 @@ async function fetchLeadsFromGitHub() {
     if (res.ok) {
       const data = await res.json();
       if (Array.isArray(data) && data.length > 0) {
-        // Preserve manual edits from localStorage
-        const stored = localStorage.getItem('mai-manual-edits');
-        const manualEdits = stored ? JSON.parse(stored) : [];
-        // Merge: start with fetched data, add manual edits that aren't duplicates
-        const fetchedIds = new Set(data.map(l => l.id));
-        const maxId = Math.max(...data.map(l => l.id), 0);
-        manualEdits.forEach((edit, i) => {
-          if (!fetchedIds.has(edit.id)) {
-            edit.id = maxId + i + 1;
-            data.push(edit);
+        // Filter out deleted leads
+        let merged = data.filter(l => !deletedIds.has(l.id));
+        // Apply status updates
+        merged = merged.map(l => {
+          if (statusUpdates[l.id]) {
+            return {...l, status: statusUpdates[l.id]};
           }
+          return l;
         });
-        leads = data;
+        // Add manual leads
+        const maxId = Math.max(...data.map(l => l.id), 0);
+        manualLeads.forEach((ml, i) => {
+          ml.id = maxId + 1000 + i;
+          merged.push(ml);
+        });
+        leads = merged;
         document.getElementById('last-update').textContent = new Date().toLocaleString();
         render();
       }
