@@ -126,62 +126,33 @@ const SECTIONS = [
 
 let activeSection = 'lead-radar';
 let leads = [];
+let activeSection = 'lead-radar';
+let manualLeads = JSON.parse(localStorage.getItem('mai-manual') || '[]');
+let deletedIds = new Set(JSON.parse(localStorage.getItem('mai-deleted') || '[]'));
+let statusMap = JSON.parse(localStorage.getItem('mai-status') || '{}');
 
-// Load from localStorage first, then try to fetch from GitHub
-async function init() {
-  // Load saved state first (manual edits, status changes, deletions)
-  const savedState = localStorage.getItem('mai-state-v3');
-  if (savedState) {
-    const state = JSON.parse(savedState);
-    manualLeads = state.manualLeads || [];
-    statusUpdates = state.statusUpdates || {};
-    deletedIds = new Set(state.deletedIds || []);
-  }
-  await fetchLeadsFromGitHub();
-  render();
+function saveLocal() {
+  localStorage.setItem('mai-manual', JSON.stringify(manualLeads));
+  localStorage.setItem('mai-deleted', JSON.stringify([...deletedIds]));
+  localStorage.setItem('mai-status', JSON.stringify(statusMap));
 }
 
-let manualLeads = [];
-let statusUpdates = {};
-let deletedIds = new Set();
-
-function saveState() {
-  localStorage.setItem('mai-state-v3', JSON.stringify({
-    manualLeads,
-    statusUpdates,
-    deletedIds: [...deletedIds]
-  }));
+async function init() {
+  await fetchLeadsFromGitHub();
 }
 
 async function fetchLeadsFromGitHub() {
   try {
     const res = await fetch('https://raw.githubusercontent.com/claudebot234-max/miami-advisor-dashboard/main/data/leads-data.json?t=' + Date.now());
     if (res.ok) {
-      const data = await res.json();
-      if (Array.isArray(data) && data.length > 0) {
-        // Filter out deleted leads
-        let merged = data.filter(l => !deletedIds.has(l.id));
-        // Apply status updates
-        merged = merged.map(l => {
-          if (statusUpdates[l.id]) {
-            return {...l, status: statusUpdates[l.id]};
-          }
-          return l;
-        });
-        // Add manual leads
-        const maxId = Math.max(...data.map(l => l.id), 0);
-        manualLeads.forEach((ml, i) => {
-          ml.id = maxId + 1000 + i;
-          merged.push(ml);
-        });
-        leads = merged;
-        document.getElementById('last-update').textContent = new Date().toLocaleString();
-        render();
-      }
+      let data = await res.json();
+      data = data.filter(l => !deletedIds.has(l.id));
+      data = data.map(l => statusMap[l.id] ? {...l, status: statusMap[l.id]} : l);
+      leads = [...data, ...manualLeads];
+      document.getElementById('last-update').textContent = new Date().toLocaleString();
+      render();
     }
-  } catch (e) {
-    console.log('Using cached data');
-  }
+  } catch(e) { console.log(e); }
 }
 
 function refreshData() {
@@ -288,19 +259,24 @@ function render() {
 
 function updateStatus(id, status) {
   leads = leads.map(l => l.id === id ? {...l, status} : l);
+  const m = manualLeads.find(l => l.id === id);
+  if (m) m.status = status;
+  else statusMap[id] = status;
+  saveLocal();
+  render();
+} : l);
   statusUpdates[id] = status;
   saveState();
   render();
 }
 
 function deleteLead(id) {
-  if (confirm('Delete this lead permanently?')) {
-    leads = leads.filter(l => l.id !== id);
-    deletedIds.add(id);
-    manualLeads = manualLeads.filter(l => l.id !== id);
-    saveState();
-    render();
-  }
+  if (!confirm('Delete?')) return;
+  leads = leads.filter(l => l.id !== id);
+  manualLeads = manualLeads.filter(l => l.id !== id);
+  deletedIds.add(id);
+  saveLocal();
+  render();
 }
 
 function editLead(id) {
@@ -380,21 +356,16 @@ function saveLead(e, id) {
     notes: document.getElementById('f-notes').value,
     section: activeSection
   };
-  
   if (id) {
     leads = leads.map(l => l.id === id ? {...l, ...data} : l);
-    // Update in manualLeads if it exists there
     const idx = manualLeads.findIndex(l => l.id === id);
-    if (idx >= 0) {
-      manualLeads[idx] = {...manualLeads[idx], ...data};
-    }
+    if (idx >= 0) manualLeads[idx] = {...manualLeads[idx], ...data};
   } else {
     const newLead = {...data, id: Date.now()};
     leads.push(newLead);
     manualLeads.push(newLead);
   }
-  
-  saveState();
+  saveLocal();
   closeModal();
   render();
 }
