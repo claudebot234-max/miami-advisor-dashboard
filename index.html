@@ -139,8 +139,19 @@ async function fetchLeadsFromGitHub() {
     if (res.ok) {
       const data = await res.json();
       if (Array.isArray(data) && data.length > 0) {
+        // Preserve manual edits from localStorage
+        const stored = localStorage.getItem('mai-manual-edits');
+        const manualEdits = stored ? JSON.parse(stored) : [];
+        // Merge: start with fetched data, add manual edits that aren't duplicates
+        const fetchedIds = new Set(data.map(l => l.id));
+        const maxId = Math.max(...data.map(l => l.id), 0);
+        manualEdits.forEach((edit, i) => {
+          if (!fetchedIds.has(edit.id)) {
+            edit.id = maxId + i + 1;
+            data.push(edit);
+          }
+        });
         leads = data;
-        localStorage.setItem('mai-leads-v2', JSON.stringify(leads));
         document.getElementById('last-update').textContent = new Date().toLocaleString();
         render();
       }
