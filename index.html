@@ -130,6 +130,14 @@ let leads = [];
 // Load from localStorage first, then try to fetch from GitHub
 async function init() {
   await fetchLeadsFromGitHub();
+  // Merge any manually added leads from localStorage
+  const stored = localStorage.getItem('mai-manual-leads');
+  if (stored) {
+    const manual = JSON.parse(stored);
+    manual.forEach(m => {
+      if (!leads.find(l => l.id === m.id)) leads.push(m);
+    });
+  }
   render();
 }
 
@@ -346,7 +354,13 @@ function saveLead(e, id) {
   if (id) {
     leads = leads.map(l => l.id === id ? {...l, ...data} : l);
   } else {
-    leads.push({...data, id: Date.now(), section: activeSection});
+    const newLead = {...data, id: Date.now(), section: activeSection};
+    leads.push(newLead);
+    // Save to manual leads localStorage
+    const stored = localStorage.getItem('mai-manual-leads');
+    const manual = stored ? JSON.parse(stored) : [];
+    manual.push(newLead);
+    localStorage.setItem('mai-manual-leads', JSON.stringify(manual));
   }
   
   save();
