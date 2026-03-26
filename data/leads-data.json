@@ -45,6 +45,39 @@
   },
   {
     "id": 5,
+    "section": "lead-radar",
+    "title": "Nicos Katsoulis - Real Estate Investor",
+    "name": "Nicos Katsoulis",
+    "company": "Real Estate Investor",
+    "status": "new",
+    "aum": 0,
+    "details": "**Trigger Event:** Sold 4,800 sq ft home at 3215 South Flagler Drive, West Palm Beach for $10.5M (March 2026). Bought 2018 for $3.6M = $6.9M gain.\n\n**Wealth Signal:** 3x return in 8 years, owns investment properties, likely $4-8M net worth range \u2705\n\n**Heat Level:** HOT - Recent liquidity event\n\n**Suggested Approach:** \"Saw you just closed on the Flagler Drive sale\u2014impressive return. As you look at what to do with those proceeds, I help investors in your position build tax-efficient income strategies that keep wealth working for you without the landlord headaches.\"",
+    "approach": ""
+  },
+  {
+    "id": 6,
+    "section": "lead-radar",
+    "title": "Jorge Carmenate - Healthcare Real Estate Investor",
+    "name": "Jorge Carmenate",
+    "company": "Healthcare Real Estate Investor",
+    "status": "new",
+    "aum": 0,
+    "details": "**Trigger Event:** Sold Colonial Assisted Living (68-unit facility, Lauderhill) for $20M (March 2026). Bought 2024 for $8M = $12M gain in 2 years.\n\n**Wealth Signal:** 150% return in 24 months, operates Golden Age Health Center, sophisticated healthcare RE investor, likely $5-15M net worth \u2705\n\n**Heat Level:** HOT - Major liquidity event\n\n**Suggested Approach:** \"Congratulations on the Colonial ALF exit\u2014doubling your money in two years is exceptional. With $20M in proceeds, you're likely weighing your next move. I specialize in helping healthcare entrepreneurs like you protect gains and generate predictable ",
+    "approach": ""
+  },
+  {
+    "id": 7,
+    "section": "lead-radar",
+    "title": "Edward Farscht - CEO, Diamond Communications",
+    "name": "Edward Farscht",
+    "company": "CEO, Diamond Communications",
+    "status": "new",
+    "aum": 0,
+    "details": "**Trigger Event:** Sold mansion at 733 North Ocean Boulevard, Delray Beach for $19.2M (March 2026). Bought 2021 for $14.3M = $4.9M gain.\n\n**Wealth Signal:** CEO of Diamond Communications (wireless infrastructure firm), luxury real estate investor, likely $10M+ net worth\n\n**Heat Level:** WARM - May be above target range\n\n**Suggested Approach:** \"Saw you closed on the Ocean Boulevard property\u2014smart exit timing. As a CEO managing both business and personal wealth, you might appreciate how we help executives in your position turn real estate gains into diversified income streams that don't req",
+    "approach": ""
+  },
+  {
+    "id": 8,
     "section": "acquisition",
     "title": "Steven Fenyves, CFP, CFS - Valued Wealth Management Inc.",
     "name": "Steven Fenyves, CFP, CFS",
@@ -55,7 +88,7 @@
     "approach": ""
   },
   {
-    "id": 6,
+    "id": 9,
     "section": "acquisition",
     "title": "Mauro Guerra - Guerra Wealth Advisors",
     "name": "Mauro Guerra",
@@ -66,7 +99,7 @@
     "approach": ""
   },
   {
-    "id": 7,
+    "id": 10,
     "section": "acquisition",
     "title": "Joshua Feller, ChFC",
     "name": "Joshua Feller, ChFC",
@@ -77,7 +110,7 @@
     "approach": ""
   },
   {
-    "id": 8,
+    "id": 11,
     "section": "acquisition",
     "title": "Provenance Wealth Advisors Partners",
     "name": "Provenance Wealth Advisors Partners",
@@ -88,7 +121,7 @@
     "approach": ""
   },
   {
-    "id": 9,
+    "id": 12,
     "section": "acquisition",
     "title": "Northstar Financial Planners Team",
     "name": "Northstar Financial Planners Team",
@@ -99,7 +132,7 @@
     "approach": ""
   },
   {
-    "id": 10,
+    "id": 13,
     "section": "vul",
     "title": "Teri Kaye - CohnReznick",
     "name": "Teri Kaye",
@@ -110,7 +143,7 @@
     "approach": "As someone who helps high-net-worth families reduce tax burden, have you explored how tax-advantaged permanent insurance fits into your own wealth strategy alongside your qualified retirement accounts?\"\n\n---"
   },
   {
-    "id": 11,
+    "id": 14,
     "section": "vul",
     "title": "Martha M. Ferral - Shutts & Bowen",
     "name": "Martha M. Ferral",
@@ -121,7 +154,7 @@
     "approach": "Congratulations on making partner - as you enter this new income phase, most new partners realize they've maxed traditional retirement vehicles and need additional tax-advantaged growth. Have you looked at how VUL complements your 401k?\"\n\n---"
   },
   {
-    "id": 12,
+    "id": 15,
     "section": "vul",
     "title": "Daniela F. Cimo - Weiss Serota Helfman Cole + Bierman",
     "name": "Daniela F. Cimo",
@@ -132,7 +165,7 @@
     "approach": "Making partner is a huge milestone - it also typically means you've hit the 401k/IRA limits. Most successful attorneys in your position use VUL to create additional tax-free accumulation. Have you explored this?"
   },
   {
-    "id": 13,
+    "id": 16,
     "section": "cpa-partners",
     "title": "Victor Delerme, CPA - Delerme CPA",
     "name": "Victor Delerme, CPA",
@@ -143,7 +176,7 @@
     "approach": "Victor, I came across your work with high-income entrepreneurs and Act 60 relocations\u2014impressive niche. I'm a wealth advisor in Miami working with similar clients (business owners scaling 7-8 figures, often with international exposure). I'm finding that most of my clients' CPAs focus on compliance, not strategy. You clearly do both. That's rare. I'm curious if you've built referral relationships with advisors who complement your tax work\u2014estate planning, investment structuring, insurance optimization, etc. Many of my CPA relationships are informal, but the best ones are intentional. Would you be open to a quick call to explore whether there's a fit? Not looking to pitch you\u2014just comparing notes on how we each serve this market."
   },
   {
-    "id": 14,
+    "id": 17,
     "section": "cpa-partners",
     "title": "Edgar Gomez, CPA, MST, MBA - E. Gomez CPA LLC",
     "name": "Edgar Gomez, CPA, MST, MBA",
@@ -154,7 +187,7 @@
     "approach": "Edgar, I saw you've built a strong practice with construction and freight businesses in Miami\u2014impressive niche. Those clients have unique cash flow challenges (I know, I work with several). I'm a wealth advisor here, and I'm finding that business owners in those industries often have great tax planning (if they have a good CPA like you), but terrible wealth accumulation strategies. They're profitable, but they're not building personal wealth outside the business. I'm curious if you've seen that pattern\u2014and whether you've built referral relationships with advisors who help your clients translate business success into personal financial security. Not looking to pitch you anything. Just wondering if there's a fit to collaborate where your tax work ends and wealth planning begins."
   },
   {
-    "id": 15,
+    "id": 18,
     "section": "cpa-partners",
     "title": "Edward D. Quilca, CPA - Quilca CPA Group",
     "name": "Edward D. Quilca, CPA",
@@ -165,7 +198,7 @@
     "approach": "Edward, I saw you work with real estate investors and startup founders in Miami\u2014two groups I work with constantly. Both have similar blind spots: they're great at building wealth, terrible at protecting and diversifying it. Real estate guys have 100% of their net worth in property. Startup founders have 100% in equity. Both need someone to help them translate that into long-term financial security\u2014but most CPAs don't want to touch that (and most advisors don't understand their tax situations). I'm curious if you've built partnerships with advisors who understand your clients' worlds. I'm not looking to compete with you\u2014I'm looking for CPAs who can help me serve clients better, and vice versa. Worth a quick call to explore?"
   },
   {
-    "id": 16,
+    "id": 19,
     "section": "cpa-partners",
     "title": "Alvaro Acevedo Jr., JD, CPA - Brickell Accountants",
     "name": "Alvaro Acevedo Jr., JD, CPA",
@@ -176,7 +209,7 @@
     "approach": "Alvaro, I saw you've been serving international clients in Brickell since 1980\u2014that's a serious track record. I'm a wealth advisor here, and I keep running into foreign nationals who have great tax and legal structuring (usually through a firm like yours) but zero investment strategy or wealth planning. They're compliant. They're structured. But they're not optimized for long-term wealth growth. I'm curious if you've seen that pattern\u2014and whether you've built referral relationships with advisors who can help your clients with the investment/wealth planning side after you handle the tax/legal side. Not looking to pitch you. Just wondering if there's a fit to collaborate on the international client segment. Worth a call?"
   },
   {
-    "id": 17,
+    "id": 20,
     "section": "cpa-partners",
     "title": "Mongio & Associates, CPAs",
     "name": "Mongio & Associates, CPAs",
@@ -187,7 +220,7 @@
     "approach": "[Partner Name], I noticed Mongio & Associates specializes in IRS problem resolution\u2014that's a unique and valuable niche. I'm a wealth advisor in Miami, and I'm curious about something: What happens to your clients AFTER you fix their tax problems? They're compliant again, but do they have a plan to rebuild wealth and avoid ending up back in the same position? I work with business owners who've been through financial crises (tax debt, business failures, divorces). The ones who succeed long-term have two things: a great CPA (to keep them compliant) and a wealth advisor (to help them rebuild smart). I'm wondering if there's a fit to collaborate\u2014not on the tax resolution side (that's your expertise), but on the 'what comes next' side for clients you've helped turn around. Worth a conversation?"
   },
   {
-    "id": 18,
+    "id": 21,
     "section": "estate-attorneys",
     "title": "Anwar E. Hadeed - Hadeed Legal",
     "name": "Anwar E. Hadeed",
@@ -198,7 +231,7 @@
     "approach": "Anwar, I work with professionals and business owners in Brickell who are moving significant assets to Florida\u2014many need trusted estate counsel who understands the probate differences here and I'd love to explore a referral relationship.\"\n\n---"
   },
   {
-    "id": 19,
+    "id": 22,
     "section": "estate-attorneys",
     "title": "Yanitza Schoonover - The Schoonover Law Firm",
     "name": "Yanitza Schoonover",
@@ -209,7 +242,7 @@
     "approach": "Yanitza, I specialize in wealth management for families going through major transitions\u2014divorces, inheritances, business sales\u2014and I'm looking for an estate attorney who handles the complex litigation side to build a two-way referral relationship.\"\n\n---"
   },
   {
-    "id": 20,
+    "id": 23,
     "section": "estate-attorneys",
     "title": "Monique Lavender Greenberg - Lavender Greenberg PLLC",
     "name": "Monique Lavender Greenberg",
@@ -220,7 +253,7 @@
     "approach": "Monique, I saw on your website that you collaborate with financial planners\u2014I'm an Equitable advisor in Brickell working with $2-10M net worth clients who need Board Certified estate counsel, and I'd love to discuss becoming your go-to advisor partner.\"\n\n---"
   },
   {
-    "id": 21,
+    "id": 24,
     "section": "estate-attorneys",
     "title": "Peter A. Dyson - The Estate Plan",
     "name": "Peter A. Dyson",
@@ -231,7 +264,7 @@
     "approach": "Peter, I work with a lot of senior directors and VPs relocating to Miami from the Northeast\u2014they need estate planning that bridges their old state documents to Florida law, and I'd love to create a referral pipeline where I send you planning clients and you send me families who need wealth management after inheritance events.\"\n\n---"
   },
   {
-    "id": 22,
+    "id": 25,
     "section": "estate-attorneys",
     "title": "Denise Jomarron - Denise Jomarron Legal Group",
     "name": "Denise Jomarron",
@@ -242,7 +275,7 @@
     "approach": "Denise, I specialize in wealth management for families with special needs beneficiaries\u2014the intersection of trusts, benefits, and investment planning is complex and I'm looking for an attorney who truly understands both the legal and emotional side to build a long-term partnership."
   },
   {
-    "id": 23,
+    "id": 26,
     "section": "warm-intros",
     "title": "Seema Chaturvedi - TiE Miami / Accelerator Group",
     "name": "Seema Chaturvedi",
@@ -253,7 +286,7 @@
     "approach": "I saw you're leading TiE Miami's growth - I work with several Indian professionals in Brickell and would love to learn about the entrepreneurship community you're building here.\"\n\n---"
   },
   {
-    "id": 24,
+    "id": 27,
     "section": "warm-intros",
     "title": "Anil Gajwani - EnCircle Payments / TiE Miami",
     "name": "Anil Gajwani",
@@ -264,7 +297,7 @@
     "approach": "I understand you're leading mentorship at TiE Miami - as an Equitable advisor working with Indian professionals, I'd value your perspective on the business community here.\"\n\n---"
   },
   {
-    "id": 25,
+    "id": 28,
     "section": "warm-intros",
     "title": "Satish Mehta - Chewy",
     "name": "Satish Mehta",
