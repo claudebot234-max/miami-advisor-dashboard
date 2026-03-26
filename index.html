@@ -608,12 +608,13 @@ function renderTasks() {
 
   var ac = tasks.filter(function(t){return !t.done}).length;
   var dc = tasks.filter(function(t){return t.done}).length;
-  var hp = tasks.filter(function(t){return t.priority==='high'&&!t.done}).length;
+  var pipeAum = tasks.filter(function(t){return !t.done}).reduce(function(s,t){return s+(t.aum||0)},0);
+  var pipeComm = tasks.filter(function(t){return !t.done}).reduce(function(s,t){return s+(t.commission||0)},0);
   document.getElementById('stats').innerHTML =
     '<div class="stat"><div class="stat-label">Active Tasks</div><div class="stat-value yellow">'+ac+'</div></div>'+
     '<div class="stat"><div class="stat-label">Completed</div><div class="stat-value green">'+dc+'</div></div>'+
-    '<div class="stat"><div class="stat-label">Total</div><div class="stat-value">'+tasks.length+'</div></div>'+
-    '<div class="stat"><div class="stat-label">High Priority</div><div class="stat-value" style="color:var(--danger)">'+hp+'</div></div>';
+    '<div class="stat"><div class="stat-label">Pipeline AUM</div><div class="stat-value blue">'+fmt(pipeAum)+'</div></div>'+
+    '<div class="stat"><div class="stat-label">Pipeline Comm.</div><div class="stat-value green">'+fmt(pipeComm)+'</div></div>';
 
   function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 
@@ -637,6 +638,8 @@ function renderTasks() {
       '<div class="task-meta">'+
       '<span class="task-priority '+(t.priority||'medium')+'">'+(t.priority||'medium').toUpperCase()+'</span>'+
       '<span class="task-category" style="color:'+cat.color+'">'+cat.label+'</span>'+
+      (t.aum?'<span style="color:#34d399">AUM: '+fmt(t.aum)+'</span>':'')+
+      (t.commission?'<span style="color:#fbbf24">Comm: '+fmt(t.commission)+'</span>':'')+
       (ds?'<span>'+ds+'</span>':'')+
       '</div></div>'+
       '<div class="task-actions">'+
@@ -650,7 +653,7 @@ function renderTasks() {
 function openTaskModal(id) {
   var t = id ? tasks.find(function(tk){return tk.id===id}) : null;
   var isEdit = !!t;
-  if (!t) t = {text:'',person:'',category:'follow-up',priority:'medium',notes:'',done:false};
+  if (!t) t = {text:'',person:'',category:'follow-up',priority:'medium',notes:'',done:false,aum:0,commission:0};
   var cat = t.category||'follow-up', pri = t.priority||'medium';
   function esc(s){return (s||'').replace(/"/g,'&quot;')}
   document.getElementById('modal').innerHTML =
@@ -671,6 +674,10 @@ function openTaskModal(id) {
     '<option value="low"'+(pri==='low'?' selected':'')+'>Low</option></select></div>'+
     (isEdit?'<div class="form-group"><label>Status</label><select id="ft-done"><option value="0"'+(!t.done?' selected':'')+'>Active</option><option value="1"'+(t.done?' selected':'')+'>Done</option></select></div>':'<div class="form-group"></div>')+
     '</div>'+
+    '<div class="form-row">'+
+    '<div class="form-group"><label>Est. AUM ($)</label><input type="number" id="ft-aum" value="'+(t.aum||0)+'" placeholder="0"></div>'+
+    '<div class="form-group"><label>Commission ($)</label><input type="number" id="ft-commission" value="'+(t.commission||0)+'" placeholder="0"></div>'+
+    '</div>'+
     '<div class="form-group"><label>Notes</label><textarea id="ft-notes" placeholder="Details, follow-up info...">'+esc(t.notes)+'</textarea></div>'+
     '<div class="form-actions">'+
     '<button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>'+
@@ -685,7 +692,9 @@ function saveTaskForm(e, id) {
     person: document.getElementById('ft-person').value,
     category: document.getElementById('ft-cat').value,
     priority: document.getElementById('ft-pri').value,
-    notes: document.getElementById('ft-notes').value
+    notes: document.getElementById('ft-notes').value,
+    aum: parseInt(document.getElementById('ft-aum').value) || 0,
+    commission: parseInt(document.getElementById('ft-commission').value) || 0
   };
   if (id) {
     var doneEl = document.getElementById('ft-done');
