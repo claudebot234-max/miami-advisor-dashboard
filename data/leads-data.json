@@ -85,78 +85,6 @@
   },
   {
     "id": 8,
-    "section": "acquisition",
-    "title": "FP Transitions - Partial access, found one Florida listing",
-    "name": "FP Transitions",
-    "company": "Partial access, found one Florida listing",
-    "status": "new",
-    "aum": 0,
-    "details": "",
-    "approach": "",
-    "source": "Practice Marketplace"
-  },
-  {
-    "id": 9,
-    "section": "acquisition",
-    "title": "Succession Link (now Fin.Link) - Login required for listings",
-    "name": "Succession Link (now Fin.Link)",
-    "company": "Login required for listings",
-    "status": "new",
-    "aum": 0,
-    "details": "",
-    "approach": "",
-    "source": "Practice Marketplace"
-  },
-  {
-    "id": 10,
-    "section": "acquisition",
-    "title": "David Grau / Advisor Legacy - Unable to access without search API",
-    "name": "David Grau / Advisor Legacy",
-    "company": "Unable to access without search API",
-    "status": "new",
-    "aum": 0,
-    "details": "",
-    "approach": "",
-    "source": "Practice Marketplace"
-  },
-  {
-    "id": 11,
-    "section": "acquisition",
-    "title": "Register on FP Transitions",
-    "name": "Register on FP Transitions",
-    "company": "",
-    "status": "new",
-    "aum": 0,
-    "details": "",
-    "approach": "",
-    "source": "Practice Marketplace"
-  },
-  {
-    "id": 12,
-    "section": "acquisition",
-    "title": "Set up Fin.Link account",
-    "name": "Set up Fin.Link account",
-    "company": "",
-    "status": "new",
-    "aum": 0,
-    "details": "",
-    "approach": "",
-    "source": "Practice Marketplace"
-  },
-  {
-    "id": 13,
-    "section": "acquisition",
-    "title": "Contact FP Transitions M&A team",
-    "name": "Contact FP Transitions M&A team",
-    "company": "",
-    "status": "new",
-    "aum": 0,
-    "details": "",
-    "approach": "",
-    "source": "Practice Marketplace"
-  },
-  {
-    "id": 14,
     "section": "vul",
     "title": "Teri Kaye - CohnReznick",
     "name": "Teri Kaye",
@@ -168,7 +96,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 15,
+    "id": 9,
     "section": "vul",
     "title": "Martha M. Ferral - Shutts & Bowen",
     "name": "Martha M. Ferral",
@@ -180,7 +108,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 16,
+    "id": 10,
     "section": "vul",
     "title": "Daniela F. Cimo - Weiss Serota Helfman Cole + Bierman",
     "name": "Daniela F. Cimo",
@@ -192,7 +120,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 17,
+    "id": 11,
     "section": "cpa-partners",
     "title": "Victor Delerme, CPA - Delerme CPA",
     "name": "Victor Delerme, CPA",
@@ -204,7 +132,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 18,
+    "id": 12,
     "section": "cpa-partners",
     "title": "Edgar Gomez, CPA, MST, MBA - E. Gomez CPA LLC",
     "name": "Edgar Gomez, CPA, MST, MBA",
@@ -216,7 +144,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 19,
+    "id": 13,
     "section": "cpa-partners",
     "title": "Edward D. Quilca, CPA - Quilca CPA Group",
     "name": "Edward D. Quilca, CPA",
@@ -228,7 +156,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 20,
+    "id": 14,
     "section": "cpa-partners",
     "title": "Alvaro Acevedo Jr., JD, CPA - Brickell Accountants",
     "name": "Alvaro Acevedo Jr., JD, CPA",
@@ -240,7 +168,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 21,
+    "id": 15,
     "section": "cpa-partners",
     "title": "Mongio & Associates, CPAs",
     "name": "Mongio & Associates, CPAs",
@@ -252,7 +180,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 22,
+    "id": 16,
     "section": "estate-attorneys",
     "title": "Anwar E. Hadeed - Hadeed Legal",
     "name": "Anwar E. Hadeed",
@@ -264,7 +192,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 23,
+    "id": 17,
     "section": "estate-attorneys",
     "title": "Yanitza Schoonover - The Schoonover Law Firm",
     "name": "Yanitza Schoonover",
@@ -276,7 +204,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 24,
+    "id": 18,
     "section": "estate-attorneys",
     "title": "Monique Lavender Greenberg - Lavender Greenberg PLLC",
     "name": "Monique Lavender Greenberg",
@@ -288,7 +216,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 25,
+    "id": 19,
     "section": "estate-attorneys",
     "title": "Peter A. Dyson - The Estate Plan",
     "name": "Peter A. Dyson",
@@ -300,7 +228,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 26,
+    "id": 20,
     "section": "estate-attorneys",
     "title": "Denise Jomarron - Denise Jomarron Legal Group",
     "name": "Denise Jomarron",
@@ -312,7 +240,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 27,
+    "id": 21,
     "section": "warm-intros",
     "title": "Seema Chaturvedi - TiE Miami / Accelerator Group",
     "name": "Seema Chaturvedi",
@@ -324,7 +252,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 28,
+    "id": 22,
     "section": "warm-intros",
     "title": "Anil Gajwani - EnCircle Payments / TiE Miami",
     "name": "Anil Gajwani",
@@ -336,7 +264,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 29,
+    "id": 23,
     "section": "warm-intros",
     "title": "Satish Mehta - Chewy",
     "name": "Satish Mehta",
@@ -348,7 +276,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 30,
+    "id": 24,
     "section": "indian-network",
     "title": "Dr. Arun Garg - Role: Physician, Biochemist, and Global Health Leader (Vancouver-based)",
     "name": "Dr. Arun Garg",
@@ -360,7 +288,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 31,
+    "id": 25,
     "section": "indian-network",
     "title": "Ravishankar Bhooplapur - Role: Chairman of Association of Indians in America, Founder/President of Xavier University School of Medicine (Aruba)",
     "name": "Ravishankar Bhooplapur",
@@ -370,5 +298,565 @@
     "details": "**Community Connection:** Association of Indians in America (AIA) - elected chairman March 2026\n\n**Trigger:** Unanimous election as AIA chairman. Founder of medical university with 1,300+ physician graduates. Named Person of the Year by SouthAsian Times 2022\n\n**Heat:** HOT\n\n**Why Opportunity:** Medical education entrepreneur with international operations, Gift of Life India founder (6,500+ surgeries facilitated), SUNY trustee - needs cross-border wealth management, succession planning for university, charitable giving strategies, potential \n\n**Event:** 8th New Jersey Indian & International Film Festival\n- Date: March 2026 (ongoing)\n- Organizer: New Jersey Indian community organizations\n- Audience: Indian diaspora professionals, business owners, entertainment industry connections\n- Why attend: Film \n\n**Notes:**\n- Brave Search API hit usage limit - relied on web_fetch for direct article access\n- TiE Miami website experienced technical issues (522 timeout)\n- GOPIO Miami chapter lacks recent specific events on main site\n- BAPS Florida section returned 404 errors\n- LinkedIn requires login for detailed search results",
     "approach": "Ravishankar, congratulations on your AIA chairmanship! Building Xavier University to 1,300+ graduates while managing Gift of Life India's expansion shows remarkable vision. I specialize in helping education entrepreneurs and philanthropists structure wealth across borders - especially relevant given your Caribbean and US operations.",
     "source": "Indian Network"
+  },
+  {
+    "id": 26,
+    "section": "lead-radar",
+    "title": "Carlos Hernandez - Baptist Health Doctors Hospital",
+    "name": "Carlos Hernandez",
+    "company": "Baptist Health Doctors Hospital",
+    "status": "new",
+    "aum": 0,
+    "details": "**Title:** CEO, Baptist Health Doctors Hospital\n\n**Trigger:** Named CEO of Doctors Hospital effective May 1, 2026; will also serve as executive leader for Baptist Health Orthopedics\n\n**Heat:** WARM\n\n**Income Signal:** Hospital CEO + major sports org partnerships (Miami HEAT, Dolphins, Inter Miami CF, Panthers) = $300K-$600K income\n\n**Wealth Signal:** Likely existing $1-3M net worth\n\n**Why Opportunity:** New C-suite role overseeing orthopedics and partnerships with major Miami sports teams. Career peak moment = financial planning review opportunity.",
+    "approach": "Congratulations on your appointment as CEO of Doctors Hospital and the orthopedics leadership role \u2014 that's a major career milestone. As you take on these new responsibilities, have you had a chance to revisit your financial strategy to align with your expanded role?\"\n\n---"
+  },
+  {
+    "id": 27,
+    "section": "lead-radar",
+    "title": "Nathaniel Ortiz - Baptist Health West Kendall Baptist Hospital",
+    "name": "Nathaniel Ortiz",
+    "company": "Baptist Health West Kendall Baptist Hospital",
+    "status": "new",
+    "aum": 0,
+    "details": "**Title:** CEO, Baptist Health West Kendall Baptist Hospital\n\n**Trigger:** Named CEO of West Kendall Baptist Hospital effective May 1, 2026; previously COO at Baptist Hospital\n\n**Heat:** WARM\n\n**Income Signal:** Hospital CEO in wealthy Kendall area = $350K-$650K income\n\n**Wealth Signal:** Likely $1.5-4M net worth\n\n**Why Opportunity:** Promotion from COO to CEO = significant compensation increase. Major career milestone creates natural opening for financial strategy conversation.",
+    "approach": "Congratulations on your promotion to CEO of West Kendall Baptist! Moving from COO to the CEO seat is a big step \u2014 are you working with anyone to help ensure your financial strategy keeps pace with your career growth?\"\n\n---"
+  },
+  {
+    "id": 28,
+    "section": "lead-radar",
+    "title": "Drew Grossman - Baptist Health (Multi-Facility CEO)",
+    "name": "Drew Grossman",
+    "company": "Baptist Health (Multi-Facility CEO)",
+    "status": "new",
+    "aum": 0,
+    "details": "**Title:** CEO of Fishermen's Community Hospital & Mariners Hospital; CEO Advisor for Baptist Health Sunrise Hospital (opening 2029)\n\n**Trigger:** Named CEO Advisor for new Sunrise Hospital while retaining current CEO roles\n\n**Heat:** WARM\n\n**Income Signal:** Multi-facility hospital CEO = $400K-$700K income\n\n**Wealth Signal:** Likely $2-5M net worth\n\n**Why Opportunity:** Managing multiple facilities plus new hospital development project. Complex compensation and career trajectory = needs sophisticated planning.",
+    "approach": "Congratulations on taking on the Sunrise Hospital project while leading Fishermen's and Mariners \u2014 managing multiple facilities and a major new development, have you structured your finances to handle the complexity?\"\n\n---"
+  },
+  {
+    "id": 29,
+    "section": "lead-radar",
+    "title": "Raymond Perez - Baptist Health Rehabilitation Hospital",
+    "name": "Raymond Perez",
+    "company": "Baptist Health Rehabilitation Hospital",
+    "status": "new",
+    "aum": 0,
+    "details": "**Title:** Executive Director, Baptist Health Rehabilitation Hospital (new facility opening August 2026)\n\n**Trigger:** Named Executive Director of new 62-bed rehabilitation hospital opening August 2026 in South Miami\n\n**Heat:** WARM\n\n**Income Signal:** Hospital executive director new facility = $250K-$450K income\n\n**Wealth Signal:** Likely $800K-$2M net worth\n\n**Why Opportunity:** Leading brand-new joint-venture facility. 15+ years experience. Opening new $25M+ facility = career peak moment.",
+    "approach": "Congratulations on being named Executive Director of the new Rehabilitation Hospital \u2014 opening a new facility is a major career milestone. With the joint venture and expansion, have you revisited your financial planning to make sure it aligns with this next chapter?"
+  },
+  {
+    "id": 30,
+    "section": "lead-radar",
+    "title": "Nicos Katsoulis - Real Estate Investor",
+    "name": "Nicos Katsoulis",
+    "company": "Real Estate Investor",
+    "status": "new",
+    "aum": 0,
+    "details": "**Trigger Event:** Sold 4,800 sq ft home at 3215 South Flagler Drive, West Palm Beach for $10.5M (March 2026). Bought 2018 for $3.6M = $6.9M gain.\n\n**Wealth Signal:** 3x return in 8 years, owns investment properties, likely $4-8M net worth range \u2705\n\n**Heat Level:** HOT - Recent liquidity event",
+    "approach": "Saw you just closed on the Flagler Drive sale\u2014impressive return. As you look at what to do with those proceeds, I help investors in your position build tax-efficient income strategies that keep wealth working for you without the landlord headaches."
+  },
+  {
+    "id": 31,
+    "section": "lead-radar",
+    "title": "Jorge Carmenate - Healthcare Real Estate Investor",
+    "name": "Jorge Carmenate",
+    "company": "Healthcare Real Estate Investor",
+    "status": "new",
+    "aum": 0,
+    "details": "**Trigger Event:** Sold Colonial Assisted Living (68-unit facility, Lauderhill) for $20M (March 2026). Bought 2024 for $8M = $12M gain in 2 years.\n\n**Wealth Signal:** 150% return in 24 months, operates Golden Age Health Center, sophisticated healthcare RE investor, likely $5-15M net worth \u2705\n\n**Heat Level:** HOT - Major liquidity event",
+    "approach": "Congratulations on the Colonial ALF exit\u2014doubling your money in two years is exceptional. With $20M in proceeds, you're likely weighing your next move. I specialize in helping healthcare entrepreneurs like you protect gains and generate predictable income while you evaluate the next acquisition."
+  },
+  {
+    "id": 32,
+    "section": "lead-radar",
+    "title": "Edward Farscht - CEO, Diamond Communications",
+    "name": "Edward Farscht",
+    "company": "CEO, Diamond Communications",
+    "status": "new",
+    "aum": 0,
+    "details": "**Trigger Event:** Sold mansion at 733 North Ocean Boulevard, Delray Beach for $19.2M (March 2026). Bought 2021 for $14.3M = $4.9M gain.\n\n**Wealth Signal:** CEO of Diamond Communications (wireless infrastructure firm), luxury real estate investor, likely $10M+ net worth\n\n**Heat Level:** WARM - May be above target range",
+    "approach": "Saw you closed on the Ocean Boulevard property\u2014smart exit timing. As a CEO managing both business and personal wealth, you might appreciate how we help executives in your position turn real estate gains into diversified income streams that don't require active management."
+  },
+  {
+    "id": 33,
+    "section": "vul",
+    "title": "Teri Kaye - CohnReznick",
+    "name": "Teri Kaye",
+    "company": "CohnReznick",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Miami, FL\n\n**Profession:** CPA Partner, CohnReznick (South Florida Tax Practice Leader)\n\n**Income Signal:** 30+ years experience, leads tax practice for major CPA firm in high-cost Miami market, recognized as Top 50 Women Leaders of Miami 2026\n\n**Vul Fit Reason:** High-net-worth tax advisor likely earning $500K+, specializes in tax planning for wealthy families which means she understands tax-advantaged vehicles but may not have optimized her own wealth accumulation strategy beyond qualified plans.\n\n**Heat:** WARM\n\n**Trigger Event:** Just recognized as Top 50 Women Leaders of Miami for 2026 by Women We Admire",
+    "approach": "As someone who helps high-net-worth families reduce tax burden, have you explored how tax-advantaged permanent insurance fits into your own wealth strategy alongside your qualified retirement accounts?\"\n\n---"
+  },
+  {
+    "id": 34,
+    "section": "vul",
+    "title": "Martha M. Ferral - Shutts & Bowen",
+    "name": "Martha M. Ferral",
+    "company": "Shutts & Bowen",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Miami, FL\n\n**Profession:** Partner, Shutts & Bowen (Miami office)\n\n**Income Signal:** Newly named partner at major South Florida law firm, partners at firms like Shutts typically earn $400K-$1M+\n\n**Vul Fit Reason:** Just reached partner level (peak earning years ahead), likely has maxed 401k contributions, needs additional tax-advantaged wealth accumulation and permanent protection as new family breadwinner at partner level.\n\n**Heat:** HOT\n\n**Trigger Event:** Just promoted to partner at Shutts & Bowen in March 2026",
+    "approach": "Congratulations on making partner - as you enter this new income phase, most new partners realize they've maxed traditional retirement vehicles and need additional tax-advantaged growth. Have you looked at how VUL complements your 401k?\"\n\n---"
+  },
+  {
+    "id": 35,
+    "section": "vul",
+    "title": "Daniela F. Cimo - Weiss Serota Helfman Cole + Bierman",
+    "name": "Daniela F. Cimo",
+    "company": "Weiss Serota Helfman Cole + Bierman",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Miami, FL\n\n**Profession:** Partner, Weiss Serota Helfman Cole + Bierman\n\n**Income Signal:** Recently made partner at established Miami law firm, partners at mid-size Miami firms typically earn $400K-$800K\n\n**Vul Fit Reason:** New partner promotion means significant income jump and entry into peak earning years (age 40-55 typical for partnership), needs permanent protection with tax-advantaged growth beyond qualified plans.\n\n**Heat:** HOT\n\n**Trigger Event:** Just became partner at Weiss Serota Helfman Cole + Bierman",
+    "approach": "Making partner is a huge milestone - it also typically means you've hit the 401k/IRA limits. Most successful attorneys in your position use VUL to create additional tax-free accumulation. Have you explored this?"
+  },
+  {
+    "id": 36,
+    "section": "cpa-partners",
+    "title": "Victor Delerme, CPA - Delerme CPA",
+    "name": "Victor Delerme, CPA",
+    "company": "Delerme CPA",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Brickell, Miami, FL\n\n**Firm:** Delerme CPA\n\n**Founded:** 2009 (15+ years established)\n\n**Linkedin:** https://www.linkedin.com/in/victor-delerme/\n\n**Website:** https://www.delermecpas.com/\n\n**Client Focus:**\n- High-income business owners ($500K+ annual income)\n- Global entrepreneurs with international footprint\n- Puerto Rico Act 60 tax optimization specialists\n- Multi-entity structuring for tax reduction\n- Bilingual team (English/Spanish)\n\n**Why Perfect:**\n\u2705 Explicitly markets to \"high-income business owners, investors, and global entrepreneurs\"\n\u2705 Strategic tax planning focus (not just compliance)\n\u2705 Act 60 expertise = clients considering major wealth moves\n\u2705 **No mention of advisor partnerships on website or LinkedIn**\n\u2705 Bilingual = Miami Latin American market overlap\n\n**Heat:** \ud83d\udd25 Hot (perfect fit, mature practice, no existing partnerships)\n\n---",
+    "approach": "Victor, I came across your work with high-income entrepreneurs and Act 60 relocations\u2014impressive niche. I'm a wealth advisor in Miami working with similar clients (business owners scaling 7-8 figures, often with international exposure). I'm finding that most of my clients' CPAs focus on compliance, not strategy. You clearly do both. That's rare. I'm curious if you've built referral relationships with advisors who complement your tax work\u2014estate planning, investment structuring, insurance optimization, etc. Many of my CPA relationships are informal, but the best ones are intentional. Would you be open to a quick call to explore whether there's a fit? Not looking to pitch you\u2014just comparing notes on how we each serve this market."
+  },
+  {
+    "id": 37,
+    "section": "cpa-partners",
+    "title": "Edgar Gomez, CPA, MST, MBA - E. Gomez CPA LLC",
+    "name": "Edgar Gomez, CPA, MST, MBA",
+    "company": "E. Gomez CPA LLC",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Brickell, Miami, FL\n\n**Firm:** E. Gomez CPA LLC\n\n**Experience:** 20+ years (Big 4 background)\n\n**Website:** https://www.egomezcpa.com/\n\n**Phone:** 305-497-0552\n\n**Client Focus:**\n- Construction contractors (project-based businesses)\n- Freight & trucking companies\n- Wholesale distributors\n- Tax resolution and audit protection\n- QuickBooks/cloud accounting implementation\n\n**Why Perfect:**\n\u2705 20+ years = mature client relationships\n\u2705 Big 4 background = sophisticated technical skills\n\u2705 Focus on business owners with complex operations (construction, freight = high cash flow)\n\u2705 Tax resolution practice = clients with financial stress (opportunity for wealth planning intervention)\n\u2705 **No advisor partnership mentioned on website**\n\n**Heat:** \ud83d\udd25 Hot (established, niche focus, no partnerships)\n\n---",
+    "approach": "Edgar, I saw you've built a strong practice with construction and freight businesses in Miami\u2014impressive niche. Those clients have unique cash flow challenges (I know, I work with several). I'm a wealth advisor here, and I'm finding that business owners in those industries often have great tax planning (if they have a good CPA like you), but terrible wealth accumulation strategies. They're profitable, but they're not building personal wealth outside the business. I'm curious if you've seen that pattern\u2014and whether you've built referral relationships with advisors who help your clients translate business success into personal financial security. Not looking to pitch you anything. Just wondering if there's a fit to collaborate where your tax work ends and wealth planning begins."
+  },
+  {
+    "id": 38,
+    "section": "cpa-partners",
+    "title": "Edward D. Quilca, CPA - Quilca CPA Group",
+    "name": "Edward D. Quilca, CPA",
+    "company": "Quilca CPA Group",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Miami, FL\n\n**Firm:** Quilca CPA Group, PA\n\n**Linkedin:** https://www.linkedin.com/in/quilcacpa/ (500+ connections)\n\n**Website:** https://quilcacpagroup.com/\n\n**Client Focus:**\n- Startups (early-stage entrepreneurs)\n- Real estate investors (buy-and-hold, flips, 1031 exchanges)\n- High-net-worth individuals\n- International tax planning\n- Small business accounting\n\n**Why Perfect:**\n\u2705 FIU graduate (local Miami roots)\n\u2705 500+ LinkedIn connections = well-networked\n\u2705 Real estate investors AND HNW individuals = wealth accumulation clients\n\u2705 Startup advisory = entrepreneurs experiencing liquidity events\n\u2705 **No mention of advisor partnerships**\n\n**Heat:** \ud83c\udf21\ufe0f Warm (good fit, networked, startup/RE niche)\n\n---",
+    "approach": "Edward, I saw you work with real estate investors and startup founders in Miami\u2014two groups I work with constantly. Both have similar blind spots: they're great at building wealth, terrible at protecting and diversifying it. Real estate guys have 100% of their net worth in property. Startup founders have 100% in equity. Both need someone to help them translate that into long-term financial security\u2014but most CPAs don't want to touch that (and most advisors don't understand their tax situations). I'm curious if you've built partnerships with advisors who understand your clients' worlds. I'm not looking to compete with you\u2014I'm looking for CPAs who can help me serve clients better, and vice versa. Worth a quick call to explore?"
+  },
+  {
+    "id": 39,
+    "section": "cpa-partners",
+    "title": "Alvaro Acevedo Jr., JD, CPA - Brickell Accountants",
+    "name": "Alvaro Acevedo Jr., JD, CPA",
+    "company": "Brickell Accountants",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd 800 Brickell Ave, Miami, FL\n\n**Firm:** Brickell Accountants\n\n**Experience:** Serving clients since 1980 (44 years!)\n\n**Credentials:** Board-certified attorney AND CPA (dual expertise)\n\n**Website:** https://www.brickellaccountants.com/\n\n**Phone:** 305-856-5689\n\n**Client Focus:**\n- International business owners (U.S. inbound and outbound)\n- Foreign investors in U.S. real estate (FIRPTA compliance)\n- Executives of multinational companies\n- High-net-worth individuals with cross-border wealth\n- FATCA compliance specialists\n\n**Why Perfect:**\n\u2705 **Attorney + CPA** = sophisticated estate and tax planning conversations\n\u2705 **Since 1980** = 44+ years, massive relationship network\n\u2705 Brickell location = financial district, corporate clients\n\u2705 FIRPTA expertise = foreign nationals buying U.S. real estate ($2M+ deals)\n\u2705 **No wealth advisor partnership** despite serving ultra-HNW international clients\n\n**Heat:** \ud83c\udf21\ufe0f Warm (established, international niche, dual credentials)\n\n---",
+    "approach": "Alvaro, I saw you've been serving international clients in Brickell since 1980\u2014that's a serious track record. I'm a wealth advisor here, and I keep running into foreign nationals who have great tax and legal structuring (usually through a firm like yours) but zero investment strategy or wealth planning. They're compliant. They're structured. But they're not optimized for long-term wealth growth. I'm curious if you've seen that pattern\u2014and whether you've built referral relationships with advisors who can help your clients with the investment/wealth planning side after you handle the tax/legal side. Not looking to pitch you. Just wondering if there's a fit to collaborate on the international client segment. Worth a call?"
+  },
+  {
+    "id": 40,
+    "section": "cpa-partners",
+    "title": "Mongio & Associates, CPAs",
+    "name": "Mongio & Associates, CPAs",
+    "company": "",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd 1100 S Miami Ave, Miami, FL (Brickell area)\n\n**Firm:** Mongio & Associates, CPAs\n\n**Type:** Virtual CPA firm (cloud-based, nationwide reach)\n\n**Website:** https://www.mongioandassociates.com/\n\n**Client Focus:**\n- Business owners (tax, bookkeeping, consulting)\n- IRS problem resolution (tax debt, audits, appeals)\n- Expert witness testimony (financial litigation)\n- Financial modeling and coaching\n- Military veteran-focused services\n\n**Why Perfect:**\n\u2705 **IRS problem resolution** = clients in financial distress (opportunity for wealth reset/planning)\n\u2705 **Financial coaching** mentioned = already stepping into advisory territory\n\u2705 Virtual firm = modern, tech-forward (likely open to new partnerships)\n\u2705 \"Save time, money, reduce stress\" marketing = relationship-oriented\n\u2705 **No wealth advisor partnership mentioned**\n\n**Heat:** \ud83c\udf21\ufe0f Warm (IRS resolution niche, financial coaching overlap)\n\n---\n\n## Summary\n\n- **Total CPAs:** 5 firms (solo/small, no large aggregators)\n- **No Existing Partnerships:** Zero mention of advisor relationships on any website/LinkedIn\n- **Client Overlap",
+    "approach": "[Partner Name], I noticed Mongio & Associates specializes in IRS problem resolution\u2014that's a unique and valuable niche. I'm a wealth advisor in Miami, and I'm curious about something: What happens to your clients AFTER you fix their tax problems? They're compliant again, but do they have a plan to rebuild wealth and avoid ending up back in the same position? I work with business owners who've been through financial crises (tax debt, business failures, divorces). The ones who succeed long-term have two things: a great CPA (to keep them compliant) and a wealth advisor (to help them rebuild smart). I'm wondering if there's a fit to collaborate\u2014not on the tax resolution side (that's your expertise), but on the 'what comes next' side for clients you've helped turn around. Worth a conversation?"
+  },
+  {
+    "id": 41,
+    "section": "estate-attorneys",
+    "title": "Anwar E. Hadeed - Hadeed Legal",
+    "name": "Anwar E. Hadeed",
+    "company": "Hadeed Legal",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Coral Gables, FL (4000 Ponce de Leon Blvd, Suite 470)\n\n**Specialty:** Probate, guardianship, and estate planning for families\n\n**Evidence Of No Advisor Partner:**\n\u2705 Founded in 2024 as boutique firm\n\u2705 Website has no mention of financial advisor partnerships\n\u2705 Focuses solely on legal services\n\n**Client Profile Match:** Serves families protecting legacies and assets ($2-10M range), multi-county Florida practice fits HNW clients relocating to Miami\n\n**Heat:** HOT\n\n**Contact:** (954) 738-9757 | anwar@hadeedlegal.com | hadeedlegal.com",
+    "approach": "Anwar, I work with professionals and business owners in Brickell who are moving significant assets to Florida\u2014many need trusted estate counsel who understands the probate differences here and I'd love to explore a referral relationship.\"\n\n---"
+  },
+  {
+    "id": 42,
+    "section": "estate-attorneys",
+    "title": "Yanitza Schoonover - The Schoonover Law Firm",
+    "name": "Yanitza Schoonover",
+    "company": "The Schoonover Law Firm",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Miami, FL\n\n**Specialty:** Probate administration, probate litigation, and estate planning across Miami-Dade/Broward/Palm Beach\n\n**Evidence Of No Advisor Partner:**\n\u2705 Solo practitioner website presents services only\n\u2705 No advisor partnerships mentioned\n\u2705 Rising Stars 2021-2026 suggests building practice\n\n**Client Profile Match:** Serves tri-county HNW families, litigation experience means complex estate situations that often have investment portfolios\n\n**Heat:** WARM\n\n**Contact:** estateplanningattorney.us | LinkedIn: linkedin.com/in/yanitza-schoonover-esq-0a84b45",
+    "approach": "Yanitza, I specialize in wealth management for families going through major transitions\u2014divorces, inheritances, business sales\u2014and I'm looking for an estate attorney who handles the complex litigation side to build a two-way referral relationship.\"\n\n---"
+  },
+  {
+    "id": 43,
+    "section": "estate-attorneys",
+    "title": "Monique Lavender Greenberg - Lavender Greenberg PLLC",
+    "name": "Monique Lavender Greenberg",
+    "company": "Lavender Greenberg PLLC",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Coral Gables, FL (2525 Ponce de Leon Blvd, Suite 300)\n\n**Specialty:** Estate planning, probate, guardianship, asset protection\u2014Board Certified in Wills, Trusts & Estates\n\n**Evidence Of No Advisor Partner:**\n\u2705 Website emphasizes collaboration with \"financial planner, accountant, and coaches\"\n\u2705 Doesn't list a specific advisor partner locked in\n\u2705 Board Certified = HNW clients\n\n**Client Profile Match:** Coral Gables location = professionals/executives, explicitly mentions \"working with your financial planner\"\n\n**Heat:** WARM\n\n**Contact:** (786) 832-4694 | lglawmiami.com",
+    "approach": "Monique, I saw on your website that you collaborate with financial planners\u2014I'm an Equitable advisor in Brickell working with $2-10M net worth clients who need Board Certified estate counsel, and I'd love to discuss becoming your go-to advisor partner.\"\n\n---"
+  },
+  {
+    "id": 44,
+    "section": "estate-attorneys",
+    "title": "Peter A. Dyson - The Estate Plan",
+    "name": "Peter A. Dyson",
+    "company": "The Estate Plan",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Coral Gables, FL (135 San Lorenzo Ave, #750)\n\n**Specialty:** Estate planning, probate, trust administration, partition actions\u2014boutique firm focused on \"What If\" planning\n\n**Evidence Of No Advisor Partner:**\n\u2705 Website mentions \"collaborate with your personal and professional advisors\"\n\u2705 Doesn't name a locked-in partner\n\u2705 Boutique model suggests selective partnerships\n\n**Client Profile Match:** Boutique = personalized HNW service, Coral Gables location, 24/7 client access model aligns with your responsive service style\n\n**Heat:** WARM\n\n**Contact:** (305) 677-8489 | theestateplanfl.com",
+    "approach": "Peter, I work with a lot of senior directors and VPs relocating to Miami from the Northeast\u2014they need estate planning that bridges their old state documents to Florida law, and I'd love to create a referral pipeline where I send you planning clients and you send me families who need wealth management after inheritance events.\"\n\n---"
+  },
+  {
+    "id": 45,
+    "section": "estate-attorneys",
+    "title": "Denise Jomarron - Denise Jomarron Legal Group",
+    "name": "Denise Jomarron",
+    "company": "Denise Jomarron Legal Group",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Miami, FL (4300 Biscayne Blvd Ste 305)\n\n**Specialty:** Special needs planning, probate, guardianships, estate planning, Medicaid planning\n\n**Evidence Of No Advisor Partner:**\n\u2705 Website focuses on family-first legal services\n\u2705 No financial advisor partnerships mentioned\n\u2705 Rising Star recognition suggests growing practice\n\n**Client Profile Match:** Special needs planning = families with $1-5M+ who need coordinated financial + legal strategy, guardianship work = trustee relationships\n\n**Heat:** WARM\n\n**Contact:** (305) 402-4494 | djlegalgroup.com | Spanish-speaking services available",
+    "approach": "Denise, I specialize in wealth management for families with special needs beneficiaries\u2014the intersection of trusts, benefits, and investment planning is complex and I'm looking for an attorney who truly understands both the legal and emotional side to build a long-term partnership."
+  },
+  {
+    "id": 46,
+    "section": "warm-intros",
+    "title": "Seema Chaturvedi - TiE Miami / Accelerator Group",
+    "name": "Seema Chaturvedi",
+    "company": "TiE Miami / Accelerator Group",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Miami, FL\n\n**Role:** President of TiE Miami & Founder/Managing Director at Accelerator Group LLC\n\n**Community Connection:** Founder and leader of TiE Miami chapter since 2006, Co-Chairs TiE Miami Angels, serves on AWE Funds (women's investment fund)\n\n**Warm Intro Path:** Through TiE Miami events - James should join as member and attend monthly meetings, get introduced by existing TiE charter members, or connect at TiE Miami Angels pitch events\n\n**Trigger:** Leading women's entrepreneurship initiatives, active in Miami business community, managing investment banking advisory firm\n\n**Heat:** HOT\n\n**Why Opportunity:** Investment banker with high net worth, involved in multiple ventures, likely $500K+ income, strong network of HNW entrepreneurs who could become referrals",
+    "approach": "I saw you're leading TiE Miami's growth - I work with several Indian professionals in Brickell and would love to learn about the entrepreneurship community you're building here.\"\n\n---"
+  },
+  {
+    "id": 47,
+    "section": "warm-intros",
+    "title": "Anil Gajwani - EnCircle Payments / TiE Miami",
+    "name": "Anil Gajwani",
+    "company": "EnCircle Payments / TiE Miami",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Doral, FL\n\n**Role:** President & CEO at EnCircle Payments, Mentorship Chair at TiE Miami\n\n**Community Connection:** Founding charter member of TiE Miami, runs payment processing company in Doral\n\n**Warm Intro Path:** Through TiE Miami mentorship programs - James could request mentorship matching or meet at TiE networking events where Anil leads mentorship initiatives\n\n**Trigger:** Leading TiE Miami's mentorship program, established entrepreneur with successful exits\n\n**Heat:** WARM\n\n**Why Opportunity:** Serial entrepreneur, CEO of payment processing firm, likely $400K+ income, owns foundation suggesting wealth accumulation phase",
+    "approach": "I understand you're leading mentorship at TiE Miami - as an Equitable advisor working with Indian professionals, I'd value your perspective on the business community here.\"\n\n---"
+  },
+  {
+    "id": 48,
+    "section": "warm-intros",
+    "title": "Satish Mehta - Chewy",
+    "name": "Satish Mehta",
+    "company": "Chewy",
+    "status": "new",
+    "aum": 0,
+    "details": "\ud83d\udccd Plantation, FL\n\n**Role:** Chief Technology Officer at Chewy\n\n**Community Connection:** C-level executive at major South Florida tech employer, likely connected to Indian tech professional networks\n\n**Warm Intro Path:** Through Chewy employee networks, tech industry events in South Florida, or mutual connections with other Indian IT professionals James knows\n\n**Trigger:** CTO of $3B+ company since 2018, managing large technology teams, stock compensation likely significant\n\n**Heat:** HOT\n\n**Why Opportunity:** C-suite executive compensation likely $500K-$2M+, significant stock holdings in public company, age likely 45-55 prime wealth accumulation",
+    "approach": "I work with several senior tech leaders in the Indian community - would love to connect given your role leading technology at one of South Florida's largest tech companies."
+  },
+  {
+    "id": 49,
+    "section": "indian-network",
+    "title": "Dr. Arun Garg - Role: Physician, Biochemist, and Global Health Leader (Vancouver-based)",
+    "name": "Dr. Arun Garg",
+    "company": "Role: Physician, Biochemist, and Global Health Leader (Vancouver-based)",
+    "status": "new",
+    "aum": 0,
+    "details": "**Community Connection:** Canadian Indian Network Society (CINS) founder, Global Association of Physicians of Indian Origin (GAPIO) senior executive\n\n**Trigger:** Featured in ITV Gold interview discussing integrative medicine alongside Padma Shri Dr. Sudhir Parikh. Leading South Asian Health Institute initiatives\n\n**Heat:** WARM\n\n**Why Opportunity:** High-profile physician with global network managing health initiatives - likely needs wealth management for professional assets, potential estate planning for nonprofit legacy, insurance solutions for healthcare ventures",
+    "approach": "Dr. Garg, I saw your recent ITV Gold interview on integrative medicine - connecting healthcare professionals across 60+ countries while managing philanthropic initiatives like CINS requires sophisticated wealth structuring. I work with Indian medical professionals in Miami who face similar challenges balancing practice growth with community impact."
+  },
+  {
+    "id": 50,
+    "section": "indian-network",
+    "title": "Ravishankar Bhooplapur - Role: Chairman of Association of Indians in America, Founder/President of Xavier University School of Medicine (Aruba)",
+    "name": "Ravishankar Bhooplapur",
+    "company": "Role: Chairman of Association of Indians in America, Founder/President of Xavier University School of Medicine (Aruba)",
+    "status": "new",
+    "aum": 0,
+    "details": "**Community Connection:** Association of Indians in America (AIA) - elected chairman March 2026\n\n**Trigger:** Unanimous election as AIA chairman. Founder of medical university with 1,300+ physician graduates. Named Person of the Year by SouthAsian Times 2022\n\n**Heat:** HOT\n\n**Why Opportunity:** Medical education entrepreneur with international operations, Gift of Life India founder (6,500+ surgeries facilitated), SUNY trustee - needs cross-border wealth management, succession planning for university, charitable giving strategies, potential \n\n**Event:** 8th New Jersey Indian & International Film Festival\n- Date: March 2026 (ongoing)\n- Organizer: New Jersey Indian community organizations\n- Audience: Indian diaspora professionals, business owners, entertainment industry connections\n- Why attend: Film \n\n**Notes:**\n- Brave Search API hit usage limit - relied on web_fetch for direct article access\n- TiE Miami website experienced technical issues (522 timeout)\n- GOPIO Miami chapter lacks recent specific events on main site\n- BAPS Florida section returned 404 errors\n- LinkedIn requires login for detailed search results",
+    "approach": "Ravishankar, congratulations on your AIA chairmanship! Building Xavier University to 1,300+ graduates while managing Gift of Life India's expansion shows remarkable vision. I specialize in helping education entrepreneurs and philanthropists structure wealth across borders - especially relevant given your Caribbean and US operations."
+  },
+  {
+    "id": 51,
+    "section": "acquisition",
+    "title": "Steven Fenyves, CFP, CFS - Valued Wealth Management Inc.",
+    "name": "Steven Fenyves, CFP, CFS",
+    "company": "Valued Wealth Management Inc.",
+    "status": "new",
+    "aum": 50000000,
+    "details": "\ud83d\udccd 5255 North Federal Highway, Suite 330, Boca Raton, FL 33487\n\n**Firm:** Valued Wealth Management Inc.\n\n**Founded:** 2005 (21 years)\n\n**Crd:** (Search SEC IAPD)\n\n**Structure:** Solo practice (President & Founder) + small team (~2 employees)\n\n**Affiliation:** Osaic Wealth, Inc. (formerly Securities America)\n\n**Education:** BA Accounting, Hofstra University\n\n**Linkedin:** https://www.linkedin.com/in/steven-w-fenyves-cfp-cfs-47475010/ (318 connections)\n\n**Website:** https://www.valuedwealth.com/\n\n**Succession Signal:**\n- **21 years in practice** (founded 2005) = founder likely 55-65 years old\n- **Solo practice with small team** = no clear junior successor\n- **Named after service (\"Valued Wealth\")** not founder = potential rebrand for sale\n- **Serves \"successful professionals preparing for retirement\"** = mature client base\n- **Boca Raton location** = affluent retirement market\n\n**Estimated Aum:**\n- **$50M-150M** (based on solo practice with 2 employees, 21 years in business)\n- **Revenue estimate:** $500K-1.5M annually (assuming 1% fee)\n\n**Why Acquirable:**\n\u2705 Solo founder (no partnership complexity)\n\u2705 21 years = mature practice, peak value\n\u2705 Independent BD affiliation (Osaic) = portable book\n\u2705 Boca Raton = strong market, retiree-focused\n\u2705 No evidence of succession plan on website\n\n**Valuation Estimate:**\n- **Conservative (2x revenue):** $1M-3M\n- **Fair market (2.5x):** $1.25M-3.75M\n- **Aggressive (3x):** $1.5M-4.5M\n\n**Subject:** \"21 years in Boca\u2014what's your succession plan?\"\n\nSteven,\n\nI came across Valued Wealth Management and saw you founded the practice in 2005. That's 21 years serving Boca Raton professionals\u2014impressive longevity in a competitive market.\n\nI'm reaching ou\n\n**Heat:** \ud83d\udd25 Hot (perfect profile\u2014solo, 21 years, age range, clean structure)\n\n---",
+    "approach": ""
+  },
+  {
+    "id": 52,
+    "section": "acquisition",
+    "title": "Mauro Guerra - Guerra Wealth Advisors",
+    "name": "Mauro Guerra",
+    "company": "Guerra Wealth Advisors",
+    "status": "new",
+    "aum": 600000000,
+    "details": "\ud83d\udccd Miami, FL\n\n**Firm:** Guerra Wealth Advisors (formerly Guerra Financial Group)\n\n**Founded:** 1986 (40 years!)\n\n**Estimated Aum:**\n- **$600M+** (explicitly stated on website)\n- **Revenue estimate:** $6M+ annually (assuming 1% blended fee)\n\n**Structure:** Family business - Founder + Sons (Sebastian & Fabian Guerra)\n\n**Website:** https://guerrawealth.com/\n\n**Linkedin:** https://www.linkedin.com/in/mauro-guerra-409577153/\n\n**Succession Signal:**\n- **40 years in practice** = founder age 65-75 estimated\n- **Family succession in progress** = sons actively involved\n- **\"Thousands of clients\"** = large book, institutional complexity\n- **Immigrant success story** (South America \u2192 Miami) = legacy mindset\n\n**Why Acquirable:**\n\u2705 Patriarch with succession question (will sons fully take over or need partner?)\n\u2705 No PE backing or aggregator affiliation\n\u2705 40-year milestone = natural transition point\n\u2705 Family businesses often need outside succession when next gen is uncertain\n\n**Valuation Estimate:**\n- **Conservative (2x revenue):** $12M\n- **Fair market (2.5x):** $15M\n- **Aggressive (3x):** $18M\n\n**Subject:** \"40 years, $600M+, family succession\u2014what's next?\"\n\nMauro,\n\nI came across Guerra Wealth Advisors and was impressed by the 40-year legacy you've built serving South Florida families. From immigrant entrepreneur to $600M+ practice\u2014that's an incredible \n\n**Heat:** \ud83c\udf21\ufe0f Warm (large size, family succession = complex but possible)\n\n---",
+    "approach": ""
+  },
+  {
+    "id": 53,
+    "section": "acquisition",
+    "title": "Joshua Feller, ChFC",
+    "name": "Joshua Feller, ChFC",
+    "company": "",
+    "status": "new",
+    "aum": 50000000,
+    "details": "\ud83d\udccd Boca Raton, FL\n\n**Firm:** Feller Financial Services\n\n**Founded:** 2006 (20 years)\n\n**Structure:** Partnership (2 co-founders)\n\n**Website:** https://www.fellerfs.com/\n\n**Partners:**\n- **Joshua Feller, ChFC** - Investment Advisor Representative\n- **Richard Koblick, CRPC, AWMA** - Investment Advisor Representative\n\n**Succession Signal:**\n- **20 years in practice** = partners likely 50-60 years old\n- **Partnership structure** = succession complexity (who exits first? how to value each book?)\n- **\"Old-school relationship-focused\"** marketing = mature practice, stable client base\n- **No junior advisors mentioned** = no internal succession path\n\n**Estimated Aum:**\n- **$50M-200M** (partnership, 20 years, Boca Raton market)\n- **Revenue estimate:** $500K-2M annually\n\n**Why Acquirable:**\n\u2705 20-year milestone = natural evaluation point\n\u2705 Partnership without clear succession = both partners face same question\n\u2705 Relationship-focused practice = high client retention\n\u2705 Boca Raton = affluent market\n\n**Valuation Estimate:**\n- **Conservative (2x revenue):** $1M-4M\n- **Fair market (2.5x):** $1.25M-5M\n- **Aggressive (3x):** $1.5M-6M\n\n**Subject:** \"20 years as partners\u2014succession planning?\"\n\nJosh and Richard,\n\nI noticed you co-founded Feller Financial in 2006\u201420 years ago. That's impressive, especially as partners (most partnerships don't last 20 years!).\n\nI'm reaching out because I work with \n\n**Heat:** \ud83c\udf21\ufe0f Warm (partnership complexity, age range, timing)\n\n---",
+    "approach": ""
+  },
+  {
+    "id": 54,
+    "section": "acquisition",
+    "title": "Provenance Wealth Advisors Partners",
+    "name": "Provenance Wealth Advisors Partners",
+    "company": "",
+    "status": "new",
+    "aum": 100000000,
+    "details": "\ud83d\udccd Fort Lauderdale, FL\n\n**Firm:** Provenance Wealth Advisors, LLC\n\n**Founded:** 2000 (26 years)\n\n**Estimated Aum:** $100M-300M\n\n**Structure:** Partnership (multiple advisors)\n\n**Website:** https://www.provwealth.com/\n\n**Succession Signal:**\n- **26 years in business** = founding partners now 55-65+\n- **Partnership structure** = succession complexity\n- **Fee-only RIA** = clean revenue model\n- **Business succession specialty** = ironic they advise clients but may not have solved own succession\n\n**Cold Email (From Earlier):** \"I noticed Provenance Wealth has been serving Fort Lauderdale business owners since 2000. That's a 26-year track record. With the founding partners approaching 25-30 years in practice, I'm curious if you've started exploring succession options. Many \n\n**Heat:** \ud83c\udf21\ufe0f Warm\n\n---",
+    "approach": ""
+  },
+  {
+    "id": 55,
+    "section": "acquisition",
+    "title": "Northstar Financial Planners Team",
+    "name": "Northstar Financial Planners Team",
+    "company": "",
+    "status": "new",
+    "aum": 100000000,
+    "details": "\ud83d\udccd Plantation, FL (Broward County)\n\n**Firm:** Northstar Financial Planners, Inc.\n\n**Founded:** 2000 (26 years)\n\n**Estimated Aum:** $100M-200M\n\n**Structure:** Team of 7 (Allen Giese, Charlie Thomas, Joseph Valerio, Gary Gonzalez, Stacy Saavedra, Richard Lottier, Maria Gutierrez)\n\n**Website:** https://www.northstarplanners.com/\n\n**Succession Signal:**\n- **26 years** = founding partners likely 55-65+\n- **7-person team** = some want to retire, others want to stay\n- **Fee-only RIA** = mature, stable practice\n- **Team approach** = succession is complex, not simple\n\n**Cold Email (From Earlier):** \"I saw Northstar has been serving Broward County since 2000\u201426 years with a strong team-based approach. I'm curious: what's the succession plan? I work with RIA teams facing the question of who exits when and how to ensure client continuity. Would yo\n\n**Heat:** \ud83c\udf21\ufe0f Warm\n\n---",
+    "approach": ""
+  },
+  {
+    "id": 56,
+    "category": "cpa",
+    "triggerEvent": "High-income entrepreneurs ($500K+ income) with Act 60 Puerto Rico tax optimization and multi-entity structuring. No advisor partnership mentioned. Bil",
+    "prospectName": "Victor Delerme",
+    "eventType": "other",
+    "details": "High-income entrepreneurs ($500K+ income) with Act 60 Puerto Rico tax optimization and multi-entity structuring. No advisor partnership mentioned. Bilingual practice serving global entrepreneurs with international footprint.",
+    "advisorApproach": "Victor, I came across your work with high-income entrepreneurs and Act 60 relocations\u2014impressive niche. I'm a wealth advisor in Miami working with similar clients (business owners scaling 7-8 figures). I'm finding most CPAs focus on compliance, not strategy. You clearly do both. Curious if you've built referral relationships with advisors who complement your tax work\u2014estate planning, investment structuring, insurance optimization?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Hot",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-26T01:01:07.318304",
+        "action": "Imported from cpa-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-26T01:01:07.318339",
+    "name": "Victor Delerme",
+    "section": "cpa-partners",
+    "title": "Victor Delerme"
+  },
+  {
+    "id": 57,
+    "category": "cpa",
+    "triggerEvent": "Construction contractors, freight companies, wholesale distributors with complex cash flow. 20+ years experience, Big 4 background. Strong tax resolut",
+    "prospectName": "Edgar Gomez",
+    "eventType": "other",
+    "details": "Construction contractors, freight companies, wholesale distributors with complex cash flow. 20+ years experience, Big 4 background. Strong tax resolution practice. No advisor partnership on website.",
+    "advisorApproach": "Edgar, I saw you've built a strong practice with construction and freight businesses in Miami. Those clients have unique cash flow challenges. I'm finding business owners in those industries often have great tax planning but terrible wealth accumulation strategies. They're profitable, but not building personal wealth outside the business. Curious if you've seen that pattern and whether there's a fit to collaborate?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Hot",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-26T01:01:07.318366",
+        "action": "Imported from cpa-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-26T01:01:07.318369",
+    "name": "Edgar Gomez",
+    "section": "cpa-partners",
+    "title": "Edgar Gomez"
+  },
+  {
+    "id": 58,
+    "category": "cpa",
+    "triggerEvent": "Startups, real estate investors, and high-net-worth individuals. International tax planning. 500+ LinkedIn connections (well-networked). Real estate i",
+    "prospectName": "Edward D. Quilca",
+    "eventType": "other",
+    "details": "Startups, real estate investors, and high-net-worth individuals. International tax planning. 500+ LinkedIn connections (well-networked). Real estate investors over-concentrated in property, startup founders in equity.",
+    "advisorApproach": "Edward, I saw you work with real estate investors and startup founders in Miami\u2014two groups with similar blind spots: great at building wealth, terrible at protecting and diversifying it. Real estate guys have 100% in property. Startup founders have 100% in equity. Both need someone to help them translate that into long-term financial security. Worth a quick call to explore?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Warm",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-26T01:01:07.318382",
+        "action": "Imported from cpa-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-26T01:01:07.318385",
+    "name": "Edward D. Quilca",
+    "section": "cpa-partners",
+    "title": "Edward D. Quilca"
+  },
+  {
+    "id": 59,
+    "category": "cpa",
+    "triggerEvent": "International business owners, foreign investors in U.S. real estate (FIRPTA), FATCA compliance. Serving clients since 1980 (44 years). Attorney + CPA",
+    "prospectName": "Alvaro Acevedo Jr.",
+    "eventType": "other",
+    "details": "International business owners, foreign investors in U.S. real estate (FIRPTA), FATCA compliance. Serving clients since 1980 (44 years). Attorney + CPA dual expertise. No wealth advisor partnership despite ultra-HNW international clients.",
+    "advisorApproach": "Alvaro, I saw you've been serving international clients in Brickell since 1980\u2014serious track record. I keep running into foreign nationals who have great tax and legal structuring but zero investment strategy or wealth planning. They're compliant and structured, but not optimized for long-term wealth growth. Curious if you've seen that pattern and whether there's a fit to collaborate on the international client segment?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Warm",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-26T01:01:07.318400",
+        "action": "Imported from cpa-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-26T01:01:07.318402",
+    "name": "Alvaro Acevedo Jr.",
+    "section": "cpa-partners",
+    "title": "Alvaro Acevedo Jr."
+  },
+  {
+    "id": 60,
+    "category": "cpa",
+    "triggerEvent": "IRS problem resolution (clients in financial distress), financial modeling, expert witness testimony. Virtual firm, tech-forward. Financial coaching m",
+    "prospectName": "Mongio & Associates",
+    "eventType": "other",
+    "details": "IRS problem resolution (clients in financial distress), financial modeling, expert witness testimony. Virtual firm, tech-forward. Financial coaching mentioned (stepping into advisory territory). No wealth advisor partnership.",
+    "advisorApproach": "I noticed Mongio & Associates specializes in IRS problem resolution\u2014valuable niche. I'm curious: what happens to your clients AFTER you fix their tax problems? They're compliant again, but do they have a plan to rebuild wealth and avoid ending up back in the same position? I work with business owners who've been through financial crises. The ones who succeed long-term have two things: a great CPA and a wealth advisor. Worth a conversation about the 'what comes next' side?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Warm",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-26T01:01:07.318414",
+        "action": "Imported from cpa-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-26T01:01:07.318416",
+    "name": "Mongio & Associates",
+    "section": "cpa-partners",
+    "title": "Mongio & Associates"
+  },
+  {
+    "id": 61,
+    "category": "acquisition",
+    "triggerEvent": "Founded 1986 (40 years). Age 65-75 estimated. Family succession with sons Sebastian and Fabian now in practice. $600M+ AUM. Classic patriarch transiti",
+    "prospectName": "Mauro Guerra",
+    "eventType": "other",
+    "details": "Founded 1986 (40 years). Age 65-75 estimated. Family succession with sons Sebastian and Fabian now in practice. $600M+ AUM. Classic patriarch transition scenario.",
+    "advisorApproach": "Mauro, I saw Guerra Wealth Advisors has been serving Miami families since 1986\u2014incredible 40-year legacy. I noticed your sons Sebastian and Fabian have joined the practice. As someone who's built a $600M+ firm, are you exploring continuity options beyond family succession? Many founders consider strategic partnerships to ensure client continuity. Worth a conversation about what succession could look like?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Warm",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-26T01:01:07.319193",
+        "action": "Imported from acquisition-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-26T01:01:07.319201",
+    "name": "Mauro Guerra",
+    "section": "acquisition",
+    "title": "Mauro Guerra"
+  },
+  {
+    "id": 62,
+    "category": "acquisition",
+    "triggerEvent": "Founded 2005 (21 years). Boca Raton. Solo practice (2 employees per RocketReach). Affiliated with Osaic Wealth (formerly Securities America). Age like",
+    "prospectName": "Steven Fenyves",
+    "eventType": "other",
+    "details": "Founded 2005 (21 years). Boca Raton. Solo practice (2 employees per RocketReach). Affiliated with Osaic Wealth (formerly Securities America). Age likely 55-65. Hofstra grad, served South Florida 21 years.",
+    "advisorApproach": "Steven, I saw you founded Valued Wealth Management in 2005\u201421 years serving Boca Raton professionals is impressive. As a solo/small practice owner approaching the 20-25 year mark, have you started thinking about succession planning? Many advisors your age are exploring strategic partnerships to ensure client continuity while maximizing practice value. Would you be open to a confidential conversation about what your next 5-10 years look like?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Hot",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-26T01:01:07.319213",
+        "action": "Imported from acquisition-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-26T01:01:07.319215",
+    "name": "Steven Fenyves",
+    "section": "acquisition",
+    "title": "Steven Fenyves"
+  },
+  {
+    "id": 63,
+    "category": "acquisition",
+    "triggerEvent": "Founded 2006 (20 years). Boca Raton. Partnership with Richard Koblick (CRPC, AWMA). 20-year milestone, partnership structure creates succession comple",
+    "prospectName": "Joshua Feller",
+    "eventType": "other",
+    "details": "Founded 2006 (20 years). Boca Raton. Partnership with Richard Koblick (CRPC, AWMA). 20-year milestone, partnership structure creates succession complexity. 'Old-school' relationship-focused practice.",
+    "advisorApproach": "Josh, I noticed you and Richard founded Feller Financial in 2006\u201420 years serving South Florida. As partners approaching the 20-year mark, have you two discussed succession planning? Many partnerships hit complexity at this stage (who exits first, how to value each partner's book). I work with advisors in similar positions exploring strategic partnerships that solve the succession puzzle. Worth a conversation?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Warm",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-26T01:01:07.319223",
+        "action": "Imported from acquisition-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-26T01:01:07.319224",
+    "name": "Joshua Feller",
+    "section": "acquisition",
+    "title": "Joshua Feller"
+  },
+  {
+    "id": 64,
+    "category": "acquisition",
+    "triggerEvent": "Founded 2015 (11 years). Coral Gables. Independent RIA serving U.S. and international clients. Too young for immediate succession but good future pipe",
+    "prospectName": "Jaime Domenech Macias",
+    "eventType": "other",
+    "details": "Founded 2015 (11 years). Coral Gables. Independent RIA serving U.S. and international clients. Too young for immediate succession but good future pipeline target.",
+    "advisorApproach": "Jaime, I saw you founded Angelus Investment Consulting in 2015 serving U.S. and international clients from Coral Gables. While succession may be years away, many advisors tell me they wish they'd started planning earlier. As your practice matures (11 years now), have you thought about long-term continuity planning? Not looking to buy today\u2014just exploring whether there's fit for future partnership. Worth keeping in touch?",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Cool",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-26T01:01:07.319231",
+        "action": "Imported from acquisition-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-26T01:01:07.319233",
+    "name": "Jaime Domenech Macias",
+    "section": "acquisition",
+    "title": "Jaime Domenech Macias"
+  },
+  {
+    "id": 65,
+    "category": "acquisition",
+    "triggerEvent": "Founded 2000 as TBK Investments, sold to major bank 2007 (GenSpring), re-established as independent WE Family Offices 2013. Now serves 80+ UHNW famili",
+    "prospectName": "Santiago Ulloa",
+    "eventType": "other",
+    "details": "Founded 2000 as TBK Investments, sold to major bank 2007 (GenSpring), re-established as independent WE Family Offices 2013. Now serves 80+ UHNW families, $14.1B in assets advised/reported. Too large and institutionalized for typical acquisition, but good partnership/alliance target.",
+    "advisorApproach": "Santiago, I saw WE Family Offices serves 80+ UHNW families with $14B+ advised\u2014impressive scale. I'm curious about your journey from founding TBK in 2000, selling to a bank, then re-establishing independence in 2013. That's rare. As someone who's been through both sides (selling and building), would you be open to sharing insights on what you learned? Not looking to pitch anything\u2014just learning from someone who's navigated the path I'm exploring.",
+    "estimatedAUM": 0,
+    "status": "new",
+    "heat": "Cool",
+    "notes": [],
+    "activities": [
+      {
+        "date": "2026-03-26T01:01:07.319240",
+        "action": "Imported from acquisition-targets-today.json"
+      }
+    ],
+    "createdAt": "2026-03-26T01:01:07.319242",
+    "name": "Santiago Ulloa",
+    "section": "acquisition",
+    "title": "Santiago Ulloa"
   }
 ]
