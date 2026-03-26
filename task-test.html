@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html><head><title>Task Test</title>
+<style>body{background:#111;color:#eee;font-family:sans-serif;padding:20px}</style>
+</head><body>
+<h2>Task Test</h2>
+<div id="stats"></div>
+<div id="leads"></div>
+<div id="modal"></div>
+<pre id="log" style="color:#0f0;font-size:12px;max-height:300px;overflow:auto"></pre>
+<script>
+function log(msg) { document.getElementById('log').textContent += msg + '\n'; console.log(msg); }
+
+let tasks = [];
+let taskFilter = 'active';
+const TASK_CATEGORIES = [
+  {id:'follow-up', label:'Follow-Up', color:'#4f8ef7'},
+  {id:'policy', label:'Policy/Service', color:'#34d399'},
+  {id:'pipeline', label:'Pipeline', color:'#fbbf24'},
+  {id:'other', label:'Other', color:'#71717a'},
+];
+
+function loadTasks() {
+  try { tasks = JSON.parse(localStorage.getItem('mai-tasks') || '[]'); } catch(e) { tasks = []; }
+  log('Loaded ' + tasks.length + ' tasks');
+}
+
+function saveTasks() {
+  localStorage.setItem('mai-tasks', JSON.stringify(tasks));
+  log('Saved ' + tasks.length + ' tasks');
+}
+
+function addTask() {
+  log('addTask called');
+  var input = document.getElementById('task-input');
+  log('input element: ' + (input ? 'found' : 'NOT FOUND'));
+  if (!input) return;
+  var text = input.value.trim();
+  log('input value: "' + text + '"');
+  if (!text) { log('empty text, returning'); return; }
+  var cat = document.getElementById('task-cat-input');
+  var pri = document.getElementById('task-priority-input');
+  tasks.push({
+    id: Date.now().toString(36) + Math.random().toString(36).substr(2,4),
+    text: text, person: '', notes: '',
+    category: cat ? cat.value : 'other',
+    priority: pri ? pri.value : 'medium',
+    done: false, created: Date.now()
+  });
+  log('Task added: ' + text);
+  saveTasks();
+  input.value = '';
+  renderTasks();
+}
+
+function toggleTask(id) { log('toggle: ' + id); tasks = tasks.map(function(tk){return tk.id===id?Object.assign({},tk,{done:!tk.done}):tk}); saveTasks(); renderTasks(); }
+function deleteTask(id) { log('delete: ' + id); tasks = tasks.filter(function(tk){return tk.id!==id}); saveTasks(); renderTasks(); }
+
+function renderTasks() {
+  log('renderTasks called, ' + tasks.length + ' tasks');
+  var esc = function(s) { return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); };
+  var html = '<div style="display:flex;gap:8px;margin-bottom:16px">' +
+    '<input type="text" id="task-input" placeholder="Type a task..." style="flex:1;padding:10px;background:#222;color:#eee;border:1px solid #444;border-radius:6px">' +
+    '<select id="task-cat-input" style="padding:10px;background:#222;color:#eee;border:1px solid #444;border-radius:6px">' +
+    TASK_CATEGORIES.map(function(c){return '<option value="'+c.id+'">'+c.label+'</option>'}).join('') +
+    '</select>' +
+    '<select id="task-priority-input" style="padding:10px;background:#222;color:#eee;border:1px solid #444;border-radius:6px">' +
+    '<option value="medium">Medium</option><option value="high">High</option><option value="low">Low</option>' +
+    '</select>' +
+    '<button id="task-add-btn" style="padding:10px 20px;background:#4f8ef7;color:#fff;border:none;border-radius:6px;cursor:pointer">+ Add</button>' +
+    '</div>';
+
+  for (var i = 0; i < tasks.length; i++) {
+    var t = tasks[i];
+    html += '<div style="display:flex;gap:10px;align-items:center;padding:10px;background:#1a1a2e;margin-bottom:6px;border-radius:8px">' +
+      '<button data-task-toggle="' + esc(t.id) + '" style="width:24px;height:24px;border-radius:4px;border:2px solid ' + (t.done?'#34d399':'#444') + ';background:' + (t.done?'#34d399':'transparent') + ';color:#fff;cursor:pointer">' + (t.done?'✓':'') + '</button>' +
+      '<span style="flex:1;' + (t.done?'text-decoration:line-through;opacity:0.5':'') + '">' + esc(t.text) + '</span>' +
+      '<button data-task-delete="' + esc(t.id) + '" style="border:1px solid #444;background:transparent;color:#f87171;padding:4px 8px;border-radius:4px;cursor:pointer">X</button>' +
+      '</div>';
+  }
+
+  var el = document.getElementById('leads');
+  el.innerHTML = html;
+
+  // Attach listeners
+  var addBtn = document.getElementById('task-add-btn');
+  if (addBtn) {
+    log('Attaching click listener to + Add button');
+    addBtn.addEventListener('click', addTask);
+  } else {
+    log('ERROR: task-add-btn not found!');
+  }
+  var inp = document.getElementById('task-input');
+  if (inp) inp.addEventListener('keydown', function(e){ if(e.key==='Enter') addTask(); });
+
+  el.addEventListener('click', function(e) {
+    var togEl = e.target.closest('[data-task-toggle]');
+    if (togEl) { toggleTask(togEl.getAttribute('data-task-toggle')); return; }
+    var delEl = e.target.closest('[data-task-delete]');
+    if (delEl) { deleteTask(delEl.getAttribute('data-task-delete')); return; }
+  });
+}
+
+loadTasks();
+renderTasks();
+</script></body></html>
