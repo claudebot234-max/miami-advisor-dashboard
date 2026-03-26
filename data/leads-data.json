@@ -347,7 +347,10 @@
         "action": "Imported from cpa-targets-today.json"
       }
     ],
-    "createdAt": "2026-03-26T01:01:07.318339"
+    "createdAt": "2026-03-26T01:01:07.318339",
+    "name": "Victor Delerme",
+    "section": "cpa-partners",
+    "title": "Victor Delerme"
   },
   {
     "id": 32,
@@ -367,7 +370,10 @@
         "action": "Imported from cpa-targets-today.json"
       }
     ],
-    "createdAt": "2026-03-26T01:01:07.318369"
+    "createdAt": "2026-03-26T01:01:07.318369",
+    "name": "Edgar Gomez",
+    "section": "cpa-partners",
+    "title": "Edgar Gomez"
   },
   {
     "id": 33,
@@ -387,7 +393,10 @@
         "action": "Imported from cpa-targets-today.json"
       }
     ],
-    "createdAt": "2026-03-26T01:01:07.318385"
+    "createdAt": "2026-03-26T01:01:07.318385",
+    "name": "Edward D. Quilca",
+    "section": "cpa-partners",
+    "title": "Edward D. Quilca"
   },
   {
     "id": 34,
@@ -407,7 +416,10 @@
         "action": "Imported from cpa-targets-today.json"
       }
     ],
-    "createdAt": "2026-03-26T01:01:07.318402"
+    "createdAt": "2026-03-26T01:01:07.318402",
+    "name": "Alvaro Acevedo Jr.",
+    "section": "cpa-partners",
+    "title": "Alvaro Acevedo Jr."
   },
   {
     "id": 35,
@@ -427,7 +439,10 @@
         "action": "Imported from cpa-targets-today.json"
       }
     ],
-    "createdAt": "2026-03-26T01:01:07.318416"
+    "createdAt": "2026-03-26T01:01:07.318416",
+    "name": "Mongio & Associates",
+    "section": "cpa-partners",
+    "title": "Mongio & Associates"
   },
   {
     "id": 36,
@@ -447,7 +462,10 @@
         "action": "Imported from acquisition-targets-today.json"
       }
     ],
-    "createdAt": "2026-03-26T01:01:07.319201"
+    "createdAt": "2026-03-26T01:01:07.319201",
+    "name": "Mauro Guerra",
+    "section": "acquisition",
+    "title": "Mauro Guerra"
   },
   {
     "id": 37,
@@ -467,7 +485,10 @@
         "action": "Imported from acquisition-targets-today.json"
       }
     ],
-    "createdAt": "2026-03-26T01:01:07.319215"
+    "createdAt": "2026-03-26T01:01:07.319215",
+    "name": "Steven Fenyves",
+    "section": "acquisition",
+    "title": "Steven Fenyves"
   },
   {
     "id": 38,
@@ -487,7 +508,10 @@
         "action": "Imported from acquisition-targets-today.json"
       }
     ],
-    "createdAt": "2026-03-26T01:01:07.319224"
+    "createdAt": "2026-03-26T01:01:07.319224",
+    "name": "Joshua Feller",
+    "section": "acquisition",
+    "title": "Joshua Feller"
   },
   {
     "id": 39,
@@ -507,7 +531,10 @@
         "action": "Imported from acquisition-targets-today.json"
       }
     ],
-    "createdAt": "2026-03-26T01:01:07.319233"
+    "createdAt": "2026-03-26T01:01:07.319233",
+    "name": "Jaime Domenech Macias",
+    "section": "acquisition",
+    "title": "Jaime Domenech Macias"
   },
   {
     "id": 40,
@@ -527,6 +554,9 @@
         "action": "Imported from acquisition-targets-today.json"
       }
     ],
-    "createdAt": "2026-03-26T01:01:07.319242"
+    "createdAt": "2026-03-26T01:01:07.319242",
+    "name": "Santiago Ulloa",
+    "section": "acquisition",
+    "title": "Santiago Ulloa"
   }
 ]
