@@ -74,6 +74,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .empty-icon { font-size: 48px; margin-bottom: 1rem; opacity: 0.5; }
 .empty p { font-size: 15px; }
 .refresh-note { font-size: 11px; color: var(--muted); text-align: right; margin-bottom: 1rem; }
+.source-filters { display: flex; gap: 6px; margin-bottom: 1rem; flex-wrap: wrap; }
+.source-chip { font-size: 11px; padding: 5px 12px; border-radius: 20px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all 0.15s; font-weight: 500; }
+.source-chip:hover { border-color: var(--accent); color: var(--text); }
+.source-chip.active { background: rgba(79,142,247,0.15); border-color: var(--accent); color: var(--accent); }
+.source-chip .chip-count { font-size: 10px; opacity: 0.7; margin-left: 4px; }
+.source-badge { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 10px; background: var(--surface2); color: var(--muted); margin-left: 8px; font-weight: 500; vertical-align: middle; }
 </style>
 </head>
 <body>
@@ -120,11 +126,13 @@ const SECTIONS = [
   {id:'cpa-partners',name:'CPA Partners',icon:'📊'},
   {id:'estate-attorneys',name:'Estate Attorneys',icon:'⚖️'},
   {id:'warm-intros',name:'Warm Intros',icon:'🤝'},
-  {id:'divorce-leads',name:"Ryan's Referrals",icon:'💔'},
+  {id:'divorce-leads',name:'Divorce Leads',icon:'💍'},
+  {id:'ryans-referrals',name:"Ryan's Referrals",icon:'💔'},
   {id:'filly-bookings',name:'Filly Bookings',icon:'📞'}
 ];
 
 let activeSection = 'lead-radar';
+let activeSource = 'all';
 let leads = [];
 
 // Load from localStorage first, then try to fetch from GitHub
@@ -203,7 +211,13 @@ function renderNav() {
 
 function setSection(id) {
   activeSection = id;
+  activeSource = 'all';
   document.getElementById('section-title').textContent = SECTIONS.find(s => s.id === id)?.name || id;
+  render();
+}
+
+function setSource(src) {
+  activeSource = src;
   render();
 }
 
@@ -212,17 +226,32 @@ function render() {
   const search = document.getElementById('search').value.toLowerCase();
   const statusFilter = document.getElementById('status-filter').value;
   
+  const sectionLeads = leads.filter(l => l.section === activeSection);
+
+  // Source sub-filter chips
+  const sources = [...new Set(sectionLeads.map(l => l.source).filter(Boolean))];
+  let sourceHTML = '';
+  if (sources.length > 1) {
+    const allCount = sectionLeads.length;
+    sourceHTML = `<div class="source-filters">
+      <span class="source-chip ${activeSource === 'all' ? 'active' : ''}" onclick="setSource('all')">All<span class="chip-count">(${allCount})</span></span>
+      ${sources.map(src => {
+        const c = sectionLeads.filter(l => l.source === src).length;
+        return `<span class="source-chip ${activeSource === src ? 'active' : ''}" onclick="setSource('${src}')">${src}<span class="chip-count">(${c})</span></span>`;
+      }).join('')}
+    </div>`;
+  }
+
   const filtered = leads.filter(l => {
     if (l.section !== activeSection) return false;
+    if (activeSource !== 'all' && (l.source || '') !== activeSource) return false;
     if (statusFilter !== 'all' && l.status !== statusFilter) return false;
-    if (search && !((l.name || '').toLowerCase().includes(search) || 
+    if (search && !((l.name || '').toLowerCase().includes(search) ||
                     (l.company || '').toLowerCase().includes(search) ||
                     (l.title || '').toLowerCase().includes(search) ||
                     (l.details || '').toLowerCase().includes(search))) return false;
     return true;
   });
-  
-  const sectionLeads = leads.filter(l => l.section === activeSection);
   const totalAUM = sectionLeads.reduce((s, l) => s + (l.aum || 0), 0);
   const newCount = sectionLeads.filter(l => l.status === 'new').length;
   const meetingCount = sectionLeads.filter(l => l.status === 'meeting').length;
@@ -247,20 +276,20 @@ function render() {
     </div>`;
   
   if (!filtered.length) {
-    document.getElementById('leads').innerHTML = `
+    document.getElementById('leads').innerHTML = sourceHTML + `
       <div class="empty">
         <div class="empty-icon">📋</div>
-        <p>No leads in this section yet.</p>
+        <p>No leads${activeSource !== 'all' ? ' from ' + activeSource : ' in this section'} yet.</p>
         <p style="margin-top: 8px;">Click "+ Add Lead" to create one, or wait for cron jobs to populate data.</p>
       </div>`;
     return;
   }
   
-  document.getElementById('leads').innerHTML = filtered.map(l => `
+  document.getElementById('leads').innerHTML = sourceHTML + filtered.map(l => `
     <div class="lead-card">
       <div class="lead-header">
         <div>
-          <div class="lead-title">${l.title || l.name || 'Untitled Lead'}</div>
+          <div class="lead-title">${l.title || l.name || 'Untitled Lead'}${l.source && sources.length > 1 ? `<span class="source-badge">${l.source}</span>` : ''}</div>
           <div class="lead-meta">${l.name || ''}${l.company ? ' · ' + l.company : ''}</div>
         </div>
         <span class="badge badge-${l.status || 'new'}">${l.status || 'new'}</span>
