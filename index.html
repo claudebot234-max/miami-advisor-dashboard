@@ -571,6 +571,9 @@ function exportCSV() {
 // ═══════════════════════════════════════════════════
 let tasks = [];
 let taskFilter = 'active'; // active, done, all
+let _taskInputVal = '';
+let _taskCatVal = 'follow-up';
+let _taskPriVal = 'medium';
 
 const TASK_CATEGORIES = [
   {id:'follow-up', label:'Follow-Up', color:'#4f8ef7'},
@@ -596,11 +599,13 @@ function updateTaskCount() {
 }
 
 function renderTasks() {
-  // Preserve task input value across re-renders
-  const existingInput = document.getElementById('task-input');
-  const savedInputVal = existingInput ? existingInput.value : '';
-  const savedCat = document.getElementById('task-cat-input')?.value || 'follow-up';
-  const savedPri = document.getElementById('task-priority-input')?.value || 'medium';
+  // Sync from DOM before we destroy it
+  var ei = document.getElementById('task-input');
+  if (ei) _taskInputVal = ei.value;
+  var ec = document.getElementById('task-cat-input');
+  if (ec) _taskCatVal = ec.value;
+  var ep = document.getElementById('task-priority-input');
+  if (ep) _taskPriVal = ep.value;
 
   const search = document.getElementById('search')?.value?.toLowerCase() || '';
 
@@ -674,16 +679,17 @@ function renderTasks() {
   var leadsEl = document.getElementById('leads');
   leadsEl.innerHTML = html;
 
-  // Restore input values
+  // Restore input values and attach listeners
   var newInput = document.getElementById('task-input');
   if (newInput) {
-    newInput.value = savedInputVal;
+    newInput.value = _taskInputVal;
     newInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') addTask(); });
+    newInput.addEventListener('input', function() { _taskInputVal = this.value; });
   }
   var newCat = document.getElementById('task-cat-input');
-  if (newCat) newCat.value = savedCat;
+  if (newCat) { newCat.value = _taskCatVal; newCat.addEventListener('change', function() { _taskCatVal = this.value; }); }
   var newPri = document.getElementById('task-priority-input');
-  if (newPri) newPri.value = savedPri;
+  if (newPri) { newPri.value = _taskPriVal; newPri.addEventListener('change', function() { _taskPriVal = this.value; }); }
 
   // Event delegation for task actions
   var addBtn = document.getElementById('task-add-btn');
@@ -702,21 +708,20 @@ function renderTasks() {
 }
 
 function addTask() {
-  const input = document.getElementById('task-input');
-  const text = input.value.trim();
+  var text = _taskInputVal.trim();
   if (!text) return;
   tasks.push({
     id: Date.now().toString(36) + Math.random().toString(36).substr(2,4),
     text: text,
     person: '',
     notes: '',
-    category: document.getElementById('task-cat-input').value,
-    priority: document.getElementById('task-priority-input').value,
+    category: _taskCatVal,
+    priority: _taskPriVal,
     done: false,
     created: Date.now()
   });
   saveTasks();
-  input.value = '';
+  _taskInputVal = '';
   renderTasks();
 }
 
