@@ -138,6 +138,18 @@ async function init() {
       if (!leads.find(l => l.id === m.id)) leads.push(m);
     });
   }
+  // Filter out deleted leads
+  const deleted = localStorage.getItem('mai-deleted-ids');
+  if (deleted) {
+    const delIds = JSON.parse(deleted);
+    leads = leads.filter(l => !delIds.includes(l.id));
+  }
+  // Apply status changes
+  const statuses = localStorage.getItem('mai-status-changes');
+  if (statuses) {
+    const statusMap = JSON.parse(statuses);
+    leads = leads.map(l => statusMap[l.id] ? {...l, status: statusMap[l.id]} : l);
+  }
   render();
 }
 
@@ -262,6 +274,11 @@ function render() {
 
 function updateStatus(id, status) {
   leads = leads.map(l => l.id === id ? {...l, status} : l);
+  // Save status change to localStorage
+  const stored = localStorage.getItem('mai-status-changes');
+  const statusMap = stored ? JSON.parse(stored) : {};
+  statusMap[id] = status;
+  localStorage.setItem('mai-status-changes', JSON.stringify(statusMap));
   save();
   render();
 }
@@ -269,6 +286,17 @@ function updateStatus(id, status) {
 function deleteLead(id) {
   if (confirm('Delete this lead permanently?')) {
     leads = leads.filter(l => l.id !== id);
+    // Save deletion to localStorage
+    const stored = localStorage.getItem('mai-deleted-ids');
+    const deleted = stored ? JSON.parse(stored) : [];
+    deleted.push(id);
+    localStorage.setItem('mai-deleted-ids', JSON.stringify(deleted));
+    // Also remove from manual leads if present
+    const manualStored = localStorage.getItem('mai-manual-leads');
+    if (manualStored) {
+      const manual = JSON.parse(manualStored).filter(l => l.id !== id);
+      localStorage.setItem('mai-manual-leads', JSON.stringify(manual));
+    }
     save();
     render();
   }
