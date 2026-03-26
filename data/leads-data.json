@@ -426,29 +426,6 @@
   {
     "id": 34,
     "category": "acquisition",
-    "triggerEvent": "Founded 1986 (40 years). Age 65-75 estimated. Family succession with sons Sebastian and Fabian now in practice. $600M+ AUM. Classic patriarch transiti",
-    "prospectName": "Mauro Guerra",
-    "eventType": "other",
-    "details": "Founded 1986 (40 years). Age 65-75 estimated. Family succession with sons Sebastian and Fabian now in practice. $600M+ AUM. Classic patriarch transition scenario.",
-    "advisorApproach": "Mauro, I saw Guerra Wealth Advisors has been serving Miami families since 1986\u2014incredible 40-year legacy. I noticed your sons Sebastian and Fabian have joined the practice. As someone who's built a $600M+ firm, are you exploring continuity options beyond family succession? Many founders consider strategic partnerships to ensure client continuity. Worth a conversation about what succession could look like?",
-    "estimatedAUM": 0,
-    "status": "new",
-    "heat": "Warm",
-    "notes": [],
-    "activities": [
-      {
-        "date": "2026-03-26T01:01:07.319193",
-        "action": "Imported from acquisition-targets-today.json"
-      }
-    ],
-    "createdAt": "2026-03-26T01:01:07.319201",
-    "name": "Mauro Guerra",
-    "section": "acquisition",
-    "title": "Mauro Guerra"
-  },
-  {
-    "id": 35,
-    "category": "acquisition",
     "triggerEvent": "Founded 2005 (21 years). Boca Raton. Solo practice (2 employees per RocketReach). Affiliated with Osaic Wealth (formerly Securities America). Age like",
     "prospectName": "Steven Fenyves",
     "eventType": "other",
@@ -470,7 +447,7 @@
     "title": "Steven Fenyves"
   },
   {
-    "id": 36,
+    "id": 35,
     "category": "acquisition",
     "triggerEvent": "Founded 2006 (20 years). Boca Raton. Partnership with Richard Koblick (CRPC, AWMA). 20-year milestone, partnership structure creates succession comple",
     "prospectName": "Joshua Feller",
@@ -493,7 +470,7 @@
     "title": "Joshua Feller"
   },
   {
-    "id": 37,
+    "id": 36,
     "category": "acquisition",
     "triggerEvent": "Founded 2015 (11 years). Coral Gables. Independent RIA serving U.S. and international clients. Too young for immediate succession but good future pipe",
     "prospectName": "Jaime Domenech Macias",
@@ -516,7 +493,7 @@
     "title": "Jaime Domenech Macias"
   },
   {
-    "id": 38,
+    "id": 37,
     "category": "acquisition",
     "triggerEvent": "Founded 2000 as TBK Investments, sold to major bank 2007 (GenSpring), re-established as independent WE Family Offices 2013. Now serves 80+ UHNW famili",
     "prospectName": "Santiago Ulloa",
