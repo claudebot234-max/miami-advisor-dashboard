@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel Agents - OpenClaw Pipeline</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --bg: #0a0a12;
+  --surface: #12121e;
+  --surface2: #1a1a2e;
+  --border: #2a2a3e;
+  --text: #e0e0f0;
+  --muted: #6a6a8a;
+  --accent: #4f8ef7;
+  --success: #34d399;
+  --warning: #fbbf24;
+  --danger: #f87171;
+  --pixel-font: 'Press Start 2P', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scanline overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.03) 2px,
+    rgba(0,0,0,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Starfield background */
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  animation: twinkle 3s ease-in-out infinite alternate;
+}
+@keyframes twinkle {
+  0% { opacity: 0.2; }
+  100% { opacity: 0.8; }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: headerScan 4s linear infinite;
+}
+@keyframes headerScan {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+.header h1 {
+  font-family: var(--pixel-font);
+  font-size: 20px;
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(79,142,247,0.5);
+  margin-bottom: 8px;
+}
+.header .subtitle {
+  font-size: 13px;
+  color: var(--muted);
+}
+.back-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-family: var(--pixel-font);
+  font-size: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+.back-link:hover { color: var(--accent); border-color: var(--accent); }
+
+/* Stats bar */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+.stat-box {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+}
+.stat-box .label {
+  font-family: var(--pixel-font);
+  font-size: 8px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.stat-box .value {
+  font-family: var(--pixel-font);
+  font-size: 22px;
+}
+.stat-box .value.total { color: var(--accent); }
+.stat-box .value.ok { color: var(--success); }
+.stat-box .value.err { color: var(--danger); }
+.stat-box .value.idle { color: var(--warning); }
+.stat-box .value.run { color: #c084fc; }
+
+/* Category filter */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filter-btn {
+  font-family: var(--pixel-font);
+  font-size: 8px;
+  padding: 8px 14px;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+.filter-btn:hover { border-color: var(--accent); color: var(--text); }
+.filter-btn.active { background: rgba(79,142,247,0.15); border-color: var(--accent); color: var(--accent); }
+
+/* View toggle */
+.view-toggle {
+  margin-left: auto;
+  display: flex;
+  gap: 4px;
+}
+.view-btn {
+  font-size: 18px;
+  padding: 6px 10px;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.view-btn:hover { border-color: var(--accent); }
+.view-btn.active { border-color: var(--accent); background: rgba(79,142,247,0.15); }
+
+/* Agent grid */
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+.agent-grid.list-view {
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+/* Agent card */
+.agent-card {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  padding: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.agent-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(79,142,247,0.15);
+}
+.agent-card.status-completed { border-color: rgba(52,211,153,0.3); }
+.agent-card.status-error { border-color: rgba(248,113,113,0.3); }
+.agent-card.status-running { border-color: rgba(192,132,252,0.3); }
+.agent-card.status-error::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--danger);
+  animation: errorPulse 1.5s ease-in-out infinite;
+}
+@keyframes errorPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* Pixel character */
+.pixel-char {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  image-rendering: pixelated;
+  position: relative;
+}
+
+/* Pixel art via CSS box-shadow on a single pixel element */
+.pixel-body {
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+/* Idle animation */
+.agent-card.status-idle .pixel-char { animation: idleBob 2s ease-in-out infinite; }
+.agent-card.status-completed .pixel-char { animation: completedBob 1.5s ease-in-out infinite; }
+.agent-card.status-running .pixel-char { animation: runBounce 0.4s ease-in-out infinite; }
+.agent-card.status-error .pixel-char { animation: errorShake 0.5s ease-in-out infinite; }
+
+@keyframes idleBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+@keyframes completedBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+@keyframes runBounce {
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  50% { transform: translateY(-6px) scaleY(0.95); }
+}
+@keyframes errorShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+/* Status indicator */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.status-dot.completed { background: var(--success); box-shadow: 0 0 6px var(--success); }
+.status-dot.error { background: var(--danger); box-shadow: 0 0 6px var(--danger); animation: errorPulse 1s infinite; }
+.status-dot.running { background: #c084fc; box-shadow: 0 0 6px #c084fc; animation: errorPulse 0.5s infinite; }
+.status-dot.idle { background: var(--warning); box-shadow: 0 0 6px rgba(251,191,36,0.3); }
+
+.agent-name {
+  font-family: var(--pixel-font);
+  font-size: 7px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 8px;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.agent-status {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.agent-schedule {
+  font-family: var(--pixel-font);
+  font-size: 7px;
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+/* List view card */
+.list-view .agent-card {
+  display: grid;
+  grid-template-columns: 64px 1fr 120px 160px 100px;
+  align-items: center;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  gap: 1rem;
+}
+.list-view .pixel-char { margin: 0 auto; width: 32px; height: 32px; transform: scale(0.67); }
+.list-view .agent-name { min-height: auto; justify-content: flex-start; }
+.list-view .agent-schedule { text-align: center; }
+.list-view .agent-meta { font-size: 11px; color: var(--muted); }
+
+/* Detail modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+}
+.modal {
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+.modal h3 {
+  font-family: var(--pixel-font);
+  font-size: 11px;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.modal-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.modal-row .label { color: var(--muted); }
+.modal-row .val { color: var(--text); font-weight: 500; }
+.modal-close {
+  font-family: var(--pixel-font);
+  font-size: 10px;
+  padding: 8px 20px;
+  background: var(--surface2);
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+}
+.modal-close:hover { border-color: var(--accent); }
+
+/* Character canvas - small pixel grids drawn via CSS */
+.char-canvas {
+  display: grid;
+  grid-template-columns: repeat(12, 4px);
+  grid-template-rows: repeat(12, 4px);
+  gap: 0;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  image-rendering: pixelated;
+}
+.list-view .char-canvas {
+  transform: scale(0.67);
+  margin: 0 auto;
+}
+.px { width: 4px; height: 4px; }
+</style>
+</head>
+<body>
+
+<div class="starfield" id="starfield"></div>
+
+<div class="container">
+  <div class="header">
+    <a href="index.html" class="back-link">&lt; Dashboard</a>
+    <h1>PIXEL AGENTS</h1>
+    <div class="subtitle">OpenClaw Automation Pipeline &mdash; 32 Agents Monitoring Miami Markets</div>
+  </div>
+
+  <div class="stats-bar" id="stats-bar"></div>
+
+  <div class="filters" id="filters">
+    <button class="filter-btn active" onclick="setFilter('all')">All</button>
+    <div class="view-toggle">
+      <button class="view-btn active" id="grid-btn" onclick="setView('grid')">&#9638;</button>
+      <button class="view-btn" id="list-btn" onclick="setView('list')">&#9776;</button>
+    </div>
+  </div>
+
+  <div class="agent-grid" id="agent-grid"></div>
+</div>
+
+<div id="modal"></div>
+
+<script>
+let agents = [];
+let activeFilter = 'all';
+let viewMode = 'grid';
+
+// Pixel art templates per category (12x12 grid, each char = color index)
+// 0=transparent, 1=primary, 2=secondary, 3=accent, 4=dark, 5=highlight
+const SPRITES = {
+  leads: {
+    label: 'Scout',
+    colors: ['transparent','#4f8ef7','#3466c7','#60a5fa','#1a1a2e','#a3d0ff'],
+    grid: [
+      '000033330000',
+      '003333333300',
+      '003113311300',
+      '031155511130',
+      '033111111330',
+      '003333333300',
+      '001133311100',
+      '001133311100',
+      '013311113310',
+      '013300003310',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  cpa: {
+    label: 'Accountant',
+    colors: ['transparent','#34d399','#1a9a6c','#6ee7b7','#1a1a2e','#a7f3d0'],
+    grid: [
+      '000044440000',
+      '004444444400',
+      '001113311100',
+      '011155511110',
+      '011111111110',
+      '001111111100',
+      '003311113300',
+      '003333333300',
+      '013333333310',
+      '013300003310',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  vul: {
+    label: 'Insurer',
+    colors: ['transparent','#c084fc','#8b5cf6','#ddb4fe','#1a1a2e','#ede9fe'],
+    grid: [
+      '000033330000',
+      '003333333300',
+      '031113311130',
+      '031155511130',
+      '033111111330',
+      '003333333300',
+      '001111111100',
+      '001131311100',
+      '001111111100',
+      '011100001110',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  acquisition: {
+    label: 'Hunter',
+    colors: ['transparent','#f59e0b','#d97706','#fcd34d','#1a1a2e','#fef3c7'],
+    grid: [
+      '000333333000',
+      '003333333300',
+      '000113311000',
+      '001155511100',
+      '001111111100',
+      '000111111000',
+      '001133311100',
+      '013333333310',
+      '013311113310',
+      '001100001100',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  estate: {
+    label: 'Attorney',
+    colors: ['transparent','#6366f1','#4f46e5','#a5b4fc','#1a1a2e','#c7d2fe'],
+    grid: [
+      '000033330000',
+      '003333333300',
+      '001113311100',
+      '011155511110',
+      '011111111110',
+      '001111111100',
+      '001111111100',
+      '014444444410',
+      '014411114410',
+      '011400004110',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  indian: {
+    label: 'Networker',
+    colors: ['transparent','#f97316','#ea580c','#fdba74','#1a1a2e','#fed7aa'],
+    grid: [
+      '000033330000',
+      '003333333300',
+      '031113311130',
+      '031155511130',
+      '033111111330',
+      '003111111300',
+      '001111111100',
+      '001133311100',
+      '001111111100',
+      '011100001110',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  linkedin: {
+    label: 'Publisher',
+    colors: ['transparent','#0a66c2','#004182','#5eade0','#1a1a2e','#b4d5e8'],
+    grid: [
+      '000033330000',
+      '003333333300',
+      '001113311100',
+      '011155511110',
+      '011111111110',
+      '001111111100',
+      '001111111100',
+      '001113311100',
+      '011133311110',
+      '011100001110',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  divorce: {
+    label: 'Monitor',
+    colors: ['transparent','#ec4899','#db2777','#f9a8d4','#1a1a2e','#fce7f3'],
+    grid: [
+      '000033330000',
+      '003333333300',
+      '001113311100',
+      '011155511110',
+      '011111111110',
+      '001111111100',
+      '001111111100',
+      '001131311100',
+      '001111111100',
+      '011100001110',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  're-investor': {
+    label: 'Investor',
+    colors: ['transparent','#10b981','#059669','#6ee7b7','#1a1a2e','#a7f3d0'],
+    grid: [
+      '000333333000',
+      '003333333300',
+      '001113311100',
+      '011155511110',
+      '011111111110',
+      '001111111100',
+      '001111111100',
+      '013311113310',
+      '013311113310',
+      '011100001110',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  'warm-intros': {
+    label: 'Connector',
+    colors: ['transparent','#f59e0b','#d97706','#fcd34d','#1a1a2e','#fef3c7'],
+    grid: [
+      '000033330000',
+      '003333333300',
+      '031113311130',
+      '031155511130',
+      '033111111330',
+      '003333333300',
+      '001111111100',
+      '031111111130',
+      '031100001130',
+      '001100001100',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  filly: {
+    label: 'Booker',
+    colors: ['transparent','#14b8a6','#0d9488','#5eead4','#1a1a2e','#99f6e4'],
+    grid: [
+      '000033330000',
+      '003333333300',
+      '001113311100',
+      '011155511110',
+      '011111111110',
+      '001111111100',
+      '001133311100',
+      '001133311100',
+      '001111111100',
+      '011100001110',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  zoominfo: {
+    label: 'Scraper',
+    colors: ['transparent','#8b5cf6','#7c3aed','#c4b5fd','#1a1a2e','#ddd6fe'],
+    grid: [
+      '000044440000',
+      '004444444400',
+      '041114411140',
+      '041155514140',
+      '044111114440',
+      '004444444400',
+      '001111111100',
+      '001111111100',
+      '011131311110',
+      '011100001110',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  intel: {
+    label: 'Spy',
+    colors: ['transparent','#64748b','#475569','#94a3b8','#1a1a2e','#cbd5e1'],
+    grid: [
+      '000033330000',
+      '003333333300',
+      '033333333330',
+      '031155511130',
+      '033111111330',
+      '003333333300',
+      '001111111100',
+      '001111111100',
+      '001111111100',
+      '011100001110',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  pipeline: {
+    label: 'Foreman',
+    colors: ['transparent','#eab308','#ca8a04','#fde047','#1a1a2e','#fef9c3'],
+    grid: [
+      '003333333300',
+      '033333333330',
+      '000113311000',
+      '001155511100',
+      '001111111100',
+      '000111111000',
+      '001111111100',
+      '011144411110',
+      '011144411110',
+      '011100001110',
+      '011100001110',
+      '044400004440',
+    ]
+  },
+  misc: {
+    label: 'Agent',
+    colors: ['transparent','#71717a','#52525b','#a1a1aa','#1a1a2e','#d4d4d8'],
+    grid: [
+      '000033330000',
+      '003333333300',
+      '001113311100',
+      '011155511110',
+      '011111111110',
+      '001111111100',
+      '001111111100',
+      '001111111100',
+      '001111111100',
+      '011100001110',
+      '011100001110',
+      '044400004440',
+    ]
+  }
+};
+
+function renderPixelChar(category, status) {
+  const sprite = SPRITES[category] || SPRITES.misc;
+  const colors = [...sprite.colors];
+
+  // Tint based on status
+  let overlay = '';
+  if (status === 'error') {
+    overlay = 'filter: saturate(0.3) brightness(0.7);';
+  }
+
+  let html = `<div class="char-canvas" style="${overlay}">`;
+  for (let row of sprite.grid) {
+    for (let ch of row) {
+      const idx = parseInt(ch);
+      const color = colors[idx] || 'transparent';
+      html += `<div class="px" style="background:${color}"></div>`;
+    }
+  }
+  html += '</div>';
+  return html;
+}
+
+function cronToHuman(expr) {
+  if (!expr || expr === '?') return 'No schedule';
+  const parts = expr.split(' ');
+  if (parts.length < 5) return expr;
+  const [min, hr, , , dow] = parts;
+  const days = {
+    '*': 'Daily',
+    '1-5': 'Weekdays',
+    '1,3,5': 'Mon/Wed/Fri',
+    '2,4': 'Tue/Thu',
+    '1': 'Mondays',
+    '3': 'Wednesdays',
+    '4': 'Thursdays',
+  };
+  const dayStr = days[dow] || dow;
+  const hour = parseInt(hr);
+  const ampm = hour >= 12 ? 'PM' : 'AM';
+  const h12 = hour > 12 ? hour - 12 : hour === 0 ? 12 : hour;
+  return `${dayStr} ${h12}:${min.padStart(2,'0')}${ampm}`;
+}
+
+function timeAgo(ms) {
+  if (!ms) return 'Never';
+  const diff = Date.now() - ms;
+  const mins = Math.floor(diff / 60000);
+  if (mins < 60) return `${mins}m ago`;
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24) return `${hrs}h ago`;
+  const days = Math.floor(hrs / 24);
+  return `${days}d ago`;
+}
+
+function renderStats() {
+  const total = agents.length;
+  const completed = agents.filter(a => a.status === 'completed').length;
+  const errors = agents.filter(a => a.status === 'error').length;
+  const idle = agents.filter(a => a.status === 'idle').length;
+  const running = agents.filter(a => a.status === 'running').length;
+
+  document.getElementById('stats-bar').innerHTML = `
+    <div class="stat-box">
+      <div class="label">Total Agents</div>
+      <div class="value total">${total}</div>
+    </div>
+    <div class="stat-box">
+      <div class="label">Completed</div>
+      <div class="value ok">${completed}</div>
+    </div>
+    <div class="stat-box">
+      <div class="label">Errors</div>
+      <div class="value err">${errors}</div>
+    </div>
+    <div class="stat-box">
+      <div class="label">Idle</div>
+      <div class="value idle">${idle}</div>
+    </div>
+    <div class="stat-box">
+      <div class="label">Running</div>
+      <div class="value run">${running}</div>
+    </div>
+  `;
+}
+
+function renderFilters() {
+  const cats = [...new Set(agents.map(a => a.category))].sort();
+  const container = document.getElementById('filters');
+
+  // Keep the view toggle
+  const viewToggle = container.querySelector('.view-toggle');
+  container.innerHTML = '';
+
+  const allBtn = document.createElement('button');
+  allBtn.className = `filter-btn ${activeFilter === 'all' ? 'active' : ''}`;
+  allBtn.textContent = `All (${agents.length})`;
+  allBtn.onclick = () => setFilter('all');
+  container.appendChild(allBtn);
+
+  for (const cat of cats) {
+    const count = agents.filter(a => a.category === cat).length;
+    const btn = document.createElement('button');
+    btn.className = `filter-btn ${activeFilter === cat ? 'active' : ''}`;
+    btn.textContent = `${cat} (${count})`;
+    btn.onclick = () => setFilter(cat);
+    container.appendChild(btn);
+  }
+
+  // Re-add view toggle
+  const vt = document.createElement('div');
+  vt.className = 'view-toggle';
+  vt.innerHTML = `
+    <button class="view-btn ${viewMode === 'grid' ? 'active' : ''}" onclick="setView('grid')">&#9638;</button>
+    <button class="view-btn ${viewMode === 'list' ? 'active' : ''}" onclick="setView('list')">&#9776;</button>
+  `;
+  container.appendChild(vt);
+}
+
+function renderAgents() {
+  const filtered = activeFilter === 'all' ? agents : agents.filter(a => a.category === activeFilter);
+
+  // Sort: errors first, then running, completed, idle
+  const order = { error: 0, running: 1, completed: 2, idle: 3 };
+  filtered.sort((a, b) => (order[a.status] ?? 4) - (order[b.status] ?? 4));
+
+  const grid = document.getElementById('agent-grid');
+  grid.className = `agent-grid ${viewMode === 'list' ? 'list-view' : ''}`;
+
+  if (viewMode === 'list') {
+    grid.innerHTML = filtered.map((a, i) => `
+      <div class="agent-card status-${a.status}" onclick="showDetail(${i}, '${activeFilter}')">
+        ${renderPixelChar(a.category, a.status)}
+        <div class="agent-name">${a.name}</div>
+        <div class="agent-status"><span class="status-dot ${a.status}"></span>${a.status}</div>
+        <div class="agent-meta">${cronToHuman(a.schedule)}</div>
+        <div class="agent-meta">${a.lastRunTime ? timeAgo(a.lastRunMs) : 'Never run'}</div>
+      </div>
+    `).join('');
+  } else {
+    grid.innerHTML = filtered.map((a, i) => `
+      <div class="agent-card status-${a.status}" onclick="showDetail(${i}, '${activeFilter}')">
+        ${renderPixelChar(a.category, a.status)}
+        <div class="agent-name">${a.name}</div>
+        <div class="agent-status"><span class="status-dot ${a.status}"></span>${a.status}</div>
+        <div class="agent-schedule">${cronToHuman(a.schedule)}</div>
+      </div>
+    `).join('');
+  }
+}
+
+function showDetail(idx, filter) {
+  const filtered = filter === 'all' ? agents : agents.filter(a => a.category === filter);
+  const order = { error: 0, running: 1, completed: 2, idle: 3 };
+  filtered.sort((a, b) => (order[a.status] ?? 4) - (order[b.status] ?? 4));
+  const a = filtered[idx];
+  if (!a) return;
+
+  const sprite = SPRITES[a.category] || SPRITES.misc;
+
+  document.getElementById('modal').innerHTML = `
+    <div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+      <div class="modal">
+        <div style="text-align:center;margin-bottom:1rem;">
+          ${renderPixelChar(a.category, a.status)}
+          <div style="font-family:var(--pixel-font);font-size:8px;color:var(--muted);margin-top:4px;">${sprite.label}</div>
+        </div>
+        <h3>${a.name}</h3>
+        <div class="modal-row"><span class="label">Status</span><span class="val"><span class="status-dot ${a.status}"></span>${a.status.toUpperCase()}</span></div>
+        <div class="modal-row"><span class="label">Category</span><span class="val">${a.category}</span></div>
+        <div class="modal-row"><span class="label">Schedule</span><span class="val">${cronToHuman(a.schedule)}</span></div>
+        <div class="modal-row"><span class="label">Cron Expression</span><span class="val" style="font-family:monospace">${a.schedule}</span></div>
+        <div class="modal-row"><span class="label">Last Run</span><span class="val">${a.lastRunTime || 'Never'}</span></div>
+        <div class="modal-row"><span class="label">Next Run</span><span class="val">${a.nextRunTime || 'Unknown'}</span></div>
+        <div class="modal-row"><span class="label">Duration</span><span class="val">${a.durationMs ? (a.durationMs / 1000).toFixed(1) + 's' : '-'}</span></div>
+        <div class="modal-row"><span class="label">Consecutive Errors</span><span class="val" style="color:${a.consecutiveErrors > 0 ? 'var(--danger)' : 'var(--success)'}">${a.consecutiveErrors}</span></div>
+        <div class="modal-row"><span class="label">Output</span><span class="val" style="font-size:11px;word-break:break-all">${a.outputFile || 'None'}</span></div>
+        <div class="modal-row"><span class="label">Agent ID</span><span class="val" style="font-family:monospace">${a.id}</span></div>
+        <button class="modal-close" onclick="closeModal()">CLOSE</button>
+      </div>
+    </div>
+  `;
+}
+
+function closeModal() {
+  document.getElementById('modal').innerHTML = '';
+}
+
+function setFilter(f) {
+  activeFilter = f;
+  renderFilters();
+  renderAgents();
+}
+
+function setView(v) {
+  viewMode = v;
+  renderFilters();
+  renderAgents();
+}
+
+// Starfield
+function createStars() {
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 80; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.animationDelay = Math.random() * 3 + 's';
+    star.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(star);
+  }
+}
+
+async function init() {
+  createStars();
+  try {
+    const res = await fetch('data/agents-data.json?t=' + Date.now());
+    if (res.ok) agents = await res.json();
+  } catch(e) {
+    console.error('Failed to load agents data:', e);
+  }
+  renderStats();
+  renderFilters();
+  renderAgents();
+}
+
+init();
+</script>
+</body>
+</html>
