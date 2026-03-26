@@ -381,6 +381,16 @@ function saveLead(e, id) {
   
   if (id) {
     leads = leads.map(l => l.id === id ? {...l, ...data} : l);
+    // Update in manual leads localStorage if it exists there
+    const manualStored = localStorage.getItem('mai-manual-leads');
+    if (manualStored) {
+      const manual = JSON.parse(manualStored);
+      const idx = manual.findIndex(l => l.id === id);
+      if (idx >= 0) {
+        manual[idx] = {...manual[idx], ...data};
+        localStorage.setItem('mai-manual-leads', JSON.stringify(manual));
+      }
+    }
   } else {
     const newLead = {...data, id: Date.now(), section: activeSection};
     leads.push(newLead);
