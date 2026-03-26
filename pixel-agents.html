@@ -3,936 +3,1116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pixel Agents - OpenClaw Pipeline</title>
+<title>Pixel Agents - OpenClaw Office</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a0a12;overflow:hidden;font-family:-apple-system,sans-serif;color:#e0e0f0}
+#wrap{position:relative;width:100vw;height:100vh;display:flex;flex-direction:column}
 
-:root {
-  --bg: #0a0a12;
-  --surface: #12121e;
-  --surface2: #1a1a2e;
-  --border: #2a2a3e;
-  --text: #e0e0f0;
-  --muted: #6a6a8a;
-  --accent: #4f8ef7;
-  --success: #34d399;
-  --warning: #fbbf24;
-  --danger: #f87171;
-  --pixel-font: 'Press Start 2P', monospace;
-}
+/* Top bar */
+.topbar{display:flex;align-items:center;gap:12px;padding:8px 16px;background:#12121e;border-bottom:2px solid #1e1e32;z-index:10;flex-shrink:0}
+.topbar h1{font-family:'Press Start 2P',monospace;font-size:12px;color:#4f8ef7;text-shadow:0 0 10px rgba(79,142,247,0.4)}
+.topbar .sep{width:1px;height:20px;background:#2a2a3e;margin:0 4px}
+.stat{text-align:center;padding:0 10px}
+.stat .n{font-family:'Press Start 2P',monospace;font-size:14px}
+.stat .l{font-size:9px;color:#6a6a8a;margin-top:2px}
+.n.ok{color:#34d399}.n.err{color:#f87171}.n.idle{color:#fbbf24}.n.run{color:#c084fc}.n.tot{color:#4f8ef7}
+.topbar .spacer{flex:1}
+.btn{font-family:'Press Start 2P',monospace;font-size:9px;padding:8px 16px;border:2px solid #2a2a3e;border-radius:4px;background:#12121e;color:#e0e0f0;cursor:pointer;transition:all .2s;white-space:nowrap}
+.btn:hover{border-color:#4f8ef7;color:#4f8ef7}
+.btn.active{border-color:#c084fc;color:#c084fc;background:rgba(192,132,252,0.1)}
+.btn.danger{border-color:#f87171;color:#f87171}
+.back{font-size:10px;color:#6a6a8a;text-decoration:none;padding:6px 10px;border:1px solid #2a2a3e;border-radius:4px}
+.back:hover{color:#4f8ef7;border-color:#4f8ef7}
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* Canvas */
+#game-wrap{flex:1;position:relative;overflow:hidden;cursor:default}
+canvas{display:block;image-rendering:pixelated;image-rendering:crisp-edges}
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+/* Agent info panel */
+#info{position:absolute;top:0;right:-360px;width:350px;height:100%;background:#12121eee;border-left:2px solid #2a2a3e;padding:20px;overflow-y:auto;transition:right .3s ease;z-index:20}
+#info.open{right:0}
+#info h3{font-family:'Press Start 2P',monospace;font-size:10px;color:#4f8ef7;margin-bottom:16px}
+#info .close{position:absolute;top:12px;right:12px;font-size:18px;color:#6a6a8a;cursor:pointer;background:none;border:none}
+#info .close:hover{color:#f87171}
+.info-sprite{text-align:center;margin-bottom:16px}
+.info-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #1e1e32;font-size:13px}
+.info-row .k{color:#6a6a8a}.info-row .v{color:#e0e0f0;font-weight:500;text-align:right;max-width:60%}
+.info-row .v.err-text{color:#f87171}
+.info-row .v.ok-text{color:#34d399}
+.personality{margin-top:16px;padding:12px;background:#1a1a2e;border-radius:6px;font-size:12px;line-height:1.6;color:#a0a0c0}
+.personality b{color:#e0e0f0}
 
-/* Scanline overlay */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0,0,0,0.03) 2px,
-    rgba(0,0,0,0.03) 4px
-  );
-  pointer-events: none;
-  z-index: 1000;
-}
+/* Tooltip */
+#tooltip{position:absolute;pointer-events:none;background:#12121ef0;border:2px solid #4f8ef7;border-radius:4px;padding:6px 10px;font-family:'Press Start 2P',monospace;font-size:8px;color:#e0e0f0;white-space:nowrap;z-index:30;display:none}
 
-/* Starfield background */
-.starfield {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-}
-.star {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: rgba(255,255,255,0.4);
-  border-radius: 50%;
-  animation: twinkle 3s ease-in-out infinite alternate;
-}
-@keyframes twinkle {
-  0% { opacity: 0.2; }
-  100% { opacity: 0.8; }
-}
-
-.container {
-  position: relative;
-  z-index: 1;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 1.5rem;
-}
-
-/* Header */
-.header {
-  text-align: center;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: var(--surface);
-  border: 2px solid var(--border);
-  border-radius: 4px;
-  position: relative;
-  overflow: hidden;
-}
-.header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  animation: headerScan 4s linear infinite;
-}
-@keyframes headerScan {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
-.header h1 {
-  font-family: var(--pixel-font);
-  font-size: 20px;
-  color: var(--accent);
-  text-shadow: 0 0 20px rgba(79,142,247,0.5);
-  margin-bottom: 8px;
-}
-.header .subtitle {
-  font-size: 13px;
-  color: var(--muted);
-}
-.back-link {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  font-family: var(--pixel-font);
-  font-size: 10px;
-  color: var(--muted);
-  text-decoration: none;
-  padding: 6px 12px;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  transition: all 0.2s;
-}
-.back-link:hover { color: var(--accent); border-color: var(--accent); }
-
-/* Stats bar */
-.stats-bar {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-  margin-bottom: 2rem;
-}
-.stat-box {
-  background: var(--surface);
-  border: 2px solid var(--border);
-  border-radius: 4px;
-  padding: 1rem;
-  text-align: center;
-}
-.stat-box .label {
-  font-family: var(--pixel-font);
-  font-size: 8px;
-  color: var(--muted);
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
-.stat-box .value {
-  font-family: var(--pixel-font);
-  font-size: 22px;
-}
-.stat-box .value.total { color: var(--accent); }
-.stat-box .value.ok { color: var(--success); }
-.stat-box .value.err { color: var(--danger); }
-.stat-box .value.idle { color: var(--warning); }
-.stat-box .value.run { color: #c084fc; }
-
-/* Category filter */
-.filters {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.filter-btn {
-  font-family: var(--pixel-font);
-  font-size: 8px;
-  padding: 8px 14px;
-  background: var(--surface);
-  border: 2px solid var(--border);
-  border-radius: 4px;
-  color: var(--muted);
-  cursor: pointer;
-  transition: all 0.2s;
-  text-transform: uppercase;
-}
-.filter-btn:hover { border-color: var(--accent); color: var(--text); }
-.filter-btn.active { background: rgba(79,142,247,0.15); border-color: var(--accent); color: var(--accent); }
-
-/* View toggle */
-.view-toggle {
-  margin-left: auto;
-  display: flex;
-  gap: 4px;
-}
-.view-btn {
-  font-size: 18px;
-  padding: 6px 10px;
-  background: var(--surface);
-  border: 2px solid var(--border);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.view-btn:hover { border-color: var(--accent); }
-.view-btn.active { border-color: var(--accent); background: rgba(79,142,247,0.15); }
-
-/* Agent grid */
-.agent-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 16px;
-}
-.agent-grid.list-view {
-  grid-template-columns: 1fr;
-  gap: 8px;
-}
-
-/* Agent card */
-.agent-card {
-  background: var(--surface);
-  border: 2px solid var(--border);
-  border-radius: 4px;
-  padding: 1.25rem;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.2s;
-  position: relative;
-  overflow: hidden;
-}
-.agent-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(79,142,247,0.15);
-}
-.agent-card.status-completed { border-color: rgba(52,211,153,0.3); }
-.agent-card.status-error { border-color: rgba(248,113,113,0.3); }
-.agent-card.status-running { border-color: rgba(192,132,252,0.3); }
-.agent-card.status-error::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--danger);
-  animation: errorPulse 1.5s ease-in-out infinite;
-}
-@keyframes errorPulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
-}
-
-/* Pixel character */
-.pixel-char {
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 12px;
-  image-rendering: pixelated;
-  position: relative;
-}
-
-/* Pixel art via CSS box-shadow on a single pixel element */
-.pixel-body {
-  width: 4px;
-  height: 4px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: transparent;
-}
-
-/* Idle animation */
-.agent-card.status-idle .pixel-char { animation: idleBob 2s ease-in-out infinite; }
-.agent-card.status-completed .pixel-char { animation: completedBob 1.5s ease-in-out infinite; }
-.agent-card.status-running .pixel-char { animation: runBounce 0.4s ease-in-out infinite; }
-.agent-card.status-error .pixel-char { animation: errorShake 0.5s ease-in-out infinite; }
-
-@keyframes idleBob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); }
-}
-@keyframes completedBob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-2px); }
-}
-@keyframes runBounce {
-  0%, 100% { transform: translateY(0) scaleY(1); }
-  50% { transform: translateY(-6px) scaleY(0.95); }
-}
-@keyframes errorShake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-3px); }
-  75% { transform: translateX(3px); }
-}
-
-/* Status indicator */
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 6px;
-  vertical-align: middle;
-}
-.status-dot.completed { background: var(--success); box-shadow: 0 0 6px var(--success); }
-.status-dot.error { background: var(--danger); box-shadow: 0 0 6px var(--danger); animation: errorPulse 1s infinite; }
-.status-dot.running { background: #c084fc; box-shadow: 0 0 6px #c084fc; animation: errorPulse 0.5s infinite; }
-.status-dot.idle { background: var(--warning); box-shadow: 0 0 6px rgba(251,191,36,0.3); }
-
-.agent-name {
-  font-family: var(--pixel-font);
-  font-size: 7px;
-  line-height: 1.6;
-  color: var(--text);
-  margin-bottom: 8px;
-  min-height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.agent-status {
-  font-size: 11px;
-  color: var(--muted);
-  margin-bottom: 4px;
-}
-.agent-schedule {
-  font-family: var(--pixel-font);
-  font-size: 7px;
-  color: var(--muted);
-  opacity: 0.6;
-}
-
-/* List view card */
-.list-view .agent-card {
-  display: grid;
-  grid-template-columns: 64px 1fr 120px 160px 100px;
-  align-items: center;
-  text-align: left;
-  padding: 0.75rem 1rem;
-  gap: 1rem;
-}
-.list-view .pixel-char { margin: 0 auto; width: 32px; height: 32px; transform: scale(0.67); }
-.list-view .agent-name { min-height: auto; justify-content: flex-start; }
-.list-view .agent-schedule { text-align: center; }
-.list-view .agent-meta { font-size: 11px; color: var(--muted); }
-
-/* Detail modal */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 500;
-}
-.modal {
-  background: var(--surface);
-  border: 2px solid var(--accent);
-  border-radius: 4px;
-  width: 500px;
-  max-height: 80vh;
-  overflow-y: auto;
-  padding: 1.5rem;
-}
-.modal h3 {
-  font-family: var(--pixel-font);
-  font-size: 11px;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-.modal-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 13px;
-}
-.modal-row .label { color: var(--muted); }
-.modal-row .val { color: var(--text); font-weight: 500; }
-.modal-close {
-  font-family: var(--pixel-font);
-  font-size: 10px;
-  padding: 8px 20px;
-  background: var(--surface2);
-  border: 2px solid var(--border);
-  border-radius: 4px;
-  color: var(--text);
-  cursor: pointer;
-  margin-top: 1rem;
-  width: 100%;
-}
-.modal-close:hover { border-color: var(--accent); }
-
-/* Character canvas - small pixel grids drawn via CSS */
-.char-canvas {
-  display: grid;
-  grid-template-columns: repeat(12, 4px);
-  grid-template-rows: repeat(12, 4px);
-  gap: 0;
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 12px;
-  image-rendering: pixelated;
-}
-.list-view .char-canvas {
-  transform: scale(0.67);
-  margin: 0 auto;
-}
-.px { width: 4px; height: 4px; }
+/* Speed controls */
+.speed-ctrl{display:flex;align-items:center;gap:4px;font-size:9px;color:#6a6a8a}
+.speed-ctrl button{width:28px;height:28px;font-size:12px;border:1px solid #2a2a3e;background:#12121e;color:#e0e0f0;border-radius:4px;cursor:pointer}
+.speed-ctrl button.active{border-color:#4f8ef7;color:#4f8ef7}
 </style>
 </head>
 <body>
-
-<div class="starfield" id="starfield"></div>
-
-<div class="container">
-  <div class="header">
-    <a href="index.html" class="back-link">&lt; Dashboard</a>
+<div id="wrap">
+  <div class="topbar">
+    <a href="index.html" class="back">&lt; Dashboard</a>
+    <div class="sep"></div>
     <h1>PIXEL AGENTS</h1>
-    <div class="subtitle">OpenClaw Automation Pipeline &mdash; 32 Agents Monitoring Miami Markets</div>
-  </div>
-
-  <div class="stats-bar" id="stats-bar"></div>
-
-  <div class="filters" id="filters">
-    <button class="filter-btn active" onclick="setFilter('all')">All</button>
-    <div class="view-toggle">
-      <button class="view-btn active" id="grid-btn" onclick="setView('grid')">&#9638;</button>
-      <button class="view-btn" id="list-btn" onclick="setView('list')">&#9776;</button>
+    <div class="sep"></div>
+    <div class="stat"><div class="n tot" id="s-total">0</div><div class="l">AGENTS</div></div>
+    <div class="stat"><div class="n ok" id="s-ok">0</div><div class="l">DONE</div></div>
+    <div class="stat"><div class="n err" id="s-err">0</div><div class="l">ERROR</div></div>
+    <div class="stat"><div class="n idle" id="s-idle">0</div><div class="l">IDLE</div></div>
+    <div class="spacer"></div>
+    <div class="speed-ctrl">
+      SPD:
+      <button onclick="setSpeed(0.5)">&#189;</button>
+      <button class="active" onclick="setSpeed(1)">1</button>
+      <button onclick="setSpeed(2)">2</button>
     </div>
+    <div class="sep"></div>
+    <button class="btn" id="scrum-btn" onclick="callScrum()">CALL SCRUM</button>
+    <button class="btn" onclick="sendCoffeeBreak()">COFFEE BREAK</button>
   </div>
-
-  <div class="agent-grid" id="agent-grid"></div>
+  <div id="game-wrap">
+    <canvas id="game"></canvas>
+    <div id="info">
+      <button class="close" onclick="closeInfo()">&times;</button>
+      <div id="info-body"></div>
+    </div>
+    <div id="tooltip"></div>
+  </div>
 </div>
 
-<div id="modal"></div>
-
 <script>
-let agents = [];
-let activeFilter = 'all';
-let viewMode = 'grid';
+// ═══════════════════════════════════════════════════
+// CONSTANTS
+// ═══════════════════════════════════════════════════
+const PX = 4; // pixels per game-pixel
+const GW = 320, GH = 180; // game world size
+const SW = GW * PX, SH = GH * PX; // screen size
 
-// Pixel art templates per category (12x12 grid, each char = color index)
-// 0=transparent, 1=primary, 2=secondary, 3=accent, 4=dark, 5=highlight
-const SPRITES = {
-  leads: {
-    label: 'Scout',
-    colors: ['transparent','#4f8ef7','#3466c7','#60a5fa','#1a1a2e','#a3d0ff'],
-    grid: [
-      '000033330000',
-      '003333333300',
-      '003113311300',
-      '031155511130',
-      '033111111330',
-      '003333333300',
-      '001133311100',
-      '001133311100',
-      '013311113310',
-      '013300003310',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  cpa: {
-    label: 'Accountant',
-    colors: ['transparent','#34d399','#1a9a6c','#6ee7b7','#1a1a2e','#a7f3d0'],
-    grid: [
-      '000044440000',
-      '004444444400',
-      '001113311100',
-      '011155511110',
-      '011111111110',
-      '001111111100',
-      '003311113300',
-      '003333333300',
-      '013333333310',
-      '013300003310',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  vul: {
-    label: 'Insurer',
-    colors: ['transparent','#c084fc','#8b5cf6','#ddb4fe','#1a1a2e','#ede9fe'],
-    grid: [
-      '000033330000',
-      '003333333300',
-      '031113311130',
-      '031155511130',
-      '033111111330',
-      '003333333300',
-      '001111111100',
-      '001131311100',
-      '001111111100',
-      '011100001110',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  acquisition: {
-    label: 'Hunter',
-    colors: ['transparent','#f59e0b','#d97706','#fcd34d','#1a1a2e','#fef3c7'],
-    grid: [
-      '000333333000',
-      '003333333300',
-      '000113311000',
-      '001155511100',
-      '001111111100',
-      '000111111000',
-      '001133311100',
-      '013333333310',
-      '013311113310',
-      '001100001100',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  estate: {
-    label: 'Attorney',
-    colors: ['transparent','#6366f1','#4f46e5','#a5b4fc','#1a1a2e','#c7d2fe'],
-    grid: [
-      '000033330000',
-      '003333333300',
-      '001113311100',
-      '011155511110',
-      '011111111110',
-      '001111111100',
-      '001111111100',
-      '014444444410',
-      '014411114410',
-      '011400004110',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  indian: {
-    label: 'Networker',
-    colors: ['transparent','#f97316','#ea580c','#fdba74','#1a1a2e','#fed7aa'],
-    grid: [
-      '000033330000',
-      '003333333300',
-      '031113311130',
-      '031155511130',
-      '033111111330',
-      '003111111300',
-      '001111111100',
-      '001133311100',
-      '001111111100',
-      '011100001110',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  linkedin: {
-    label: 'Publisher',
-    colors: ['transparent','#0a66c2','#004182','#5eade0','#1a1a2e','#b4d5e8'],
-    grid: [
-      '000033330000',
-      '003333333300',
-      '001113311100',
-      '011155511110',
-      '011111111110',
-      '001111111100',
-      '001111111100',
-      '001113311100',
-      '011133311110',
-      '011100001110',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  divorce: {
-    label: 'Monitor',
-    colors: ['transparent','#ec4899','#db2777','#f9a8d4','#1a1a2e','#fce7f3'],
-    grid: [
-      '000033330000',
-      '003333333300',
-      '001113311100',
-      '011155511110',
-      '011111111110',
-      '001111111100',
-      '001111111100',
-      '001131311100',
-      '001111111100',
-      '011100001110',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  're-investor': {
-    label: 'Investor',
-    colors: ['transparent','#10b981','#059669','#6ee7b7','#1a1a2e','#a7f3d0'],
-    grid: [
-      '000333333000',
-      '003333333300',
-      '001113311100',
-      '011155511110',
-      '011111111110',
-      '001111111100',
-      '001111111100',
-      '013311113310',
-      '013311113310',
-      '011100001110',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  'warm-intros': {
-    label: 'Connector',
-    colors: ['transparent','#f59e0b','#d97706','#fcd34d','#1a1a2e','#fef3c7'],
-    grid: [
-      '000033330000',
-      '003333333300',
-      '031113311130',
-      '031155511130',
-      '033111111330',
-      '003333333300',
-      '001111111100',
-      '031111111130',
-      '031100001130',
-      '001100001100',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  filly: {
-    label: 'Booker',
-    colors: ['transparent','#14b8a6','#0d9488','#5eead4','#1a1a2e','#99f6e4'],
-    grid: [
-      '000033330000',
-      '003333333300',
-      '001113311100',
-      '011155511110',
-      '011111111110',
-      '001111111100',
-      '001133311100',
-      '001133311100',
-      '001111111100',
-      '011100001110',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  zoominfo: {
-    label: 'Scraper',
-    colors: ['transparent','#8b5cf6','#7c3aed','#c4b5fd','#1a1a2e','#ddd6fe'],
-    grid: [
-      '000044440000',
-      '004444444400',
-      '041114411140',
-      '041155514140',
-      '044111114440',
-      '004444444400',
-      '001111111100',
-      '001111111100',
-      '011131311110',
-      '011100001110',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  intel: {
-    label: 'Spy',
-    colors: ['transparent','#64748b','#475569','#94a3b8','#1a1a2e','#cbd5e1'],
-    grid: [
-      '000033330000',
-      '003333333300',
-      '033333333330',
-      '031155511130',
-      '033111111330',
-      '003333333300',
-      '001111111100',
-      '001111111100',
-      '001111111100',
-      '011100001110',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  pipeline: {
-    label: 'Foreman',
-    colors: ['transparent','#eab308','#ca8a04','#fde047','#1a1a2e','#fef9c3'],
-    grid: [
-      '003333333300',
-      '033333333330',
-      '000113311000',
-      '001155511100',
-      '001111111100',
-      '000111111000',
-      '001111111100',
-      '011144411110',
-      '011144411110',
-      '011100001110',
-      '011100001110',
-      '044400004440',
-    ]
-  },
-  misc: {
-    label: 'Agent',
-    colors: ['transparent','#71717a','#52525b','#a1a1aa','#1a1a2e','#d4d4d8'],
-    grid: [
-      '000033330000',
-      '003333333300',
-      '001113311100',
-      '011155511110',
-      '011111111110',
-      '001111111100',
-      '001111111100',
-      '001111111100',
-      '001111111100',
-      '011100001110',
-      '011100001110',
-      '044400004440',
-    ]
+// ═══════════════════════════════════════════════════
+// OFFICE LAYOUT (in game pixels)
+// ═══════════════════════════════════════════════════
+const FLOOR_COLOR = '#2a1f14';
+const FLOOR_TILE1 = '#2a1f14';
+const FLOOR_TILE2 = '#2e2318';
+const WALL_COLOR = '#3a3050';
+const WALL_TOP = '#4a4060';
+const WINDOW_COLOR = '#1a3050';
+const WINDOW_LIGHT = '#2a5080';
+const DESK_COLOR = '#5a4530';
+const DESK_TOP = '#6a5540';
+const MONITOR_ON = '#2040a0';
+const MONITOR_SCREEN = '#304880';
+const CHAIR_COLOR = '#404050';
+const CARPET_COLOR = '#1e1628';
+const MEETING_FLOOR = '#1a1425';
+const KITCHEN_FLOOR = '#1e1a14';
+const PLANT_POT = '#5a3a20';
+const PLANT_GREEN = '#2a7a3a';
+const PLANT_LIGHT = '#3a9a4a';
+const COUCH_COLOR = '#3a2a50';
+const COUCH_CUSHION = '#4a3a60';
+const BOOKSHELF = '#4a3520';
+const WHITEBOARD = '#c0c0d0';
+
+// Desk positions (game coords) - 4 rows × 8 cols
+const DESK_ROWS = 4, DESK_COLS = 8;
+const DESK_W = 13, DESK_H = 7;
+const DESK_START_X = 90, DESK_START_Y = 14;
+const DESK_GAP_X = 2, DESK_GAP_Y = 14;
+const DESK_BLOCK_GAP = 10; // extra gap between left 4 and right 4
+
+const DESKS = [];
+for (let r = 0; r < DESK_ROWS; r++) {
+  for (let c = 0; c < DESK_COLS; c++) {
+    const blockOffset = c >= 4 ? DESK_BLOCK_GAP : 0;
+    DESKS.push({
+      x: DESK_START_X + c * (DESK_W + DESK_GAP_X) + blockOffset,
+      y: DESK_START_Y + r * (DESK_H + DESK_GAP_Y),
+      row: r, col: c
+    });
   }
+}
+
+// Chair position relative to desk: centered below
+const chairOffset = { x: 4, y: DESK_H + 1 };
+
+// Key locations
+const MEETING_ROOM = { x: 4, y: 4, w: 68, h: 56 };
+const MEETING_TABLE = { x: 18, y: 18, w: 38, h: 16 };
+const MEETING_DOOR = { x: 68, y: 34, w: 4, h: 12 };
+const KITCHEN = { x: 230, y: 118, w: 86, h: 58 };
+const COFFEE_MACHINE = { x: 242, y: 122 };
+const FRIDGE_POS = { x: 300, y: 122 };
+const WATER_COOLER = { x: 260, y: 122 };
+const KITCHEN_TABLE = { x: 260, y: 148, w: 26, h: 12 };
+const LOUNGE = { x: 4, y: 90, w: 72, h: 86 };
+const COUCH_POS = { x: 10, y: 130, w: 40, h: 14 };
+const PLANTS = [
+  { x: 82, y: 6 }, { x: 82, y: 60 }, { x: 82, y: 100 },
+  { x: 4, y: 66 }, { x: 62, y: 66 },
+  { x: 220, y: 120 }, { x: 315, y: 6 },
+  { x: 315, y: 60 }, { x: 315, y: 100 },
+  { x: 150, y: 100 }, { x: 200, y: 100 },
+];
+
+// Meeting spots for scrum (positions inside meeting room)
+const MEETING_SPOTS = [];
+for (let i = 0; i < 36; i++) {
+  MEETING_SPOTS.push({
+    x: MEETING_ROOM.x + 8 + (i % 6) * 9,
+    y: MEETING_ROOM.y + 6 + Math.floor(i / 6) * 8
+  });
+}
+
+// ═══════════════════════════════════════════════════
+// AGENT TYPES & PERSONALITIES
+// ═══════════════════════════════════════════════════
+const AGENT_TYPES = {
+  leads:         { label: 'Scout',      shirt: '#4080d0', accent: '#60a0f0', pants: '#2a3a5a', hair: '#5a3a20', speed: 1.2, social: 0.4, deskTime: 0.5, coffeeFreq: 0.3, personality: 'Energetic scanner. Always first to spot a new lead. Walks fast, talks faster.' },
+  cpa:           { label: 'Accountant', shirt: '#30a070', accent: '#50c090', pants: '#2a4a3a', hair: '#1a1a2a', speed: 0.7, social: 0.3, deskTime: 0.8, coffeeFreq: 0.2, personality: 'Methodical and precise. Double-checks everything. Prefers spreadsheets to small talk.' },
+  vul:           { label: 'Insurer',    shirt: '#8060b0', accent: '#a080d0', pants: '#3a2a5a', hair: '#4a3020', speed: 0.8, social: 0.5, deskTime: 0.6, coffeeFreq: 0.3, personality: 'Calm and collected. Speaks in actuarial tables. Secretly a thrill-seeker.' },
+  acquisition:   { label: 'Hunter',     shirt: '#c08030', accent: '#e0a050', pants: '#4a3a20', hair: '#d0a040', speed: 1.4, social: 0.6, deskTime: 0.3, coffeeFreq: 0.4, personality: 'Bold dealmaker. Always on the hunt. Gets restless sitting at a desk.' },
+  estate:        { label: 'Attorney',   shirt: '#4050a0', accent: '#6070c0', pants: '#2a2a40', hair: '#808090', speed: 0.6, social: 0.3, deskTime: 0.7, coffeeFreq: 0.2, personality: 'Dignified and deliberate. Never rushes. Quotes case law at the coffee machine.' },
+  indian:        { label: 'Networker',  shirt: '#d06030', accent: '#f08050', pants: '#4a2a1a', hair: '#1a1a2a', speed: 1.0, social: 0.9, deskTime: 0.3, coffeeFreq: 0.4, personality: 'The office social butterfly. Knows everyone. Always planning the next event.' },
+  linkedin:      { label: 'Publisher',  shirt: '#2070b0', accent: '#3090d0', pants: '#1a2a4a', hair: '#4a3020', speed: 0.8, social: 0.4, deskTime: 0.7, coffeeFreq: 0.3, personality: 'Content machine. Drafts posts while walking. Has opinions about engagement metrics.' },
+  divorce:       { label: 'Monitor',    shirt: '#c04080', accent: '#e060a0', pants: '#4a1a3a', hair: '#2a1a2a', speed: 0.9, social: 0.3, deskTime: 0.6, coffeeFreq: 0.2, personality: 'Vigilant observer. Notices everything. Keeps detailed records of all filings.' },
+  're-investor': { label: 'Investor',   shirt: '#20a080', accent: '#40c0a0', pants: '#1a3a30', hair: '#3a2a1a', speed: 1.0, social: 0.5, deskTime: 0.5, coffeeFreq: 0.3, personality: 'Sharp eye for deals. Reads The Real Deal religiously. Always calculating ROI.' },
+  'warm-intros': { label: 'Connector',  shirt: '#d0a020', accent: '#f0c040', pants: '#4a3a10', hair: '#a03010', speed: 1.0, social: 1.0, deskTime: 0.2, coffeeFreq: 0.5, personality: 'Born networker. Never met a stranger. The office insists they invented the warm handshake.' },
+  filly:         { label: 'Booker',     shirt: '#20a0a0', accent: '#40c0c0', pants: '#1a3a3a', hair: '#1a1a2a', speed: 0.9, social: 0.5, deskTime: 0.5, coffeeFreq: 0.4, personality: 'Phone wizard. Can book a meeting in 30 seconds flat. Always has headphones on.' },
+  zoominfo:      { label: 'Scraper',    shirt: '#7040c0', accent: '#9060e0', pants: '#2a1a4a', hair: '#2a2a3a', speed: 1.1, social: 0.2, deskTime: 0.8, coffeeFreq: 0.2, personality: 'Data obsessed. Hunched over monitors. Speaks in APIs and enrichment scores.' },
+  intel:         { label: 'Spy',        shirt: '#506070', accent: '#708090', pants: '#2a3040', hair: '#2a2a3a', speed: 1.0, social: 0.2, deskTime: 0.5, coffeeFreq: 0.2, personality: 'Mysterious and quiet. Appears out of nowhere with critical intel. Loves dark mode.' },
+  pipeline:      { label: 'Foreman',    shirt: '#b09020', accent: '#d0b040', pants: '#3a3010', hair: '#4a3020', speed: 0.9, social: 0.6, deskTime: 0.4, coffeeFreq: 0.3, personality: 'The manager. Keeps everyone on track. Loves status updates and weekly digests.' },
+  misc:          { label: 'Agent',      shirt: '#607080', accent: '#8090a0', pants: '#2a3040', hair: '#3a3040', speed: 0.8, social: 0.4, deskTime: 0.5, coffeeFreq: 0.3, personality: 'Reliable all-rounder. Gets the job done without drama.' },
+};
+const SKIN = '#e8b888';
+const SKIN_SHADOW = '#c89868';
+const EYE_COLOR = '#1a1a2a';
+const MOUTH_COLOR = '#c06048';
+const SHOE_COLOR = '#2a2020';
+
+// ═══════════════════════════════════════════════════
+// SPRITE DEFINITIONS (10w × 14h, character codes)
+// ═══════════════════════════════════════════════════
+// . = transparent, h = hair, s = skin, e = eye, m = mouth
+// t = shirt, a = accent, p = pants, o = shoes, d = skin shadow
+const SPRITES = {
+  stand: [
+    '...hhhh...',
+    '..hhhhhh..',
+    '..hssssh..',
+    '..seesed..',
+    '..sssssd..',
+    '...smms...',
+    '....ss....',
+    '..tttttt..',
+    '.tttaattt.',
+    '..tttttt..',
+    '...tttt...',
+    '...pppp...',
+    '...pp.pp..',
+    '..oo..oo..',
+  ],
+  walk1: [
+    '...hhhh...',
+    '..hhhhhh..',
+    '..hssssh..',
+    '..seesed..',
+    '..sssssd..',
+    '...smms...',
+    '....ss....',
+    '..tttttt..',
+    '.tttaattt.',
+    '..tttttt..',
+    '...tttt...',
+    '...pppp...',
+    '..pp...pp.',
+    '.oo....oo.',
+  ],
+  walk2: [
+    '...hhhh...',
+    '..hhhhhh..',
+    '..hssssh..',
+    '..seesed..',
+    '..sssssd..',
+    '...smms...',
+    '....ss....',
+    '..tttttt..',
+    '.tttaattt.',
+    '..tttttt..',
+    '...tttt...',
+    '...pppp...',
+    '.pp...pp..',
+    'oo....oo..',
+  ],
+  sit: [
+    '...hhhh...',
+    '..hhhhhh..',
+    '..hssssh..',
+    '..seesed..',
+    '..sssssd..',
+    '...smms...',
+    '....ss....',
+    '..tttttt..',
+    '.tttaattt.',
+    '..tttttt..',
+    '..tppppt..',
+    '..pppppp..',
+    '..........',
+    '..........',
+  ],
+  stress: [
+    '...hhhh...',
+    '..hhhhhh..',
+    '..hssssh..',
+    '..sddsdd..',
+    '..sssssd..',
+    '...sdds...',
+    '....ss....',
+    '..tttttt..',
+    '.tssttss..',
+    '..tttttt..',
+    '...tttt...',
+    '...pppp...',
+    '...pp.pp..',
+    '..oo..oo..',
+  ],
 };
 
-function renderPixelChar(category, status) {
-  const sprite = SPRITES[category] || SPRITES.misc;
-  const colors = [...sprite.colors];
+// ═══════════════════════════════════════════════════
+// CANVAS SETUP
+// ═══════════════════════════════════════════════════
+const canvas = document.getElementById('game');
+const ctx = canvas.getContext('2d');
+canvas.width = SW;
+canvas.height = SH;
 
-  // Tint based on status
-  let overlay = '';
-  if (status === 'error') {
-    overlay = 'filter: saturate(0.3) brightness(0.7);';
-  }
+// Offscreen canvas for background
+const bgCanvas = document.createElement('canvas');
+bgCanvas.width = SW;
+bgCanvas.height = SH;
+const bgCtx = bgCanvas.getContext('2d');
 
-  let html = `<div class="char-canvas" style="${overlay}">`;
-  for (let row of sprite.grid) {
-    for (let ch of row) {
-      const idx = parseInt(ch);
-      const color = colors[idx] || 'transparent';
-      html += `<div class="px" style="background:${color}"></div>`;
+// Sprite cache
+const spriteCache = {};
+
+function resizeCanvas() {
+  const wrap = document.getElementById('game-wrap');
+  const w = wrap.clientWidth, h = wrap.clientHeight;
+  const scale = Math.min(w / SW, h / SH);
+  canvas.style.width = (SW * scale) + 'px';
+  canvas.style.height = (SH * scale) + 'px';
+  canvas.style.marginLeft = ((w - SW * scale) / 2) + 'px';
+  canvas.style.marginTop = ((h - SH * scale) / 2) + 'px';
+  canvas._scale = scale;
+  canvas._offsetX = (w - SW * scale) / 2;
+  canvas._offsetY = (h - SH * scale) / 2;
+}
+window.addEventListener('resize', resizeCanvas);
+
+// ═══════════════════════════════════════════════════
+// SPRITE RENDERING
+// ═══════════════════════════════════════════════════
+function renderSprite(spriteData, colors, flip) {
+  const w = spriteData[0].length, h = spriteData.length;
+  const c = document.createElement('canvas');
+  c.width = w * PX;
+  c.height = h * PX;
+  const cx = c.getContext('2d');
+  for (let row = 0; row < h; row++) {
+    for (let col = 0; col < w; col++) {
+      const ch = spriteData[row][flip ? (w - 1 - col) : col];
+      const color = colors[ch];
+      if (color) {
+        cx.fillStyle = color;
+        cx.fillRect(col * PX, row * PX, PX, PX);
+      }
     }
   }
-  html += '</div>';
-  return html;
+  return c;
 }
 
-function cronToHuman(expr) {
-  if (!expr || expr === '?') return 'No schedule';
-  const parts = expr.split(' ');
-  if (parts.length < 5) return expr;
-  const [min, hr, , , dow] = parts;
-  const days = {
-    '*': 'Daily',
-    '1-5': 'Weekdays',
-    '1,3,5': 'Mon/Wed/Fri',
-    '2,4': 'Tue/Thu',
-    '1': 'Mondays',
-    '3': 'Wednesdays',
-    '4': 'Thursdays',
+function buildSpriteSet(typeKey) {
+  const t = AGENT_TYPES[typeKey] || AGENT_TYPES.misc;
+  const colors = {
+    'h': t.hair, 's': SKIN, 'd': SKIN_SHADOW, 'e': EYE_COLOR,
+    'm': MOUTH_COLOR, 't': t.shirt, 'a': t.accent,
+    'p': t.pants, 'o': SHOE_COLOR, '.': null
   };
-  const dayStr = days[dow] || dow;
-  const hour = parseInt(hr);
-  const ampm = hour >= 12 ? 'PM' : 'AM';
-  const h12 = hour > 12 ? hour - 12 : hour === 0 ? 12 : hour;
-  return `${dayStr} ${h12}:${min.padStart(2,'0')}${ampm}`;
+  const set = {};
+  for (const [name, data] of Object.entries(SPRITES)) {
+    set[name + '_r'] = renderSprite(data, colors, false);
+    set[name + '_l'] = renderSprite(data, colors, true);
+  }
+  return set;
 }
 
-function timeAgo(ms) {
-  if (!ms) return 'Never';
-  const diff = Date.now() - ms;
-  const mins = Math.floor(diff / 60000);
-  if (mins < 60) return `${mins}m ago`;
-  const hrs = Math.floor(mins / 60);
-  if (hrs < 24) return `${hrs}h ago`;
-  const days = Math.floor(hrs / 24);
-  return `${days}d ago`;
+function getSprites(typeKey) {
+  if (!spriteCache[typeKey]) spriteCache[typeKey] = buildSpriteSet(typeKey);
+  return spriteCache[typeKey];
 }
 
-function renderStats() {
+// ═══════════════════════════════════════════════════
+// DRAW OFFICE BACKGROUND
+// ═══════════════════════════════════════════════════
+function drawBg() {
+  const c = bgCtx;
+  // Floor tiles
+  for (let gy = 0; gy < GH; gy++) {
+    for (let gx = 0; gx < GW; gx++) {
+      c.fillStyle = (gx + gy) % 2 === 0 ? FLOOR_TILE1 : FLOOR_TILE2;
+      c.fillRect(gx * PX, gy * PX, PX, PX);
+    }
+  }
+
+  const fill = (x, y, w, h, color) => { c.fillStyle = color; c.fillRect(x*PX,y*PX,w*PX,h*PX); };
+  const stroke = (x, y, w, h, color) => {
+    fill(x,y,w,1,color); fill(x,y+h-1,w,1,color);
+    fill(x,y,1,h,color); fill(x+w-1,y,1,h,color);
+  };
+
+  // ── Meeting Room ──
+  fill(MEETING_ROOM.x, MEETING_ROOM.y, MEETING_ROOM.w, MEETING_ROOM.h, MEETING_FLOOR);
+  stroke(MEETING_ROOM.x, MEETING_ROOM.y, MEETING_ROOM.w, MEETING_ROOM.h, WALL_COLOR);
+  // Glass walls (dashed)
+  for (let i = 0; i < MEETING_ROOM.h; i += 3) {
+    fill(MEETING_ROOM.x + MEETING_ROOM.w - 1, MEETING_ROOM.y + i, 1, 2, '#3a3a5a');
+  }
+  // Door opening
+  fill(MEETING_DOOR.x, MEETING_DOOR.y, MEETING_DOOR.w, MEETING_DOOR.h, MEETING_FLOOR);
+  // Meeting table
+  fill(MEETING_TABLE.x, MEETING_TABLE.y, MEETING_TABLE.w, MEETING_TABLE.h, DESK_COLOR);
+  fill(MEETING_TABLE.x+1, MEETING_TABLE.y+1, MEETING_TABLE.w-2, MEETING_TABLE.h-2, DESK_TOP);
+  // Chairs around table
+  for (let i = 0; i < 6; i++) {
+    fill(MEETING_TABLE.x + 3 + i*6, MEETING_TABLE.y - 3, 4, 3, CHAIR_COLOR);
+    fill(MEETING_TABLE.x + 3 + i*6, MEETING_TABLE.y + MEETING_TABLE.h, 4, 3, CHAIR_COLOR);
+  }
+  // Whiteboard
+  fill(MEETING_ROOM.x + 2, MEETING_ROOM.y + 1, 20, 2, WHITEBOARD);
+  fill(MEETING_ROOM.x + 3, MEETING_ROOM.y + 1, 18, 1, '#a0a0b0');
+  // Label
+  c.fillStyle = '#3a3a5a';
+  c.font = '8px sans-serif';
+  c.fillText('MEETING', (MEETING_ROOM.x+14)*PX, (MEETING_ROOM.y + MEETING_ROOM.h - 3)*PX);
+
+  // ── Top wall with windows ──
+  fill(0, 0, GW, 3, WALL_COLOR);
+  fill(0, 1, GW, 1, WALL_TOP);
+  for (let wx = 90; wx < GW - 10; wx += 30) {
+    fill(wx, 0, 18, 2, WINDOW_COLOR);
+    fill(wx+1, 0, 16, 1, WINDOW_LIGHT);
+    // Window frame
+    fill(wx+8, 0, 2, 2, WALL_COLOR);
+  }
+  // Side walls
+  fill(0, 0, 2, GH, WALL_COLOR);
+  fill(GW-2, 0, 2, GH, WALL_COLOR);
+  fill(0, GH-2, GW, 2, WALL_COLOR);
+
+  // ── Desks & Monitors ──
+  for (const d of DESKS) {
+    // Desk surface
+    fill(d.x, d.y, DESK_W, DESK_H, DESK_COLOR);
+    fill(d.x+1, d.y+1, DESK_W-2, DESK_H-2, DESK_TOP);
+    // Monitor
+    fill(d.x + 4, d.y + 1, 6, 4, '#1a1a2a');
+    fill(d.x + 5, d.y + 1, 4, 3, MONITOR_SCREEN);
+    // Monitor stand
+    fill(d.x + 6, d.y + 4, 2, 1, '#1a1a2a');
+    // Chair
+    fill(d.x + chairOffset.x, d.y + chairOffset.y, 5, 4, CHAIR_COLOR);
+    fill(d.x + chairOffset.x + 1, d.y + chairOffset.y, 3, 3, '#505060');
+  }
+
+  // ── Kitchen Area ──
+  fill(KITCHEN.x, KITCHEN.y, KITCHEN.w, KITCHEN.h, KITCHEN_FLOOR);
+  stroke(KITCHEN.x, KITCHEN.y, KITCHEN.w, KITCHEN.h, '#2a2a20');
+  // Counter
+  fill(KITCHEN.x + 4, KITCHEN.y + 2, KITCHEN.w - 8, 6, '#4a3a28');
+  fill(KITCHEN.x + 5, KITCHEN.y + 3, KITCHEN.w - 10, 4, '#5a4a38');
+  // Coffee machine
+  fill(COFFEE_MACHINE.x - KITCHEN.x + KITCHEN.x, COFFEE_MACHINE.y, 8, 6, '#2a1a1a');
+  fill(COFFEE_MACHINE.x - KITCHEN.x + KITCHEN.x + 1, COFFEE_MACHINE.y + 1, 6, 3, '#4a2020');
+  fill(COFFEE_MACHINE.x - KITCHEN.x + KITCHEN.x + 2, COFFEE_MACHINE.y, 1, 1, '#f04040'); // light
+  // Water cooler
+  fill(WATER_COOLER.x, WATER_COOLER.y, 5, 8, '#a0c0e0');
+  fill(WATER_COOLER.x + 1, WATER_COOLER.y + 1, 3, 4, '#80a0c0');
+  fill(WATER_COOLER.x + 1, WATER_COOLER.y + 6, 3, 1, '#607080');
+  // Fridge
+  fill(FRIDGE_POS.x, FRIDGE_POS.y, 8, 10, '#c0c0d0');
+  fill(FRIDGE_POS.x+1, FRIDGE_POS.y+1, 6, 4, '#a0a0b0');
+  fill(FRIDGE_POS.x+1, FRIDGE_POS.y+6, 6, 3, '#a0a0b0');
+  fill(FRIDGE_POS.x+6, FRIDGE_POS.y+2, 1, 2, '#404040');
+  // Kitchen table
+  fill(KITCHEN_TABLE.x, KITCHEN_TABLE.y, KITCHEN_TABLE.w, KITCHEN_TABLE.h, DESK_COLOR);
+  fill(KITCHEN_TABLE.x+1, KITCHEN_TABLE.y+1, KITCHEN_TABLE.w-2, KITCHEN_TABLE.h-2, DESK_TOP);
+  for (let i = 0; i < 3; i++) {
+    fill(KITCHEN_TABLE.x + 2 + i*9, KITCHEN_TABLE.y + KITCHEN_TABLE.h, 4, 3, CHAIR_COLOR);
+  }
+  // Label
+  c.fillStyle = '#3a3020';
+  c.font = '8px sans-serif';
+  c.fillText('KITCHEN', (KITCHEN.x + 30)*PX, (KITCHEN.y + KITCHEN.h - 3)*PX);
+
+  // ── Lounge Area ──
+  fill(LOUNGE.x, LOUNGE.y, LOUNGE.w, LOUNGE.h, CARPET_COLOR);
+  stroke(LOUNGE.x, LOUNGE.y, LOUNGE.w, LOUNGE.h, '#2a2040');
+  // Couch
+  fill(COUCH_POS.x, COUCH_POS.y, COUCH_POS.w, COUCH_POS.h, COUCH_COLOR);
+  fill(COUCH_POS.x + 1, COUCH_POS.y + 1, COUCH_POS.w - 2, COUCH_POS.h - 4, COUCH_CUSHION);
+  fill(COUCH_POS.x, COUCH_POS.y, 3, COUCH_POS.h, COUCH_COLOR); // arm
+  fill(COUCH_POS.x + COUCH_POS.w - 3, COUCH_POS.y, 3, COUCH_POS.h, COUCH_COLOR); // arm
+  // Coffee table
+  fill(COUCH_POS.x + 8, COUCH_POS.y + COUCH_POS.h + 2, 24, 8, DESK_COLOR);
+  fill(COUCH_POS.x + 9, COUCH_POS.y + COUCH_POS.h + 3, 22, 6, DESK_TOP);
+  // Bookshelf
+  fill(LOUNGE.x + 2, LOUNGE.y + 2, 6, 30, BOOKSHELF);
+  for (let b = 0; b < 5; b++) {
+    const bc = ['#a04040','#4040a0','#40a040','#a0a040','#a040a0'][b];
+    fill(LOUNGE.x + 3, LOUNGE.y + 3 + b*6, 4, 5, bc);
+  }
+  // Rug
+  fill(LOUNGE.x + 14, LOUNGE.y + 14, 40, 20, '#281830');
+  fill(LOUNGE.x + 15, LOUNGE.y + 15, 38, 18, '#301838');
+  // Label
+  c.fillStyle = '#3a2a50';
+  c.font = '8px sans-serif';
+  c.fillText('LOUNGE', (LOUNGE.x + 20)*PX, (LOUNGE.y + LOUNGE.h - 3)*PX);
+
+  // ── Plants ──
+  for (const p of PLANTS) {
+    // Pot
+    fill(p.x, p.y + 4, 5, 3, PLANT_POT);
+    fill(p.x + 1, p.y + 3, 3, 1, PLANT_POT);
+    // Leaves
+    fill(p.x + 1, p.y, 3, 3, PLANT_GREEN);
+    fill(p.x, p.y + 1, 1, 2, PLANT_GREEN);
+    fill(p.x + 4, p.y + 1, 1, 2, PLANT_GREEN);
+    fill(p.x + 2, p.y - 1, 1, 1, PLANT_LIGHT);
+    fill(p.x, p.y, 1, 1, PLANT_LIGHT);
+    fill(p.x + 4, p.y, 1, 1, PLANT_LIGHT);
+  }
+
+  // ── Corridor labels ──
+  // Divider lines on floor (subtle)
+  for (let y = 4; y < GH - 4; y += 2) {
+    fill(84, y, 1, 1, '#1a1610');
+  }
+
+  // ── Clock on wall ──
+  fill(170, 3, 8, 6, '#c0c0d0');
+  fill(171, 4, 6, 4, '#1a1a2a');
+  fill(174, 5, 1, 2, '#e0e0e0'); // hand
+  fill(174, 5, 2, 1, '#e0e0e0'); // hand
+}
+
+// ═══════════════════════════════════════════════════
+// PARTICLE SYSTEM
+// ═══════════════════════════════════════════════════
+const particles = [];
+function addParticle(x, y, type, duration) {
+  particles.push({ x, y, type, life: duration, maxLife: duration, vx: 0, vy: -0.3 });
+}
+
+function updateParticles(dt) {
+  for (let i = particles.length - 1; i >= 0; i--) {
+    const p = particles[i];
+    p.life -= dt;
+    p.x += p.vx * dt;
+    p.y += p.vy * dt;
+    if (p.life <= 0) particles.splice(i, 1);
+  }
+}
+
+function drawParticles() {
+  for (const p of particles) {
+    const alpha = Math.min(1, p.life / (p.maxLife * 0.3));
+    ctx.globalAlpha = alpha * 0.6;
+    if (p.type === 'steam') {
+      ctx.fillStyle = '#a0a0b0';
+      ctx.fillRect(p.x * PX, p.y * PX, PX, PX);
+    } else if (p.type === 'zzz') {
+      ctx.fillStyle = '#6a6aaa';
+      ctx.font = `${PX * 3}px 'Press Start 2P', monospace`;
+      ctx.fillText('z', p.x * PX, p.y * PX);
+    }
+    ctx.globalAlpha = 1;
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// AGENT CLASS
+// ═══════════════════════════════════════════════════
+let agents = [];
+let scrumActive = false;
+let scrumTimer = 0;
+let gameSpeed = 1;
+
+class Agent {
+  constructor(data, index) {
+    this.data = data;
+    this.index = index;
+    this.desk = DESKS[index % DESKS.length];
+    this.category = data.category || 'misc';
+    this.type = AGENT_TYPES[this.category] || AGENT_TYPES.misc;
+    this.sprites = getSprites(this.category);
+    this.name = data.name;
+    this.jobStatus = data.status; // completed, error, idle, running
+
+    // Position
+    this.x = this.desk.x + chairOffset.x;
+    this.y = this.desk.y + chairOffset.y;
+    this.targetX = this.x;
+    this.targetY = this.y;
+    this.facing = 'r'; // r or l
+
+    // State machine
+    this.state = this.jobStatus === 'error' ? 'stressed' : 'working';
+    this.stateTimer = 2 + Math.random() * 5;
+    this.animFrame = 0;
+    this.animTimer = 0;
+
+    // Bubble
+    this.bubble = null;
+    this.bubbleTimer = 0;
+
+    // Offset for idle bob
+    this.bobPhase = Math.random() * Math.PI * 2;
+  }
+
+  setTarget(x, y) {
+    this.targetX = Math.max(4, Math.min(GW - 14, x));
+    this.targetY = Math.max(4, Math.min(GH - 16, y));
+    if (this.targetX > this.x + 2) this.facing = 'r';
+    else if (this.targetX < this.x - 2) this.facing = 'l';
+    this.state = 'walking';
+  }
+
+  goToDesk() {
+    this.setTarget(this.desk.x + chairOffset.x, this.desk.y + chairOffset.y);
+    this._nextState = this.jobStatus === 'error' ? 'stressed' : 'working';
+  }
+
+  goToCoffee() {
+    const jitter = (Math.random() - 0.5) * 10;
+    this.setTarget(COFFEE_MACHINE.x + jitter, COFFEE_MACHINE.y + 10);
+    this._nextState = 'coffee';
+    this.bubble = '☕';
+    this.bubbleTimer = 3;
+  }
+
+  goToWander() {
+    const targets = [
+      ...PLANTS.map(p => ({ x: p.x + 3, y: p.y + 8 })),
+      { x: WATER_COOLER.x, y: WATER_COOLER.y + 10 },
+      { x: COUCH_POS.x + 15, y: COUCH_POS.y - 4 },
+      { x: LOUNGE.x + 20 + Math.random()*30, y: LOUNGE.y + 20 + Math.random()*30 },
+      { x: 100 + Math.random() * 150, y: 105 + Math.random() * 30 },
+    ];
+    const t = targets[Math.floor(Math.random() * targets.length)];
+    this.setTarget(t.x, t.y);
+    this._nextState = 'idle';
+  }
+
+  goToChat() {
+    // Find a nearby agent to chat with
+    const others = agents.filter(a => a !== this && a.state !== 'walking' && a.state !== 'meeting');
+    if (others.length === 0) return this.goToWander();
+    const target = others[Math.floor(Math.random() * others.length)];
+    this.setTarget(target.x + (Math.random() > 0.5 ? 8 : -8), target.y);
+    this._nextState = 'chatting';
+    this.bubble = '💬';
+    this.bubbleTimer = 2;
+  }
+
+  goToMeeting(spot) {
+    this.setTarget(spot.x, spot.y);
+    this._nextState = 'meeting';
+  }
+
+  update(dt) {
+    this.bobPhase += dt * 2;
+    this.animTimer += dt;
+
+    // Bubble timer
+    if (this.bubbleTimer > 0) {
+      this.bubbleTimer -= dt;
+      if (this.bubbleTimer <= 0) this.bubble = null;
+    }
+
+    switch (this.state) {
+      case 'walking': {
+        const dx = this.targetX - this.x;
+        const dy = this.targetY - this.y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < 1.5) {
+          this.x = this.targetX;
+          this.y = this.targetY;
+          this.state = this._nextState || 'idle';
+          this.stateTimer = 3 + Math.random() * 6;
+          if (this.state === 'working' || this.state === 'stressed') {
+            // Snap to chair
+            this.x = this.desk.x + chairOffset.x;
+            this.y = this.desk.y + chairOffset.y;
+          }
+        } else {
+          const speed = this.type.speed * 20 * dt;
+          this.x += (dx / dist) * speed;
+          this.y += (dy / dist) * speed;
+          if (dx > 0.5) this.facing = 'r';
+          else if (dx < -0.5) this.facing = 'l';
+          // Walk animation
+          if (this.animTimer > 0.2) {
+            this.animFrame = 1 - this.animFrame;
+            this.animTimer = 0;
+          }
+        }
+        break;
+      }
+
+      case 'working': {
+        this.stateTimer -= dt;
+        // Occasional typing bubble
+        if (Math.random() < 0.002) {
+          this.bubble = ['💻','📊','📈','🔍','📋'][Math.floor(Math.random()*5)];
+          this.bubbleTimer = 1.5;
+        }
+        if (this.stateTimer <= 0) {
+          this.decideNextAction();
+        }
+        break;
+      }
+
+      case 'stressed': {
+        this.stateTimer -= dt;
+        if (Math.random() < 0.005) {
+          this.bubble = ['❗','😰','🐛','💥'][Math.floor(Math.random()*4)];
+          this.bubbleTimer = 1.5;
+        }
+        if (this.stateTimer <= 0) {
+          // Stressed agents occasionally get coffee or pace
+          if (Math.random() < 0.3) {
+            this.goToCoffee();
+          } else if (Math.random() < 0.3) {
+            this.goToWander();
+            this._nextState = 'stressed_return';
+          } else {
+            this.stateTimer = 3 + Math.random() * 4;
+          }
+        }
+        break;
+      }
+
+      case 'stressed_return': {
+        this.stateTimer -= dt;
+        if (this.stateTimer <= 0) {
+          this.goToDesk();
+          this._nextState = 'stressed';
+        }
+        break;
+      }
+
+      case 'idle': {
+        this.stateTimer -= dt;
+        if (this.stateTimer <= 0) this.decideNextAction();
+        break;
+      }
+
+      case 'coffee': {
+        this.stateTimer -= dt;
+        // Steam particles
+        if (Math.random() < 0.05) {
+          addParticle(this.x + 3 + Math.random()*4, this.y - 2, 'steam', 1.5);
+        }
+        if (this.stateTimer <= 0) {
+          this.bubble = null;
+          this.goToDesk();
+        }
+        break;
+      }
+
+      case 'chatting': {
+        this.stateTimer -= dt;
+        if (Math.random() < 0.01) {
+          this.bubble = ['😄','👋','🤝','💡','📱'][Math.floor(Math.random()*5)];
+          this.bubbleTimer = 1;
+        }
+        if (this.stateTimer <= 0) {
+          this.bubble = null;
+          this.goToDesk();
+        }
+        break;
+      }
+
+      case 'meeting': {
+        // Stay until scrum ends
+        if (!scrumActive) {
+          this.goToDesk();
+        }
+        if (Math.random() < 0.005) {
+          this.bubble = ['📋','🗣️','📊','✅','🤔'][Math.floor(Math.random()*5)];
+          this.bubbleTimer = 1.5;
+        }
+        break;
+      }
+    }
+  }
+
+  decideNextAction() {
+    if (scrumActive) return; // Don't wander during scrum
+    const rand = Math.random();
+    if (rand < this.type.deskTime) {
+      this.goToDesk();
+    } else if (rand < this.type.deskTime + this.type.coffeeFreq * 0.5) {
+      this.goToCoffee();
+    } else if (rand < this.type.deskTime + this.type.coffeeFreq * 0.5 + this.type.social * 0.3) {
+      this.goToChat();
+    } else {
+      this.goToWander();
+    }
+  }
+
+  getSpriteName() {
+    if (this.state === 'walking') {
+      return (this.animFrame === 0 ? 'walk1' : 'walk2') + '_' + this.facing;
+    }
+    if (this.state === 'working' || this.state === 'meeting') {
+      return 'sit_' + this.facing;
+    }
+    if (this.state === 'stressed' || this.state === 'stressed_return') {
+      return 'stress_' + this.facing;
+    }
+    return 'stand_' + this.facing;
+  }
+
+  draw() {
+    const spriteName = this.getSpriteName();
+    const sprite = this.sprites[spriteName];
+    if (!sprite) return;
+
+    // Idle bob
+    let bobY = 0;
+    if (this.state === 'idle' || this.state === 'chatting' || this.state === 'coffee') {
+      bobY = Math.sin(this.bobPhase) * 0.5;
+    }
+
+    const sx = Math.round(this.x * PX);
+    const sy = Math.round((this.y + bobY) * PX);
+    ctx.drawImage(sprite, sx, sy);
+
+    // Error exclamation mark
+    if (this.jobStatus === 'error') {
+      const pulse = Math.sin(Date.now() / 200) * 0.3 + 0.7;
+      ctx.globalAlpha = pulse;
+      ctx.fillStyle = '#ff3333';
+      // Exclamation mark above head
+      ctx.fillRect(sx + 4*PX, sy - 6*PX, 2*PX, 3*PX);
+      ctx.fillRect(sx + 4*PX, sy - 2*PX, 2*PX, PX);
+      ctx.globalAlpha = 1;
+    }
+
+    // Bubble
+    if (this.bubble && this.bubbleTimer > 0) {
+      const bubbleAlpha = Math.min(1, this.bubbleTimer);
+      ctx.globalAlpha = bubbleAlpha;
+      ctx.font = `${PX * 3}px sans-serif`;
+      ctx.fillText(this.bubble, sx + 6*PX, sy - 4*PX);
+      ctx.globalAlpha = 1;
+    }
+
+    // Name label on hover
+    if (this === hoveredAgent) {
+      ctx.fillStyle = '#000000aa';
+      const tw = ctx.measureText(this.name).width;
+      ctx.fillRect(sx - 4, sy - 14*PX, tw + 8, 14);
+      ctx.fillStyle = '#e0e0f0';
+      ctx.font = '10px sans-serif';
+      ctx.fillText(this.name, sx, sy - 14*PX + 11);
+    }
+  }
+
+  containsPoint(gx, gy) {
+    return gx >= this.x && gx <= this.x + 10 && gy >= this.y - 2 && gy <= this.y + 14;
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// GAME STATE
+// ═══════════════════════════════════════════════════
+let hoveredAgent = null;
+let selectedAgent = null;
+let lastTime = 0;
+
+function callScrum() {
+  if (scrumActive) {
+    // End scrum
+    scrumActive = false;
+    document.getElementById('scrum-btn').textContent = 'CALL SCRUM';
+    document.getElementById('scrum-btn').classList.remove('active');
+    agents.forEach(a => {
+      if (a.state === 'meeting') a.goToDesk();
+    });
+    return;
+  }
+  scrumActive = true;
+  scrumTimer = 0;
+  document.getElementById('scrum-btn').textContent = 'END SCRUM';
+  document.getElementById('scrum-btn').classList.add('active');
+  agents.forEach((a, i) => {
+    const spot = MEETING_SPOTS[i % MEETING_SPOTS.length];
+    setTimeout(() => a.goToMeeting(spot), i * 150 / gameSpeed);
+  });
+}
+
+function sendCoffeeBreak() {
+  agents.forEach((a, i) => {
+    if (a.state !== 'meeting') {
+      setTimeout(() => {
+        a.goToCoffee();
+      }, i * 200 / gameSpeed);
+    }
+  });
+}
+
+function setSpeed(s) {
+  gameSpeed = s;
+  document.querySelectorAll('.speed-ctrl button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+// ═══════════════════════════════════════════════════
+// INFO PANEL
+// ═══════════════════════════════════════════════════
+function showInfo(agent) {
+  selectedAgent = agent;
+  const d = agent.data;
+  const t = agent.type;
+  const statusClass = d.status === 'error' ? 'err-text' : d.status === 'completed' ? 'ok-text' : '';
+
+  function cronToHuman(expr) {
+    if (!expr || expr === '?') return 'No schedule';
+    const parts = expr.split(' ');
+    if (parts.length < 5) return expr;
+    const [min, hr, , , dow] = parts;
+    const days = {'*':'Daily','1-5':'Weekdays','1,3,5':'Mon/Wed/Fri','2,4':'Tue/Thu','1':'Mondays','3':'Wednesdays','4':'Thursdays'};
+    const dayStr = days[dow] || dow;
+    const hour = parseInt(hr);
+    const ampm = hour >= 12 ? 'PM' : 'AM';
+    const h12 = hour > 12 ? hour - 12 : hour === 0 ? 12 : hour;
+    return `${dayStr} ${h12}:${min.padStart(2,'0')}${ampm}`;
+  }
+
+  document.getElementById('info-body').innerHTML = `
+    <div class="info-sprite"><canvas id="info-sprite-canvas" width="60" height="84"></canvas></div>
+    <h3>${d.name}</h3>
+    <div class="info-row"><span class="k">Role</span><span class="v">${t.label}</span></div>
+    <div class="info-row"><span class="k">Status</span><span class="v ${statusClass}">${d.status.toUpperCase()}</span></div>
+    <div class="info-row"><span class="k">Category</span><span class="v">${d.category}</span></div>
+    <div class="info-row"><span class="k">Schedule</span><span class="v">${cronToHuman(d.schedule)}</span></div>
+    <div class="info-row"><span class="k">Cron</span><span class="v" style="font-family:monospace;font-size:11px">${d.schedule}</span></div>
+    <div class="info-row"><span class="k">Last Run</span><span class="v">${d.lastRunTime || 'Never'}</span></div>
+    <div class="info-row"><span class="k">Next Run</span><span class="v">${d.nextRunTime || 'Unknown'}</span></div>
+    <div class="info-row"><span class="k">Duration</span><span class="v">${d.durationMs ? (d.durationMs/1000).toFixed(1) + 's' : '-'}</span></div>
+    <div class="info-row"><span class="k">Errors</span><span class="v ${d.consecutiveErrors > 0 ? 'err-text' : 'ok-text'}">${d.consecutiveErrors}</span></div>
+    <div class="info-row"><span class="k">Output</span><span class="v" style="font-size:10px;word-break:break-all">${d.outputFile || 'None'}</span></div>
+    <div class="info-row"><span class="k">Doing</span><span class="v">${agent.state}</span></div>
+    <div class="personality"><b>${t.label}:</b> ${t.personality}</div>
+  `;
+  document.getElementById('info').classList.add('open');
+
+  // Draw large sprite in info panel
+  const ic = document.getElementById('info-sprite-canvas');
+  const ictx = ic.getContext('2d');
+  ictx.imageSmoothingEnabled = false;
+  const sprite = agent.sprites['stand_r'];
+  if (sprite) ictx.drawImage(sprite, 0, 0, sprite.width, sprite.height, 5, 2, 50, 70);
+}
+
+function closeInfo() {
+  document.getElementById('info').classList.remove('open');
+  selectedAgent = null;
+}
+
+// ═══════════════════════════════════════════════════
+// AMBIENT EFFECTS
+// ═══════════════════════════════════════════════════
+let coffeeSteamTimer = 0;
+let clockAngle = 0;
+
+function updateAmbient(dt) {
+  // Coffee machine steam
+  coffeeSteamTimer += dt;
+  if (coffeeSteamTimer > 0.4) {
+    coffeeSteamTimer = 0;
+    addParticle(COFFEE_MACHINE.x + 2 + Math.random()*4, COFFEE_MACHINE.y - 1, 'steam', 2);
+  }
+  clockAngle += dt * 0.5;
+}
+
+function drawAmbientOverlays() {
+  // Monitor glow on occupied desks
+  for (const agent of agents) {
+    if (agent.state === 'working' || agent.state === 'stressed') {
+      const d = agent.desk;
+      const pulse = 0.15 + Math.sin(Date.now()/1000 + agent.index) * 0.05;
+      ctx.globalAlpha = pulse;
+      ctx.fillStyle = agent.jobStatus === 'error' ? '#ff2020' : '#2060ff';
+      ctx.fillRect((d.x + 3) * PX, (d.y) * PX, 8 * PX, 6 * PX);
+      ctx.globalAlpha = 1;
+    }
+  }
+
+  // Clock hands (update)
+  const cx = 174 * PX, cy = 7.5 * PX;
+  ctx.strokeStyle = '#e0e0e0';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(cx, cy);
+  ctx.lineTo(cx + Math.cos(clockAngle) * 6, cy + Math.sin(clockAngle) * 6);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(cx, cy);
+  ctx.lineTo(cx + Math.cos(clockAngle * 12) * 4, cy + Math.sin(clockAngle * 12) * 4);
+  ctx.stroke();
+
+  // Scrum active indicator
+  if (scrumActive) {
+    ctx.globalAlpha = 0.3 + Math.sin(Date.now()/500) * 0.1;
+    ctx.fillStyle = '#c084fc';
+    ctx.fillRect(MEETING_ROOM.x * PX, MEETING_ROOM.y * PX, MEETING_ROOM.w * PX, MEETING_ROOM.h * PX);
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = '#c084fc';
+    ctx.font = "bold 14px 'Press Start 2P', monospace";
+    ctx.fillText('SCRUM', (MEETING_ROOM.x + 12) * PX, (MEETING_ROOM.y + MEETING_ROOM.h + 8) * PX);
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// INPUT HANDLING
+// ═══════════════════════════════════════════════════
+function screenToGame(sx, sy) {
+  const rect = canvas.getBoundingClientRect();
+  const scale = canvas._scale || 1;
+  return {
+    x: (sx - rect.left) / scale / PX,
+    y: (sy - rect.top) / scale / PX
+  };
+}
+
+canvas.addEventListener('mousemove', (e) => {
+  const { x, y } = screenToGame(e.clientX, e.clientY);
+  hoveredAgent = null;
+  // Check agents in reverse (top-drawn last)
+  const sorted = [...agents].sort((a, b) => b.y - a.y);
+  for (const agent of sorted) {
+    if (agent.containsPoint(x, y)) {
+      hoveredAgent = agent;
+      canvas.style.cursor = 'pointer';
+      // Tooltip
+      const tt = document.getElementById('tooltip');
+      tt.style.display = 'block';
+      tt.textContent = agent.name;
+      tt.style.left = (e.clientX - canvas.getBoundingClientRect().left + 15) + 'px';
+      tt.style.top = (e.clientY - canvas.getBoundingClientRect().top - 10) + 'px';
+      return;
+    }
+  }
+  canvas.style.cursor = 'default';
+  document.getElementById('tooltip').style.display = 'none';
+});
+
+canvas.addEventListener('click', (e) => {
+  const { x, y } = screenToGame(e.clientX, e.clientY);
+  for (const agent of [...agents].sort((a, b) => b.y - a.y)) {
+    if (agent.containsPoint(x, y)) {
+      showInfo(agent);
+      return;
+    }
+  }
+});
+
+canvas.addEventListener('mouseleave', () => {
+  hoveredAgent = null;
+  document.getElementById('tooltip').style.display = 'none';
+});
+
+// ═══════════════════════════════════════════════════
+// STATS
+// ═══════════════════════════════════════════════════
+function updateStats() {
   const total = agents.length;
-  const completed = agents.filter(a => a.status === 'completed').length;
-  const errors = agents.filter(a => a.status === 'error').length;
-  const idle = agents.filter(a => a.status === 'idle').length;
-  const running = agents.filter(a => a.status === 'running').length;
-
-  document.getElementById('stats-bar').innerHTML = `
-    <div class="stat-box">
-      <div class="label">Total Agents</div>
-      <div class="value total">${total}</div>
-    </div>
-    <div class="stat-box">
-      <div class="label">Completed</div>
-      <div class="value ok">${completed}</div>
-    </div>
-    <div class="stat-box">
-      <div class="label">Errors</div>
-      <div class="value err">${errors}</div>
-    </div>
-    <div class="stat-box">
-      <div class="label">Idle</div>
-      <div class="value idle">${idle}</div>
-    </div>
-    <div class="stat-box">
-      <div class="label">Running</div>
-      <div class="value run">${running}</div>
-    </div>
-  `;
+  const ok = agents.filter(a => a.jobStatus === 'completed').length;
+  const err = agents.filter(a => a.jobStatus === 'error').length;
+  const idle = agents.filter(a => a.jobStatus === 'idle').length;
+  document.getElementById('s-total').textContent = total;
+  document.getElementById('s-ok').textContent = ok;
+  document.getElementById('s-err').textContent = err;
+  document.getElementById('s-idle').textContent = idle;
 }
 
-function renderFilters() {
-  const cats = [...new Set(agents.map(a => a.category))].sort();
-  const container = document.getElementById('filters');
+// ═══════════════════════════════════════════════════
+// GAME LOOP
+// ═══════════════════════════════════════════════════
+function gameLoop(timestamp) {
+  const rawDt = lastTime ? (timestamp - lastTime) / 1000 : 0.016;
+  lastTime = timestamp;
+  const dt = Math.min(rawDt, 0.05) * gameSpeed;
 
-  // Keep the view toggle
-  const viewToggle = container.querySelector('.view-toggle');
-  container.innerHTML = '';
+  // Update
+  for (const a of agents) a.update(dt);
+  updateParticles(dt);
+  updateAmbient(dt);
 
-  const allBtn = document.createElement('button');
-  allBtn.className = `filter-btn ${activeFilter === 'all' ? 'active' : ''}`;
-  allBtn.textContent = `All (${agents.length})`;
-  allBtn.onclick = () => setFilter('all');
-  container.appendChild(allBtn);
+  // Render
+  ctx.drawImage(bgCanvas, 0, 0);
+  drawAmbientOverlays();
 
-  for (const cat of cats) {
-    const count = agents.filter(a => a.category === cat).length;
-    const btn = document.createElement('button');
-    btn.className = `filter-btn ${activeFilter === cat ? 'active' : ''}`;
-    btn.textContent = `${cat} (${count})`;
-    btn.onclick = () => setFilter(cat);
-    container.appendChild(btn);
-  }
+  // Sort agents by Y for painter's algorithm
+  const sorted = [...agents].sort((a, b) => a.y - b.y);
+  for (const a of sorted) a.draw();
 
-  // Re-add view toggle
-  const vt = document.createElement('div');
-  vt.className = 'view-toggle';
-  vt.innerHTML = `
-    <button class="view-btn ${viewMode === 'grid' ? 'active' : ''}" onclick="setView('grid')">&#9638;</button>
-    <button class="view-btn ${viewMode === 'list' ? 'active' : ''}" onclick="setView('list')">&#9776;</button>
-  `;
-  container.appendChild(vt);
+  drawParticles();
+
+  requestAnimationFrame(gameLoop);
 }
 
-function renderAgents() {
-  const filtered = activeFilter === 'all' ? agents : agents.filter(a => a.category === activeFilter);
-
-  // Sort: errors first, then running, completed, idle
-  const order = { error: 0, running: 1, completed: 2, idle: 3 };
-  filtered.sort((a, b) => (order[a.status] ?? 4) - (order[b.status] ?? 4));
-
-  const grid = document.getElementById('agent-grid');
-  grid.className = `agent-grid ${viewMode === 'list' ? 'list-view' : ''}`;
-
-  if (viewMode === 'list') {
-    grid.innerHTML = filtered.map((a, i) => `
-      <div class="agent-card status-${a.status}" onclick="showDetail(${i}, '${activeFilter}')">
-        ${renderPixelChar(a.category, a.status)}
-        <div class="agent-name">${a.name}</div>
-        <div class="agent-status"><span class="status-dot ${a.status}"></span>${a.status}</div>
-        <div class="agent-meta">${cronToHuman(a.schedule)}</div>
-        <div class="agent-meta">${a.lastRunTime ? timeAgo(a.lastRunMs) : 'Never run'}</div>
-      </div>
-    `).join('');
-  } else {
-    grid.innerHTML = filtered.map((a, i) => `
-      <div class="agent-card status-${a.status}" onclick="showDetail(${i}, '${activeFilter}')">
-        ${renderPixelChar(a.category, a.status)}
-        <div class="agent-name">${a.name}</div>
-        <div class="agent-status"><span class="status-dot ${a.status}"></span>${a.status}</div>
-        <div class="agent-schedule">${cronToHuman(a.schedule)}</div>
-      </div>
-    `).join('');
-  }
-}
-
-function showDetail(idx, filter) {
-  const filtered = filter === 'all' ? agents : agents.filter(a => a.category === filter);
-  const order = { error: 0, running: 1, completed: 2, idle: 3 };
-  filtered.sort((a, b) => (order[a.status] ?? 4) - (order[b.status] ?? 4));
-  const a = filtered[idx];
-  if (!a) return;
-
-  const sprite = SPRITES[a.category] || SPRITES.misc;
-
-  document.getElementById('modal').innerHTML = `
-    <div class="modal-overlay" onclick="if(event.target===this)closeModal()">
-      <div class="modal">
-        <div style="text-align:center;margin-bottom:1rem;">
-          ${renderPixelChar(a.category, a.status)}
-          <div style="font-family:var(--pixel-font);font-size:8px;color:var(--muted);margin-top:4px;">${sprite.label}</div>
-        </div>
-        <h3>${a.name}</h3>
-        <div class="modal-row"><span class="label">Status</span><span class="val"><span class="status-dot ${a.status}"></span>${a.status.toUpperCase()}</span></div>
-        <div class="modal-row"><span class="label">Category</span><span class="val">${a.category}</span></div>
-        <div class="modal-row"><span class="label">Schedule</span><span class="val">${cronToHuman(a.schedule)}</span></div>
-        <div class="modal-row"><span class="label">Cron Expression</span><span class="val" style="font-family:monospace">${a.schedule}</span></div>
-        <div class="modal-row"><span class="label">Last Run</span><span class="val">${a.lastRunTime || 'Never'}</span></div>
-        <div class="modal-row"><span class="label">Next Run</span><span class="val">${a.nextRunTime || 'Unknown'}</span></div>
-        <div class="modal-row"><span class="label">Duration</span><span class="val">${a.durationMs ? (a.durationMs / 1000).toFixed(1) + 's' : '-'}</span></div>
-        <div class="modal-row"><span class="label">Consecutive Errors</span><span class="val" style="color:${a.consecutiveErrors > 0 ? 'var(--danger)' : 'var(--success)'}">${a.consecutiveErrors}</span></div>
-        <div class="modal-row"><span class="label">Output</span><span class="val" style="font-size:11px;word-break:break-all">${a.outputFile || 'None'}</span></div>
-        <div class="modal-row"><span class="label">Agent ID</span><span class="val" style="font-family:monospace">${a.id}</span></div>
-        <button class="modal-close" onclick="closeModal()">CLOSE</button>
-      </div>
-    </div>
-  `;
-}
-
-function closeModal() {
-  document.getElementById('modal').innerHTML = '';
-}
-
-function setFilter(f) {
-  activeFilter = f;
-  renderFilters();
-  renderAgents();
-}
-
-function setView(v) {
-  viewMode = v;
-  renderFilters();
-  renderAgents();
-}
-
-// Starfield
-function createStars() {
-  const sf = document.getElementById('starfield');
-  for (let i = 0; i < 80; i++) {
-    const star = document.createElement('div');
-    star.className = 'star';
-    star.style.left = Math.random() * 100 + '%';
-    star.style.top = Math.random() * 100 + '%';
-    star.style.animationDelay = Math.random() * 3 + 's';
-    star.style.animationDuration = (2 + Math.random() * 3) + 's';
-    sf.appendChild(star);
-  }
-}
-
+// ═══════════════════════════════════════════════════
+// INITIALIZATION
+// ═══════════════════════════════════════════════════
 async function init() {
-  createStars();
+  resizeCanvas();
+  drawBg();
+
   try {
     const res = await fetch('data/agents-data.json?t=' + Date.now());
-    if (res.ok) agents = await res.json();
-  } catch(e) {
-    console.error('Failed to load agents data:', e);
+    if (res.ok) {
+      const data = await res.json();
+      agents = data.map((d, i) => new Agent(d, i));
+    }
+  } catch (e) {
+    console.error('Failed to load agent data:', e);
   }
-  renderStats();
-  renderFilters();
-  renderAgents();
+
+  updateStats();
+
+  // Stagger initial agent states for variety
+  agents.forEach((a, i) => {
+    a.stateTimer = 1 + Math.random() * 8;
+    // Some agents start idle/wandering for visual variety
+    if (a.jobStatus !== 'error' && Math.random() < 0.3) {
+      setTimeout(() => a.goToWander(), i * 300);
+    }
+    if (a.jobStatus !== 'error' && Math.random() < 0.15) {
+      setTimeout(() => a.goToCoffee(), i * 400 + 1000);
+    }
+  });
+
+  requestAnimationFrame(gameLoop);
 }
 
 init();
