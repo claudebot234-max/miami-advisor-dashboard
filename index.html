@@ -629,59 +629,76 @@ function renderTasks() {
     <div class="stat"><div class="stat-label">Total</div><div class="stat-value">${tasks.length}</div></div>
     <div class="stat"><div class="stat-label">High Priority</div><div class="stat-value" style="color:var(--danger)">${tasks.filter(t=>t.priority==='high'&&!t.done).length}</div></div>`;
 
-  let html = `
-    <div class="task-input-row">
-      <input type="text" id="task-input" placeholder="Add a task or person... (e.g. 'Call John re: new policy')" onkeydown="if(event.key==='Enter')addTask()">
-      <select id="task-cat-input">
-        ${TASK_CATEGORIES.map(c => `<option value="${c.id}">${c.label}</option>`).join('')}
-      </select>
-      <select id="task-priority-input">
-        <option value="medium">Medium</option>
-        <option value="high">High</option>
-        <option value="low">Low</option>
-      </select>
-      <button class="btn btn-primary" onclick="addTask()" style="white-space:nowrap">+ Add</button>
-    </div>
-    <div class="task-filter-bar">
-      <span class="source-chip ${taskFilter==='active'?'active':''}" onclick="taskFilter='active';renderTasks()">Active<span class="chip-count">(${activeCount})</span></span>
-      <span class="source-chip ${taskFilter==='done'?'active':''}" onclick="taskFilter='done';renderTasks()">Done<span class="chip-count">(${doneCount})</span></span>
-      <span class="source-chip ${taskFilter==='all'?'active':''}" onclick="taskFilter='all';renderTasks()">All<span class="chip-count">(${tasks.length})</span></span>
-    </div>`;
+  const esc = s => (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+
+  let html = '<div class="task-input-row">' +
+    '<input type="text" id="task-input" placeholder="Add a task or person...">' +
+    '<select id="task-cat-input">' +
+    TASK_CATEGORIES.map(c => '<option value="' + c.id + '">' + c.label + '</option>').join('') +
+    '</select>' +
+    '<select id="task-priority-input">' +
+    '<option value="medium">Medium</option><option value="high">High</option><option value="low">Low</option>' +
+    '</select>' +
+    '<button class="btn btn-primary" id="task-add-btn" style="white-space:nowrap">+ Add</button>' +
+    '</div>';
+
+  html += '<div class="task-filter-bar">' +
+    '<span class="source-chip ' + (taskFilter==='active'?'active':'') + '" data-filter="active">Active<span class="chip-count">(' + activeCount + ')</span></span>' +
+    '<span class="source-chip ' + (taskFilter==='done'?'active':'') + '" data-filter="done">Done<span class="chip-count">(' + doneCount + ')</span></span>' +
+    '<span class="source-chip ' + (taskFilter==='all'?'active':'') + '" data-filter="all">All<span class="chip-count">(' + tasks.length + ')</span></span>' +
+    '</div>';
 
   if (!filtered.length) {
-    html += `<div class="empty"><div class="empty-icon">✅</div><p>${taskFilter==='done'?'No completed tasks yet.':'No tasks yet. Add one above!'}</p></div>`;
+    html += '<div class="empty"><div class="empty-icon">✅</div><p>' + (taskFilter==='done'?'No completed tasks yet.':'No tasks yet. Add one above!') + '</p></div>';
   } else {
-    html += filtered.map(t => {
-      const cat = TASK_CATEGORIES.find(c => c.id === t.category) || TASK_CATEGORIES[5];
-      const dateStr = t.created ? new Date(t.created).toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
-      return `<div class="task-card ${t.done?'done':''}">
-        <div class="task-check ${t.done?'checked':''}" onclick="toggleTask('${t.id}')">${t.done?'✓':''}</div>
-        <div class="task-body">
-          <div class="task-text">${t.text}${t.person ? ` — <strong>${t.person}</strong>` : ''}</div>
-          <div class="task-meta">
-            <span class="task-priority ${t.priority||'medium'}">${(t.priority||'medium').toUpperCase()}</span>
-            <span class="task-category" style="color:${cat.color};border-color:${cat.color}">${cat.label}</span>
-            ${dateStr ? `<span>${dateStr}</span>` : ''}
-            ${t.notes ? `<span title="${t.notes.replace(/"/g,'&quot;')}">📝</span>` : ''}
-          </div>
-        </div>
-        <div class="task-actions">
-          <button onclick="editTask('${t.id}')">✏️</button>
-          <button onclick="deleteTask('${t.id}')">🗑️</button>
-        </div>
-      </div>`;
-    }).join('');
+    for (var i = 0; i < filtered.length; i++) {
+      var t = filtered[i];
+      var cat = TASK_CATEGORIES.find(function(c){return c.id===t.category}) || TASK_CATEGORIES[5];
+      var dateStr = t.created ? new Date(t.created).toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
+      html += '<div class="task-card ' + (t.done?'done':'') + '">' +
+        '<div class="task-check ' + (t.done?'checked':'') + '" data-task-toggle="' + esc(t.id) + '">' + (t.done?'✓':'') + '</div>' +
+        '<div class="task-body">' +
+        '<div class="task-text">' + esc(t.text) + (t.person ? ' — <strong>' + esc(t.person) + '</strong>' : '') + '</div>' +
+        '<div class="task-meta">' +
+        '<span class="task-priority ' + (t.priority||'medium') + '">' + (t.priority||'medium').toUpperCase() + '</span>' +
+        '<span class="task-category" style="color:' + cat.color + '">' + cat.label + '</span>' +
+        (dateStr ? '<span>' + dateStr + '</span>' : '') +
+        '</div></div>' +
+        '<div class="task-actions">' +
+        '<button data-task-edit="' + esc(t.id) + '">✏️</button>' +
+        '<button data-task-delete="' + esc(t.id) + '">🗑️</button>' +
+        '</div></div>';
+    }
   }
 
-  document.getElementById('leads').innerHTML = html;
+  var leadsEl = document.getElementById('leads');
+  leadsEl.innerHTML = html;
 
   // Restore input values
-  const newInput = document.getElementById('task-input');
-  if (newInput) newInput.value = savedInputVal;
-  const newCat = document.getElementById('task-cat-input');
+  var newInput = document.getElementById('task-input');
+  if (newInput) {
+    newInput.value = savedInputVal;
+    newInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') addTask(); });
+  }
+  var newCat = document.getElementById('task-cat-input');
   if (newCat) newCat.value = savedCat;
-  const newPri = document.getElementById('task-priority-input');
+  var newPri = document.getElementById('task-priority-input');
   if (newPri) newPri.value = savedPri;
+
+  // Event delegation for task actions
+  var addBtn = document.getElementById('task-add-btn');
+  if (addBtn) addBtn.addEventListener('click', addTask);
+
+  leadsEl.addEventListener('click', function(e) {
+    var el = e.target.closest('[data-task-toggle]');
+    if (el) { toggleTask(el.getAttribute('data-task-toggle')); return; }
+    el = e.target.closest('[data-task-edit]');
+    if (el) { editTask(el.getAttribute('data-task-edit')); return; }
+    el = e.target.closest('[data-task-delete]');
+    if (el) { deleteTask(el.getAttribute('data-task-delete')); return; }
+    el = e.target.closest('[data-filter]');
+    if (el) { taskFilter = el.getAttribute('data-filter'); renderTasks(); return; }
+  });
 }
 
 function addTask() {
