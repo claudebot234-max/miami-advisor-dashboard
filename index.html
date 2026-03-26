@@ -131,7 +131,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <div class="refresh-note">Last updated: <span id="last-update">-</span></div>
 <div class="stats" id="stats"></div>
 <div class="filters">
-<input type="text" id="search" placeholder="Search by name, company, or details..." oninput="render()">
+<input type="text" id="search" placeholder="Search by name, company, or details..." oninput="render()" autocomplete="off">
 <select id="status-filter" onchange="render()">
 <option value="all">All Status</option>
 <option value="new">New</option>
@@ -594,7 +594,12 @@ function updateTaskCount() {
 }
 
 function renderTasks() {
-  const main = document.querySelector('.main');
+  // Preserve task input value across re-renders
+  const existingInput = document.getElementById('task-input');
+  const savedInputVal = existingInput ? existingInput.value : '';
+  const savedCat = document.getElementById('task-cat-input')?.value || 'follow-up';
+  const savedPri = document.getElementById('task-priority-input')?.value || 'medium';
+
   const search = document.getElementById('search')?.value?.toLowerCase() || '';
 
   let filtered = tasks;
@@ -667,6 +672,14 @@ function renderTasks() {
   }
 
   document.getElementById('leads').innerHTML = html;
+
+  // Restore input values
+  const newInput = document.getElementById('task-input');
+  if (newInput) newInput.value = savedInputVal;
+  const newCat = document.getElementById('task-cat-input');
+  if (newCat) newCat.value = savedCat;
+  const newPri = document.getElementById('task-priority-input');
+  if (newPri) newPri.value = savedPri;
 }
 
 function addTask() {
@@ -689,21 +702,21 @@ function addTask() {
 }
 
 function toggleTask(id) {
-  tasks = tasks.map(t => t.id === id ? {...t, done: !t.done, completedAt: !t.done ? Date.now() : null} : t);
+  tasks = tasks.map(tk => tk.id === id ? {...tk, done: !tk.done, completedAt: !tk.done ? Date.now() : null} : tk);
   saveTasks();
   renderTasks();
 }
 
 function deleteTask(id) {
   if (confirm('Delete this task?')) {
-    tasks = tasks.filter(t => t.id !== id);
+    tasks = tasks.filter(tk => tk.id !== id);
     saveTasks();
     renderTasks();
   }
 }
 
 function editTask(id) {
-  const t = tasks.find(t => t.id === id);
+  const t = tasks.find(tk => tk.id === id);
   if (!t) return;
   const cat = t.category || 'other';
   const pri = t.priority || 'medium';
@@ -751,15 +764,15 @@ function editTask(id) {
 
 function saveTask(e, id) {
   e.preventDefault();
-  tasks = tasks.map(t => t.id === id ? {
-    ...t,
+  tasks = tasks.map(tk => tk.id === id ? {
+    ...tk,
     text: document.getElementById('et-text').value,
     person: document.getElementById('et-person').value,
     category: document.getElementById('et-cat').value,
     priority: document.getElementById('et-pri').value,
     done: document.getElementById('et-done').value === '1',
     notes: document.getElementById('et-notes').value,
-  } : t);
+  } : tk);
   saveTasks();
   closeModal();
   renderTasks();
