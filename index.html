@@ -80,6 +80,29 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .source-chip.active { background: rgba(79,142,247,0.15); border-color: var(--accent); color: var(--accent); }
 .source-chip .chip-count { font-size: 10px; opacity: 0.7; margin-left: 4px; }
 .source-badge { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 10px; background: var(--surface2); color: var(--muted); margin-left: 8px; font-weight: 500; vertical-align: middle; }
+.task-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 12px; transition: all 0.15s; }
+.task-card:hover { border-color: var(--muted); }
+.task-card.done { opacity: 0.5; }
+.task-card.done .task-text { text-decoration: line-through; }
+.task-check { width: 20px; height: 20px; border-radius: 6px; border: 2px solid var(--border); background: transparent; cursor: pointer; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; font-size: 12px; transition: all 0.15s; }
+.task-check:hover { border-color: var(--accent); }
+.task-check.checked { background: var(--success); border-color: var(--success); color: #fff; }
+.task-body { flex: 1; min-width: 0; }
+.task-text { font-size: 14px; margin-bottom: 4px; }
+.task-meta { font-size: 12px; color: var(--muted); display: flex; gap: 12px; flex-wrap: wrap; }
+.task-priority { font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+.task-priority.high { background: rgba(248,113,113,0.15); color: #f87171; }
+.task-priority.medium { background: rgba(251,191,36,0.15); color: #fbbf24; }
+.task-priority.low { background: rgba(52,211,153,0.15); color: #34d399; }
+.task-category { font-size: 10px; padding: 2px 8px; border-radius: 10px; background: rgba(79,142,247,0.1); color: var(--accent); }
+.task-actions { display: flex; gap: 6px; flex-shrink: 0; }
+.task-actions button { font-size: 11px; padding: 4px 8px; border-radius: 4px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; }
+.task-actions button:hover { color: var(--text); border-color: var(--muted); }
+.task-input-row { display: flex; gap: 8px; margin-bottom: 1rem; }
+.task-input-row input { flex: 1; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font-size: 14px; }
+.task-input-row input:focus { outline: none; border-color: var(--accent); }
+.task-input-row select { padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font-size: 13px; }
+.task-filter-bar { display: flex; gap: 6px; margin-bottom: 1rem; flex-wrap: wrap; }
 </style>
 </head>
 <body>
@@ -89,6 +112,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <div class="nav-section">
 <div class="nav-section-title">Intelligence</div>
 <div id="nav"></div>
+</div>
+<div class="nav-section">
+<div class="nav-section-title">Workspace</div>
+<button class="nav-btn" id="tasks-nav-btn" onclick="setSection('tasks')"><span class="icon">✅</span><span>Tasks</span><span class="count" id="task-count">0</span></button>
 </div>
 </div>
 <div class="main">
@@ -257,13 +284,18 @@ function fmt(n) {
 function renderNav() {
   const counts = {};
   SECTIONS.forEach(s => counts[s.id] = leads.filter(l => l.section === s.id).length);
-  document.getElementById('nav').innerHTML = SECTIONS.map(s => 
+  document.getElementById('nav').innerHTML = SECTIONS.map(s =>
     `<button class="nav-btn ${activeSection === s.id ? 'active' : ''}" onclick="setSection('${s.id}')">
       <span class="icon">${s.icon}</span>
       <span>${s.name}</span>
       ${counts[s.id] ? `<span class="count">${counts[s.id]}</span>` : ''}
     </button>`
   ).join('');
+  // Highlight tasks nav button
+  const tasksBtn = document.getElementById('tasks-nav-btn');
+  if (tasksBtn) {
+    tasksBtn.className = 'nav-btn' + (activeSection === 'tasks' ? ' active' : '');
+  }
 }
 
 function setSection(id) {
@@ -531,6 +563,243 @@ function exportCSV() {
   a.download = `${activeSection}-leads-${new Date().toISOString().split('T')[0]}.csv`;
   a.click();
 }
+
+// ═══════════════════════════════════════════════════
+// TASKS SYSTEM (fully localStorage, editable)
+// ═══════════════════════════════════════════════════
+let tasks = [];
+let taskFilter = 'active'; // active, done, all
+
+const TASK_CATEGORIES = [
+  {id:'follow-up', label:'Follow-Up', color:'#4f8ef7'},
+  {id:'policy', label:'Policy/Service', color:'#34d399'},
+  {id:'pipeline', label:'Pipeline', color:'#fbbf24'},
+  {id:'admin', label:'Admin', color:'#a78bfa'},
+  {id:'outreach', label:'Outreach', color:'#f97316'},
+  {id:'other', label:'Other', color:'#71717a'},
+];
+
+function loadTasks() {
+  try { tasks = JSON.parse(localStorage.getItem('mai-tasks') || '[]'); } catch(e) { tasks = []; }
+  updateTaskCount();
+}
+function saveTasks() {
+  localStorage.setItem('mai-tasks', JSON.stringify(tasks));
+  updateTaskCount();
+}
+function updateTaskCount() {
+  const active = tasks.filter(t => !t.done).length;
+  const el = document.getElementById('task-count');
+  if (el) el.textContent = active || '';
+}
+
+function renderTasks() {
+  const main = document.querySelector('.main');
+  const search = document.getElementById('search')?.value?.toLowerCase() || '';
+
+  let filtered = tasks;
+  if (taskFilter === 'active') filtered = tasks.filter(t => !t.done);
+  else if (taskFilter === 'done') filtered = tasks.filter(t => t.done);
+  if (search) filtered = filtered.filter(t =>
+    (t.text||'').toLowerCase().includes(search) ||
+    (t.person||'').toLowerCase().includes(search) ||
+    (t.notes||'').toLowerCase().includes(search)
+  );
+
+  // Sort: high priority first, then by date
+  const pOrder = {high:0,medium:1,low:2};
+  filtered.sort((a,b) => {
+    if (a.done !== b.done) return a.done ? 1 : -1;
+    return (pOrder[a.priority]||1) - (pOrder[b.priority]||1) || (b.created||0) - (a.created||0);
+  });
+
+  const activeCount = tasks.filter(t => !t.done).length;
+  const doneCount = tasks.filter(t => t.done).length;
+
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><div class="stat-label">Active Tasks</div><div class="stat-value yellow">${activeCount}</div></div>
+    <div class="stat"><div class="stat-label">Completed</div><div class="stat-value green">${doneCount}</div></div>
+    <div class="stat"><div class="stat-label">Total</div><div class="stat-value">${tasks.length}</div></div>
+    <div class="stat"><div class="stat-label">High Priority</div><div class="stat-value" style="color:var(--danger)">${tasks.filter(t=>t.priority==='high'&&!t.done).length}</div></div>`;
+
+  let html = `
+    <div class="task-input-row">
+      <input type="text" id="task-input" placeholder="Add a task or person... (e.g. 'Call John re: new policy')" onkeydown="if(event.key==='Enter')addTask()">
+      <select id="task-cat-input">
+        ${TASK_CATEGORIES.map(c => `<option value="${c.id}">${c.label}</option>`).join('')}
+      </select>
+      <select id="task-priority-input">
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+        <option value="low">Low</option>
+      </select>
+      <button class="btn btn-primary" onclick="addTask()" style="white-space:nowrap">+ Add</button>
+    </div>
+    <div class="task-filter-bar">
+      <span class="source-chip ${taskFilter==='active'?'active':''}" onclick="taskFilter='active';renderTasks()">Active<span class="chip-count">(${activeCount})</span></span>
+      <span class="source-chip ${taskFilter==='done'?'active':''}" onclick="taskFilter='done';renderTasks()">Done<span class="chip-count">(${doneCount})</span></span>
+      <span class="source-chip ${taskFilter==='all'?'active':''}" onclick="taskFilter='all';renderTasks()">All<span class="chip-count">(${tasks.length})</span></span>
+    </div>`;
+
+  if (!filtered.length) {
+    html += `<div class="empty"><div class="empty-icon">✅</div><p>${taskFilter==='done'?'No completed tasks yet.':'No tasks yet. Add one above!'}</p></div>`;
+  } else {
+    html += filtered.map(t => {
+      const cat = TASK_CATEGORIES.find(c => c.id === t.category) || TASK_CATEGORIES[5];
+      const dateStr = t.created ? new Date(t.created).toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
+      return `<div class="task-card ${t.done?'done':''}">
+        <div class="task-check ${t.done?'checked':''}" onclick="toggleTask('${t.id}')">${t.done?'✓':''}</div>
+        <div class="task-body">
+          <div class="task-text">${t.text}${t.person ? ` — <strong>${t.person}</strong>` : ''}</div>
+          <div class="task-meta">
+            <span class="task-priority ${t.priority||'medium'}">${(t.priority||'medium').toUpperCase()}</span>
+            <span class="task-category" style="color:${cat.color};border-color:${cat.color}">${cat.label}</span>
+            ${dateStr ? `<span>${dateStr}</span>` : ''}
+            ${t.notes ? `<span title="${t.notes.replace(/"/g,'&quot;')}">📝</span>` : ''}
+          </div>
+        </div>
+        <div class="task-actions">
+          <button onclick="editTask('${t.id}')">✏️</button>
+          <button onclick="deleteTask('${t.id}')">🗑️</button>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  document.getElementById('leads').innerHTML = html;
+}
+
+function addTask() {
+  const input = document.getElementById('task-input');
+  const text = input.value.trim();
+  if (!text) return;
+  tasks.push({
+    id: Date.now().toString(36) + Math.random().toString(36).substr(2,4),
+    text: text,
+    person: '',
+    notes: '',
+    category: document.getElementById('task-cat-input').value,
+    priority: document.getElementById('task-priority-input').value,
+    done: false,
+    created: Date.now()
+  });
+  saveTasks();
+  input.value = '';
+  renderTasks();
+}
+
+function toggleTask(id) {
+  tasks = tasks.map(t => t.id === id ? {...t, done: !t.done, completedAt: !t.done ? Date.now() : null} : t);
+  saveTasks();
+  renderTasks();
+}
+
+function deleteTask(id) {
+  if (confirm('Delete this task?')) {
+    tasks = tasks.filter(t => t.id !== id);
+    saveTasks();
+    renderTasks();
+  }
+}
+
+function editTask(id) {
+  const t = tasks.find(t => t.id === id);
+  if (!t) return;
+  const cat = t.category || 'other';
+  const pri = t.priority || 'medium';
+  document.getElementById('modal').innerHTML = `
+    <div class="modal-overlay" onclick="if(event.target===this)closeModal()">
+      <div class="modal">
+        <h3>Edit Task</h3>
+        <form onsubmit="saveTask(event,'${id}')">
+          <div class="form-group">
+            <label>Task</label>
+            <input id="et-text" value="${(t.text||'').replace(/"/g,'&quot;')}" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Person / Contact</label>
+              <input id="et-person" value="${(t.person||'').replace(/"/g,'&quot;')}" placeholder="e.g. John Smith">
+            </div>
+            <div class="form-group">
+              <label>Category</label>
+              <select id="et-cat">${TASK_CATEGORIES.map(c=>`<option value="${c.id}" ${cat===c.id?'selected':''}>${c.label}</option>`).join('')}</select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Priority</label>
+              <select id="et-pri"><option value="high" ${pri==='high'?'selected':''}>High</option><option value="medium" ${pri==='medium'?'selected':''}>Medium</option><option value="low" ${pri==='low'?'selected':''}>Low</option></select>
+            </div>
+            <div class="form-group">
+              <label>Status</label>
+              <select id="et-done"><option value="0" ${!t.done?'selected':''}>Active</option><option value="1" ${t.done?'selected':''}>Done</option></select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Notes</label>
+            <textarea id="et-notes" placeholder="Details, follow-up info...">${t.notes||''}</textarea>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>`;
+}
+
+function saveTask(e, id) {
+  e.preventDefault();
+  tasks = tasks.map(t => t.id === id ? {
+    ...t,
+    text: document.getElementById('et-text').value,
+    person: document.getElementById('et-person').value,
+    category: document.getElementById('et-cat').value,
+    priority: document.getElementById('et-pri').value,
+    done: document.getElementById('et-done').value === '1',
+    notes: document.getElementById('et-notes').value,
+  } : t);
+  saveTasks();
+  closeModal();
+  renderTasks();
+}
+
+// Override render for tasks section
+const _origRender = render;
+render = function() {
+  if (activeSection === 'tasks') {
+    renderNav();
+    renderTasks();
+    return;
+  }
+  _origRender();
+};
+
+// Override setSection to handle tasks
+const _origSetSection = setSection;
+setSection = function(id) {
+  activeSection = id;
+  activeSource = 'all';
+  document.getElementById('section-title').textContent =
+    id === 'tasks' ? 'Tasks & Pipeline' :
+    (SECTIONS.find(s => s.id === id)?.name || id);
+
+  // Toggle header buttons visibility
+  const addBtn = document.querySelector('.header-actions .btn-primary');
+  const exportBtn = document.querySelector('.header-actions .btn-secondary:nth-child(2)');
+  if (id === 'tasks') {
+    if (addBtn) addBtn.style.display = 'none';
+    if (exportBtn) exportBtn.style.display = 'none';
+  } else {
+    if (addBtn) addBtn.style.display = '';
+    if (exportBtn) exportBtn.style.display = '';
+  }
+  render();
+};
+
+// Load tasks on init
+loadTasks();
 
 // Initialize
 init();
