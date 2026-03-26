@@ -98,6 +98,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <button class="btn btn-secondary" onclick="refreshData()">↻ Refresh</button>
 <button class="btn btn-secondary" onclick="exportCSV()">↓ Export CSV</button>
 <button class="btn btn-primary" onclick="openAddModal()">+ Add Lead</button>
+<button class="btn btn-danger" onclick="clearCache()">Clear Cache</button>
 </div>
 </div>
 <div class="refresh-note">Last updated: <span id="last-update">-</span></div>
@@ -135,29 +136,85 @@ let activeSection = 'lead-radar';
 let activeSource = 'all';
 let leads = [];
 
-// Load from localStorage first, then try to fetch from GitHub
+function clearCache() {
+  if (confirm('Clear all cached data and reload fresh from GitHub? Your manual status changes will be reset.')) {
+    localStorage.removeItem('mai-leads-v2');
+    localStorage.removeItem('mai-manual-leads');
+    localStorage.removeItem('mai-deleted-ids');
+    localStorage.removeItem('mai-deleted-names');
+    localStorage.removeItem('mai-status-changes');
+    localStorage.removeItem('mai-status-byname');
+    localStorage.removeItem('mai-migrated-v3');
+    location.reload();
+  }
+}
+
+// One-time migration: clear stale old-format localStorage that causes ghost duplicates
+if (!localStorage.getItem('mai-migrated-v3')) {
+  localStorage.removeItem('mai-leads-v2');
+  localStorage.removeItem('mai-deleted-ids');
+  localStorage.removeItem('mai-status-changes');
+  // Keep mai-manual-leads — those are user's real additions
+  localStorage.setItem('mai-migrated-v3', '1');
+}
+
+// Load from GitHub, then layer on localStorage edits
 async function init() {
   await fetchLeadsFromGitHub();
-  // Merge any manually added leads from localStorage
+
+  // Merge manually added leads (matched by name to avoid dupes after ID changes)
   const stored = localStorage.getItem('mai-manual-leads');
   if (stored) {
-    const manual = JSON.parse(stored);
-    manual.forEach(m => {
-      if (!leads.find(l => l.id === m.id)) leads.push(m);
-    });
+    try {
+      const manual = JSON.parse(stored);
+      const existingNames = new Set(leads.map(l => (l.name || '').toLowerCase().trim()));
+      manual.forEach(m => {
+        const mName = (m.name || '').toLowerCase().trim();
+        if (mName && !existingNames.has(mName)) {
+          leads.push(m);
+          existingNames.add(mName);
+        }
+      });
+    } catch(e) {}
   }
-  // Filter out deleted leads
-  const deleted = localStorage.getItem('mai-deleted-ids');
+
+  // Filter out deleted leads (match by name since IDs shift between pushes)
+  const deleted = localStorage.getItem('mai-deleted-names');
   if (deleted) {
-    const delIds = JSON.parse(deleted);
-    leads = leads.filter(l => !delIds.includes(l.id));
+    try {
+      const delNames = JSON.parse(deleted);
+      leads = leads.filter(l => !delNames.includes((l.name || '').toLowerCase().trim()));
+    } catch(e) {}
   }
-  // Apply status changes
-  const statuses = localStorage.getItem('mai-status-changes');
+  // Legacy: also support old ID-based deletions
+  const deletedIds = localStorage.getItem('mai-deleted-ids');
+  if (deletedIds) {
+    try {
+      const delIds = JSON.parse(deletedIds);
+      leads = leads.filter(l => !delIds.includes(l.id));
+    } catch(e) {}
+  }
+
+  // Apply status changes (by name since IDs shift)
+  const statuses = localStorage.getItem('mai-status-byname');
   if (statuses) {
-    const statusMap = JSON.parse(statuses);
-    leads = leads.map(l => statusMap[l.id] ? {...l, status: statusMap[l.id]} : l);
+    try {
+      const statusMap = JSON.parse(statuses);
+      leads = leads.map(l => {
+        const key = (l.name || '').toLowerCase().trim();
+        return statusMap[key] ? {...l, status: statusMap[key]} : l;
+      });
+    } catch(e) {}
   }
+  // Legacy: also support old ID-based status changes
+  const oldStatuses = localStorage.getItem('mai-status-changes');
+  if (oldStatuses) {
+    try {
+      const statusMap = JSON.parse(oldStatuses);
+      leads = leads.map(l => statusMap[l.id] ? {...l, status: statusMap[l.id]} : l);
+    } catch(e) {}
+  }
+
   render();
 }
 
@@ -308,24 +365,32 @@ function render() {
 }
 
 function updateStatus(id, status) {
+  const lead = leads.find(l => l.id === id);
   leads = leads.map(l => l.id === id ? {...l, status} : l);
-  // Save status change to localStorage
-  const stored = localStorage.getItem('mai-status-changes');
-  const statusMap = stored ? JSON.parse(stored) : {};
-  statusMap[id] = status;
-  localStorage.setItem('mai-status-changes', JSON.stringify(statusMap));
+  // Save status change by name (survives ID shifts between pushes)
+  if (lead) {
+    const nameKey = (lead.name || '').toLowerCase().trim();
+    const stored = localStorage.getItem('mai-status-byname');
+    const statusMap = stored ? JSON.parse(stored) : {};
+    statusMap[nameKey] = status;
+    localStorage.setItem('mai-status-byname', JSON.stringify(statusMap));
+  }
   save();
   render();
 }
 
 function deleteLead(id) {
   if (confirm('Delete this lead permanently?')) {
+    const lead = leads.find(l => l.id === id);
     leads = leads.filter(l => l.id !== id);
-    // Save deletion to localStorage
-    const stored = localStorage.getItem('mai-deleted-ids');
-    const deleted = stored ? JSON.parse(stored) : [];
-    deleted.push(id);
-    localStorage.setItem('mai-deleted-ids', JSON.stringify(deleted));
+    // Save deletion by name (survives ID shifts)
+    if (lead) {
+      const nameKey = (lead.name || '').toLowerCase().trim();
+      const stored = localStorage.getItem('mai-deleted-names');
+      const deleted = stored ? JSON.parse(stored) : [];
+      if (!deleted.includes(nameKey)) deleted.push(nameKey);
+      localStorage.setItem('mai-deleted-names', JSON.stringify(deleted));
+    }
     // Also remove from manual leads if present
     const manualStored = localStorage.getItem('mai-manual-leads');
     if (manualStored) {
