@@ -570,10 +570,7 @@ function exportCSV() {
 // TASKS SYSTEM (fully localStorage, editable)
 // ═══════════════════════════════════════════════════
 let tasks = [];
-let taskFilter = 'active'; // active, done, all
-let _taskInputVal = '';
-let _taskCatVal = 'follow-up';
-let _taskPriVal = 'medium';
+let taskFilter = 'active';
 
 const TASK_CATEGORIES = [
   {id:'follow-up', label:'Follow-Up', color:'#4f8ef7'},
@@ -599,207 +596,130 @@ function updateTaskCount() {
 }
 
 function renderTasks() {
-  // Sync from DOM before we destroy it
-  var ei = document.getElementById('task-input');
-  if (ei) _taskInputVal = ei.value;
-  var ec = document.getElementById('task-cat-input');
-  if (ec) _taskCatVal = ec.value;
-  var ep = document.getElementById('task-priority-input');
-  if (ep) _taskPriVal = ep.value;
-
-  const search = document.getElementById('search')?.value?.toLowerCase() || '';
-
-  let filtered = tasks;
-  if (taskFilter === 'active') filtered = tasks.filter(t => !t.done);
-  else if (taskFilter === 'done') filtered = tasks.filter(t => t.done);
-  if (search) filtered = filtered.filter(t =>
-    (t.text||'').toLowerCase().includes(search) ||
-    (t.person||'').toLowerCase().includes(search) ||
-    (t.notes||'').toLowerCase().includes(search)
-  );
-
-  // Sort: high priority first, then by date
-  const pOrder = {high:0,medium:1,low:2};
-  filtered.sort((a,b) => {
-    if (a.done !== b.done) return a.done ? 1 : -1;
-    return (pOrder[a.priority]||1) - (pOrder[b.priority]||1) || (b.created||0) - (a.created||0);
+  var search = (document.getElementById('search')?.value || '').toLowerCase();
+  var filtered = tasks.slice();
+  if (taskFilter === 'active') filtered = filtered.filter(function(t){return !t.done});
+  else if (taskFilter === 'done') filtered = filtered.filter(function(t){return t.done});
+  if (search) filtered = filtered.filter(function(t){
+    return (t.text||'').toLowerCase().indexOf(search)>=0 || (t.person||'').toLowerCase().indexOf(search)>=0 || (t.notes||'').toLowerCase().indexOf(search)>=0;
   });
+  var pOrder = {high:0,medium:1,low:2};
+  filtered.sort(function(a,b){ if(a.done!==b.done) return a.done?1:-1; return (pOrder[a.priority]||1)-(pOrder[b.priority]||1)||(b.created||0)-(a.created||0); });
 
-  const activeCount = tasks.filter(t => !t.done).length;
-  const doneCount = tasks.filter(t => t.done).length;
+  var ac = tasks.filter(function(t){return !t.done}).length;
+  var dc = tasks.filter(function(t){return t.done}).length;
+  var hp = tasks.filter(function(t){return t.priority==='high'&&!t.done}).length;
+  document.getElementById('stats').innerHTML =
+    '<div class="stat"><div class="stat-label">Active Tasks</div><div class="stat-value yellow">'+ac+'</div></div>'+
+    '<div class="stat"><div class="stat-label">Completed</div><div class="stat-value green">'+dc+'</div></div>'+
+    '<div class="stat"><div class="stat-label">Total</div><div class="stat-value">'+tasks.length+'</div></div>'+
+    '<div class="stat"><div class="stat-label">High Priority</div><div class="stat-value" style="color:var(--danger)">'+hp+'</div></div>';
 
-  document.getElementById('stats').innerHTML = `
-    <div class="stat"><div class="stat-label">Active Tasks</div><div class="stat-value yellow">${activeCount}</div></div>
-    <div class="stat"><div class="stat-label">Completed</div><div class="stat-value green">${doneCount}</div></div>
-    <div class="stat"><div class="stat-label">Total</div><div class="stat-value">${tasks.length}</div></div>
-    <div class="stat"><div class="stat-label">High Priority</div><div class="stat-value" style="color:var(--danger)">${tasks.filter(t=>t.priority==='high'&&!t.done).length}</div></div>`;
+  function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 
-  const esc = s => (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
-
-  let html = '<div class="task-input-row">' +
-    '<input type="text" id="task-input" placeholder="Add a task or person...">' +
-    '<select id="task-cat-input">' +
-    TASK_CATEGORIES.map(c => '<option value="' + c.id + '">' + c.label + '</option>').join('') +
-    '</select>' +
-    '<select id="task-priority-input">' +
-    '<option value="medium">Medium</option><option value="high">High</option><option value="low">Low</option>' +
-    '</select>' +
-    '<button class="btn btn-primary" id="task-add-btn" style="white-space:nowrap">+ Add</button>' +
-    '</div>';
-
-  html += '<div class="task-filter-bar">' +
-    '<span class="source-chip ' + (taskFilter==='active'?'active':'') + '" data-filter="active">Active<span class="chip-count">(' + activeCount + ')</span></span>' +
-    '<span class="source-chip ' + (taskFilter==='done'?'active':'') + '" data-filter="done">Done<span class="chip-count">(' + doneCount + ')</span></span>' +
-    '<span class="source-chip ' + (taskFilter==='all'?'active':'') + '" data-filter="all">All<span class="chip-count">(' + tasks.length + ')</span></span>' +
+  var html = '<div class="task-filter-bar">'+
+    '<span class="source-chip '+(taskFilter==='active'?'active':'')+'" onclick="taskFilter=\'active\';renderTasks()">Active ('+ac+')</span>'+
+    '<span class="source-chip '+(taskFilter==='done'?'active':'')+'" onclick="taskFilter=\'done\';renderTasks()">Done ('+dc+')</span>'+
+    '<span class="source-chip '+(taskFilter==='all'?'active':'')+'" onclick="taskFilter=\'all\';renderTasks()">All ('+tasks.length+')</span>'+
     '</div>';
 
   if (!filtered.length) {
-    html += '<div class="empty"><div class="empty-icon">✅</div><p>' + (taskFilter==='done'?'No completed tasks yet.':'No tasks yet. Add one above!') + '</p></div>';
-  } else {
-    for (var i = 0; i < filtered.length; i++) {
-      var t = filtered[i];
-      var cat = TASK_CATEGORIES.find(function(c){return c.id===t.category}) || TASK_CATEGORIES[5];
-      var dateStr = t.created ? new Date(t.created).toLocaleDateString('en-US',{month:'short',day:'numeric'}) : '';
-      html += '<div class="task-card ' + (t.done?'done':'') + '">' +
-        '<div class="task-check ' + (t.done?'checked':'') + '" data-task-toggle="' + esc(t.id) + '">' + (t.done?'✓':'') + '</div>' +
-        '<div class="task-body">' +
-        '<div class="task-text">' + esc(t.text) + (t.person ? ' — <strong>' + esc(t.person) + '</strong>' : '') + '</div>' +
-        '<div class="task-meta">' +
-        '<span class="task-priority ' + (t.priority||'medium') + '">' + (t.priority||'medium').toUpperCase() + '</span>' +
-        '<span class="task-category" style="color:' + cat.color + '">' + cat.label + '</span>' +
-        (dateStr ? '<span>' + dateStr + '</span>' : '') +
-        '</div></div>' +
-        '<div class="task-actions">' +
-        '<button data-task-edit="' + esc(t.id) + '">✏️</button>' +
-        '<button data-task-delete="' + esc(t.id) + '">🗑️</button>' +
-        '</div></div>';
-    }
+    html += '<div class="empty"><div class="empty-icon">✅</div><p>'+(taskFilter==='done'?'No completed tasks yet.':'No tasks yet. Click "+ Add Task" above!')+'</p></div>';
   }
-
-  var leadsEl = document.getElementById('leads');
-  leadsEl.innerHTML = html;
-
-  // Restore input values and attach listeners
-  var newInput = document.getElementById('task-input');
-  if (newInput) {
-    newInput.value = _taskInputVal;
-    newInput.addEventListener('keydown', function(e) { if (e.key === 'Enter') addTask(); });
-    newInput.addEventListener('input', function() { _taskInputVal = this.value; });
+  for (var i=0;i<filtered.length;i++) {
+    var t=filtered[i];
+    var cat=TASK_CATEGORIES.find(function(c){return c.id===t.category})||TASK_CATEGORIES[5];
+    var ds=t.created?new Date(t.created).toLocaleDateString('en-US',{month:'short',day:'numeric'}):'';
+    html+='<div class="task-card '+(t.done?'done':'')+'">'+
+      '<div class="task-check '+(t.done?'checked':'')+'" onclick="toggleTask(\''+esc(t.id)+'\')">'+(t.done?'✓':'')+'</div>'+
+      '<div class="task-body" onclick="openTaskModal(\''+esc(t.id)+'\')" style="cursor:pointer">'+
+      '<div class="task-text">'+esc(t.text)+(t.person?' — <strong>'+esc(t.person)+'</strong>':'')+'</div>'+
+      '<div class="task-meta">'+
+      '<span class="task-priority '+(t.priority||'medium')+'">'+(t.priority||'medium').toUpperCase()+'</span>'+
+      '<span class="task-category" style="color:'+cat.color+'">'+cat.label+'</span>'+
+      (ds?'<span>'+ds+'</span>':'')+
+      '</div></div>'+
+      '<div class="task-actions">'+
+      '<button onclick="deleteTask(\''+esc(t.id)+'\')">🗑️</button>'+
+      '</div></div>';
   }
-  var newCat = document.getElementById('task-cat-input');
-  if (newCat) { newCat.value = _taskCatVal; newCat.addEventListener('change', function() { _taskCatVal = this.value; }); }
-  var newPri = document.getElementById('task-priority-input');
-  if (newPri) { newPri.value = _taskPriVal; newPri.addEventListener('change', function() { _taskPriVal = this.value; }); }
-
-  // Event delegation for task actions
-  var addBtn = document.getElementById('task-add-btn');
-  if (addBtn) addBtn.addEventListener('click', addTask);
-
-  leadsEl.addEventListener('click', function(e) {
-    var el = e.target.closest('[data-task-toggle]');
-    if (el) { toggleTask(el.getAttribute('data-task-toggle')); return; }
-    el = e.target.closest('[data-task-edit]');
-    if (el) { editTask(el.getAttribute('data-task-edit')); return; }
-    el = e.target.closest('[data-task-delete]');
-    if (el) { deleteTask(el.getAttribute('data-task-delete')); return; }
-    el = e.target.closest('[data-filter]');
-    if (el) { taskFilter = el.getAttribute('data-filter'); renderTasks(); return; }
-  });
+  document.getElementById('leads').innerHTML = html;
 }
 
-function addTask() {
-  var text = _taskInputVal.trim();
-  if (!text) return;
-  tasks.push({
-    id: Date.now().toString(36) + Math.random().toString(36).substr(2,4),
-    text: text,
-    person: '',
-    notes: '',
-    category: _taskCatVal,
-    priority: _taskPriVal,
-    done: false,
-    created: Date.now()
-  });
+// Task modal — uses #modal div (same as lead add/edit, never destroyed by innerHTML)
+function openTaskModal(id) {
+  var t = id ? tasks.find(function(tk){return tk.id===id}) : null;
+  var isEdit = !!t;
+  if (!t) t = {text:'',person:'',category:'follow-up',priority:'medium',notes:'',done:false};
+  var cat = t.category||'follow-up', pri = t.priority||'medium';
+  function esc(s){return (s||'').replace(/"/g,'&quot;')}
+  document.getElementById('modal').innerHTML =
+    '<div class="modal-overlay" onclick="if(event.target===this)closeModal()">'+
+    '<div class="modal">'+
+    '<h3>'+(isEdit?'Edit Task':'Add Task')+'</h3>'+
+    '<form onsubmit="saveTaskForm(event,'+(isEdit?"'"+t.id+"'":"null")+')">'+
+    '<div class="form-group"><label>Task *</label><input id="ft-text" value="'+esc(t.text)+'" required placeholder="e.g. Call John re: new policy"></div>'+
+    '<div class="form-row">'+
+    '<div class="form-group"><label>Person / Contact</label><input id="ft-person" value="'+esc(t.person)+'" placeholder="John Smith"></div>'+
+    '<div class="form-group"><label>Category</label><select id="ft-cat">'+
+    TASK_CATEGORIES.map(function(c){return '<option value="'+c.id+'"'+(cat===c.id?' selected':'')+'>'+c.label+'</option>'}).join('')+
+    '</select></div></div>'+
+    '<div class="form-row">'+
+    '<div class="form-group"><label>Priority</label><select id="ft-pri">'+
+    '<option value="high"'+(pri==='high'?' selected':'')+'>High</option>'+
+    '<option value="medium"'+(pri==='medium'?' selected':'')+'>Medium</option>'+
+    '<option value="low"'+(pri==='low'?' selected':'')+'>Low</option></select></div>'+
+    (isEdit?'<div class="form-group"><label>Status</label><select id="ft-done"><option value="0"'+(!t.done?' selected':'')+'>Active</option><option value="1"'+(t.done?' selected':'')+'>Done</option></select></div>':'<div class="form-group"></div>')+
+    '</div>'+
+    '<div class="form-group"><label>Notes</label><textarea id="ft-notes" placeholder="Details, follow-up info...">'+esc(t.notes)+'</textarea></div>'+
+    '<div class="form-actions">'+
+    '<button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>'+
+    '<button type="submit" class="btn btn-primary">'+(isEdit?'Save Changes':'Add Task')+'</button>'+
+    '</div></form></div></div>';
+}
+
+function saveTaskForm(e, id) {
+  e.preventDefault();
+  var data = {
+    text: document.getElementById('ft-text').value,
+    person: document.getElementById('ft-person').value,
+    category: document.getElementById('ft-cat').value,
+    priority: document.getElementById('ft-pri').value,
+    notes: document.getElementById('ft-notes').value
+  };
+  if (id) {
+    var doneEl = document.getElementById('ft-done');
+    tasks = tasks.map(function(tk){
+      if (tk.id!==id) return tk;
+      var u = Object.assign({},tk,data);
+      if (doneEl) u.done = doneEl.value==='1';
+      return u;
+    });
+  } else {
+    data.id = Date.now().toString(36)+Math.random().toString(36).substr(2,4);
+    data.done = false;
+    data.created = Date.now();
+    tasks.push(data);
+  }
   saveTasks();
-  _taskInputVal = '';
+  closeModal();
   renderTasks();
 }
 
+function addTask() { openTaskModal(null); }
+
 function toggleTask(id) {
-  tasks = tasks.map(tk => tk.id === id ? {...tk, done: !tk.done, completedAt: !tk.done ? Date.now() : null} : tk);
+  tasks = tasks.map(function(tk){return tk.id===id?Object.assign({},tk,{done:!tk.done}):tk});
   saveTasks();
   renderTasks();
 }
 
 function deleteTask(id) {
   if (confirm('Delete this task?')) {
-    tasks = tasks.filter(tk => tk.id !== id);
+    tasks = tasks.filter(function(tk){return tk.id!==id});
     saveTasks();
     renderTasks();
   }
-}
-
-function editTask(id) {
-  const t = tasks.find(tk => tk.id === id);
-  if (!t) return;
-  const cat = t.category || 'other';
-  const pri = t.priority || 'medium';
-  document.getElementById('modal').innerHTML = `
-    <div class="modal-overlay" onclick="if(event.target===this)closeModal()">
-      <div class="modal">
-        <h3>Edit Task</h3>
-        <form onsubmit="saveTask(event,'${id}')">
-          <div class="form-group">
-            <label>Task</label>
-            <input id="et-text" value="${(t.text||'').replace(/"/g,'&quot;')}" required>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Person / Contact</label>
-              <input id="et-person" value="${(t.person||'').replace(/"/g,'&quot;')}" placeholder="e.g. John Smith">
-            </div>
-            <div class="form-group">
-              <label>Category</label>
-              <select id="et-cat">${TASK_CATEGORIES.map(c=>`<option value="${c.id}" ${cat===c.id?'selected':''}>${c.label}</option>`).join('')}</select>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Priority</label>
-              <select id="et-pri"><option value="high" ${pri==='high'?'selected':''}>High</option><option value="medium" ${pri==='medium'?'selected':''}>Medium</option><option value="low" ${pri==='low'?'selected':''}>Low</option></select>
-            </div>
-            <div class="form-group">
-              <label>Status</label>
-              <select id="et-done"><option value="0" ${!t.done?'selected':''}>Active</option><option value="1" ${t.done?'selected':''}>Done</option></select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Notes</label>
-            <textarea id="et-notes" placeholder="Details, follow-up info...">${t.notes||''}</textarea>
-          </div>
-          <div class="form-actions">
-            <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
-            <button type="submit" class="btn btn-primary">Save</button>
-          </div>
-        </form>
-      </div>
-    </div>`;
-}
-
-function saveTask(e, id) {
-  e.preventDefault();
-  tasks = tasks.map(tk => tk.id === id ? {
-    ...tk,
-    text: document.getElementById('et-text').value,
-    person: document.getElementById('et-person').value,
-    category: document.getElementById('et-cat').value,
-    priority: document.getElementById('et-pri').value,
-    done: document.getElementById('et-done').value === '1',
-    notes: document.getElementById('et-notes').value,
-  } : tk);
-  saveTasks();
-  closeModal();
-  renderTasks();
 }
 
 // Override render for tasks section
@@ -822,14 +742,14 @@ setSection = function(id) {
     id === 'tasks' ? 'Tasks & Pipeline' :
     (SECTIONS.find(s => s.id === id)?.name || id);
 
-  // Toggle header buttons visibility
-  const addBtn = document.querySelector('.header-actions .btn-primary');
-  const exportBtn = document.querySelector('.header-actions .btn-secondary:nth-child(2)');
+  // Toggle header buttons for tasks vs leads
+  var addBtn = document.querySelector('.header-actions .btn-primary');
+  var exportBtn = document.querySelector('.header-actions .btn-secondary:nth-child(2)');
   if (id === 'tasks') {
-    if (addBtn) addBtn.style.display = 'none';
+    if (addBtn) { addBtn.textContent = '+ Add Task'; addBtn.onclick = function(){openTaskModal(null)}; addBtn.style.display = ''; }
     if (exportBtn) exportBtn.style.display = 'none';
   } else {
-    if (addBtn) addBtn.style.display = '';
+    if (addBtn) { addBtn.textContent = '+ Add Lead'; addBtn.onclick = function(){openAddModal()}; addBtn.style.display = ''; }
     if (exportBtn) exportBtn.style.display = '';
   }
   render();
