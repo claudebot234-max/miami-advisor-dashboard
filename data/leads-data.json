@@ -85,6 +85,42 @@
   },
   {
     "id": 8,
+    "section": "acquisition",
+    "title": "David Treece",
+    "name": "David Treece",
+    "company": "",
+    "status": "prospect",
+    "aum": 50000000,
+    "details": "\ud83d\udccd Miami, FL (serves Broward, Miami-Dade, Palm Beach)\n\n**Firm:** Treece Financial Group\n\n**Estimated Aum:** $50M-$150M\n\n**Retirement Signal:** 35+ years in practice (started 1991), solo practice structure, specializes in retirement planning which indicates mature client base nearing natural transition point\n\n**Heat:** WARM\n\n**Why They Fit:** Independent solo practitioner with 35 years experience serving South Florida retirees. LGBTQ+ advocacy focus and solo-ager specialty suggests established practice with loyal clients. No visible succession plan or junior advisors mentioned on website.",
+    "approach": "David, I saw you've been serving South Florida for 35 years\u2014that's an incredible legacy. As someone who specializes in retirement planning, I'm curious if you've thought about your own succession plan. Many advisors your age are exploring strategic partnerships that preserve client relationships while providing a smooth transition path.",
+    "source": "Acquisition Targets"
+  },
+  {
+    "id": 9,
+    "section": "acquisition",
+    "title": "Stuart Chamberlin, CFS",
+    "name": "Stuart Chamberlin, CFS",
+    "company": "",
+    "status": "prospect",
+    "aum": 50000000,
+    "details": "\ud83d\udccd Boca Raton, FL\n\n**Firm:** Chamberlin Financial Inc.\n\n**Estimated Aum:** $50M-$120M\n\n**Retirement Signal:** Started career 1988 (38 years experience), went independent 1996, founded current firm 2012. Timeline suggests age 60-65. Solo practice with no visible succession plan or junior advisors.\n\n**Heat:** WARM\n\n**Why They Fit:** Nearly 40-year veteran serving Palm Beach County retirees. Retirement income and preservation focus indicates mature book. Formed independent practice in 2012\u2014likely approaching natural exit window. No mention of next-gen advisors or succession strat",
+    "approach": "Stuart, 38 years in the business and founder of Chamberlin Financial since 2012\u2014you've built something substantial. I work with advisors approaching the 30-40 year mark who are thinking about their own retirement timeline. Have you started exploring succession options?",
+    "source": "Acquisition Targets"
+  },
+  {
+    "id": 10,
+    "section": "acquisition",
+    "title": "Steven Fenyves, CFP, CFS",
+    "name": "Steven Fenyves, CFP, CFS",
+    "company": "",
+    "status": "prospect",
+    "aum": 50000000,
+    "details": "\ud83d\udccd Boca Raton, FL (5255 North Federal Highway, Suite 330)\n\n**Firm:** Valued Wealth Management Inc.\n\n**Estimated Aum:** $50M-$150M\n\n**Retirement Signal:** Founded firm 2005 (21 years), serves \"successful professionals preparing for retirement\" which indicates aging client base. Solo founder with small support team (~2 employees). No visible junior advisor or succession plan.\n\n**Heat:** HOT\n\n**Why They Fit:** Perfect profile\u201421-year-old practice, solo founder, retirement-focused clientele, Boca Raton location (affluent market), affiliated with Osaic Wealth (formerly Securities America) making book transfer easier. CFP + CFS credentials indicate quality pr",
+    "approach": "Steven, you founded Valued Wealth Management in 2005 and have built a strong retirement planning practice in Boca over 21 years. Most solo practitioners at the 20-year mark start thinking about their own exit strategy. I'm exploring strategic partnerships with established advisors\u2014would you be open to a confidential conversation about what the next 5-10 years look like for you?",
+    "source": "Acquisition Targets"
+  },
+  {
+    "id": 11,
     "section": "vul",
     "title": "Patty Da Silva",
     "name": "Patty Da Silva",
@@ -96,7 +132,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 9,
+    "id": 12,
     "section": "vul",
     "title": "Margit Brandt",
     "name": "Margit Brandt",
@@ -108,7 +144,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 10,
+    "id": 13,
     "section": "estate-attorneys",
     "title": "Anwar E. Hadeed - Hadeed Legal",
     "name": "Anwar E. Hadeed",
@@ -120,7 +156,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 11,
+    "id": 14,
     "section": "estate-attorneys",
     "title": "Yanitza Schoonover - The Schoonover Law Firm",
     "name": "Yanitza Schoonover",
@@ -132,7 +168,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 12,
+    "id": 15,
     "section": "estate-attorneys",
     "title": "Monique Lavender Greenberg - Lavender Greenberg PLLC",
     "name": "Monique Lavender Greenberg",
@@ -144,7 +180,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 13,
+    "id": 16,
     "section": "estate-attorneys",
     "title": "Peter A. Dyson - The Estate Plan",
     "name": "Peter A. Dyson",
@@ -156,7 +192,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 14,
+    "id": 17,
     "section": "estate-attorneys",
     "title": "Denise Jomarron - Denise Jomarron Legal Group",
     "name": "Denise Jomarron",
@@ -168,7 +204,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 15,
+    "id": 18,
     "section": "warm-intros",
     "title": "Seema Chaturvedi - TiE Miami / Accelerator Group",
     "name": "Seema Chaturvedi",
@@ -180,7 +216,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 16,
+    "id": 19,
     "section": "warm-intros",
     "title": "Anil Gajwani - EnCircle Payments / TiE Miami",
     "name": "Anil Gajwani",
@@ -192,7 +228,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 17,
+    "id": 20,
     "section": "warm-intros",
     "title": "Satish Mehta - Chewy",
     "name": "Satish Mehta",
@@ -204,7 +240,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 18,
+    "id": 21,
     "section": "indian-network",
     "title": "Dr. Arun Garg - Role: Physician, Biochemist, and Global Health Leader (Vancouver-based)",
     "name": "Dr. Arun Garg",
@@ -216,7 +252,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 19,
+    "id": 22,
     "section": "indian-network",
     "title": "Ravishankar Bhooplapur - Role: Chairman of Association of Indians in America, Founder/President of Xavier University School of Medicine (Aruba)",
     "name": "Ravishankar Bhooplapur",
@@ -228,7 +264,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 20,
+    "id": 23,
     "section": "cpa-partners",
     "title": "Victor Delerme, CPA - Delerme CPA",
     "name": "Victor Delerme, CPA",
@@ -240,7 +276,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 21,
+    "id": 24,
     "section": "cpa-partners",
     "title": "Edgar Gomez, CPA, MST, MBA - E. Gomez CPA LLC",
     "name": "Edgar Gomez, CPA, MST, MBA",
@@ -252,7 +288,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 22,
+    "id": 25,
     "section": "cpa-partners",
     "title": "Edward D. Quilca, CPA - Quilca CPA Group",
     "name": "Edward D. Quilca, CPA",
@@ -264,7 +300,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 23,
+    "id": 26,
     "section": "cpa-partners",
     "title": "Alvaro Acevedo Jr., JD, CPA - Brickell Accountants",
     "name": "Alvaro Acevedo Jr., JD, CPA",
@@ -276,7 +312,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 24,
+    "id": 27,
     "section": "cpa-partners",
     "title": "Mongio & Associates, CPAs",
     "name": "Mongio & Associates, CPAs",
@@ -288,7 +324,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 25,
+    "id": 28,
     "section": "vul",
     "title": "Teri Kaye - CohnReznick",
     "name": "Teri Kaye",
@@ -300,7 +336,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 26,
+    "id": 29,
     "section": "vul",
     "title": "Martha M. Ferral - Shutts & Bowen",
     "name": "Martha M. Ferral",
@@ -312,7 +348,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 27,
+    "id": 30,
     "section": "vul",
     "title": "Daniela F. Cimo - Weiss Serota Helfman Cole + Bierman",
     "name": "Daniela F. Cimo",
@@ -324,18 +360,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 28,
-    "section": "acquisition",
-    "title": "Steven Fenyves, CFP, CFS - Valued Wealth Management Inc.",
-    "name": "Steven Fenyves, CFP, CFS",
-    "company": "Valued Wealth Management Inc.",
-    "status": "new",
-    "aum": 50000000,
-    "details": "\ud83d\udccd 5255 North Federal Highway, Suite 330, Boca Raton, FL 33487\n\n**Firm:** Valued Wealth Management Inc.\n\n**Founded:** 2005 (21 years)\n\n**Crd:** (Search SEC IAPD)\n\n**Structure:** Solo practice (President & Founder) + small team (~2 employees)\n\n**Affiliation:** Osaic Wealth, Inc. (formerly Securities America)\n\n**Education:** BA Accounting, Hofstra University\n\n**Linkedin:** https://www.linkedin.com/in/steven-w-fenyves-cfp-cfs-47475010/ (318 connections)\n\n**Website:** https://www.valuedwealth.com/\n\n**Succession Signal:**\n- **21 years in practice** (founded 2005) = founder likely 55-65 years old\n- **Solo practice with small team** = no clear junior successor\n- **Named after service (\"Valued Wealth\")** not founder = potential rebrand for sale\n- **Serves \"successful professionals preparing for retirement\"** = mature client base\n- **Boca Raton location** = affluent retirement market\n\n**Estimated Aum:**\n- **$50M-150M** (based on solo practice with 2 employees, 21 years in business)\n- **Revenue estimate:** $500K-1.5M annually (assuming 1% fee)\n\n**Why Acquirable:**\n\u2705 Solo founder (no partnership complexity)\n\u2705 21 years = mature practice, peak value\n\u2705 Independent BD affiliation (Osaic) = portable book\n\u2705 Boca Raton = strong market, retiree-focused\n\u2705 No evidence of succession plan on website\n\n**Valuation Estimate:**\n- **Conservative (2x revenue):** $1M-3M\n- **Fair market (2.5x):** $1.25M-3.75M\n- **Aggressive (3x):** $1.5M-4.5M\n\n**Subject:** \"21 years in Boca\u2014what's your succession plan?\"\n\nSteven,\n\nI came across Valued Wealth Management and saw you founded the practice in 2005. That's 21 years serving Boca Raton professionals\u2014impressive longevity in a competitive market.\n\nI'm reaching ou\n\n**Heat:** \ud83d\udd25 Hot (perfect profile\u2014solo, 21 years, age range, clean structure)\n\n---",
-    "approach": ""
-  },
-  {
-    "id": 29,
+    "id": 31,
     "section": "acquisition",
     "title": "Mauro Guerra - Guerra Wealth Advisors",
     "name": "Mauro Guerra",
@@ -346,7 +371,7 @@
     "approach": ""
   },
   {
-    "id": 30,
+    "id": 32,
     "section": "acquisition",
     "title": "Joshua Feller, ChFC",
     "name": "Joshua Feller, ChFC",
@@ -357,7 +382,7 @@
     "approach": ""
   },
   {
-    "id": 31,
+    "id": 33,
     "section": "acquisition",
     "title": "Provenance Wealth Advisors Partners",
     "name": "Provenance Wealth Advisors Partners",
@@ -368,7 +393,7 @@
     "approach": ""
   },
   {
-    "id": 32,
+    "id": 34,
     "section": "acquisition",
     "title": "Northstar Financial Planners Team",
     "name": "Northstar Financial Planners Team",
@@ -379,7 +404,7 @@
     "approach": ""
   },
   {
-    "id": 33,
+    "id": 35,
     "category": "acquisition",
     "triggerEvent": "Founded 2015 (11 years). Coral Gables. Independent RIA serving U.S. and international clients. Too young for immediate succession but good future pipe",
     "prospectName": "Jaime Domenech Macias",
@@ -402,7 +427,7 @@
     "title": "Jaime Domenech Macias"
   },
   {
-    "id": 34,
+    "id": 36,
     "category": "acquisition",
     "triggerEvent": "Founded 2000 as TBK Investments, sold to major bank 2007 (GenSpring), re-established as independent WE Family Offices 2013. Now serves 80+ UHNW famili",
     "prospectName": "Santiago Ulloa",
