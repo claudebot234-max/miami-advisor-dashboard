@@ -97,42 +97,6 @@
   },
   {
     "id": 9,
-    "section": "vul",
-    "title": "Dr. Henry Rodriguez-Martin",
-    "name": "Dr. Henry Rodriguez-Martin",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Profession:** Dentist and Practice Owner (Fort Lauderdale)\n\n**Income Signal:** Just sold his practice (The Dental Group) to Sage Dental DSO in March 2026 - likely received significant seven-figure buyout\n\n**Vul Fit Reason:** Practice sale creates immediate wealth event. As a healthcare professional in his peak earning years with substantial capital gains, VUL provides tax-advantaged growth and estate planning for his family while maintaining asset protection.\n\n**Heat:** HOT\n\n**Trigger Event:** Practice acquisition by Sage Dental closed March 2026",
-    "approach": "Congratulations on your partnership with Sage Dental. Many doctors I work with find that after a practice sale, VUL is one of the most tax-efficient ways to protect wealth while continuing to build for retirement.",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 10,
-    "section": "vul",
-    "title": "Bernie Pastor",
-    "name": "Bernie Pastor",
-    "company": "",
-    "status": "prospect",
-    "aum": 1000000,
-    "details": "**Profession:** Trial Lawyer and Partner (Shutts & Bowen, Miami)\n\n**Income Signal:** Board-certified civil trial lawyer with 30+ years experience, just made partner at prestigious Miami firm - partner-level compensation likely $500K-$1M+\n\n**Vul Fit Reason:** At peak earning capacity with decades of courtroom success. As a new partner at a major firm, needs tax-advantaged wealth accumulation beyond maxed 401(k)/profit sharing, plus asset protection given litigation career exposure.\n\n**Heat:** WARM\n\n**Trigger Event:** Promoted to Partner at Shutts & Bowen, announced March 2026",
-    "approach": "I work with several partners at major Miami law firms. The transition to partner often means maxing out qualified plans - VUL can be a smart next layer for tax-free growth while adding another layer of asset protection.",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 11,
-    "section": "cpa-partners",
-    "title": "Adalberto Parra, CPA - Location: Miami, FL (555 NE 15th Street - Downtown)",
-    "name": "Adalberto Parra, CPA",
-    "company": "Location: Miami, FL (555 NE 15th Street - Downtown)",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Specialty:** Small business owners, executives, independent professionals, payroll services\n\n**Why No Advisor Partner:** Solo LLC practice established 2018, services focus on tax/accounting only\n\n**Client Profile Match:** Executives and independent professionals match James's target market\n\n**Heat:** WARM\n\n**Approach:** \"I help executives and business owners with the financial planning side - retirement accounts, insurance strategies, and investment managemen\u2026",
-    "approach": "I help executives and business owners with the financial planning side - retirement accounts, insurance strategies, and investment managemen\u2026",
-    "source": "CPA Finder"
-  },
-  {
-    "id": 12,
     "section": "estate-attorneys",
     "title": "Anwar E. Hadeed - Hadeed Legal",
     "name": "Anwar E. Hadeed",
@@ -144,7 +108,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 13,
+    "id": 10,
     "section": "estate-attorneys",
     "title": "Alain Roman - The Law Office of Alain Roman, PLLC",
     "name": "Alain Roman",
@@ -156,7 +120,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 14,
+    "id": 11,
     "section": "warm-intros",
     "title": "Seema Chaturvedi - TiE Miami / Accelerator Group",
     "name": "Seema Chaturvedi",
@@ -168,7 +132,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 15,
+    "id": 12,
     "section": "warm-intros",
     "title": "Anil Gajwani - EnCircle Payments / TiE Miami",
     "name": "Anil Gajwani",
@@ -180,7 +144,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 16,
+    "id": 13,
     "section": "warm-intros",
     "title": "Satish Mehta - Chewy",
     "name": "Satish Mehta",
@@ -192,7 +156,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 17,
+    "id": 14,
     "section": "indian-network",
     "title": "Yash Daftary",
     "name": "Yash Daftary",
@@ -202,6 +166,42 @@
     "details": "**Profession:** Founder & CEO, FanBasis (Creator economy platform)\n\n**Community Connection:** Indian American entrepreneur, Forbes 30 Under 30 2026, graduated American Heritage School (Broward)\n\n**Trigger:** Raised $20M Series A funding in May 2025, Forbes 30 Under 30 recognition December 2025\n\n**Heat:** HOT\n\n**Why Opportunity:** Just closed major funding round and gained national recognition. Platform processed $1B+ in merchandise. Typical post-Series A scenario = liquidity event for founder, need for sophisticated wealth planning including tax optimization, estate planning,\n\n**Wealth Signal:** $20M raise at likely 8-10% founder equity = $2-5M+ liquid net worth post-funding; platform doing $1B GMV suggests personal income well into seven figures",
     "approach": "Yash, congrats on the Forbes recognition and Series A - incredible validation of what you've built at FanBasis. As someone who works with Indian American entrepreneurs post-liquidity events, I'd love to share some strategies other founder-CEOs in Miami have used to optimize their wealth position after major funding rounds.",
     "source": "Indian Network"
+  },
+  {
+    "id": 15,
+    "section": "vul",
+    "title": "Dr. Henry Rodriguez-Martin",
+    "name": "Dr. Henry Rodriguez-Martin",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Profession:** Dentist and Practice Owner (Fort Lauderdale)\n\n**Income Signal:** Just sold his practice (The Dental Group) to Sage Dental DSO in March 2026 - likely received significant seven-figure buyout\n\n**Vul Fit Reason:** Practice sale creates immediate wealth event. As a healthcare professional in his peak earning years with substantial capital gains, VUL provides tax-advantaged growth and estate planning for his family while maintaining asset protection.\n\n**Heat:** HOT\n\n**Trigger Event:** Practice acquisition by Sage Dental closed March 2026",
+    "approach": "Congratulations on your partnership with Sage Dental. Many doctors I work with find that after a practice sale, VUL is one of the most tax-efficient ways to protect wealth while continuing to build for retirement.",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 16,
+    "section": "vul",
+    "title": "Bernie Pastor",
+    "name": "Bernie Pastor",
+    "company": "",
+    "status": "prospect",
+    "aum": 1000000,
+    "details": "**Profession:** Trial Lawyer and Partner (Shutts & Bowen, Miami)\n\n**Income Signal:** Board-certified civil trial lawyer with 30+ years experience, just made partner at prestigious Miami firm - partner-level compensation likely $500K-$1M+\n\n**Vul Fit Reason:** At peak earning capacity with decades of courtroom success. As a new partner at a major firm, needs tax-advantaged wealth accumulation beyond maxed 401(k)/profit sharing, plus asset protection given litigation career exposure.\n\n**Heat:** WARM\n\n**Trigger Event:** Promoted to Partner at Shutts & Bowen, announced March 2026",
+    "approach": "I work with several partners at major Miami law firms. The transition to partner often means maxing out qualified plans - VUL can be a smart next layer for tax-free growth while adding another layer of asset protection.",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 17,
+    "section": "cpa-partners",
+    "title": "Adalberto Parra, CPA - Location: Miami, FL (555 NE 15th Street - Downtown)",
+    "name": "Adalberto Parra, CPA",
+    "company": "Location: Miami, FL (555 NE 15th Street - Downtown)",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Specialty:** Small business owners, executives, independent professionals, payroll services\n\n**Why No Advisor Partner:** Solo LLC practice established 2018, services focus on tax/accounting only\n\n**Client Profile Match:** Executives and independent professionals match James's target market\n\n**Heat:** WARM\n\n**Approach:** \"I help executives and business owners with the financial planning side - retirement accounts, insurance strategies, and investment managemen\u2026",
+    "approach": "I help executives and business owners with the financial planning side - retirement accounts, insurance strategies, and investment managemen\u2026",
+    "source": "CPA Finder"
   },
   {
     "id": 18,
