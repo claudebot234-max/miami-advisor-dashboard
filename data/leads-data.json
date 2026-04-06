@@ -61,66 +61,6 @@
   },
   {
     "id": 6,
-    "section": "vul",
-    "title": "Fred Fontes",
-    "name": "Fred Fontes",
-    "company": "",
-    "status": "prospect",
-    "aum": 34000000,
-    "details": "**Profession:** CEO, Acclaim (AI voice platform for regulated industries)\n\n**Income Signal:** Leading $34M Series A company, CEO-level compensation in enterprise AI, relocated to Miami to establish global HQ\n\n**Vul Fit Reason:** High-income tech executive in peak earning years, likely maxed traditional retirement vehicles, needs tax-advantaged growth and estate planning as company scales. AI industry offers high comp packages typically $500K-$1M+ for CEOs at this funding sta\n\n**Heat:** WARM\n\n**Trigger Event:** Just appointed CEO of Acclaim in 2026, company expanding U.S. operations with Miami as global HQ, hiring aggressively",
-    "approach": "Saw Acclaim's expansion announcement\u2014congrats on the CEO role and Miami HQ. As you're scaling the team and comp packages, have you looked at tax-advantaged strategies for the equity upside beyond the standard 401k?",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 7,
-    "section": "vul",
-    "title": "Shayn March",
-    "name": "Shayn March",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Profession:** CFO, GEO Group (private corrections company, Boca Raton)\n\n**Income Signal:** CFO of publicly-traded company, 17-year company veteran promoted to CFO role, likely $400K-$800K base plus equity\n\n**Vul Fit Reason:** Peak earning years (mid-40s-50s based on 17-year tenure), new CFO role means comp increase, needs permanent life insurance with tax-deferred investment component as wealth accumulates. Maxed out 401k limits.\n\n**Heat:** HOT\n\n**Trigger Event:** Just promoted to CFO in March 2026, replacing departing executive",
-    "approach": "Congratulations on the CFO promotion at GEO Group. With the comp bump and equity grants, this is the perfect time to look at strategies that go beyond the 401k cap\u2014especially for executives in your tax bracket.",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 8,
-    "section": "cpa-partners",
-    "title": "Quilca CPA Group - Location: Miami, FL",
-    "name": "Quilca CPA Group",
-    "company": "Location: Miami, FL",
-    "status": "prospect",
-    "aum": 2000000,
-    "details": "**Specialty:** Small businesses, real estate investors, high net worth individuals - focus on startups and professionals with international tax needs\n\n**Why No Advisor Partner:** Website shows no financial planning or advisor affiliation, focused purely on tax/accounting services\n\n**Client Profile Match:** Explicitly serves \"High Net Worth Individuals\" and \"Small businesses\" with income matching James's target ($400K-$2M income range based on business owners and real estate investors)\n\n**Heat:** WARM\n\n**Approach:** Lead with international tax complexity and investment strategies - offer to collaborate on clients who need coordinated wealth planning beyond tax prep",
-    "approach": "Lead with international tax complexity and investment strategies - offer to collaborate on clients who need coordinated wealth planning beyond tax prep",
-    "source": "CPA Finder"
-  },
-  {
-    "id": 9,
-    "section": "cpa-partners",
-    "title": "Damian Landeiro CPA, PA - Location: Miami, FL",
-    "name": "Damian Landeiro CPA, PA",
-    "company": "Location: Miami, FL",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Specialty:** Solo practitioner serving individuals and small businesses with tax, consulting, QuickBooks, and international investment advice\n\n**Why No Advisor Partner:** Website mentions \"international investment advice\" but no financial advisor partnership - solo CPA doing advisory himself\n\n**Client Profile Match:** Serves \"small business\" owners and professionals needing international investment guidance - fits mid-tier professionals James targets\n\n**Heat:** HOT\n\n**Approach:** Position as complementary partner - James handles comprehensive wealth planning and insurance while Damian keeps tax/accounting. Solo practitioners need referral partners most.",
-    "approach": "Position as complementary partner - James handles comprehensive wealth planning and insurance while Damian keeps tax/accounting. Solo practitioners need referral partners most.",
-    "source": "CPA Finder"
-  },
-  {
-    "id": 10,
-    "section": "cpa-partners",
-    "title": "MiamiCPA LLC (North Miami) - Location: North Miami, FL",
-    "name": "MiamiCPA LLC (North Miami)",
-    "company": "Location: North Miami, FL",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Specialty:** Physicians, real estate professionals, attorneys, foreign nationals, charter boats - sophisticated tax planning for high earners\n\n**Why No Advisor Partner:** No mention of financial planning or advisor partnership on website - pu\u2026",
-    "approach": "",
-    "source": "CPA Finder"
-  },
-  {
-    "id": 11,
     "section": "estate-attorneys",
     "title": "Anwar E. Hadeed - Hadeed Legal",
     "name": "Anwar E. Hadeed",
@@ -132,7 +72,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 12,
+    "id": 7,
     "section": "estate-attorneys",
     "title": "Yanitza Schoonover - The Schoonover Law Firm, P.A.",
     "name": "Yanitza Schoonover",
@@ -144,7 +84,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 13,
+    "id": 8,
     "section": "warm-intros",
     "title": "Sumit Singh",
     "name": "Sumit Singh",
@@ -156,7 +96,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 14,
+    "id": 9,
     "section": "warm-intros",
     "title": "Seema Chaturvedi",
     "name": "Seema Chaturvedi",
@@ -166,6 +106,66 @@
     "details": "**Role:** President of TiE Miami, Founder & Managing Partner at AWE Funds, Founder & Managing Director at Accelerator Group LLC**\n\n**Community Connection:** TiE Miami President, TiE Global Board of Trustees (first woman), Forbes Finance Council, Indiaspora member**\n\n**Warm Intro Path:** Through any TiE Miami event (monthly meetings, pitch competitions), through India-US Chamber of Commerce South Florida, or through women entrepreneur networks**\n\n**Trigger:** Recently recognized as Top 100 Women in Finance 2023, active in India investment delegation visits, managing investment funds**\n\n**Heat:** HOT\n\n**Why Opportunity:** Managing investment banking/advisory firm + fund, Harvard Business School Executive Ed background, Shearson Lehman/JM Morgan Stanley experience indicates high net worth, frequent travel between Miami-Detroit-India**",
     "approach": "Seema, I work with se\u2026",
     "source": "Warm Intros"
+  },
+  {
+    "id": 10,
+    "section": "vul",
+    "title": "Fred Fontes",
+    "name": "Fred Fontes",
+    "company": "",
+    "status": "prospect",
+    "aum": 34000000,
+    "details": "**Profession:** CEO, Acclaim (AI voice platform for regulated industries)\n\n**Income Signal:** Leading $34M Series A company, CEO-level compensation in enterprise AI, relocated to Miami to establish global HQ\n\n**Vul Fit Reason:** High-income tech executive in peak earning years, likely maxed traditional retirement vehicles, needs tax-advantaged growth and estate planning as company scales. AI industry offers high comp packages typically $500K-$1M+ for CEOs at this funding sta\n\n**Heat:** WARM\n\n**Trigger Event:** Just appointed CEO of Acclaim in 2026, company expanding U.S. operations with Miami as global HQ, hiring aggressively",
+    "approach": "Saw Acclaim's expansion announcement\u2014congrats on the CEO role and Miami HQ. As you're scaling the team and comp packages, have you looked at tax-advantaged strategies for the equity upside beyond the standard 401k?",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 11,
+    "section": "vul",
+    "title": "Shayn March",
+    "name": "Shayn March",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Profession:** CFO, GEO Group (private corrections company, Boca Raton)\n\n**Income Signal:** CFO of publicly-traded company, 17-year company veteran promoted to CFO role, likely $400K-$800K base plus equity\n\n**Vul Fit Reason:** Peak earning years (mid-40s-50s based on 17-year tenure), new CFO role means comp increase, needs permanent life insurance with tax-deferred investment component as wealth accumulates. Maxed out 401k limits.\n\n**Heat:** HOT\n\n**Trigger Event:** Just promoted to CFO in March 2026, replacing departing executive",
+    "approach": "Congratulations on the CFO promotion at GEO Group. With the comp bump and equity grants, this is the perfect time to look at strategies that go beyond the 401k cap\u2014especially for executives in your tax bracket.",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 12,
+    "section": "cpa-partners",
+    "title": "Quilca CPA Group - Location: Miami, FL",
+    "name": "Quilca CPA Group",
+    "company": "Location: Miami, FL",
+    "status": "prospect",
+    "aum": 2000000,
+    "details": "**Specialty:** Small businesses, real estate investors, high net worth individuals - focus on startups and professionals with international tax needs\n\n**Why No Advisor Partner:** Website shows no financial planning or advisor affiliation, focused purely on tax/accounting services\n\n**Client Profile Match:** Explicitly serves \"High Net Worth Individuals\" and \"Small businesses\" with income matching James's target ($400K-$2M income range based on business owners and real estate investors)\n\n**Heat:** WARM\n\n**Approach:** Lead with international tax complexity and investment strategies - offer to collaborate on clients who need coordinated wealth planning beyond tax prep",
+    "approach": "Lead with international tax complexity and investment strategies - offer to collaborate on clients who need coordinated wealth planning beyond tax prep",
+    "source": "CPA Finder"
+  },
+  {
+    "id": 13,
+    "section": "cpa-partners",
+    "title": "Damian Landeiro CPA, PA - Location: Miami, FL",
+    "name": "Damian Landeiro CPA, PA",
+    "company": "Location: Miami, FL",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Specialty:** Solo practitioner serving individuals and small businesses with tax, consulting, QuickBooks, and international investment advice\n\n**Why No Advisor Partner:** Website mentions \"international investment advice\" but no financial advisor partnership - solo CPA doing advisory himself\n\n**Client Profile Match:** Serves \"small business\" owners and professionals needing international investment guidance - fits mid-tier professionals James targets\n\n**Heat:** HOT\n\n**Approach:** Position as complementary partner - James handles comprehensive wealth planning and insurance while Damian keeps tax/accounting. Solo practitioners need referral partners most.",
+    "approach": "Position as complementary partner - James handles comprehensive wealth planning and insurance while Damian keeps tax/accounting. Solo practitioners need referral partners most.",
+    "source": "CPA Finder"
+  },
+  {
+    "id": 14,
+    "section": "cpa-partners",
+    "title": "MiamiCPA LLC (North Miami) - Location: North Miami, FL",
+    "name": "MiamiCPA LLC (North Miami)",
+    "company": "Location: North Miami, FL",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Specialty:** Physicians, real estate professionals, attorneys, foreign nationals, charter boats - sophisticated tax planning for high earners\n\n**Why No Advisor Partner:** No mention of financial planning or advisor partnership on website - pu\u2026",
+    "approach": "",
+    "source": "CPA Finder"
   },
   {
     "id": 15,
