@@ -85,6 +85,78 @@
   },
   {
     "id": 8,
+    "section": "lead-radar",
+    "title": "Miami-Dade County Online Case Search (OCS) - The official portal requires interactive searches that can't be automated",
+    "name": "Miami-Dade County Online Case Search (OCS)",
+    "company": "The official portal requires interactive searches that can't be automated",
+    "status": "prospect",
+    "aum": 0,
+    "details": "",
+    "approach": "",
+    "source": "Probate"
+  },
+  {
+    "id": 9,
+    "section": "lead-radar",
+    "title": "Daily Business Review - Legal notice archive requires paid subscription access",
+    "name": "Daily Business Review",
+    "company": "Legal notice archive requires paid subscription access",
+    "status": "prospect",
+    "aum": 0,
+    "details": "",
+    "approach": "",
+    "source": "Probate"
+  },
+  {
+    "id": 10,
+    "section": "lead-radar",
+    "title": "Broward Legal Directory - Only has archived records through 2021",
+    "name": "Broward Legal Directory",
+    "company": "Only has archived records through 2021",
+    "status": "prospect",
+    "aum": 0,
+    "details": "",
+    "approach": "",
+    "source": "Probate"
+  },
+  {
+    "id": 11,
+    "section": "lead-radar",
+    "title": "Florida Public Notices - Indexed general notices but doesn't provide estate value filters or Miami-Dade specific recent high-value probate data",
+    "name": "Florida Public Notices",
+    "company": "Indexed general notices but doesn't provide estate value filters or Miami-Dade specific recent high-value probate data",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**What James Actually Needs To Do:** To legally and effectively access this probate lead data, James should:",
+    "approach": "",
+    "source": "Probate"
+  },
+  {
+    "id": 12,
+    "section": "lead-radar",
+    "title": "Subscribe to Daily Business Review",
+    "name": "Subscribe to Daily Business Review",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "",
+    "approach": "",
+    "source": "Probate"
+  },
+  {
+    "id": 13,
+    "section": "lead-radar",
+    "title": "Visit Miami-Dade Clerk's Office",
+    "name": "Visit Miami-Dade Clerk's Office",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "",
+    "approach": "",
+    "source": "Probate"
+  },
+  {
+    "id": 14,
     "section": "acquisition",
     "title": "David Treece",
     "name": "David Treece",
@@ -96,7 +168,7 @@
     "source": "Acquisition Targets"
   },
   {
-    "id": 9,
+    "id": 15,
     "section": "acquisition",
     "title": "Stuart Chamberlin, CFS",
     "name": "Stuart Chamberlin, CFS",
@@ -108,7 +180,7 @@
     "source": "Acquisition Targets"
   },
   {
-    "id": 10,
+    "id": 16,
     "section": "acquisition",
     "title": "Steven Fenyves, CFP, CFS",
     "name": "Steven Fenyves, CFP, CFS",
@@ -120,7 +192,7 @@
     "source": "Acquisition Targets"
   },
   {
-    "id": 11,
+    "id": 17,
     "section": "acquisition",
     "title": "Manual FINRA/IAPD searches",
     "name": "Manual FINRA/IAPD searches",
@@ -132,31 +204,31 @@
     "source": "FINRA Scanner"
   },
   {
-    "id": 12,
-    "section": "vul",
-    "title": "Nelson Gonzalez",
-    "name": "Nelson Gonzalez",
-    "company": "",
+    "id": 18,
+    "section": "cpa-partners",
+    "title": "Nicholas L. Samuel, CPA / Samuel & Associates - Location: Miami, FL (virtual CPA firm)",
+    "name": "Nicholas L. Samuel, CPA / Samuel & Associates",
+    "company": "Location: Miami, FL (virtual CPA firm)",
     "status": "prospect",
-    "aum": 10000000,
-    "details": "**Profession:** Senior Vice President, Luxury Real Estate\n\n**Income Signal:** $4 billion in career sales, named #1 agent worldwide across 40,000+ Berkshire Hathaway agents, regularly brokers $10M+ waterfront estates\n\n**Vul Fit Reason:** At peak earnings with extraordinary commission income; needs tax-advantaged wealth accumulation beyond maxed retirement accounts, plus estate planning for permanent coverage with investment growth.\n\n**Heat:** HOT\n\n**Trigger Event:** Just named #1 agent worldwide in Berkshire Hathaway network (announced April 2, 2026) with recent $74.25M sale",
-    "approach": "Congratulations on the #1 ranking\u2014with commission income at this level, have you explored how VUL can create a tax-free wealth accumulation vehicle while providing the permanent coverage your estate plan needs?",
-    "source": "VUL Monitor"
+    "aum": 2000000,
+    "details": "**Specialty:** Solo entrepreneurs, small businesses, high-net-worth individuals - tax planning and investment management\n\n**Why No Advisor Partner:** Website mentions \"investment services\" but Nicholas is both CPA AND RIA (registered investment advisor) - no separate financial advisor partner listed; he wears both hats himself which means clients may want a *separate* advisor perspective\n\n**Client Profile Match:** Serves business owners and HNW individuals - perfect overlap with James's $400K+ income / $2-10M net worth target; also serves entrepreneurs navigating growth\n\n**Heat:** WARM\n\n**Approach:** \"Nicholas, I see you're handling both the CPA and investment advisory side for your clients. I work with successful business owners and entrepreneurs in Miami who value having a CPA-advisor team approach - where tax strategy and investment planning w",
+    "approach": "Nicholas, I see you're handling both the CPA and investment advisory side for your clients. I work with successful business owners and entrepreneurs in Miami who value having a CPA-advisor team approach - where tax strategy and investment planning work hand-in-hand but come from separate specialists. I'm with Equitable Advisors in Brickell and focus on comprehensive financial planning for clients in that $400K-$2M income range. Would you be open to a coffee to explore whether a referral relationship might add value for some of your clients?",
+    "source": "CPA Finder"
   },
   {
-    "id": 13,
-    "section": "vul",
-    "title": "Marc Elkman",
-    "name": "Marc Elkman",
-    "company": "",
+    "id": 19,
+    "section": "cpa-partners",
+    "title": "Edward D. Quilca, CPA / Quilca CPA Group - Location: Miami, FL",
+    "name": "Edward D. Quilca, CPA / Quilca CPA Group",
+    "company": "Location: Miami, FL",
     "status": "prospect",
-    "aum": 100000000,
-    "details": "**Profession:** Founder & CEO, Empire Development (luxury real estate development)\n\n**Income Signal:** $100M+ active project portfolio, sells spec homes $5M-$21M range, sold previous tech company (Fresh Meal Plan) for multi-millions\n\n**Vul Fit Reason:** Business owner in peak earning years with lumpy income from large development sales; VUL provides tax-efficient accumulation, permanent coverage for estate taxes, and asset protection benefits.\n\n**Heat:** WARM\n\n**Trigger Event:** Recently featured for Empire Development's success and expansion (April 1, 2026), multiple high-value properties closing",
-    "approach": "With your development projects generating such significant income spikes, VUL could help you smooth out tax exposure while building protected wealth outside the business\u2014especially valuable for estate planning on those multi-million dollar pay\u2026",
-    "source": "VUL Monitor"
+    "aum": 0,
+    "details": "**Specialty:** Startups, small businesses, real estate investors, high-net-worth individuals - international tax planning\n\n**Why No Advisor Partner:** No financial advisor listed on website or LinkedIn; firm focuses purely on accounting, tax, bookkeeping, and tax compliance\n\n**Client Profile Match:** Serves HNW individuals and small business owners - many likely in James's target income/net worth range; real estate investors often have complex financial planning needs beyond tax\n\n**Heat:** HOT\n\n**Approach:** \"Edward, I came across Quilca CPA Group and was impressed by your focus on real est\u2026",
+    "approach": "Edward, I came across Quilca CPA Group and was impressed by your focus on real est\u2026",
+    "source": "CPA Finder"
   },
   {
-    "id": 14,
+    "id": 20,
     "section": "estate-attorneys",
     "title": "Yanitza Schoonover - Solo Practice",
     "name": "Yanitza Schoonover",
@@ -168,7 +240,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 15,
+    "id": 21,
     "section": "estate-attorneys",
     "title": "Denise Jomarron - Denise Jomarron Legal Group",
     "name": "Denise Jomarron",
@@ -180,7 +252,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 16,
+    "id": 22,
     "section": "warm-intros",
     "title": "Sumit Singh",
     "name": "Sumit Singh",
@@ -192,7 +264,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 17,
+    "id": 23,
     "section": "warm-intros",
     "title": "Seema Chaturvedi",
     "name": "Seema Chaturvedi",
@@ -204,7 +276,31 @@
     "source": "Warm Intros"
   },
   {
-    "id": 18,
+    "id": 24,
+    "section": "vul",
+    "title": "Nelson Gonzalez",
+    "name": "Nelson Gonzalez",
+    "company": "",
+    "status": "prospect",
+    "aum": 10000000,
+    "details": "**Profession:** Senior Vice President, Luxury Real Estate\n\n**Income Signal:** $4 billion in career sales, named #1 agent worldwide across 40,000+ Berkshire Hathaway agents, regularly brokers $10M+ waterfront estates\n\n**Vul Fit Reason:** At peak earnings with extraordinary commission income; needs tax-advantaged wealth accumulation beyond maxed retirement accounts, plus estate planning for permanent coverage with investment growth.\n\n**Heat:** HOT\n\n**Trigger Event:** Just named #1 agent worldwide in Berkshire Hathaway network (announced April 2, 2026) with recent $74.25M sale",
+    "approach": "Congratulations on the #1 ranking\u2014with commission income at this level, have you explored how VUL can create a tax-free wealth accumulation vehicle while providing the permanent coverage your estate plan needs?",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 25,
+    "section": "vul",
+    "title": "Marc Elkman",
+    "name": "Marc Elkman",
+    "company": "",
+    "status": "prospect",
+    "aum": 100000000,
+    "details": "**Profession:** Founder & CEO, Empire Development (luxury real estate development)\n\n**Income Signal:** $100M+ active project portfolio, sells spec homes $5M-$21M range, sold previous tech company (Fresh Meal Plan) for multi-millions\n\n**Vul Fit Reason:** Business owner in peak earning years with lumpy income from large development sales; VUL provides tax-efficient accumulation, permanent coverage for estate taxes, and asset protection benefits.\n\n**Heat:** WARM\n\n**Trigger Event:** Recently featured for Empire Development's success and expansion (April 1, 2026), multiple high-value properties closing",
+    "approach": "With your development projects generating such significant income spikes, VUL could help you smooth out tax exposure while building protected wealth outside the business\u2014especially valuable for estate planning on those multi-million dollar pay\u2026",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 26,
     "section": "lead-radar",
     "title": "Natalie Rodriguez - Role/Company: Promoted from CFO to CEO, Coral Gables Hospital",
     "name": "Natalie Rodriguez",
@@ -216,7 +312,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 19,
+    "id": 27,
     "section": "lead-radar",
     "title": "Eyal E. Halali - Transaction: Sold 12-unit Ocean Wave Apartments at 2100 Miami Road, Fort Lauderdale for $9M, April 3, 2026",
     "name": "Eyal E. Halali",
@@ -228,7 +324,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 20,
+    "id": 28,
     "section": "lead-radar",
     "title": "Idan Gotlib - Transaction: Co-sold 12-unit Ocean Wave Apartments at 2100 Miami Road, Fort Lauderdale for $9M (with Eyal Halali and Michal Peled Gotlib), April 3, 2026",
     "name": "Idan Gotlib",
@@ -240,7 +336,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 21,
+    "id": 29,
     "section": "lead-radar",
     "title": "Allen Chelminsky - Transaction: Sold warehouse at 1095 NW Broken Sound Parkway, Boca Raton for $12.7M, April 3, 2026 (bought 2023 for $10.8M)",
     "name": "Allen Chelminsky",
@@ -252,7 +348,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 22,
+    "id": 30,
     "section": "lead-radar",
     "title": "Dr. Sandeep Kulkarni - Transaction: Purchased $15M Pinecrest mansion at 9400 SW 60th Court, April 2, 2026",
     "name": "Dr. Sandeep Kulkarni",
@@ -264,7 +360,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 23,
+    "id": 31,
     "section": "lead-radar",
     "title": "Carlos Hernandez - Previous employer: Baptist Health (VP and COO at Doctors Hospital & West Kendall Baptist Hospital)",
     "name": "Carlos Hernandez",
@@ -276,7 +372,7 @@
     "source": "LinkedIn Jobs"
   },
   {
-    "id": 24,
+    "id": 32,
     "section": "lead-radar",
     "title": "Nathaniel Ortiz - Previous employer: Baptist Health Baptist Hospital (COO)",
     "name": "Nathaniel Ortiz",
@@ -288,7 +384,7 @@
     "source": "LinkedIn Jobs"
   },
   {
-    "id": 25,
+    "id": 33,
     "section": "estate-attorneys",
     "title": "Anwar E. Hadeed - Hadeed Legal",
     "name": "Anwar E. Hadeed",
@@ -300,7 +396,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 26,
+    "id": 34,
     "section": "vul",
     "title": "Fred Fontes",
     "name": "Fred Fontes",
@@ -312,7 +408,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 27,
+    "id": 35,
     "section": "vul",
     "title": "Shayn March",
     "name": "Shayn March",
@@ -324,7 +420,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 28,
+    "id": 36,
     "section": "cpa-partners",
     "title": "Quilca CPA Group - Location: Miami, FL",
     "name": "Quilca CPA Group",
@@ -336,7 +432,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 29,
+    "id": 37,
     "section": "cpa-partners",
     "title": "Damian Landeiro CPA, PA - Location: Miami, FL",
     "name": "Damian Landeiro CPA, PA",
@@ -348,7 +444,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 30,
+    "id": 38,
     "section": "cpa-partners",
     "title": "MiamiCPA LLC (North Miami) - Location: North Miami, FL",
     "name": "MiamiCPA LLC (North Miami)",
@@ -360,7 +456,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 31,
+    "id": 39,
     "section": "lead-radar",
     "title": "Simon Elliott and Chantal Elliott - Transaction: Sold Fort Lauderdale waterfront home at 600 Fifth Key Drive for $21.8M (March 4, 2026)",
     "name": "Simon Elliott and Chantal Elliott",
@@ -372,7 +468,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 32,
+    "id": 40,
     "section": "lead-radar",
     "title": "Carlo Giovannetti - Transaction: Sold Miami Beach waterfront home at 84 La Gorce Circle for $31.5M (March 31, 2026) with Davor Ninkovic",
     "name": "Carlo Giovannetti",
@@ -384,7 +480,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 33,
+    "id": 41,
     "section": "estate-attorneys",
     "title": "Alain Roman - Law Office of Alain Roman, PLLC",
     "name": "Alain Roman",
@@ -396,7 +492,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 34,
+    "id": 42,
     "section": "lead-radar",
     "title": "Drew Grossman - Role/Company: CEO, Fishermen's Community Hospital & Mariners Hospital (Florida Keys/Baptist Health)",
     "name": "Drew Grossman",
@@ -408,7 +504,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 35,
+    "id": 43,
     "section": "lead-radar",
     "title": "Kevin Douglas - Transaction: Sold Palm Beach oceanfront mansion at 870 S Ocean Blvd for $37.1M, March 2026 (purchased 2021 for $28.5M)",
     "name": "Kevin Douglas",
@@ -420,7 +516,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 36,
+    "id": 44,
     "section": "lead-radar",
     "title": "William Karol - Transaction: Sold Miami Beach condo at 501 West Ave for $13M, March 2026 (~$1,900/sf)",
     "name": "William Karol",
@@ -432,7 +528,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 37,
+    "id": 45,
     "section": "lead-radar",
     "title": "Amir Kermani - Transaction: Sold Miami Beach mansion at 4340 N Bay Road for $23.4M, March 2026",
     "name": "Amir Kermani",
@@ -444,7 +540,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 38,
+    "id": 46,
     "section": "estate-attorneys",
     "title": "Alain E. Roman - The Law Office of Alain Roman, PLLC",
     "name": "Alain E. Roman",
@@ -456,7 +552,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 39,
+    "id": 47,
     "section": "indian-network",
     "title": "Yash Daftary",
     "name": "Yash Daftary",
@@ -468,7 +564,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 40,
+    "id": 48,
     "section": "warm-intros",
     "title": "Anil Gajwani - EnCircle Payments / TiE Miami",
     "name": "Anil Gajwani",
@@ -480,7 +576,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 41,
+    "id": 49,
     "section": "warm-intros",
     "title": "Satish Mehta - Chewy",
     "name": "Satish Mehta",
@@ -492,7 +588,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 42,
+    "id": 50,
     "section": "lead-radar",
     "title": "Nicos Katsoulis - Transaction: Sold 4BR home at 3215 S Flagler Dr, West Palm Beach for $10.5M, March 18, 2026 (bought 2018 for $3.6M)",
     "name": "Nicos Katsoulis",
@@ -504,7 +600,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 43,
+    "id": 51,
     "section": "lead-radar",
     "title": "Jorge Carmenate - Transaction: Sold Colonial Assisted Living facility (68 units), Lauderhill for $20M, March 2026 (bought 2024 for $8M)",
     "name": "Jorge Carmenate",
@@ -516,7 +612,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 44,
+    "id": 52,
     "section": "lead-radar",
     "title": "Anthony Hernandez - Transaction: Sold waterfront home at 416 S Lake Dr, Lantana for $8.4M, March 27, 2026 (via Illustrated Properties LLC with wife Kimberly)",
     "name": "Anthony Hernandez",
@@ -528,7 +624,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 45,
+    "id": 53,
     "section": "vul",
     "title": "Dr. Henry Rodriguez-Martin",
     "name": "Dr. Henry Rodriguez-Martin",
@@ -540,7 +636,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 46,
+    "id": 54,
     "section": "vul",
     "title": "Bernie Pastor",
     "name": "Bernie Pastor",
@@ -552,7 +648,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 47,
+    "id": 55,
     "section": "cpa-partners",
     "title": "Adalberto Parra, CPA - Location: Miami, FL (555 NE 15th Street - Downtown)",
     "name": "Adalberto Parra, CPA",
@@ -564,7 +660,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 48,
+    "id": 56,
     "section": "lead-radar",
     "title": "Alejandro Gravier - Transaction: Sold newly-built waterfront home at 1041 North Venetian Drive for $17.3M, March 2026",
     "name": "Alejandro Gravier",
@@ -576,7 +672,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 49,
+    "id": 57,
     "section": "indian-network",
     "title": "Shatabdi Sharma",
     "name": "Shatabdi Sharma",
@@ -588,7 +684,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 50,
+    "id": 58,
     "section": "lead-radar",
     "title": "Salvatore Longo - Transaction: Sold Fort Lauderdale waterfront mansion at 2 Pelican Drive for $21.5M, February 2026 (purchased 2017 for $11M)",
     "name": "Salvatore Longo",
@@ -600,7 +696,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 51,
+    "id": 59,
     "section": "lead-radar",
     "title": "Allan Hubbard - Transaction: Sold North Palm Beach condo at 11050 Turtle Beach Road for $8.8M, March 2026 (purchased 2021 for $6.6M)",
     "name": "Allan Hubbard",
@@ -612,7 +708,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 52,
+    "id": 60,
     "section": "vul",
     "title": "Patty Da Silva",
     "name": "Patty Da Silva",
@@ -624,7 +720,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 53,
+    "id": 61,
     "section": "vul",
     "title": "Margit Brandt",
     "name": "Margit Brandt",
@@ -636,7 +732,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 54,
+    "id": 62,
     "section": "lead-radar",
     "title": "Raymond Perez - Baptist Health Rehabilitation Hospital",
     "name": "Raymond Perez",
@@ -648,7 +744,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 55,
+    "id": 63,
     "section": "lead-radar",
     "title": "Edward Farscht - CEO, Diamond Communications",
     "name": "Edward Farscht",
@@ -660,7 +756,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 56,
+    "id": 64,
     "section": "estate-attorneys",
     "title": "Monique Lavender Greenberg - Lavender Greenberg PLLC",
     "name": "Monique Lavender Greenberg",
@@ -672,7 +768,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 57,
+    "id": 65,
     "section": "estate-attorneys",
     "title": "Peter A. Dyson - The Estate Plan",
     "name": "Peter A. Dyson",
@@ -684,7 +780,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 58,
+    "id": 66,
     "section": "indian-network",
     "title": "Dr. Arun Garg - Role: Physician, Biochemist, and Global Health Leader (Vancouver-based)",
     "name": "Dr. Arun Garg",
@@ -696,7 +792,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 59,
+    "id": 67,
     "section": "indian-network",
     "title": "Ravishankar Bhooplapur - Role: Chairman of Association of Indians in America, Founder/President of Xavier University School of Medicine (Aruba)",
     "name": "Ravishankar Bhooplapur",
@@ -708,7 +804,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 60,
+    "id": 68,
     "section": "cpa-partners",
     "title": "Victor Delerme, CPA - Delerme CPA",
     "name": "Victor Delerme, CPA",
@@ -720,7 +816,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 61,
+    "id": 69,
     "section": "cpa-partners",
     "title": "Edgar Gomez, CPA, MST, MBA - E. Gomez CPA LLC",
     "name": "Edgar Gomez, CPA, MST, MBA",
@@ -732,7 +828,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 62,
+    "id": 70,
     "section": "cpa-partners",
     "title": "Edward D. Quilca, CPA - Quilca CPA Group",
     "name": "Edward D. Quilca, CPA",
@@ -744,7 +840,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 63,
+    "id": 71,
     "section": "cpa-partners",
     "title": "Alvaro Acevedo Jr., JD, CPA - Brickell Accountants",
     "name": "Alvaro Acevedo Jr., JD, CPA",
@@ -756,7 +852,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 64,
+    "id": 72,
     "section": "cpa-partners",
     "title": "Mongio & Associates, CPAs",
     "name": "Mongio & Associates, CPAs",
@@ -768,7 +864,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 65,
+    "id": 73,
     "section": "vul",
     "title": "Teri Kaye - CohnReznick",
     "name": "Teri Kaye",
@@ -780,7 +876,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 66,
+    "id": 74,
     "section": "vul",
     "title": "Martha M. Ferral - Shutts & Bowen",
     "name": "Martha M. Ferral",
@@ -792,7 +888,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 67,
+    "id": 75,
     "section": "vul",
     "title": "Daniela F. Cimo - Weiss Serota Helfman Cole + Bierman",
     "name": "Daniela F. Cimo",
@@ -804,7 +900,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 68,
+    "id": 76,
     "section": "acquisition",
     "title": "Mauro Guerra - Guerra Wealth Advisors",
     "name": "Mauro Guerra",
@@ -815,7 +911,7 @@
     "approach": ""
   },
   {
-    "id": 69,
+    "id": 77,
     "section": "acquisition",
     "title": "Joshua Feller, ChFC",
     "name": "Joshua Feller, ChFC",
@@ -826,7 +922,7 @@
     "approach": ""
   },
   {
-    "id": 70,
+    "id": 78,
     "section": "acquisition",
     "title": "Provenance Wealth Advisors Partners",
     "name": "Provenance Wealth Advisors Partners",
@@ -837,7 +933,7 @@
     "approach": ""
   },
   {
-    "id": 71,
+    "id": 79,
     "section": "acquisition",
     "title": "Northstar Financial Planners Team",
     "name": "Northstar Financial Planners Team",
@@ -848,7 +944,7 @@
     "approach": ""
   },
   {
-    "id": 72,
+    "id": 80,
     "category": "acquisition",
     "triggerEvent": "Founded 2015 (11 years). Coral Gables. Independent RIA serving U.S. and international clients. Too young for immediate succession but good future pipe",
     "prospectName": "Jaime Domenech Macias",
@@ -871,7 +967,7 @@
     "title": "Jaime Domenech Macias"
   },
   {
-    "id": 73,
+    "id": 81,
     "category": "acquisition",
     "triggerEvent": "Founded 2000 as TBK Investments, sold to major bank 2007 (GenSpring), re-established as independent WE Family Offices 2013. Now serves 80+ UHNW famili",
     "prospectName": "Santiago Ulloa",
