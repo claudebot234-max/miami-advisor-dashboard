@@ -169,42 +169,6 @@
   },
   {
     "id": 15,
-    "section": "vul",
-    "title": "Brian Schwartz",
-    "name": "Brian Schwartz",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Profession:** Chief Executive Officer, H.I.G. Capital (Miami-based private equity)\n\n**Income Signal:** CEO of $74B global private equity firm, decades of senior leadership compensation\n\n**Vul Fit Reason:** At peak wealth accumulation phase with massive concentrated wealth that needs estate planning protection, tax efficiency, and legacy structure. VUL offers permanent death benefit while allowing investment in private equity-style sub-accounts.\n\n**Heat:** WARM\n\n**Trigger Event:** Promoted to CEO of H.I.G. Capital effective April 7, 2026 after 30+ years with the firm",
-    "approach": "Congratulations on the CEO appointment\u2014at this inflection point, have you revisited your estate and legacy planning to match your new responsibilities?",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 16,
-    "section": "vul",
-    "title": "Doug Berman",
-    "name": "Doug Berman",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Profession:** Co-President, H.I.G. Capital (Head of U.S. Private Equity)\n\n**Income Signal:** Promoted to Co-President of $74B firm, 28 years at H.I.G., oversees multi-billion dollar PE platform\n\n**Vul Fit Reason:** Age 50s likely, in peak earning years with promotion boost. VUL provides permanent insurance for estate equalization (multi-child scenarios common in PE world) plus tax-deferred growth for non-qualified assets.\n\n**Heat:** WARM\n\n**Trigger Event:** Promoted to Co-President in April 2026 alongside Brian Schwartz",
-    "approach": "Big move to Co-President\u2014have you stress-tested your estate plan for the increased net worth trajectory this brings?",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 17,
-    "section": "vul",
-    "title": "Nelson Gonzalez",
-    "name": "Nelson Gonzalez",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Profession:** #1 Real Estate Agent Worldwide, Berkshire Hathaway HomeServices EWM Realty (Miami)\n\n**Income Signal:** $4+ billion in career sales, just clo\u2026",
-    "approach": "",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 18,
     "section": "cpa-partners",
     "title": "Dave Miller CPA - Location: Miami (Brickell area), FL",
     "name": "Dave Miller CPA",
@@ -216,7 +180,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 19,
+    "id": 16,
     "section": "cpa-partners",
     "title": "Edward Quilca - Quilca CPA Group",
     "name": "Edward Quilca",
@@ -228,7 +192,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 20,
+    "id": 17,
     "section": "cpa-partners",
     "title": "REG & Advisors CPA - Location: Miami, FL",
     "name": "REG & Advisors CPA",
@@ -240,7 +204,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 21,
+    "id": 18,
     "section": "estate-attorneys",
     "title": "Anwar E. Hadeed - Hadeed Legal",
     "name": "Anwar E. Hadeed",
@@ -252,7 +216,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 22,
+    "id": 19,
     "section": "estate-attorneys",
     "title": "Alain Roman - The Law Office of Alain Roman, PLLC",
     "name": "Alain Roman",
@@ -262,6 +226,42 @@
     "details": "\ud83d\udccd Doral, FL (8180 NW 36th Street, Suite 224)\n\n**Specialty:** Estate planning, probate, guardianship. Emphasis on exceptional customer service and accessibility.\n\n**Evidence Of No Advisor Partner:** Website mentions working \"closely with financial advisors, accountants, realtors, and insurance professionals\" but lists no specific partner by name. Active on LinkedIn posting estate planning content without tagging advisors\u2014suggests he's networking",
     "approach": "",
     "source": "Attorney Finder"
+  },
+  {
+    "id": 20,
+    "section": "vul",
+    "title": "Brian Schwartz",
+    "name": "Brian Schwartz",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Profession:** Chief Executive Officer, H.I.G. Capital (Miami-based private equity)\n\n**Income Signal:** CEO of $74B global private equity firm, decades of senior leadership compensation\n\n**Vul Fit Reason:** At peak wealth accumulation phase with massive concentrated wealth that needs estate planning protection, tax efficiency, and legacy structure. VUL offers permanent death benefit while allowing investment in private equity-style sub-accounts.\n\n**Heat:** WARM\n\n**Trigger Event:** Promoted to CEO of H.I.G. Capital effective April 7, 2026 after 30+ years with the firm",
+    "approach": "Congratulations on the CEO appointment\u2014at this inflection point, have you revisited your estate and legacy planning to match your new responsibilities?",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 21,
+    "section": "vul",
+    "title": "Doug Berman",
+    "name": "Doug Berman",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Profession:** Co-President, H.I.G. Capital (Head of U.S. Private Equity)\n\n**Income Signal:** Promoted to Co-President of $74B firm, 28 years at H.I.G., oversees multi-billion dollar PE platform\n\n**Vul Fit Reason:** Age 50s likely, in peak earning years with promotion boost. VUL provides permanent insurance for estate equalization (multi-child scenarios common in PE world) plus tax-deferred growth for non-qualified assets.\n\n**Heat:** WARM\n\n**Trigger Event:** Promoted to Co-President in April 2026 alongside Brian Schwartz",
+    "approach": "Big move to Co-President\u2014have you stress-tested your estate plan for the increased net worth trajectory this brings?",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 22,
+    "section": "vul",
+    "title": "Nelson Gonzalez",
+    "name": "Nelson Gonzalez",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Profession:** #1 Real Estate Agent Worldwide, Berkshire Hathaway HomeServices EWM Realty (Miami)\n\n**Income Signal:** $4+ billion in career sales, just clo\u2026",
+    "approach": "",
+    "source": "VUL Monitor"
   },
   {
     "id": 23,
