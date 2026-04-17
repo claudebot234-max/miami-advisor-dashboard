@@ -97,66 +97,6 @@
   },
   {
     "id": 9,
-    "section": "vul",
-    "title": "Dr. I-wen Wang",
-    "name": "Dr. I-wen Wang",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Profession:** Board-certified cardiothoracic surgeon, Director of Perfusion at Baptist Health Miami Cardiac & Vascular Institute\n\n**Income Signal:** Director-level hospital position, internationally recognized expert in heart transplantation and mechanical circulatory support, extensive academic credentials (MD, PhD)\n\n**Vul Fit Reason:** Peak earning physician (45-60 age range typical for director-level hospital roles) who has maxed out traditional retirement vehicles and needs tax-advantaged wealth accumulation with permanent life insurance for estate planning.\n\n**Heat:** WARM\n\n**Trigger Event:** Just joined Baptist Health Miami in early April 2026 as director of perfusion, likely with significant compensation package increase",
-    "approach": "Congratulations on your new role at Baptist Health. As you're settling into this director position, many physicians at your level explore VUL to supplement retirement savings beyond the 401(k) limits while building tax-free income for the future.",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 10,
-    "section": "vul",
-    "title": "Brian Schwartz",
-    "name": "Brian Schwartz",
-    "company": "",
-    "status": "prospect",
-    "aum": 10000000,
-    "details": "**Profession:** Chief Executive Officer of H.I.G. Capital ($74 billion alternative investment firm)\n\n**Income Signal:** CEO of major Miami-based private equity firm managing $74B, 30+ year veteran partner at the firm, targeting $100B AUM\n\n**Vul Fit Reason:** Ultra-high-income executive in peak earning years who needs sophisticated estate planning tools and tax-advantaged wealth transfer strategies for a likely $10M+ net worth.\n\n**Heat:** COLD\n\n**Trigger Event:** Promoted to CEO on April 7, 2026 (first non-founder CEO in firm's 33-year history)",
-    "approach": "Congratulations on becoming CEO of H.I.G. Capital. Many private equity executives at your level use VUL as part of their estate planning to create tax-free legacy wealth alongside their carried interest.",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 11,
-    "section": "cpa-partners",
-    "title": "MiamiCPA LLC - Location: North Miami, FL",
-    "name": "MiamiCPA LLC",
-    "company": "Location: North Miami, FL",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Specialty:** Medical professionals, physicians, medical practices\n\n**Why No Advisor Partner:** Website focuses exclusively on CPA/tax services with no mention of wealth management or advisor partnerships\n\n**Client Profile Match:** Physicians earning $400K+ with high tax burden fit James's sweet spot; site mentions \"lowering tax burden\" and \"bonus compensation plans\" indicating high-earning clients\n\n**Heat:** WARM\n\n**Approach:** \"I work with physicians who've built strong practices but want a financial partner who understands stock options, practice sales, and tax-efficient wealth strategies beyond just filing returns. Let's grab coffee in Brickell and talk about how we can ",
-    "approach": "I work with physicians who've built strong practices but want a financial partner who understands stock options, practice sales, and tax-efficient wealth strategies beyond just filing returns. Let's grab coffee in Brickell and talk about how we can serve your clients together.",
-    "source": "CPA Finder"
-  },
-  {
-    "id": 12,
-    "section": "cpa-partners",
-    "title": "Quilca CPA Group - Location: Miami, FL",
-    "name": "Quilca CPA Group",
-    "company": "Location: Miami, FL",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Specialty:** Real estate investors, high net worth individuals, startups, small businesses\n\n**Why No Advisor Partner:** Boutique firm focused on accounting/tax with no financial planning or advisor listed on website\n\n**Client Profile Match:** \"High Net Worth Individuals\" and real estate investors in $2-10M range are ideal for James's investment + insurance strategies\n\n**Heat:** HOT\n\n**Approach:** \"Your real estate investor clients need more than tax strategy\u2014they need asset protection, estate planning, and investment diversification. I specialize in VUL structures for HNW investors. Let's explore a referral partnership that adds value to your",
-    "approach": "Your real estate investor clients need more than tax strategy\u2014they need asset protection, estate planning, and investment diversification. I specialize in VUL structures for HNW investors. Let's explore a referral partnership that adds value to your clients without overlap.",
-    "source": "CPA Finder"
-  },
-  {
-    "id": 13,
-    "section": "cpa-partners",
-    "title": "Langolf CPA, PA - Location: Hallandale Beach, FL (North Miami Beach area)",
-    "name": "Langolf CPA, PA",
-    "company": "Location: Hallandale Beach, FL (North Miami Beach area)",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Specialty:** Small business owners, executives, independent professionals\n\n**Why No Advisor Partner:** Solo founder (Yulia Langolf) with no advisor or wealth management mentioned; focus on tax planning and bookkeeping\n\n**Client Profile Match:** Site mentions \"business owners\" and \"independent professionals\"\u2014consultants, executives earning $400K+ who need investment pl\u2026",
-    "approach": "",
-    "source": "CPA Finder"
-  },
-  {
-    "id": 14,
     "section": "estate-attorneys",
     "title": "Denise Jomarron - Denise Jomarron Legal Group",
     "name": "Denise Jomarron",
@@ -168,7 +108,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 15,
+    "id": 10,
     "section": "estate-attorneys",
     "title": "Alain Roman - Law Office of Alain Roman, PLLC",
     "name": "Alain Roman",
@@ -178,6 +118,66 @@
     "details": "\ud83d\udccd Doral, FL\n\n**Specialty:** Estate planning, probate, guardianship for individuals and families\n\n**Evidence Of No Advisor Partner:** Solo practitioner founded practice recently. Website emphasizes \"accessible\" and \"transparent\" approach\u2014no financial advisor mentioned in values or team section. Active on local Doral community building\u2014likely hasn't locked in established COI relatio\n\n**Client Profile Match:** Excellent. Doral has massive Latin American HNW population ($2M-$10M net worth) age 40-60. His \"estate planning for everyone\" posit\u2026",
     "approach": "",
     "source": "Attorney Finder"
+  },
+  {
+    "id": 11,
+    "section": "vul",
+    "title": "Dr. I-wen Wang",
+    "name": "Dr. I-wen Wang",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Profession:** Board-certified cardiothoracic surgeon, Director of Perfusion at Baptist Health Miami Cardiac & Vascular Institute\n\n**Income Signal:** Director-level hospital position, internationally recognized expert in heart transplantation and mechanical circulatory support, extensive academic credentials (MD, PhD)\n\n**Vul Fit Reason:** Peak earning physician (45-60 age range typical for director-level hospital roles) who has maxed out traditional retirement vehicles and needs tax-advantaged wealth accumulation with permanent life insurance for estate planning.\n\n**Heat:** WARM\n\n**Trigger Event:** Just joined Baptist Health Miami in early April 2026 as director of perfusion, likely with significant compensation package increase",
+    "approach": "Congratulations on your new role at Baptist Health. As you're settling into this director position, many physicians at your level explore VUL to supplement retirement savings beyond the 401(k) limits while building tax-free income for the future.",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 12,
+    "section": "vul",
+    "title": "Brian Schwartz",
+    "name": "Brian Schwartz",
+    "company": "",
+    "status": "prospect",
+    "aum": 10000000,
+    "details": "**Profession:** Chief Executive Officer of H.I.G. Capital ($74 billion alternative investment firm)\n\n**Income Signal:** CEO of major Miami-based private equity firm managing $74B, 30+ year veteran partner at the firm, targeting $100B AUM\n\n**Vul Fit Reason:** Ultra-high-income executive in peak earning years who needs sophisticated estate planning tools and tax-advantaged wealth transfer strategies for a likely $10M+ net worth.\n\n**Heat:** COLD\n\n**Trigger Event:** Promoted to CEO on April 7, 2026 (first non-founder CEO in firm's 33-year history)",
+    "approach": "Congratulations on becoming CEO of H.I.G. Capital. Many private equity executives at your level use VUL as part of their estate planning to create tax-free legacy wealth alongside their carried interest.",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 13,
+    "section": "cpa-partners",
+    "title": "MiamiCPA LLC - Location: North Miami, FL",
+    "name": "MiamiCPA LLC",
+    "company": "Location: North Miami, FL",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Specialty:** Medical professionals, physicians, medical practices\n\n**Why No Advisor Partner:** Website focuses exclusively on CPA/tax services with no mention of wealth management or advisor partnerships\n\n**Client Profile Match:** Physicians earning $400K+ with high tax burden fit James's sweet spot; site mentions \"lowering tax burden\" and \"bonus compensation plans\" indicating high-earning clients\n\n**Heat:** WARM\n\n**Approach:** \"I work with physicians who've built strong practices but want a financial partner who understands stock options, practice sales, and tax-efficient wealth strategies beyond just filing returns. Let's grab coffee in Brickell and talk about how we can ",
+    "approach": "I work with physicians who've built strong practices but want a financial partner who understands stock options, practice sales, and tax-efficient wealth strategies beyond just filing returns. Let's grab coffee in Brickell and talk about how we can serve your clients together.",
+    "source": "CPA Finder"
+  },
+  {
+    "id": 14,
+    "section": "cpa-partners",
+    "title": "Quilca CPA Group - Location: Miami, FL",
+    "name": "Quilca CPA Group",
+    "company": "Location: Miami, FL",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Specialty:** Real estate investors, high net worth individuals, startups, small businesses\n\n**Why No Advisor Partner:** Boutique firm focused on accounting/tax with no financial planning or advisor listed on website\n\n**Client Profile Match:** \"High Net Worth Individuals\" and real estate investors in $2-10M range are ideal for James's investment + insurance strategies\n\n**Heat:** HOT\n\n**Approach:** \"Your real estate investor clients need more than tax strategy\u2014they need asset protection, estate planning, and investment diversification. I specialize in VUL structures for HNW investors. Let's explore a referral partnership that adds value to your",
+    "approach": "Your real estate investor clients need more than tax strategy\u2014they need asset protection, estate planning, and investment diversification. I specialize in VUL structures for HNW investors. Let's explore a referral partnership that adds value to your clients without overlap.",
+    "source": "CPA Finder"
+  },
+  {
+    "id": 15,
+    "section": "cpa-partners",
+    "title": "Langolf CPA, PA - Location: Hallandale Beach, FL (North Miami Beach area)",
+    "name": "Langolf CPA, PA",
+    "company": "Location: Hallandale Beach, FL (North Miami Beach area)",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Specialty:** Small business owners, executives, independent professionals\n\n**Why No Advisor Partner:** Solo founder (Yulia Langolf) with no advisor or wealth management mentioned; focus on tax planning and bookkeeping\n\n**Client Profile Match:** Site mentions \"business owners\" and \"independent professionals\"\u2014consultants, executives earning $400K+ who need investment pl\u2026",
+    "approach": "",
+    "source": "CPA Finder"
   },
   {
     "id": 16,
