@@ -1,42 +1,6 @@
 [
   {
     "id": 1,
-    "section": "lead-radar",
-    "title": "Restricted Access",
-    "name": "Restricted Access",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "",
-    "approach": "",
-    "source": "Probate"
-  },
-  {
-    "id": 2,
-    "section": "lead-radar",
-    "title": "Publication Timing",
-    "name": "Publication Timing",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "",
-    "approach": "",
-    "source": "Probate"
-  },
-  {
-    "id": 3,
-    "section": "lead-radar",
-    "title": "Estate Value Not Public Initially",
-    "name": "Estate Value Not Public Initially",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Recommended Next Steps For James:**\n- **Subscribe to legal notice services** that aggregate probate filings (South Florida Business Journal legal notices, Daily Business Review)\n- **Partner with probate attorneys** who can ethically share non-confidential lead information\n- **Monitor obituaries** in Miami Herald + funeral home websites for high-net-worth individuals (estates often follow 30-60 days later)\n- **Courthouse in-person research**: Visit Miami-Dade Probate Division (73 W Flagler St, Rm 238) to review recent case files directly",
-    "approach": "",
-    "source": "Probate"
-  },
-  {
-    "id": 4,
     "section": "acquisition",
     "title": "David Treece",
     "name": "David Treece",
@@ -48,7 +12,7 @@
     "source": "Acquisition Targets"
   },
   {
-    "id": 5,
+    "id": 2,
     "section": "acquisition",
     "title": "Stuart Chamberlin, CFS",
     "name": "Stuart Chamberlin, CFS",
@@ -60,7 +24,7 @@
     "source": "Acquisition Targets"
   },
   {
-    "id": 6,
+    "id": 3,
     "section": "acquisition",
     "title": "Steven Fenyves, CFP, CFS",
     "name": "Steven Fenyves, CFP, CFS",
@@ -70,6 +34,42 @@
     "details": "\ud83d\udccd Boca Raton, FL (5255 North Federal Highway, Suite 330)\n\n**Firm:** Valued Wealth Management Inc.\n\n**Estimated Aum:** $50M-$150M\n\n**Retirement Signal:** Founded firm 2005 (21 years), serves \"successful professionals preparing for retirement\" which indicates aging client base. Solo founder with small support team (~2 employees). No visible junior advisor or succession plan.\n\n**Heat:** HOT\n\n**Why They Fit:** Perfect profile\u201421-year-old practice, solo founder, retirement-focused clientele, Boca Raton location (affluent market), affiliated with Osaic Wealth (formerly Securities America) making book transfer easier. CFP + CFS credentials indicate quality pr",
     "approach": "Steven, you founded Valued Wealth Management in 2005 and have built a strong retirement planning practice in Boca over 21 years. Most solo practitioners at the 20-year mark start thinking about their own exit strategy. I'm exploring strategic partnerships with established advisors\u2014would you be open to a confidential conversation about what the next 5-10 years look like for you?",
     "source": "Acquisition Targets"
+  },
+  {
+    "id": 4,
+    "section": "lead-radar",
+    "title": "Restricted Access",
+    "name": "Restricted Access",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "",
+    "approach": "",
+    "source": "Probate"
+  },
+  {
+    "id": 5,
+    "section": "lead-radar",
+    "title": "Publication Timing",
+    "name": "Publication Timing",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "",
+    "approach": "",
+    "source": "Probate"
+  },
+  {
+    "id": 6,
+    "section": "lead-radar",
+    "title": "Estate Value Not Public Initially",
+    "name": "Estate Value Not Public Initially",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Recommended Next Steps For James:**\n- **Subscribe to legal notice services** that aggregate probate filings (South Florida Business Journal legal notices, Daily Business Review)\n- **Partner with probate attorneys** who can ethically share non-confidential lead information\n- **Monitor obituaries** in Miami Herald + funeral home websites for high-net-worth individuals (estates often follow 30-60 days later)\n- **Courthouse in-person research**: Visit Miami-Dade Probate Division (73 W Flagler St, Rm 238) to review recent case files directly",
+    "approach": "",
+    "source": "Probate"
   },
   {
     "id": 7,
