@@ -146,17 +146,29 @@
   {
     "id": 13,
     "section": "vul",
-    "title": "Dr. Rachael Nambusi",
-    "name": "Dr. Rachael Nambusi",
+    "title": "Aracibo Quintana",
+    "name": "Aracibo Quintana",
     "company": "",
     "status": "prospect",
-    "aum": 0,
-    "details": "**Profession:** Physician, Founder & Medical Director\n\n**Income Signal:** Founded My Health & Wellness Medical Group in Miami Beach (April 2024), practice now fully operational with advanced medical equipment (DEXA, Emsculpt NEO, red light therapy), multiple revenue streams (DPC, weight loss, aesthetics, occupational healt\n\n**Vul Fit Reason:** High-income physician-entrepreneur in accumulation phase with significant business reinvestment needs, likely maxed traditional retirement vehicles, needs tax-advantaged permanent coverage plus investment growth component\n\n**Heat:** WARM\n\n**Trigger Event:** Practice expansion through 2025-2026, adding advanced equipment and building patient base in affluent Miami Beach market",
-    "approach": "I work with Miami Beach physicians who are transitioning from military practice to private entrepreneurship\u2014congrats on the success of MHW Medical Group. As your income grows, have you looked at how VUL can complement your practice's qualified plans?",
+    "aum": 1000000,
+    "details": "**Profession:** Executive Managing Director, Retail Real Estate Advisory (Cushman & Wakefield)\n\n**Income Signal:** Senior executive at major global CRE firm; 1,000+ retail transactions across 4 continents; former Apple & Nike real estate leadership; likely $500K-$1M+ compensation\n\n**Vul Fit Reason:** Peak earning years (mid-40s-50s), likely maxed traditional retirement accounts, needs tax-advantaged wealth accumulation with death benefit protection for family given high-stakes advisory role.\n\n**Heat:** WARM\n\n**Trigger Event:** Just joined Cushman & Wakefield Miami as Executive Managing Director (May 26, 2026) - major career move representing significant compensation increase",
+    "approach": "Congratulations on the C&W move\u2014big opportunity in Miami's retail boom. As you build your Miami presence, have you looked at VUL as a way to shelter that incremental income beyond your 401k limits?",
     "source": "VUL Monitor"
   },
   {
     "id": 14,
+    "section": "vul",
+    "title": "Marty Arrivo",
+    "name": "Marty Arrivo",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Profession:** Executive Director, Retail Real Estate Advisory (Cushman & Wakefield)\n\n**Income Signal:** 24+ years retail CRE experience, executive director level at global firm handling major mixed-use developments (CityPlace, Related Companies projects); $400K-$700K range\n\n**Vul Fit Reason:** In accumulation phase with significant real estate expertise; VUL real estate sub-account options align with his expertise while providing tax deferral and permanent coverage.\n\n**Heat:** WARM\n\n**Trigger Event:** Joined Cushman & Wakefield Miami (May 26, 2026) alongside Quintana\u2014career advancement moment with likely compensation boost",
+    "approach": "Welcome to C&W\u2014your mixed-use background is perfect timing for Miami. Given your real estate focus, have you explored VUL policies with real estate sub-accounts? It's like building your own tax-free REIT.",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 15,
     "section": "cpa-partners",
     "title": "Quilca CPA Group - Location: Miami, FL (10800 Biscayne Boulevard)",
     "name": "Quilca CPA Group",
@@ -168,7 +180,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 15,
+    "id": 16,
     "section": "cpa-partners",
     "title": "MiamiCPA LLC (Glenn Gopman) - Location: Aventura, FL (20590 West Dixie Highway)",
     "name": "MiamiCPA LLC (Glenn Gopman)",
@@ -180,7 +192,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 16,
+    "id": 17,
     "section": "cpa-partners",
     "title": "Square Accounting LLC (Stevan) - Location: South Florida (Florida-based)",
     "name": "Square Accounting LLC (Stevan)",
@@ -192,7 +204,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 17,
+    "id": 18,
     "section": "estate-attorneys",
     "title": "Anwar E. Hadeed - Hadeed Legal",
     "name": "Anwar E. Hadeed",
@@ -204,7 +216,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 18,
+    "id": 19,
     "section": "estate-attorneys",
     "title": "Geoff Levy - The Levy Firm PLLC",
     "name": "Geoff Levy",
@@ -216,7 +228,43 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 19,
+    "id": 20,
+    "section": "warm-intros",
+    "title": "Yash Daftary",
+    "name": "Yash Daftary",
+    "company": "",
+    "status": "prospect",
+    "aum": 20000000,
+    "details": "**Role:** Founder & CEO, FanBasis (raised $20M Series A)\n\n**Community Connection:** Forbes 30 Under 30 2026, Miami-based tech entrepreneur, Indian-American\n\n**Warm Intro Path:** Through TiE Miami network or IUCC South Florida tech committee; likely knows Lakshmi Natarajan (IUCC board); Miami startup/VC events\n\n**Trigger:** Just closed $20M Series A to expand global operations; Forbes 30 Under 30 recognition (Dec 2025)\n\n**Heat:** HOT\n\n**Why Opportunity:** Young founder managing venture-backed company, high-growth trajectory, likely $500K+ income, significant equity wealth from $20M raise",
+    "approach": "Saw your Forbes 30 Under 30 feature and your work building FanBasis here in Miami\u2014I work with tech founders in the Indian business community through TiE and wondered if you'd explored wealth strategies for founders post-Series A",
+    "source": "Warm Intros"
+  },
+  {
+    "id": 21,
+    "section": "warm-intros",
+    "title": "Mit Patel",
+    "name": "Mit Patel",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Role:** Co-founder & CEO, SwiftSku (Y Combinator W21)\n\n**Community Connection:** Forbes 30 Under 30 2026, c-store tech platform serving Indian immigrant community\n\n**Warm Intro Path:** Through IUCC South Florida entrepreneurship events; TiE Miami founders network; family runs convenience stores (strong c-store network)\n\n**Trigger:** Forbes 30 Under 30 recognition; Y Combinator backing; built platform specifically for Indian immigrant c-store owners\n\n**Heat:** WARM\n\n**Why Opportunity:** YC-backed founder, likely high six-figure income, built business around Indian immigrant community which shows deep cultural ties",
+    "approach": "Mit, I work with entrepreneurs in South Florida's Indian community through IUCC\u2014your work helping immigrant c-store owners with SwiftSku really resonates. Have you thought about how founders transition from startup equity to long-term wealth building?",
+    "source": "Warm Intros"
+  },
+  {
+    "id": 22,
+    "section": "warm-intros",
+    "title": "Lakshmi Natarajan",
+    "name": "Lakshmi Natarajan",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Role:** Treasurer & Board Member, IUCC South Florida; Founder, Excelador; former Fortune 500 e\u2026",
+    "approach": "",
+    "source": "Warm Intros"
+  },
+  {
+    "id": 23,
     "section": "indian-network",
     "title": "Rabia Azhar - promoted to COO at Broward College (January 2026), but she's in higher education administration (Fort Lauderdale/Boca Raton area), not necessarily the $400K-$2M income/net worth profile James targets",
     "name": "Rabia Azhar",
@@ -228,7 +276,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 20,
+    "id": 24,
     "section": "indian-network",
     "title": "Mike Patel",
     "name": "Mike Patel",
@@ -240,7 +288,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 21,
+    "id": 25,
     "section": "indian-network",
     "title": "Yash Daftary",
     "name": "Yash Daftary",
@@ -252,7 +300,19 @@
     "source": "Indian Network"
   },
   {
-    "id": 22,
+    "id": 26,
+    "section": "vul",
+    "title": "Dr. Rachael Nambusi",
+    "name": "Dr. Rachael Nambusi",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Profession:** Physician, Founder & Medical Director\n\n**Income Signal:** Founded My Health & Wellness Medical Group in Miami Beach (April 2024), practice now fully operational with advanced medical equipment (DEXA, Emsculpt NEO, red light therapy), multiple revenue streams (DPC, weight loss, aesthetics, occupational healt\n\n**Vul Fit Reason:** High-income physician-entrepreneur in accumulation phase with significant business reinvestment needs, likely maxed traditional retirement vehicles, needs tax-advantaged permanent coverage plus investment growth component\n\n**Heat:** WARM\n\n**Trigger Event:** Practice expansion through 2025-2026, adding advanced equipment and building patient base in affluent Miami Beach market",
+    "approach": "I work with Miami Beach physicians who are transitioning from military practice to private entrepreneurship\u2014congrats on the success of MHW Medical Group. As your income grows, have you looked at how VUL can complement your practice's qualified plans?",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 27,
     "section": "lead-radar",
     "title": "Philip Korsant - Transaction: Sold Palm Beach mansion at 115 Via La Selva for $43.3M, June 3 2026",
     "name": "Philip Korsant",
@@ -264,7 +324,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 23,
+    "id": 28,
     "section": "lead-radar",
     "title": "John Civantos - Transaction: Sold Miami mansion at 3090 Munroe Drive for $23M, May 22 2026",
     "name": "John Civantos",
@@ -276,7 +336,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 24,
+    "id": 29,
     "section": "lead-radar",
     "title": "Darin Goldstein - Transaction: Sold Wellington equestrian estate at 3351 Grand Prix Farms Drive for $17M, May 29 2026",
     "name": "Darin Goldstein",
@@ -288,7 +348,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 25,
+    "id": 30,
     "section": "lead-radar",
     "title": "Aracibo Quintana - Previous employer: RIPCO Real Estate",
     "name": "Aracibo Quintana",
@@ -300,7 +360,7 @@
     "source": "LinkedIn Jobs"
   },
   {
-    "id": 26,
+    "id": 31,
     "section": "lead-radar",
     "title": "Marty Arrivo - Previous employer: RIPCO Real Estate",
     "name": "Marty Arrivo",
@@ -312,7 +372,7 @@
     "source": "LinkedIn Jobs"
   },
   {
-    "id": 27,
+    "id": 32,
     "section": "estate-attorneys",
     "title": "Daniel M. Herrera - DMH Legal PLLC",
     "name": "Daniel M. Herrera",
@@ -324,7 +384,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 28,
+    "id": 33,
     "section": "estate-attorneys",
     "title": "Geoffrey Langbart - Florida Planning & Probate",
     "name": "Geoffrey Langbart",
@@ -336,7 +396,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 29,
+    "id": 34,
     "section": "lead-radar",
     "title": "Giselle Gonzalez Manseur - Role/Company: Partner, Haber Law (Business Litigation Practice Group)",
     "name": "Giselle Gonzalez Manseur",
@@ -348,7 +408,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 30,
+    "id": 35,
     "section": "lead-radar",
     "title": "Cyrus Abbassi - Role/Company: Shareholder, Greenberg Traurig (Corporate Practice, Miami)",
     "name": "Cyrus Abbassi",
@@ -360,7 +420,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 31,
+    "id": 36,
     "section": "lead-radar",
     "title": "Jose Canero - Transaction: Sold Chateau Grove condo complex, 3265 Virginia Street, Coconut Grove for $45.5M (bought 2025 for $17.3M), May 2026",
     "name": "Jose Canero",
@@ -372,7 +432,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 32,
+    "id": 37,
     "section": "lead-radar",
     "title": "Pedro Kolychkine - Transaction: Sold 285 Woodcrest Road, Key Biscayne for $6.7M (bought 2022 for $1.9M), May 2026",
     "name": "Pedro Kolychkine",
@@ -384,7 +444,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 33,
+    "id": 38,
     "section": "lead-radar",
     "title": "Darin S. Goldstein - Transaction: Sold equestrian estate at 3351 Grand Prix Farms Drive, Wellington for $17M (owned for decades), May 2026",
     "name": "Darin S. Goldstein",
@@ -396,7 +456,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 34,
+    "id": 39,
     "section": "acquisition",
     "title": "Succession Resource Group (myCompass) - Requires login/buyer profile to view listings and express interest. No public Florida listings visible.",
     "name": "Succession Resource Group (myCompass)",
@@ -408,7 +468,7 @@
     "source": "Practice Marketplace"
   },
   {
-    "id": 35,
+    "id": 40,
     "section": "vul",
     "title": "William \"Bill\" Geraghty",
     "name": "William \"Bill\" Geraghty",
@@ -420,19 +480,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 36,
-    "section": "vul",
-    "title": "Aracibo Quintana",
-    "name": "Aracibo Quintana",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Profession:** Retail Real Estate Executive / Executive Managing Director\n\n**Income Signal:** Decades of experience advising global b\u2026",
-    "approach": "",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 37,
+    "id": 41,
     "section": "cpa-partners",
     "title": "Samuel & Associates - Location: Miami (Brickell - 701 Brickell Ave), FL",
     "name": "Samuel & Associates",
@@ -444,7 +492,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 38,
+    "id": 42,
     "section": "cpa-partners",
     "title": "Bette Hochberger CPA - Location: Hollywood/South Florida, FL",
     "name": "Bette Hochberger CPA",
@@ -456,7 +504,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 39,
+    "id": 43,
     "section": "lead-radar",
     "title": "David Mandel - Transaction: Sold waterfront home on Venetian Islands for $15.5M, June 2026 (bought 2003 for $1.9M)",
     "name": "David Mandel",
@@ -468,7 +516,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 40,
+    "id": 44,
     "section": "lead-radar",
     "title": "Richard Zecher - Transaction: Sold Sunny Isles condo for $10.2M, June 2026 (bought 2022 for $5.5M)",
     "name": "Richard Zecher",
@@ -480,7 +528,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 41,
+    "id": 45,
     "section": "estate-attorneys",
     "title": "Evan M. Rosen - Law Offices of Evan M. Rosen, P.A.",
     "name": "Evan M. Rosen",
@@ -492,7 +540,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 42,
+    "id": 46,
     "section": "indian-network",
     "title": "Bobby George",
     "name": "Bobby George",
@@ -504,7 +552,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 43,
+    "id": 47,
     "section": "vul",
     "title": "Michele Griffin",
     "name": "Michele Griffin",
@@ -516,7 +564,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 44,
+    "id": 48,
     "section": "vul",
     "title": "Mathias Mamou-Mani",
     "name": "Mathias Mamou-Mani",
@@ -528,7 +576,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 45,
+    "id": 49,
     "section": "warm-intros",
     "title": "Sumit Singh",
     "name": "Sumit Singh",
@@ -540,7 +588,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 46,
+    "id": 50,
     "section": "warm-intros",
     "title": "Bhumi Patel, MBA",
     "name": "Bhumi Patel, MBA",
@@ -552,7 +600,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 47,
+    "id": 51,
     "section": "lead-radar",
     "title": "Stuart McFarland - Role/Company: Newly admitted Partner at PwC (Client Relations Executive), based in Boca Raton/South Florida area",
     "name": "Stuart McFarland",
@@ -564,7 +612,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 48,
+    "id": 52,
     "section": "vul",
     "title": "Megan A. Lazo",
     "name": "Megan A. Lazo",
@@ -576,7 +624,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 49,
+    "id": 53,
     "section": "cpa-partners",
     "title": "Ian Borbolla / Digital Tax Group - Location: Miami, FL",
     "name": "Ian Borbolla / Digital Tax Group",
@@ -588,7 +636,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 50,
+    "id": 54,
     "section": "cpa-partners",
     "title": "Leo Gurevich / CPA Street - Location: Miami, FL (6306 NW 2nd St)",
     "name": "Leo Gurevich / CPA Street",
@@ -600,7 +648,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 51,
+    "id": 55,
     "section": "lead-radar",
     "title": "Steven Baum - Transaction: Sold 3 industrial properties in Fort Lauderdale (3377 SW 2nd Ave + 222 SW 33rd Ct + adjacent land) for $11.3M (May 29, 2026)",
     "name": "Steven Baum",
@@ -612,7 +660,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 52,
+    "id": 56,
     "section": "warm-intros",
     "title": "Mallesh Murugesan",
     "name": "Mallesh Murugesan",
@@ -624,7 +672,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 53,
+    "id": 57,
     "section": "warm-intros",
     "title": "Dr. Bharat Gupta, MD, FACP",
     "name": "Dr. Bharat Gupta, MD, FACP",
@@ -636,7 +684,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 54,
+    "id": 58,
     "section": "warm-intros",
     "title": "Raj Rangaswamy",
     "name": "Raj Rangaswamy",
@@ -648,7 +696,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 55,
+    "id": 59,
     "section": "lead-radar",
     "title": "Philip Tingle - Transaction: Sold 6853 Sunrise Court, Coral Gables waterfront for $16.2M (May 28, 2026) - bought 2004 for $2.1M",
     "name": "Philip Tingle",
@@ -660,7 +708,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 56,
+    "id": 60,
     "section": "lead-radar",
     "title": "Edgar Dreyer - Transaction: Sold Pinecrest mansion (9,400 sq ft) for $11.1M (May 28, 2026) via LLC tied to Lightstone Group",
     "name": "Edgar Dreyer",
@@ -672,7 +720,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 57,
+    "id": 61,
     "section": "estate-attorneys",
     "title": "Odelia Goldberg - Law Offices of Odelia Goldberg",
     "name": "Odelia Goldberg",
@@ -684,7 +732,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 58,
+    "id": 62,
     "section": "vul",
     "title": "Katherine Wong",
     "name": "Katherine Wong",
@@ -696,7 +744,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 59,
+    "id": 63,
     "section": "vul",
     "title": "Dr. Jordan B. Schwartzberg",
     "name": "Dr. Jordan B. Schwartzberg",
@@ -708,7 +756,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 60,
+    "id": 64,
     "section": "cpa-partners",
     "title": "Dave Miller CPA (Miller CPA) - Location: Miami, FL (2915 Biscayne Blvd, Brickell)",
     "name": "Dave Miller CPA (Miller CPA)",
@@ -720,7 +768,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 61,
+    "id": 65,
     "section": "cpa-partners",
     "title": "Quilca CPA Group (Miami) - Location: Miami, FL (10800 Biscayne Boulevard, Suite 850)",
     "name": "Quilca CPA Group (Miami)",
@@ -732,7 +780,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 62,
+    "id": 66,
     "section": "cpa-partners",
     "title": "Bette Hochb\u2026",
     "name": "Bette Hochb\u2026",
@@ -744,7 +792,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 63,
+    "id": 67,
     "section": "lead-radar",
     "title": "Eric Guevara - Role/Company: Executive Vice President and Head of International Trade Finance at Grove Bank & Trust, Miami",
     "name": "Eric Guevara",
@@ -756,7 +804,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 64,
+    "id": 68,
     "section": "lead-radar",
     "title": "Daniel Undurraga Deves - Transaction: Sold 7610 SW 48th Court (Miami mansion) for $10.1M, May 2026",
     "name": "Daniel Undurraga Deves",
@@ -768,7 +816,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 65,
+    "id": 69,
     "section": "vul",
     "title": "Jeff Szur",
     "name": "Jeff Szur",
@@ -780,7 +828,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 66,
+    "id": 70,
     "section": "vul",
     "title": "Rick Penafiel",
     "name": "Rick Penafiel",
@@ -792,7 +840,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 67,
+    "id": 71,
     "section": "cpa-partners",
     "title": "MiamiCPA LLC (Evelyn Hsu, CPA) - Location: North Miami, FL",
     "name": "MiamiCPA LLC (Evelyn Hsu, CPA)",
@@ -804,7 +852,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 68,
+    "id": 72,
     "section": "cpa-partners",
     "title": "Edgar M. G\u00f3mez CPA, LLC - Location: Miami (multiple locations: Brickell, Miami Lakes)",
     "name": "Edgar M. G\u00f3mez CPA, LLC",
@@ -816,7 +864,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 69,
+    "id": 73,
     "section": "cpa-partners",
     "title": "Team K Miami (Katiuska Tovar) - Location: Sunrise, FL (serves Miami metro)",
     "name": "Team K Miami (Katiuska Tovar)",
@@ -828,7 +876,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 70,
+    "id": 74,
     "section": "cpa-partners",
     "title": "Signature CPAs & Advisors - Location: Miami (20900 NE 30th Avenue, Suite 1013)",
     "name": "Signature CPAs & Advisors",
@@ -840,7 +888,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 71,
+    "id": 75,
     "section": "cpa-partners",
     "title": "Jorge Ramirez CPA, P.A. - Location: Fort Lauderdale, FL (serves Broward County)",
     "name": "Jorge Ramirez CPA, P.A.",
@@ -852,7 +900,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 72,
+    "id": 76,
     "section": "cpa-partners",
     "title": "Oren Gulasa CPA Services - Location: Aventura, FL (20803 Biscayne Blvd, Suite 101)",
     "name": "Oren Gulasa CPA Services",
@@ -864,7 +912,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 73,
+    "id": 77,
     "section": "lead-radar",
     "title": "Steve Dingle & Scott Dingle - Transaction: Sold Boca Raton spec mansion (2500 East Maya Drive) for $75M, May 26, 2026",
     "name": "Steve Dingle & Scott Dingle",
@@ -876,7 +924,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 74,
+    "id": 78,
     "section": "lead-radar",
     "title": "Arthur Samuels & Regina Samuels - Transaction: Sold Jupiter waterfront home (5900 Pennock Point Road) for $18.3M, May 22, 2026",
     "name": "Arthur Samuels & Regina Samuels",
@@ -888,7 +936,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 75,
+    "id": 79,
     "section": "vul",
     "title": "Steven D. Eisenband",
     "name": "Steven D. Eisenband",
@@ -900,7 +948,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 76,
+    "id": 80,
     "section": "vul",
     "title": "Dr. Juan Ruiz-Unger",
     "name": "Dr. Juan Ruiz-Unger",
@@ -912,7 +960,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 77,
+    "id": 81,
     "section": "warm-intros",
     "title": "Dr. Nish Patel",
     "name": "Dr. Nish Patel",
@@ -924,7 +972,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 78,
+    "id": 82,
     "section": "warm-intros",
     "title": "Atal Bansal",
     "name": "Atal Bansal",
@@ -936,7 +984,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 79,
+    "id": 83,
     "section": "lead-radar",
     "title": "Luis Arevalo - Transaction: Sold waterfront home at 216 Bal Bay Drive, Bal Harbour for $29M, May 14, 2026",
     "name": "Luis Arevalo",
@@ -948,7 +996,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 80,
+    "id": 84,
     "section": "lead-radar",
     "title": "Ernesto and Magaly Santana - Transaction: Sold 11,500 sq ft Pinecrest mansion at 10101 SW 60th Court for $13.4M, May 15, 2026",
     "name": "Ernesto and Magaly Santana",
@@ -960,7 +1008,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 81,
+    "id": 85,
     "section": "lead-radar",
     "title": "Philip Bonadonna - Transaction: Sold home at 377 E Coconut Palm Road, Boca Raton for $8.4M, May 18, 2026",
     "name": "Philip Bonadonna",
@@ -972,7 +1020,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 82,
+    "id": 86,
     "section": "estate-attorneys",
     "title": "Irama Valdes - Get Ahead Legal (formerly Irama Valdes, P.A.)",
     "name": "Irama Valdes",
@@ -984,7 +1032,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 83,
+    "id": 87,
     "section": "cpa-partners",
     "title": "A&G CPA Firm (Marcela Gomez, EA) - Location: Coral Gables, FL",
     "name": "A&G CPA Firm (Marcela Gomez, EA)",
@@ -996,7 +1044,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 84,
+    "id": 88,
     "section": "cpa-partners",
     "title": "E. Gomez CPA LLC (Edgar Gomez, CPA) - Location: Coral Gables, FL",
     "name": "E. Gomez CPA LLC (Edgar Gomez, CPA)",
@@ -1008,7 +1056,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 85,
+    "id": 89,
     "section": "lead-radar",
     "title": "Francisco Perez - Transaction: Sold Miami Beach waterfront mansion (1727 W 24th St) for $38.5M, May 2026 (bought $13M in 2022)",
     "name": "Francisco Perez",
@@ -1020,7 +1068,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 86,
+    "id": 90,
     "section": "lead-radar",
     "title": "Michelle Miller & Myron Miller - Transaction: Sold Palm Beach home (1246 N Lake Way) for $30.8M, April 2026",
     "name": "Michelle Miller & Myron Miller",
@@ -1032,7 +1080,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 87,
+    "id": 91,
     "section": "estate-attorneys",
     "title": "Jose Medina - Medina Law Firm, LLC",
     "name": "Jose Medina",
@@ -1044,7 +1092,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 88,
+    "id": 92,
     "section": "estate-attorneys",
     "title": "Eric S. Kane - Eric S. Kane, P.L.",
     "name": "Eric S. Kane",
@@ -1056,7 +1104,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 89,
+    "id": 93,
     "section": "vul",
     "title": "H.I.G. Capital CEO Brian Schwartz - April 2026 promotion to CEO, but manages $74B firm (ultra-wealthy tier, not James's target)",
     "name": "H.I.G. Capital CEO Brian Schwartz",
@@ -1068,7 +1116,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 90,
+    "id": 94,
     "section": "vul",
     "title": "Real Estate Professionals - Found top producers like Monica Betancourt (Coldwell Banker), Chad Carroll (Compass, $8B career sales), Michael Garcia (Real Estate Sales Force) - all established, but no specific recent commission windfalls documented in accessible press",
     "name": "Real Estate Professionals",
@@ -1080,7 +1128,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 91,
+    "id": 95,
     "section": "vul",
     "title": "CPA Firm Merger - Citrin Cooperman acquired SWKJD in Coral Gables (May 2026), but no individual partner names published",
     "name": "CPA Firm Merger",
@@ -1092,7 +1140,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 92,
+    "id": 96,
     "section": "vul",
     "title": "Medical Professionals - Salary data shows cardiologists earn $575K-730K and orthopedic surgeons $795K median, confirming income levels, but no specific Miami-area physicians with recent practice joins/promotions named in business press",
     "name": "Medical Professionals",
@@ -1104,7 +1152,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 93,
+    "id": 97,
     "section": "warm-intros",
     "title": "TiE Miami charter members list - but without LinkedIn profiles, income verification, or warm intro details",
     "name": "TiE Miami charter members list",
@@ -1116,7 +1164,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 94,
+    "id": 98,
     "section": "lead-radar",
     "title": "Suraj Desai - Role/Company: Partner & Head of Hospitality, Blue Mountain Capital (Florida office)",
     "name": "Suraj Desai",
@@ -1128,7 +1176,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 95,
+    "id": 99,
     "section": "lead-radar",
     "title": "Justin Walker - Role/Company: Vice President, Colliers (South Florida - Boca Raton office)",
     "name": "Justin Walker",
@@ -1140,7 +1188,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 96,
+    "id": 100,
     "section": "lead-radar",
     "title": "Eli Finkelman - Transaction: Sold 4510 Prairie Ave, Miami Beach for $11.5M (bought 2019 for\u2026",
     "name": "Eli Finkelman",
@@ -1152,7 +1200,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 97,
+    "id": 101,
     "section": "vul",
     "title": "Suraj Desai",
     "name": "Suraj Desai",
@@ -1164,7 +1212,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 98,
+    "id": 102,
     "section": "vul",
     "title": "Justin Walker",
     "name": "Justin Walker",
@@ -1176,7 +1224,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 99,
+    "id": 103,
     "section": "cpa-partners",
     "title": "Nischay Rawal - NR CPAs & Business Advisors",
     "name": "Nischay Rawal",
@@ -1188,7 +1236,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 100,
+    "id": 104,
     "section": "cpa-partners",
     "title": "Jon Drage - Drage CPA",
     "name": "Jon Drage",
@@ -1200,7 +1248,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 101,
+    "id": 105,
     "section": "lead-radar",
     "title": "Ruben Bravo - Role/Company: Project Executive at Shawmut Design and Construction (newly hired)",
     "name": "Ruben Bravo",
@@ -1212,7 +1260,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 102,
+    "id": 106,
     "section": "lead-radar",
     "title": "Regan Remillard - Transaction: Sold 134 MacFarlane Drive townhouse, Delray Beach for $5.7M (bought 2016 for $3.4M = $2.3M gain), May 2026",
     "name": "Regan Remillard",
@@ -1224,7 +1272,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 103,
+    "id": 107,
     "section": "lead-radar",
     "title": "Mariano Henin - Transaction: Sold Fisher Island condo (7433 Fisher Island Drive) for $10.2M (bought 2002 for $2.7M = $7.5M gain), May 2026",
     "name": "Mariano Henin",
@@ -1236,7 +1284,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 104,
+    "id": 108,
     "section": "lead-radar",
     "title": "Robert and Hope Sheft - Transaction: Sold 7202 Ayrshire Lane mansion, Boca Raton for $15M, May 2026",
     "name": "Robert and Hope Sheft",
@@ -1248,7 +1296,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 105,
+    "id": 109,
     "section": "lead-radar",
     "title": "Rick Penafiel - Role: Market Executive for South Florida at UBS",
     "name": "Rick Penafiel",
@@ -1260,7 +1308,7 @@
     "source": "SFBJ News"
   },
   {
-    "id": 106,
+    "id": 110,
     "section": "estate-attorneys",
     "title": "Brian C. Perlin - Perlin Estate Planning & Probate",
     "name": "Brian C. Perlin",
@@ -1272,7 +1320,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 107,
+    "id": 111,
     "section": "indian-network",
     "title": "Niven Patel",
     "name": "Niven Patel",
@@ -1284,7 +1332,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 108,
+    "id": 112,
     "section": "lead-radar",
     "title": "Frances Stevens - Transaction: Sold home at 3138 Gulfstream Road, Gulf Stream for $7.4M (bought 2002 for $850K), May 6, 2026",
     "name": "Frances Stevens",
@@ -1296,7 +1344,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 109,
+    "id": 113,
     "section": "lead-radar",
     "title": "Ruta T. Cooper - Transaction: Sold 14-unit multifamily building at 440 SE 23rd St, Fort Lauderdale for $2.8M, May 8, 2026",
     "name": "Ruta T. Cooper",
@@ -1308,7 +1356,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 110,
+    "id": 114,
     "section": "lead-radar",
     "title": "Tatiana Solden - Transaction: Bought retail building at 3470 W. Broward Blvd, Fort Lauderdale for $950K, May 2026",
     "name": "Tatiana Solden",
@@ -1320,7 +1368,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 111,
+    "id": 115,
     "section": "estate-attorneys",
     "title": "Alain E. Roman - The Law Office of Alain Roman, PLLC",
     "name": "Alain E. Roman",
@@ -1332,7 +1380,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 112,
+    "id": 116,
     "section": "lead-radar",
     "title": "Jaime Parlade & Justin Schaefer",
     "name": "Jaime Parlade & Justin Schaefer",
@@ -1344,7 +1392,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 113,
+    "id": 117,
     "section": "lead-radar",
     "title": "Ken Griffin",
     "name": "Ken Griffin",
@@ -1356,7 +1404,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 114,
+    "id": 118,
     "section": "lead-radar",
     "title": "Michael Parker - Transaction: Sold Miami Beach home at 845 E Dilido Dr for $35M, May 8, 2026 (purchased Feb 2025 for $19.5M)",
     "name": "Michael Parker",
@@ -1368,7 +1416,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 115,
+    "id": 119,
     "section": "lead-radar",
     "title": "Claudia Aros - Transaction: Sold Miami home at 575 Hibiscus Lane for $9.6M, May 7, 2026 (purchased 2018 for $2.7M)",
     "name": "Claudia Aros",
@@ -1380,7 +1428,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 116,
+    "id": 120,
     "section": "estate-attorneys",
     "title": "Anwar Elias Hadeed - Hadeed Legal",
     "name": "Anwar Elias Hadeed",
@@ -1392,7 +1440,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 117,
+    "id": 121,
     "section": "cpa-partners",
     "title": "Glenn Gopman, CPA - MiamiCPA LLC",
     "name": "Glenn Gopman, CPA",
@@ -1404,7 +1452,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 118,
+    "id": 122,
     "section": "cpa-partners",
     "title": "Jorge Martinez - Martinez-Marquez, CPA, P.A.",
     "name": "Jorge Martinez",
@@ -1416,7 +1464,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 119,
+    "id": 123,
     "section": "divorce-monitor",
     "title": "Constance Tolevich Fernandez - Location: Miami, Florida",
     "name": "Constance Tolevich Fernandez",
@@ -1428,7 +1476,7 @@
     "source": "Divorce Monitor"
   },
   {
-    "id": 120,
+    "id": 124,
     "section": "lead-radar",
     "title": "Gerald Katcher - Transaction: Sold Spanish-style estate at 4197 South Douglas Road, Miami for $15.6M, May 7, 2026 (owned since unknown date)",
     "name": "Gerald Katcher",
@@ -1440,7 +1488,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 121,
+    "id": 125,
     "section": "lead-radar",
     "title": "Brian Coulter - Transaction: Sold home at 566 Palm Way, Gulf Stream for $11.8M, May 7, 2026 (purchased 2015 for $3.5M)",
     "name": "Brian Coulter",
@@ -1452,7 +1500,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 122,
+    "id": 126,
     "section": "warm-intros",
     "title": "Seema Chaturvedi",
     "name": "Seema Chaturvedi",
@@ -1464,7 +1512,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 123,
+    "id": 127,
     "section": "lead-radar",
     "title": "Roni Seiderman - Transaction: Sold retail center at 15315 South Dixie Highway, Miami for $12M, April 10, 2026 (held since 1990, paid $2.2M)",
     "name": "Roni Seiderman",
@@ -1476,7 +1524,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 124,
+    "id": 128,
     "section": "lead-radar",
     "title": "Tatiana Pino - Transaction: Sold mixed-use building at 110 Phoenetia Avenue, Coral Gables for $16M, April 17, 2026 (held since 2021, paid $9.8M)",
     "name": "Tatiana Pino",
@@ -1488,7 +1536,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 125,
+    "id": 129,
     "section": "lead-radar",
     "title": "Mar\u00eda Carla Chicu\u00e9n - Role/Company: Associate Executive Director & Chief Strategy Officer, Vizcaya Museum and Gardens (Miami)",
     "name": "Mar\u00eda Carla Chicu\u00e9n",
@@ -1500,7 +1548,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 126,
+    "id": 130,
     "section": "lead-radar",
     "title": "Joseph Werner & Adele Werner - Transaction: Sold waterfront home at 13791 Baycliff Drive, North Palm Beach for $10 million (May 1, 2026). Purchased in 2017 for $4.9 million.",
     "name": "Joseph Werner & Adele Werner",
@@ -1512,7 +1560,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 127,
+    "id": 131,
     "section": "vul",
     "title": "Ted Papapostolou",
     "name": "Ted Papapostolou",
@@ -1524,7 +1572,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 128,
+    "id": 132,
     "section": "vul",
     "title": "Nate Miller",
     "name": "Nate Miller",
@@ -1536,7 +1584,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 129,
+    "id": 133,
     "section": "cpa-partners",
     "title": "Steven J. Henriquez, CPA (SJH CPA) - Location: South Miami, FL",
     "name": "Steven J. Henriquez, CPA (SJH CPA)",
@@ -1548,7 +1596,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 130,
+    "id": 134,
     "section": "cpa-partners",
     "title": "Edward Parsons, CPA - Location: Doral/Miami, FL",
     "name": "Edward Parsons, CPA",
@@ -1560,7 +1608,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 131,
+    "id": 135,
     "section": "indian-network",
     "title": "Dr. Chirag Choudhary, MD, MBA",
     "name": "Dr. Chirag Choudhary, MD, MBA",
@@ -1572,7 +1620,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 132,
+    "id": 136,
     "section": "indian-network",
     "title": "G. Satya Sai",
     "name": "G. Satya Sai",
@@ -1584,7 +1632,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 133,
+    "id": 137,
     "section": "lead-radar",
     "title": "Joycelyn S. Brown - Role: Partner at J. Muir & Associates",
     "name": "Joycelyn S. Brown",
@@ -1596,7 +1644,7 @@
     "source": "SFBJ News"
   },
   {
-    "id": 134,
+    "id": 138,
     "section": "lead-radar",
     "title": "Pedro Herrera - Role: Partner at Jones Walker (Miami office)",
     "name": "Pedro Herrera",
@@ -1608,7 +1656,7 @@
     "source": "SFBJ News"
   },
   {
-    "id": 135,
+    "id": 139,
     "section": "lead-radar",
     "title": "Benjamin Davis - Role: Partner Resident at Morgan Lewis (Miami)",
     "name": "Benjamin Davis",
@@ -1620,7 +1668,7 @@
     "source": "SFBJ News"
   },
   {
-    "id": 136,
+    "id": 140,
     "section": "vul",
     "title": "Brian Schwartz",
     "name": "Brian Schwartz",
@@ -1632,7 +1680,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 137,
+    "id": 141,
     "section": "vul",
     "title": "Doug Berman",
     "name": "Doug Berman",
@@ -1644,7 +1692,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 138,
+    "id": 142,
     "section": "warm-intros",
     "title": "Shikhar Agarwal",
     "name": "Shikhar Agarwal",
@@ -1656,7 +1704,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 139,
+    "id": 143,
     "section": "warm-intros",
     "title": "Sandeep Chugani",
     "name": "Sandeep Chugani",
@@ -1668,7 +1716,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 140,
+    "id": 144,
     "section": "lead-radar",
     "title": "Kendall Pickett - Transaction: Sold 260 El Dorado Lane, Palm Beach for $6.2M, April 2026",
     "name": "Kendall Pickett",
@@ -1680,7 +1728,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 141,
+    "id": 145,
     "section": "lead-radar",
     "title": "Myron \"Mosie\" Miller - Transaction: Sold 1246 North Lake Way, Palm Beach for $30.8M, April 2026 (bought 2023 for $21.6M, renovated)",
     "name": "Myron \"Mosie\" Miller",
@@ -1692,7 +1740,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 142,
+    "id": 146,
     "section": "lead-radar",
     "title": "Michelle Miller - Transaction: Co-sold 1246 North Lake Way, Palm Beach for $30.8M with ex-husband Mosie, April 2026",
     "name": "Michelle Miller",
@@ -1704,7 +1752,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 143,
+    "id": 147,
     "section": "vul",
     "title": "Bill Seidle",
     "name": "Bill Seidle",
@@ -1716,7 +1764,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 144,
+    "id": 148,
     "section": "vul",
     "title": "Kevin Graham",
     "name": "Kevin Graham",
@@ -1728,7 +1776,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 145,
+    "id": 149,
     "section": "cpa-partners",
     "title": "Adalberto Parra, CPA - Location: Miami, FL (555 NE 15th Street)",
     "name": "Adalberto Parra, CPA",
@@ -1740,7 +1788,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 146,
+    "id": 150,
     "section": "cpa-partners",
     "title": "MiamiCPA LLC (Steven Geller) - Location: North Miami, FL",
     "name": "MiamiCPA LLC (Steven Geller)",
@@ -1752,7 +1800,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 147,
+    "id": 151,
     "section": "lead-radar",
     "title": "Nate Miller - Role/Company: VP/Ticketing & Business Operations, University of Miami (formerly Assistant VP at Legends Global)",
     "name": "Nate Miller",
@@ -1764,7 +1812,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 148,
+    "id": 152,
     "section": "lead-radar",
     "title": "Adrian Moses - Role/Company: VP of Venue Operations, Sports Facilities Companies (Paradise Coast Sports Complex, Southwest Florida)",
     "name": "Adrian Moses",
@@ -1776,7 +1824,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 149,
+    "id": 153,
     "section": "lead-radar",
     "title": "Scott Sherman - Transaction: Sold retail building at 910 Lincoln Road, Miami Beach for $15M (purchased $10.4M in 2024), April 27, 2026",
     "name": "Scott Sherman",
@@ -1788,7 +1836,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 150,
+    "id": 154,
     "section": "lead-radar",
     "title": "Steve Rhodes - Transaction: Sold Wynwood retail portfolio (2121 & 2085 NW 2nd Ave) for $25M to GWealth (bought land $619K in 2013, built 2016), January 2026",
     "name": "Steve Rhodes",
@@ -1800,7 +1848,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 151,
+    "id": 155,
     "section": "lead-radar",
     "title": "Myron Miller - Transaction: Sold Palm Beach home at 1246 North Lake Way for $30.8M (with ex-wife Michelle Miller), April 28, 2026",
     "name": "Myron Miller",
@@ -1812,7 +1860,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 152,
+    "id": 156,
     "section": "estate-attorneys",
     "title": "Jason Steinman - Jason Steinman, PA",
     "name": "Jason Steinman",
@@ -1824,7 +1872,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 153,
+    "id": 157,
     "section": "lead-radar",
     "title": "Tony DuBose - Role/Company: Co-Founder & Managing Director, Legacy Wealth Management (South Florida/Plantation, FL)",
     "name": "Tony DuBose",
@@ -1836,7 +1884,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 154,
+    "id": 158,
     "section": "lead-radar",
     "title": "Joel Palatnik - Role/Company: Co-Founder & Managing Director, Legacy Wealth Manag\u2026",
     "name": "Joel Palatnik",
@@ -1848,7 +1896,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 155,
+    "id": 159,
     "section": "estate-attorneys",
     "title": "Peter A. Dyson - The Estate Plan",
     "name": "Peter A. Dyson",
@@ -1860,7 +1908,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 156,
+    "id": 160,
     "section": "lead-radar",
     "title": "Dan Radakovich - Role/Company: University of Miami Athletic Director (retiring)",
     "name": "Dan Radakovich",
@@ -1872,7 +1920,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 157,
+    "id": 161,
     "section": "lead-radar",
     "title": "James Lockhart, CPA, JD, LLM - Role/Company: Named Real Estate Industry Leader at Aprio (top-20 accounting firm), effective May 1, 2026",
     "name": "James Lockhart, CPA, JD, LLM",
@@ -1884,7 +1932,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 158,
+    "id": 162,
     "section": "lead-radar",
     "title": "Joseph K. Maiuro - Transaction: Sold Pompano Gardens (120-unit multifamily portfolio) for $16.5M, March 2026",
     "name": "Joseph K. Maiuro",
@@ -1896,7 +1944,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 159,
+    "id": 163,
     "section": "estate-attorneys",
     "title": "Denise Jomarron - Denise Jomarron Legal Group",
     "name": "Denise Jomarron",
@@ -1908,7 +1956,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 160,
+    "id": 164,
     "section": "estate-attorneys",
     "title": "Alain Roman - Law Office of Alain Roman, PLLC",
     "name": "Alain Roman",
@@ -1920,7 +1968,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 161,
+    "id": 165,
     "section": "vul",
     "title": "Dr. I-wen Wang",
     "name": "Dr. I-wen Wang",
@@ -1932,7 +1980,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 162,
+    "id": 166,
     "section": "cpa-partners",
     "title": "MiamiCPA LLC - Location: North Miami, FL",
     "name": "MiamiCPA LLC",
@@ -1944,7 +1992,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 163,
+    "id": 167,
     "section": "cpa-partners",
     "title": "Langolf CPA, PA - Location: Hallandale Beach, FL (North Miami Beach area)",
     "name": "Langolf CPA, PA",
@@ -1956,7 +2004,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 164,
+    "id": 168,
     "section": "lead-radar",
     "title": "Raul Nu\u00f1ez - Transaction: Sold Office Depot-anchored mixed-use center at 5301 W 20th Ave, Hialeah for $23.2M, January 2026",
     "name": "Raul Nu\u00f1ez",
@@ -1968,7 +2016,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 165,
+    "id": 169,
     "section": "lead-radar",
     "title": "Mark Corlew - Transaction: Sold Turtle Run Shoppes, Coral Springs for $19.5M, January 2026",
     "name": "Mark Corlew",
@@ -1980,7 +2028,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 166,
+    "id": 170,
     "section": "indian-network",
     "title": "Sanjay Gupta, CPA, FCA",
     "name": "Sanjay Gupta, CPA, FCA",
@@ -1992,7 +2040,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 167,
+    "id": 171,
     "section": "lead-radar",
     "title": "Rodolfo Gonzalez - Transaction: Bought industrial property (Tamiami Trade Park, 13815 SW 139th Court, Miami) for $10.5M, March 2026",
     "name": "Rodolfo Gonzalez",
@@ -2004,7 +2052,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 168,
+    "id": 172,
     "section": "lead-radar",
     "title": "Irving Padron - Transaction: Sold completed spec mansion (9360 Gallardo St, Coral Gables) for $36M, April 2026 (bought land 2021 for $5.1M, built 2023-2026)",
     "name": "Irving Padron",
@@ -2016,7 +2064,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 169,
+    "id": 173,
     "section": "lead-radar",
     "title": "Cesar Molina - Transaction: Sold completed spec mansion (9360 Gallardo St, Coral Gables) for $36M with Irving Padron, April 2026",
     "name": "Cesar Molina",
@@ -2028,7 +2076,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 170,
+    "id": 174,
     "section": "estate-attorneys",
     "title": "Andy Medina - Medina Law Firm LLC",
     "name": "Andy Medina",
@@ -2040,7 +2088,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 171,
+    "id": 175,
     "section": "cpa-partners",
     "title": "Dave Miller CPA - Location: Miami (Brickell area), FL",
     "name": "Dave Miller CPA",
@@ -2052,7 +2100,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 172,
+    "id": 176,
     "section": "cpa-partners",
     "title": "Edward Quilca - Quilca CPA Group",
     "name": "Edward Quilca",
@@ -2064,7 +2112,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 173,
+    "id": 177,
     "section": "lead-radar",
     "title": "Christian Reyes - Role: Regional Director of Consumer Banking, South Florida at JPMorgan Chase",
     "name": "Christian Reyes",
@@ -2076,7 +2124,7 @@
     "source": "SFBJ News"
   },
   {
-    "id": 174,
+    "id": 178,
     "section": "lead-radar",
     "title": "Jay Massirman - Transaction: Sold Miami home at 5001 Pine Drive for $13.5M, April 2026 (bought for $8.5M in 2023)",
     "name": "Jay Massirman",
@@ -2088,7 +2136,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 175,
+    "id": 179,
     "section": "lead-radar",
     "title": "Robert Stewart - Transaction: Sold Palm Beach Gardens home at 658 Hermitage Circle for $7.2M, April 2026 (bought for $2.5M in 2009)",
     "name": "Robert Stewart",
@@ -2100,7 +2148,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 176,
+    "id": 180,
     "section": "lead-radar",
     "title": "Allen Chelminsky - Transaction: Sold Boca Raton warehouse at 1095 Broken Sound Parkway for $12.7M, April 2026 (bought for $10.7M in 2023)",
     "name": "Allen Chelminsky",
@@ -2112,7 +2160,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 177,
+    "id": 181,
     "section": "lead-radar",
     "title": "Erwin Sredni - Transaction: Sold Miami waterfront apartment complex (23 units) at 1940 Bay Drive for $14.3M, April 8, 2026. Bought in 2021 for $7.4M.",
     "name": "Erwin Sredni",
@@ -2124,7 +2172,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 178,
+    "id": 182,
     "section": "lead-radar",
     "title": "Jonatan Sredni - Transaction: Sold Miami waterfront apartment complex (23 units) at 1940 Bay Drive for $14.3M, April 8, 2026. Bought in 2021 for $7.4M.",
     "name": "Jonatan Sredni",
@@ -2136,7 +2184,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 179,
+    "id": 183,
     "section": "lead-radar",
     "title": "Scott Alcus - Transaction: Sold Miami waterfront apartment complex (23 units) at 1940 Bay Drive for $14.3M, April 8, 2026. Bought in 2021 for $7.4M.",
     "name": "Scott Alcus",
@@ -2148,7 +2196,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 180,
+    "id": 184,
     "section": "lead-radar",
     "title": "Elizabeth Gomez - Role: Director of Marketing and Community Outreach at Fleet Advantage",
     "name": "Elizabeth Gomez",
@@ -2160,7 +2208,7 @@
     "source": "SFBJ News"
   },
   {
-    "id": 181,
+    "id": 185,
     "section": "vul",
     "title": "Kyle Vasel, CFP\u00ae, CRPC\u00ae",
     "name": "Kyle Vasel, CFP\u00ae, CRPC\u00ae",
@@ -2172,7 +2220,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 182,
+    "id": 186,
     "section": "cpa-partners",
     "title": "Damian Landeiro CPA, PA - Location: Miami, FL (Kendall area)",
     "name": "Damian Landeiro CPA, PA",
@@ -2184,7 +2232,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 183,
+    "id": 187,
     "section": "indian-network",
     "title": "Chef Niven Patel - While he owns Ghee Indian Kitchen restaurants and is expanding (Wynwood location opened late 2024, Atlanta 2025, Paya South Beach planned), the expansion happened in 2024-2025, not 2026",
     "name": "Chef Niven Patel",
@@ -2196,7 +2244,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 184,
+    "id": 188,
     "section": "indian-network",
     "title": "Dr. Pradip Jamnadas - Orlando-based (not South Florida), established practice owner since 1989, net worth ~$11M - but no 2026 trigger event identified",
     "name": "Dr. Pradip Jamnadas",
@@ -2208,7 +2256,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 185,
+    "id": 189,
     "section": "cpa-partners",
     "title": "Nicholas L. Samuel, CPA / Samuel & Associates - Location: Miami, FL (virtual CPA firm)",
     "name": "Nicholas L. Samuel, CPA / Samuel & Associates",
@@ -2220,7 +2268,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 186,
+    "id": 190,
     "section": "lead-radar",
     "title": "Lauren Sturges - Transaction: Sold waterfront Tahiti Beach mansion, Coral Gables for $32M, March 31, 2026",
     "name": "Lauren Sturges",
@@ -2232,7 +2280,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 187,
+    "id": 191,
     "section": "lead-radar",
     "title": "David Nicholas & Lori Nicholas - Transaction: Sold waterfront home at 976 Cypress Drive, Delray Beach for $10M, April 2, 2026 (purchased 2022 for $8M)",
     "name": "David Nicholas & Lori Nicholas",
@@ -2244,7 +2292,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 188,
+    "id": 192,
     "section": "lead-radar",
     "title": "Natalie Rodriguez - Role/Company: Promoted from CFO to CEO, Coral Gables Hospital",
     "name": "Natalie Rodriguez",
@@ -2256,7 +2304,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 189,
+    "id": 193,
     "section": "lead-radar",
     "title": "Eyal E. Halali - Transaction: Sold 12-unit Ocean Wave Apartments at 2100 Miami Road, Fort Lauderdale for $9M, April 3, 2026",
     "name": "Eyal E. Halali",
@@ -2268,7 +2316,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 190,
+    "id": 194,
     "section": "lead-radar",
     "title": "Idan Gotlib - Transaction: Co-sold 12-unit Ocean Wave Apartments at 2100 Miami Road, Fort Lauderdale for $9M (with Eyal Halali and Michal Peled Gotlib), April 3, 2026",
     "name": "Idan Gotlib",
@@ -2280,7 +2328,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 191,
+    "id": 195,
     "section": "lead-radar",
     "title": "Nathaniel Ortiz - Previous employer: Baptist Health Baptist Hospital (COO)",
     "name": "Nathaniel Ortiz",
@@ -2292,7 +2340,7 @@
     "source": "LinkedIn Jobs"
   },
   {
-    "id": 192,
+    "id": 196,
     "section": "vul",
     "title": "Fred Fontes",
     "name": "Fred Fontes",
@@ -2304,7 +2352,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 193,
+    "id": 197,
     "section": "vul",
     "title": "Shayn March",
     "name": "Shayn March",
@@ -2316,7 +2364,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 194,
+    "id": 198,
     "section": "lead-radar",
     "title": "Simon Elliott and Chantal Elliott - Transaction: Sold Fort Lauderdale waterfront home at 600 Fifth Key Drive for $21.8M (March 4, 2026)",
     "name": "Simon Elliott and Chantal Elliott",
@@ -2328,7 +2376,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 195,
+    "id": 199,
     "section": "lead-radar",
     "title": "Carlo Giovannetti - Transaction: Sold Miami Beach waterfront home at 84 La Gorce Circle for $31.5M (March 31, 2026) with Davor Ninkovic",
     "name": "Carlo Giovannetti",
@@ -2340,7 +2388,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 196,
+    "id": 200,
     "section": "lead-radar",
     "title": "Drew Grossman - Role/Company: CEO, Fishermen's Community Hospital & Mariners Hospital (Florida Keys/Baptist Health)",
     "name": "Drew Grossman",
@@ -2352,7 +2400,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 197,
+    "id": 201,
     "section": "lead-radar",
     "title": "Kevin Douglas - Transaction: Sold Palm Beach oceanfront mansion at 870 S Ocean Blvd for $37.1M, March 2026 (purchased 2021 for $28.5M)",
     "name": "Kevin Douglas",
@@ -2364,7 +2412,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 198,
+    "id": 202,
     "section": "lead-radar",
     "title": "William Karol - Transaction: Sold Miami Beach condo at 501 West Ave for $13M, March 2026 (~$1,900/sf)",
     "name": "William Karol",
@@ -2376,7 +2424,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 199,
+    "id": 203,
     "section": "lead-radar",
     "title": "Amir Kermani - Transaction: Sold Miami Beach mansion at 4340 N Bay Road for $23.4M, March 2026",
     "name": "Amir Kermani",
@@ -2388,7 +2436,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 200,
+    "id": 204,
     "section": "warm-intros",
     "title": "Anil Gajwani - EnCircle Payments / TiE Miami",
     "name": "Anil Gajwani",
@@ -2400,7 +2448,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 201,
+    "id": 205,
     "section": "warm-intros",
     "title": "Satish Mehta - Chewy",
     "name": "Satish Mehta",
@@ -2412,7 +2460,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 202,
+    "id": 206,
     "section": "lead-radar",
     "title": "Nicos Katsoulis - Transaction: Sold 4BR home at 3215 S Flagler Dr, West Palm Beach for $10.5M, March 18, 2026 (bought 2018 for $3.6M)",
     "name": "Nicos Katsoulis",
@@ -2424,7 +2472,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 203,
+    "id": 207,
     "section": "lead-radar",
     "title": "Jorge Carmenate - Transaction: Sold Colonial Assisted Living facility (68 units), Lauderhill for $20M, March 2026 (bought 2024 for $8M)",
     "name": "Jorge Carmenate",
@@ -2436,7 +2484,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 204,
+    "id": 208,
     "section": "lead-radar",
     "title": "Anthony Hernandez - Transaction: Sold waterfront home at 416 S Lake Dr, Lantana for $8.4M, March 27, 2026 (via Illustrated Properties LLC with wife Kimberly)",
     "name": "Anthony Hernandez",
@@ -2448,7 +2496,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 205,
+    "id": 209,
     "section": "vul",
     "title": "Dr. Henry Rodriguez-Martin",
     "name": "Dr. Henry Rodriguez-Martin",
@@ -2460,7 +2508,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 206,
+    "id": 210,
     "section": "vul",
     "title": "Bernie Pastor",
     "name": "Bernie Pastor",
@@ -2472,7 +2520,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 207,
+    "id": 211,
     "section": "lead-radar",
     "title": "Alejandro Gravier - Transaction: Sold newly-built waterfront home at 1041 North Venetian Drive for $17.3M, March 2026",
     "name": "Alejandro Gravier",
@@ -2484,7 +2532,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 208,
+    "id": 212,
     "section": "indian-network",
     "title": "Shatabdi Sharma",
     "name": "Shatabdi Sharma",
@@ -2496,7 +2544,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 209,
+    "id": 213,
     "section": "lead-radar",
     "title": "Salvatore Longo - Transaction: Sold Fort Lauderdale waterfront mansion at 2 Pelican Drive for $21.5M, February 2026 (purchased 2017 for $11M)",
     "name": "Salvatore Longo",
@@ -2508,7 +2556,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 210,
+    "id": 214,
     "section": "lead-radar",
     "title": "Allan Hubbard - Transaction: Sold North Palm Beach condo at 11050 Turtle Beach Road for $8.8M, March 2026 (purchased 2021 for $6.6M)",
     "name": "Allan Hubbard",
@@ -2520,7 +2568,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 211,
+    "id": 215,
     "section": "vul",
     "title": "Patty Da Silva",
     "name": "Patty Da Silva",
@@ -2532,7 +2580,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 212,
+    "id": 216,
     "section": "lead-radar",
     "title": "Raymond Perez - Baptist Health Rehabilitation Hospital",
     "name": "Raymond Perez",
@@ -2544,7 +2592,7 @@
     "source": "Lead Radar"
   },
   {
-    "id": 213,
+    "id": 217,
     "section": "lead-radar",
     "title": "Edward Farscht - CEO, Diamond Communications",
     "name": "Edward Farscht",
@@ -2556,7 +2604,7 @@
     "source": "RE Investors"
   },
   {
-    "id": 214,
+    "id": 218,
     "section": "estate-attorneys",
     "title": "Monique Lavender Greenberg - Lavender Greenberg PLLC",
     "name": "Monique Lavender Greenberg",
@@ -2568,7 +2616,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 215,
+    "id": 219,
     "section": "indian-network",
     "title": "Dr. Arun Garg - Role: Physician, Biochemist, and Global Health Leader (Vancouver-based)",
     "name": "Dr. Arun Garg",
@@ -2580,7 +2628,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 216,
+    "id": 220,
     "section": "indian-network",
     "title": "Ravishankar Bhooplapur - Role: Chairman of Association of Indians in America, Founder/President of Xavier University School of Medicine (Aruba)",
     "name": "Ravishankar Bhooplapur",
@@ -2592,7 +2640,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 217,
+    "id": 221,
     "section": "cpa-partners",
     "title": "Victor Delerme, CPA - Delerme CPA",
     "name": "Victor Delerme, CPA",
@@ -2604,7 +2652,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 218,
+    "id": 222,
     "section": "cpa-partners",
     "title": "Edgar Gomez, CPA, MST, MBA - E. Gomez CPA LLC",
     "name": "Edgar Gomez, CPA, MST, MBA",
@@ -2616,7 +2664,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 219,
+    "id": 223,
     "section": "cpa-partners",
     "title": "Edward D. Quilca, CPA - Quilca CPA Group",
     "name": "Edward D. Quilca, CPA",
@@ -2628,7 +2676,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 220,
+    "id": 224,
     "section": "cpa-partners",
     "title": "Alvaro Acevedo Jr., JD, CPA - Brickell Accountants",
     "name": "Alvaro Acevedo Jr., JD, CPA",
@@ -2640,7 +2688,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 221,
+    "id": 225,
     "section": "cpa-partners",
     "title": "Mongio & Associates, CPAs",
     "name": "Mongio & Associates, CPAs",
@@ -2652,7 +2700,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 222,
+    "id": 226,
     "section": "vul",
     "title": "Teri Kaye - CohnReznick",
     "name": "Teri Kaye",
@@ -2664,7 +2712,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 223,
+    "id": 227,
     "section": "vul",
     "title": "Martha M. Ferral - Shutts & Bowen",
     "name": "Martha M. Ferral",
@@ -2676,7 +2724,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 224,
+    "id": 228,
     "section": "vul",
     "title": "Daniela F. Cimo - Weiss Serota Helfman Cole + Bierman",
     "name": "Daniela F. Cimo",
@@ -2688,7 +2736,7 @@
     "source": "VUL Monitor"
   },
   {
-    "id": 225,
+    "id": 229,
     "section": "acquisition",
     "title": "Mauro Guerra - Guerra Wealth Advisors",
     "name": "Mauro Guerra",
@@ -2699,7 +2747,7 @@
     "approach": ""
   },
   {
-    "id": 226,
+    "id": 230,
     "section": "acquisition",
     "title": "Joshua Feller, ChFC",
     "name": "Joshua Feller, ChFC",
@@ -2710,7 +2758,7 @@
     "approach": ""
   },
   {
-    "id": 227,
+    "id": 231,
     "section": "acquisition",
     "title": "Provenance Wealth Advisors Partners",
     "name": "Provenance Wealth Advisors Partners",
@@ -2721,7 +2769,7 @@
     "approach": ""
   },
   {
-    "id": 228,
+    "id": 232,
     "section": "acquisition",
     "title": "Northstar Financial Planners Team",
     "name": "Northstar Financial Planners Team",
@@ -2740,7 +2788,7 @@
     "details": "",
     "approach": "",
     "notes": "",
-    "id": 229,
+    "id": 233,
     "section": "divorce-leads"
   },
   {
@@ -2752,7 +2800,7 @@
     "details": "needs a SAM rollover from annuity",
     "approach": "",
     "notes": "",
-    "id": 230,
+    "id": 234,
     "section": "filly-bookings",
     "commission": 0
   },
@@ -2765,7 +2813,7 @@
     "details": "",
     "approach": "",
     "notes": "",
-    "id": 231,
+    "id": 235,
     "section": "filly-bookings",
     "commission": 0
   }
