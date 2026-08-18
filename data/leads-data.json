@@ -121,30 +121,6 @@
   },
   {
     "id": 11,
-    "section": "vul",
-    "title": "Mike Valdes",
-    "name": "Mike Valdes",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Profession:** CFO & COO, BKM Capital Partners (Real Estate Private Equity)\n\n**Income Signal:** Cornell MBA, 15+ years real estate PE/PwC Financial Services, promoted from Senior MD to dual C-suite role at institutional real estate firm\n\n**Vul Fit Reason:** At peak earning years with major promotion to CFO/COO double role. Real estate PE compensation typically $400K-$800K+ at this level. Needs permanent life insurance with tax-advantaged growth now that 401k limits are maxed.\n\n**Heat:** WARM\n\n**Trigger Event:** Promoted to CFO & COO in July 2026 after 8 years with BKM Capital, major income jump",
-    "approach": "Congratulations on the CFO/COO promotion at BKM. With dual C-suite roles at a real estate PE firm, you're likely maxing retirement accounts\u2014have you explored VUL as a tax-efficient supplement that builds cash value while protecting your family?",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 12,
-    "section": "vul",
-    "title": "Nisha Patel",
-    "name": "Nisha Patel",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Profession:** COO, Basis Industrial (Delray Beach-based industrial real estate)\n\n**Income Signal:** Former COO at Levin Management, spent 10+ years at PGIM Real Estate (institutional investor), head of asset management at Essential Properties REIT\u2014C-suite real estate operations executive\n\n**Vul Fit Reason:** COO of growing industrial real estate firm, likely earn\u2026",
-    "approach": "",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 13,
     "section": "cpa-partners",
     "title": "Quilca CPA Group - Location: Miami, FL (North Miami - 10800 Biscayne Blvd)",
     "name": "Quilca CPA Group",
@@ -156,7 +132,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 14,
+    "id": 12,
     "section": "cpa-partners",
     "title": "Damian Landeiro, CPA PA - Location: Miami, FL (SW Miami - 12350 SW 132nd Ct)",
     "name": "Damian Landeiro, CPA PA",
@@ -168,7 +144,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 15,
+    "id": 13,
     "section": "estate-attorneys",
     "title": "Anwar E. Hadeed - Hadeed Legal",
     "name": "Anwar E. Hadeed",
@@ -180,7 +156,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 16,
+    "id": 14,
     "section": "indian-network",
     "title": "Direct IUCC/BAPS member directories",
     "name": "Direct IUCC/BAPS member directories",
@@ -192,7 +168,7 @@
     "source": "Indian Network"
   },
   {
-    "id": 17,
+    "id": 15,
     "section": "indian-network",
     "title": "Local Desi news outlets",
     "name": "Local Desi news outlets",
@@ -202,6 +178,30 @@
     "details": "",
     "approach": "",
     "source": "Indian Network"
+  },
+  {
+    "id": 16,
+    "section": "vul",
+    "title": "Mike Valdes",
+    "name": "Mike Valdes",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Profession:** CFO & COO, BKM Capital Partners (Real Estate Private Equity)\n\n**Income Signal:** Cornell MBA, 15+ years real estate PE/PwC Financial Services, promoted from Senior MD to dual C-suite role at institutional real estate firm\n\n**Vul Fit Reason:** At peak earning years with major promotion to CFO/COO double role. Real estate PE compensation typically $400K-$800K+ at this level. Needs permanent life insurance with tax-advantaged growth now that 401k limits are maxed.\n\n**Heat:** WARM\n\n**Trigger Event:** Promoted to CFO & COO in July 2026 after 8 years with BKM Capital, major income jump",
+    "approach": "Congratulations on the CFO/COO promotion at BKM. With dual C-suite roles at a real estate PE firm, you're likely maxing retirement accounts\u2014have you explored VUL as a tax-efficient supplement that builds cash value while protecting your family?",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 17,
+    "section": "vul",
+    "title": "Nisha Patel",
+    "name": "Nisha Patel",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Profession:** COO, Basis Industrial (Delray Beach-based industrial real estate)\n\n**Income Signal:** Former COO at Levin Management, spent 10+ years at PGIM Real Estate (institutional investor), head of asset management at Essential Properties REIT\u2014C-suite real estate operations executive\n\n**Vul Fit Reason:** COO of growing industrial real estate firm, likely earn\u2026",
+    "approach": "",
+    "source": "VUL Monitor"
   },
   {
     "id": 18,
