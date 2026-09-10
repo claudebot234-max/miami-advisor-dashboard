@@ -103,24 +103,12 @@
     "company": "",
     "status": "prospect",
     "aum": 0,
-    "details": "**Profession:** Estate Planning Attorney (Partner)\n\n**Income Signal:** Recently promoted to partner at Osborne, Francis & Pettis (major Boca Raton law firm). Estate planning partners at established South Florida firms typically earn $400K-$800K+.\n\n**Vul Fit Reason:** New partner likely seeing income surge from partnership distributions. VUL pairs perfectly with estate planning expertise\u2014he'll understand the wealth transfer and tax benefits immediately. Peak earning window just opened.\n\n**Heat:** WARM\n\n**Trigger Event:** Promoted to partner at Osborne, Francis & Pettis in September 2026",
-    "approach": "Congratulations on making partner. As someone who specializes in estate planning, you probably already know VUL inside and out\u2014but now that you're in your peak earning years, have you structured your own permanent insurance with the investment component?",
+    "details": "**Profession:** Estate Planning & Trust Litigation Attorney, Partner\n\n**Income Signal:** Recently made partner at Osborne, Francis & Pettis (September 2026), court-appointed probate attorney for two judicial circuits, youngest Chair of Broward County Bar Trusts & Estates section. Partners in estate planning at major South Florida firms t\n\n**Vul Fit Reason:** As a young partner in peak earning years handling high-net-worth estates, he understands tax-advantaged wealth accumulation. VUL's tax-deferred growth and estate planning benefits align perfectly with his practice area and client demographic.\n\n**Heat:** WARM\n\n**Trigger Event:** Just promoted to partner at established estate planning firm in Boca Raton (announced September 1, 2026)",
+    "approach": "Congrats on making partner at Osborne Francis. As someone who advises clients on estate planning, you might find VUL interesting for your own situation\u2014it's essentially a tax-advantaged investment vehicle with permanent life insurance coverage that partners well with the trusts you're setting up for clients.",
     "source": "VUL Monitor"
   },
   {
     "id": 10,
-    "section": "vul",
-    "title": "Micah Conn",
-    "name": "Micah Conn",
-    "company": "",
-    "status": "prospect",
-    "aum": 1000000,
-    "details": "**Profession:** Managing Director, Real Estate Development\n\n**Income Signal:** Just hired as Managing Director of Wood Partners' South Florida office. National multifamily developers pay MDs $500K-$1M+ base plus carried interest on development projects.\n\n**Vul Fit Reason:** Peak earning years (20+ years experience = likely 45-55 age range), overseeing major regional development deals. Needs permanent life insurance with tax-deferred growth to handle lumpy bonus/carry income from project completions.\n\n**Heat:** HOT\n\n**Trigger Event:** Hired August 2026 as Managing Director to lead all South Florida development for Wood Partners (national firm)",
-    "approach": "You're overseeing major multifamily developments across South Florida now\u2014how are you handling the tax planning on your carried interest and bonuses? VUL is becoming the go-to for developers who've maxed their 401(k) and need tax-advantaged growth.",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 11,
     "section": "cpa-partners",
     "title": "Consider CPAs in adjacent markets",
     "name": "Consider CPAs in adjacent markets",
@@ -132,7 +120,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 12,
+    "id": 11,
     "section": "estate-attorneys",
     "title": "Anwar E. Hadeed - Hadeed Legal",
     "name": "Anwar E. Hadeed",
@@ -144,7 +132,31 @@
     "source": "Attorney Finder"
   },
   {
+    "id": 12,
+    "section": "divorce-monitor",
+    "title": "Constance Tolevich Fernandez - Location: Miami-Dade, Florida",
+    "name": "Constance Tolevich Fernandez",
+    "company": "Location: Miami-Dade, Florida",
+    "status": "prospect",
+    "aum": 1000000,
+    "details": "**Situation:** High-asset divorce from healthcare billionaire Miguel 'Mike' Fernandez (filed April 16, 2026)\n\n**Asset Signal:** Challenging $1M prenup cap against husband's ~$1B estate; includes Coral Gables waterfront property + $6M jewelry collection\n\n**Heat:** WARM\n\n**Why Opportunity:** 25-year marriage ending, will receive settlement (amount TBD by court June 2026), needs comprehensive financial planning post-divorce\n\n**Sensitive Approach:** \"Constance, transitioning from a long marriage involves complex financial decisions. I specialize in helping individuals navigate major wealth transitions with discretion and strategic planning.\"",
+    "approach": "",
+    "source": "Divorce Monitor"
+  },
+  {
     "id": 13,
+    "section": "vul",
+    "title": "Micah Conn",
+    "name": "Micah Conn",
+    "company": "",
+    "status": "prospect",
+    "aum": 1000000,
+    "details": "**Profession:** Managing Director, Real Estate Development\n\n**Income Signal:** Just hired as Managing Director of Wood Partners' South Florida office. National multifamily developers pay MDs $500K-$1M+ base plus carried interest on development projects.\n\n**Vul Fit Reason:** Peak earning years (20+ years experience = likely 45-55 age range), overseeing major regional development deals. Needs permanent life insurance with tax-deferred growth to handle lumpy bonus/carry income from project completions.\n\n**Heat:** HOT\n\n**Trigger Event:** Hired August 2026 as Managing Director to lead all South Florida development for Wood Partners (national firm)",
+    "approach": "You're overseeing major multifamily developments across South Florida now\u2014how are you handling the tax planning on your carried interest and bonuses? VUL is becoming the go-to for developers who've maxed their 401(k) and need tax-advantaged growth.",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 14,
     "section": "warm-intros",
     "title": "Seema Chaturvedi",
     "name": "Seema Chaturvedi",
@@ -156,7 +168,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 14,
+    "id": 15,
     "section": "warm-intros",
     "title": "Krishan Garg, CPA",
     "name": "Krishan Garg, CPA",
@@ -166,18 +178,6 @@
     "details": "**Role:** Treasurer TiE Miami; Founder, Garg & Associates (CPA firm)\n\n**Community Connection:** TiE Miami treasurer and charter member since 2018\n\n**Warm Intro Path:** Through TiE Miami or IUCC; alternatively, CPA-to-advisor referral relationship (James could offer to be his wealth management referral partner)\n\n**Trigger:** CPA practices are acquisition targets themselves; successful practice with TiE leadership role signals $500K+ revenue practice\n\n**Heat:** HOT\n\n**Why Opportunity:** CPAs who run their own practices typically earn $200-500K+, with business value creating liquidity events. Perfect referral partner profile\u2014solo CPA without an advisor partner is James's ideal",
     "approach": "Krishan, I work with several CPAs in Miami who've built their practices but don't have a structured referral partner for wealth management. I'd love to explore how we could create value for both our client bases.\u2026",
     "source": "Warm Intros"
-  },
-  {
-    "id": 15,
-    "section": "divorce-monitor",
-    "title": "Constance Tolevich Fernandez - Location: Miami-Dade, Florida",
-    "name": "Constance Tolevich Fernandez",
-    "company": "Location: Miami-Dade, Florida",
-    "status": "prospect",
-    "aum": 1000000,
-    "details": "**Situation:** High-asset divorce from healthcare billionaire Miguel 'Mike' Fernandez (filed April 16, 2026)\n\n**Asset Signal:** Challenging $1M prenup cap against husband's ~$1B estate; includes Coral Gables waterfront property + $6M jewelry collection\n\n**Heat:** WARM\n\n**Why Opportunity:** 25-year marriage ending, will receive settlement (amount TBD by court June 2026), needs comprehensive financial planning post-divorce\n\n**Sensitive Approach:** \"Constance, transitioning from a long marriage involves complex financial decisions. I specialize in helping individuals navigate major wealth transitions with discretion and strategic planning.\"",
-    "approach": "",
-    "source": "Divorce Monitor"
   },
   {
     "id": 16,
