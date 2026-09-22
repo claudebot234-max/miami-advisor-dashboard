@@ -109,42 +109,6 @@
   },
   {
     "id": 10,
-    "section": "vul",
-    "title": "Mario R. Giommoni - Recently promoted to Partner at a Miami law firm (September 2026)",
-    "name": "Mario R. Giommoni",
-    "company": "Recently promoted to Partner at a Miami law firm (September 2026)",
-    "status": "prospect",
-    "aum": 0,
-    "details": "",
-    "approach": "",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 11,
-    "section": "vul",
-    "title": "Gian Rodriguez - Left CBRE to become Market Officer at Kurv Industrial (July 2026)",
-    "name": "Gian Rodriguez",
-    "company": "Left CBRE to become Market Officer at Kurv Industrial (July 2026)",
-    "status": "prospect",
-    "aum": 0,
-    "details": "",
-    "approach": "",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 12,
-    "section": "vul",
-    "title": "Manuel Godoy - CEO/Co-founder of F\u00e9lix (fintech that raised $200M in September 2026)",
-    "name": "Manuel Godoy",
-    "company": "CEO/Co-founder of F\u00e9lix (fintech that raised $200M in September 2026)",
-    "status": "prospect",
-    "aum": 2000000,
-    "details": "",
-    "approach": "",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 13,
     "section": "cpa-partners",
     "title": "Karen E. Lee, CPA P.A. - Location: Coral Gables, FL",
     "name": "Karen E. Lee, CPA P.A.",
@@ -156,7 +120,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 14,
+    "id": 11,
     "section": "cpa-partners",
     "title": "David Hernandez, CPA P.A. - Location: Coral Gables, FL (1 Alhambra Plaza)",
     "name": "David Hernandez, CPA P.A.",
@@ -168,7 +132,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 15,
+    "id": 12,
     "section": "cpa-partners",
     "title": "Kim Marks CPA, P.A. - Location: North Miami, FL",
     "name": "Kim Marks CPA, P.A.",
@@ -180,7 +144,7 @@
     "source": "CPA Finder"
   },
   {
-    "id": 16,
+    "id": 13,
     "section": "estate-attorneys",
     "title": "Ally M. Glaser - Ally M. Glaser, P.A.",
     "name": "Ally M. Glaser",
@@ -192,7 +156,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 17,
+    "id": 14,
     "section": "estate-attorneys",
     "title": "Brian C. Perlin - Perlin Estate Planning & Probate",
     "name": "Brian C. Perlin",
@@ -204,7 +168,55 @@
     "source": "Attorney Finder"
   },
   {
+    "id": 15,
+    "section": "divorce-monitor",
+    "title": "Strengthen Ryan Magath relationship - He already sends you divorce clients organically. Ask him for more referrals or testimonials you can use.",
+    "name": "Strengthen Ryan Magath relationship",
+    "company": "He already sends you divorce clients organically. Ask him for more referrals or testimonials you can use.",
+    "status": "prospect",
+    "aum": 0,
+    "details": "",
+    "approach": "",
+    "source": "Divorce Monitor"
+  },
+  {
+    "id": 16,
+    "section": "vul",
+    "title": "Mario R. Giommoni - Recently promoted to Partner at a Miami law firm (September 2026)",
+    "name": "Mario R. Giommoni",
+    "company": "Recently promoted to Partner at a Miami law firm (September 2026)",
+    "status": "prospect",
+    "aum": 0,
+    "details": "",
+    "approach": "",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 17,
+    "section": "vul",
+    "title": "Gian Rodriguez - Left CBRE to become Market Officer at Kurv Industrial (July 2026)",
+    "name": "Gian Rodriguez",
+    "company": "Left CBRE to become Market Officer at Kurv Industrial (July 2026)",
+    "status": "prospect",
+    "aum": 0,
+    "details": "",
+    "approach": "",
+    "source": "VUL Monitor"
+  },
+  {
     "id": 18,
+    "section": "vul",
+    "title": "Manuel Godoy - CEO/Co-founder of F\u00e9lix (fintech that raised $200M in September 2026)",
+    "name": "Manuel Godoy",
+    "company": "CEO/Co-founder of F\u00e9lix (fintech that raised $200M in September 2026)",
+    "status": "prospect",
+    "aum": 2000000,
+    "details": "",
+    "approach": "",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 19,
     "section": "warm-intros",
     "title": "Mallesh Murugesan",
     "name": "Mallesh Murugesan",
@@ -216,7 +228,7 @@
     "source": "Warm Intros"
   },
   {
-    "id": 19,
+    "id": 20,
     "section": "warm-intros",
     "title": "Dr. Nish Patel, MD",
     "name": "Dr. Nish Patel, MD",
@@ -226,18 +238,6 @@
     "details": "**Role:** Director of Structural Heart Program at Baptist Health Miami Cardiac & Vascular Institute, Interventional Cardiologist**\n\n**Community Connection:** Baptist Health physician network, likely connected to Indian physician associations in South Florida**\n\n**Warm Intro Path:** Through Baptist Health medical staff events, Indian American physician networks, or fellow cardiologists in Miami**\n\n**Trigger:** Leadership role as Director of Structural Heart Program \u2014 significant career achievement indicating senior income tier**\n\n**Heat:** HOT\n\n**Why Opportunity:** Senior cardiologist in leadership role at prestigious program. Likely $500K-$1M+ income, age 40-55, prime candidate for sophisticated wealth management, VUL, and estate planning**",
     "approach": "As Director of Structural Heart at Baptist, you've built something remarkable \u2014 I work with several physician leaders navigating the transition from income accumulation to wealth preservation.\"**",
     "source": "Warm Intros"
-  },
-  {
-    "id": 20,
-    "section": "divorce-monitor",
-    "title": "Strengthen Ryan Magath relationship - He already sends you divorce clients organically. Ask him for more referrals or testimonials you can use.",
-    "name": "Strengthen Ryan Magath relationship",
-    "company": "He already sends you divorce clients organically. Ask him for more referrals or testimonials you can use.",
-    "status": "prospect",
-    "aum": 0,
-    "details": "",
-    "approach": "",
-    "source": "Divorce Monitor"
   },
   {
     "id": 21,
