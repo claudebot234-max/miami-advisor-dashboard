@@ -97,42 +97,6 @@
   },
   {
     "id": 9,
-    "section": "vul",
-    "title": "David Resnick",
-    "name": "David Resnick",
-    "company": "",
-    "status": "prospect",
-    "aum": 850000000,
-    "details": "**Profession:** Partner & Co-Chief Investment Officer, Driftwood Capital (Coral Gables)\n\n**Income Signal:** Former CIO at 13th Floor Investments, led $850M+ capitalized projects, now partner-level at real estate investment firm\n\n**Vul Fit Reason:** Peak earning years, significant equity compensation as partner, needs tax-advantaged wealth accumulation beyond qualified retirement plans given high W-2 plus carried interest income structure.\n\n**Heat:** WARM\n\n**Trigger Event:** Promoted to Partner & Co-CIO at Driftwood Capital, September 2026",
-    "approach": "Congratulations on the partner role at Driftwood! As you structure your new compensation package, have you explored how high-earning partners use VUL to create tax-free growth alongside traditional retirement accounts?",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 10,
-    "section": "vul",
-    "title": "Andrew Dykeman",
-    "name": "Andrew Dykeman",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Profession:** Senior Vice President of Equity Investments, Driftwood Capital (Coral Gables)\n\n**Income Signal:** Former SVP at Witkoff Group, underwrote $3B+ in financings, senior executive at hospitality investment firm\n\n**Vul Fit Reason:** High-income real estate executive in 40s-50s age range, likely maxed out 401(k), needs permanent insurance with investment upside given family wealth protection needs.\n\n**Heat:** WARM\n\n**Trigger Event:** Joined Driftwood Capital as SVP Equity Investments, September 2026",
-    "approach": "Moving from Witkoff to Driftwood is a solid step up. As you're resetting your financial plan with this new role, are you considering how VUL can complement your equity comp and provide tax-free access to capital for future deals?",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 11,
-    "section": "vul",
-    "title": "Phillip Kaufman",
-    "name": "Phillip Kaufman",
-    "company": "",
-    "status": "prospect",
-    "aum": 0,
-    "details": "**Profession:** Associate CFO, University of Miami Health System & Miller School of Medicine\n\n**Income Signal:** Former VP Fin\u2026",
-    "approach": "",
-    "source": "VUL Monitor"
-  },
-  {
-    "id": 12,
     "section": "estate-attorneys",
     "title": "Anwar E. Hadeed - Hadeed Legal",
     "name": "Anwar E. Hadeed",
@@ -144,7 +108,7 @@
     "source": "Attorney Finder"
   },
   {
-    "id": 13,
+    "id": 10,
     "section": "estate-attorneys",
     "title": "Carol L. Grant - Carol L. Grant, P.A.",
     "name": "Carol L. Grant",
@@ -154,6 +118,42 @@
     "details": "\ud83d\udccd Pembroke Pines, FL (16\u2026",
     "approach": "",
     "source": "Attorney Finder"
+  },
+  {
+    "id": 11,
+    "section": "vul",
+    "title": "David Resnick",
+    "name": "David Resnick",
+    "company": "",
+    "status": "prospect",
+    "aum": 850000000,
+    "details": "**Profession:** Partner & Co-Chief Investment Officer, Driftwood Capital (Coral Gables)\n\n**Income Signal:** Former CIO at 13th Floor Investments, led $850M+ capitalized projects, now partner-level at real estate investment firm\n\n**Vul Fit Reason:** Peak earning years, significant equity compensation as partner, needs tax-advantaged wealth accumulation beyond qualified retirement plans given high W-2 plus carried interest income structure.\n\n**Heat:** WARM\n\n**Trigger Event:** Promoted to Partner & Co-CIO at Driftwood Capital, September 2026",
+    "approach": "Congratulations on the partner role at Driftwood! As you structure your new compensation package, have you explored how high-earning partners use VUL to create tax-free growth alongside traditional retirement accounts?",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 12,
+    "section": "vul",
+    "title": "Andrew Dykeman",
+    "name": "Andrew Dykeman",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Profession:** Senior Vice President of Equity Investments, Driftwood Capital (Coral Gables)\n\n**Income Signal:** Former SVP at Witkoff Group, underwrote $3B+ in financings, senior executive at hospitality investment firm\n\n**Vul Fit Reason:** High-income real estate executive in 40s-50s age range, likely maxed out 401(k), needs permanent insurance with investment upside given family wealth protection needs.\n\n**Heat:** WARM\n\n**Trigger Event:** Joined Driftwood Capital as SVP Equity Investments, September 2026",
+    "approach": "Moving from Witkoff to Driftwood is a solid step up. As you're resetting your financial plan with this new role, are you considering how VUL can complement your equity comp and provide tax-free access to capital for future deals?",
+    "source": "VUL Monitor"
+  },
+  {
+    "id": 13,
+    "section": "vul",
+    "title": "Phillip Kaufman",
+    "name": "Phillip Kaufman",
+    "company": "",
+    "status": "prospect",
+    "aum": 0,
+    "details": "**Profession:** Associate CFO, University of Miami Health System & Miller School of Medicine\n\n**Income Signal:** Former VP Fin\u2026",
+    "approach": "",
+    "source": "VUL Monitor"
   },
   {
     "id": 14,
